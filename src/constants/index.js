@@ -60,19 +60,7 @@ export const navigation = [
   {
     id: "6",
     title: "Careers",
-    url: "#careers"
-  },
-  {
-    id: "4",
-    title: "New account",
-    url: "#signup",
-    onlyMobile: true,
-  },
-  {
-    id: "5",
-    title: "Sign in",
-    url: "#login",
-    onlyMobile: true,
+    url: "#careers",
   },
 ];
 
@@ -338,7 +326,8 @@ export const jobPostings = [
     title: "Software Engineer",
     location: "Remote, Worldwide",
     text: "Develop, test, and maintain software applications for clients in a dynamic, fast-paced environment.",
-    qualifications: "Bachelor's degree in Computer Science, 2+ years of experience in software development, Proficiency in JavaScript, React, and Node.js.",
+    qualifications:
+      "Bachelor's degree in Computer Science, 2+ years of experience in software development, Proficiency in JavaScript, React, and Node.js.",
     applyUrl: "/apply/software-engineer",
     postedAt: "2025-04-01",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
@@ -348,7 +337,8 @@ export const jobPostings = [
     title: "Product Manager",
     location: "Remote, Worldwide",
     text: "Lead the development of new products and enhance existing ones, collaborating with cross-functional teams.",
-    qualifications: "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
+    qualifications:
+      "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
     applyUrl: "/apply/product-manager",
     postedAt: "2025-03-28",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
@@ -358,7 +348,8 @@ export const jobPostings = [
     title: "Product Manager",
     location: "Remote, Worldwide",
     text: "Lead the development of new products and enhance existing ones, collaborating with cross-functional teams.",
-    qualifications: "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
+    qualifications:
+      "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
     applyUrl: "/apply/product-manager",
     postedAt: "2025-03-28",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
@@ -368,7 +359,8 @@ export const jobPostings = [
     title: "Product Manager",
     location: "Remote, Worldwide",
     text: "Lead the development of new products and enhance existing ones, collaborating with cross-functional teams.",
-    qualifications: "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
+    qualifications:
+      "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
     applyUrl: "/apply/product-manager",
     postedAt: "2025-03-28",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
@@ -378,7 +370,8 @@ export const jobPostings = [
     title: "Product Manager",
     location: "Remote, Worldwide",
     text: "Lead the development of new products and enhance existing ones, collaborating with cross-functional teams.",
-    qualifications: "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
+    qualifications:
+      "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
     applyUrl: "/apply/product-manager",
     postedAt: "2025-03-28",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
@@ -388,7 +381,8 @@ export const jobPostings = [
     title: "Product Manager",
     location: "Remote, Worldwide",
     text: "Lead the development of new products and enhance existing ones, collaborating with cross-functional teams.",
-    qualifications: "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
+    qualifications:
+      "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
     applyUrl: "/apply/product-manager",
     postedAt: "2025-03-28",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
@@ -398,10 +392,10 @@ export const jobPostings = [
     title: "Product Manager",
     location: "Remote, Worldwide",
     text: "Lead the development of new products and enhance existing ones, collaborating with cross-functional teams.",
-    qualifications: "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
+    qualifications:
+      "Bachelor's degree in Business or Engineering, 3+ years of product management experience, Excellent communication and organizational skills.",
     applyUrl: "/apply/product-manager",
     postedAt: "2025-03-28",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
-  }
+  },
 ];
-
