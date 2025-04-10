@@ -1,19 +1,18 @@
-import { underline, heroBackground, robot } from "../assets";
-import React, { useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from "react";
+import { ScrollParallax } from "react-just-parallax";
+
 import Button from "./Button";
 import Section from "./Section";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
-import { heroIcons } from "../constants";
-import { ScrollParallax } from "react-just-parallax";
-import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
-import CompanyLogos from "./CompanyLogos";
+import { underline, heroBackground, robot } from "../assets";
+import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import { heroIcons } from "../constants";
 
 const TextChanger = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const texts = ['AI Voicebot', 'AI Chatbot', 'AI Telecalling'];
+  const texts = ["AI Voicebot", "AI Chatbot", "AI Telecalling"];
 
   const changeText = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
@@ -22,19 +21,20 @@ const TextChanger = () => {
   useEffect(() => {
     const interval = setInterval(changeText, 2000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   return (
     <div className="text-container">
       <h1
-        className={`gradient-text ${texts[currentIndex].toLowerCase().replace(/\s/g, '')}`}
+        className={`gradient-text ${texts[currentIndex]
+          .toLowerCase()
+          .replace(/\s/g, "")}`}
       >
         {texts[currentIndex]} {}
       </h1>
     </div>
   );
 };
-
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -50,7 +50,9 @@ const Hero = () => {
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6">
-            Explore the Possibilities of<TextChanger /> with {` `}<span className="inline-block relative">Trubot AI{" "}
+            Explore the Possibilities of <TextChanger /> with{" "}
+            <span className="inline-block relative">
+              Trubot AI
               <img
                 src={underline}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -60,14 +62,23 @@ const Hero = () => {
               />
             </span>
           </h1>
+
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Unleash the power of AI within Trubot AI. Upgrade your productivity
-            with Trubot AI, the open AI chat app.
+            From AI Chatbots to Voice Bots, Invoice Management, and Social Media
+            Tools – We Help Businesses Scale Smarter.
           </p>
-          <Button href="/pricing" white>
-            Get started
-          </Button>
+
+          <div className="flex gap-4 justify-center">
+            <Button href="#solutions" white>
+              Our Solutions
+            </Button>
+
+            <Button href="#contact" white>
+              Request a Demo
+            </Button>
+          </div>
         </div>
+
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-n-8 rounded-[1rem]">
@@ -105,12 +116,19 @@ const Hero = () => {
 
             <Gradient />
           </div>
-          
+
+          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+            <img
+              src={heroBackground}
+              className="w-full"
+              width={1440}
+              height={1800}
+              alt="hero"
+            />
+          </div>
 
           <BackgroundCircles />
         </div>
-
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
       </div>
 
       <BottomLine />
