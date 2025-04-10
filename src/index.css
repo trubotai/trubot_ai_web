@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@301&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@301&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@301&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +12,7 @@
 }
 
 * {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 @layer base {
@@ -25,81 +23,83 @@
 }
 
 .rotate-45 {
-  @apply rotate-[45deg]
+  @apply rotate-[45deg];
 }
 
 .rotate-90 {
-  @apply rotate-[90deg]
+  @apply rotate-[90deg];
 }
 
 .rotate-135 {
-  @apply rotate-[135deg]
+  @apply rotate-[135deg];
 }
 
 .rotate-180 {
-  @apply rotate-[180deg]
+  @apply rotate-[180deg];
 }
 
 .rotate-225 {
-  @apply rotate-[225deg]
+  @apply rotate-[225deg];
 }
 
 .rotate-270 {
-  @apply rotate-[270deg]
+  @apply rotate-[270deg];
 }
 
 .rotate-315 {
-  @apply rotate-[315deg]
+  @apply rotate-[315deg];
 }
 
 .rotate-360 {
-  @apply rotate-[360deg]
+  @apply rotate-[360deg];
 }
 
 .-rotate-45 {
-  @apply rotate-[-45deg]
+  @apply rotate-[-45deg];
 }
 
 .-rotate-90 {
-  @apply rotate-[-90deg]
+  @apply rotate-[-90deg];
 }
 
 .-rotate-135 {
-  @apply rotate-[-135deg]
+  @apply rotate-[-135deg];
 }
 
 .-rotate-180 {
-  @apply rotate-[-180deg]
+  @apply rotate-[-180deg];
 }
 
 .-rotate-225 {
-  @apply rotate-[-225deg]
+  @apply rotate-[-225deg];
 }
 
 .-rotate-270 {
-  @apply rotate-[-270deg]
+  @apply rotate-[-270deg];
 }
 
 .-rotate-315 {
-  @apply rotate-[-315deg]
+  @apply rotate-[-315deg];
 }
 
 .-rotate-360 {
-  @apply rotate-[-360deg]
+  @apply rotate-[-360deg];
 }
 
 .text-gradient {
-  background-image: linear-gradient(180deg,#919400 45%,#c2c429 90%);
+  background-image: linear-gradient(180deg, #919400 45%, #c2c429 90%);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0,0,0,0);
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
   padding: 4px;
   margin: -4px;
 }
 .gradient-text {
   background-color: #63d8e3;
-  background-image: linear-gradient(90deg,#63d8e3,#29beff,#007aff);
+  background-image: linear-gradient(90deg, #63d8e3, #29beff, #007aff);
   background-size: 100%;
-  -webkit-background-clip:text;
+  background-clip: text;
+  -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
@@ -110,6 +110,7 @@
   font-size: 3.25rem;
   font-weight: bold;
   background-size: 100%;
+  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -131,4 +132,3 @@
   background-color: #63d8e3;
   background-image: linear-gradient(90deg, #6a11cb, #2575fc);
 }
-
