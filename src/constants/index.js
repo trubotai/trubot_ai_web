@@ -328,3 +328,94 @@ export const jobPostings = [
     backgroundUrl: "./src/assets/benefits/card-6.svg",
   },
 ];
+
+export const careersPageList = [
+  {
+    id: "0",
+    title: "Software Engineer",
+    description:
+      "Develop, test, and maintain software applications for clients in a dynamic, fast-paced environment.",
+    qualifications: [
+      "Bachelor's degree in Computer Science",
+      "2+ years of experience in software development",
+      "Proficiency in JavaScript, React, and Node.js.",
+    ],
+  },
+  {
+    id: "1",
+    title: "Product Manager",
+    description:
+      "Lead the development of new products and enhance existing ones, collaborating with cross-functional teams.",
+    qualifications: [
+      "Bachelor's degree in Business or Engineering",
+      "3+ years of product management experience",
+      "Excellent communication and organizational skills.",
+    ],
+  },
+  {
+    id: "2",
+    title: "UX/UI Designer",
+    description:
+      "Design user-friendly interfaces and experiences for our software applications, ensuring a seamless user journey.",
+    qualifications: [
+      "Bachelor's degree in Design or related field",
+      "2+ years of experience in UX/UI design",
+      "Proficiency in design tools like Figma, Sketch, or Adobe XD.",
+    ],
+  },
+  {
+    id: "3",
+    title: "Marketing Specialist",
+    description:
+      "Develop and implement marketing strategies to promote our products and services, driving brand awareness and customer engagement.",
+    qualifications: [
+      "Bachelor's degree in Marketing or related field",
+      "2+ years of experience in digital marketing",
+      "Strong analytical skills and proficiency in marketing tools.",
+    ],
+  },
+  {
+    id: "4",
+    title: "Software Engineer",
+    description:
+      "Develop, test, and maintain software applications for clients in a dynamic, fast-paced environment.",
+    qualifications: [
+      "Bachelor's degree in Computer Science",
+      "2+ years of experience in software development",
+      "Proficiency in JavaScript, React, and Node.js.",
+    ],
+  },
+  {
+    id: "5",
+    title: "Product Manager",
+    description:
+      "Lead the development of new products and enhance existing ones, collaborating with cross-functional teams.",
+    qualifications: [
+      "Bachelor's degree in Business or Engineering",
+      "3+ years of product management experience",
+      "Excellent communication and organizational skills.",
+    ],
+  },
+  {
+    id: "6",
+    title: "UX/UI Designer",
+    description:
+      "Design user-friendly interfaces and experiences for our software applications, ensuring a seamless user journey.",
+    qualifications: [
+      "Bachelor's degree in Design or related field",
+      "2+ years of experience in UX/UI design",
+      "Proficiency in design tools like Figma, Sketch, or Adobe XD.",
+    ],
+  },
+  {
+    id: "7",
+    title: "Marketing Specialist",
+    description:
+      "Develop and implement marketing strategies to promote our products and services, driving brand awareness and customer engagement.",
+    qualifications: [
+      "Bachelor's degree in Marketing or related field",
+      "2+ years of experience in digital marketing",
+      "Strong analytical skills and proficiency in marketing tools.",
+    ],
+  },
+];
