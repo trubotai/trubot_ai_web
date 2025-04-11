@@ -132,3 +132,10 @@
   background-color: #63d8e3;
   background-image: linear-gradient(90deg, #6a11cb, #2575fc);
 }
+
+.aiagents {
+  background-color: #63d8e3;
+  background-image: linear-gradient(90deg, hsla(11, 82%, 87%, 1) 0%, hsla(299, 85%, 90%, 1) 100%);
+}
+
+
