@@ -37,7 +37,7 @@ export const navigation = [
   {
     id: "2",
     title: "Careers",
-    url: "#careers",
+    url: "/careers",
   },
   {
     id: "3",
@@ -143,47 +143,39 @@ export const collabApps = [
 export const careerList = [
   {
     id: "0",
-    title: "Software Engineer",
+    title: "Chief Sales Officer",
     description:
-      "Develop, test, and maintain software applications for clients in a dynamic, fast-paced environment.",
+      "Lead the global sales strategy, drive client acquisition, and spearhead revenue growth at a fast-growing AI startup transforming business communication.",
     qualifications: [
-      "Bachelor's degree in Computer Science",
-      "2+ years of experience in software development",
-      "Proficiency in JavaScript, React, and Node.js.",
+      "2 to 15+ years of B2B sales experience (preferably in AI, SaaS, or tech).",
+      "Proven ability to negotiate and close high-value deals.",
+      "Entrepreneurial mindset with a passion for scaling businesses.",
     ],
+    href: "https://docs.google.com/document/d/1FI8mhk7kJIHhVWa0xx_7KQzNQKlLiI_s/edit?tab=t.0",
   },
   {
     id: "1",
-    title: "Product Manager",
+    title: "Hands-on Product Manager",
     description:
-      "Lead the development of new products and enhance existing ones, collaborating with cross-functional teams.",
+      "Lead the roadmap and execution of AI-driven customer support products, working closely with cross-functional teams to build impactful solutions.",
     qualifications: [
-      "Bachelor's degree in Business or Engineering",
-      "3+ years of product management experience",
-      "Excellent communication and organizational skills.",
+      "5+ years of experience in product management, preferably in AI or SaaS.",
+      "Strong technical understanding of AI, NLP, and automation technologies.",
+      "Ability to balance strategic vision with hands-on execution.",
     ],
+    href: "https://docs.google.com/document/d/1SgepPzwa0xW8OcT208YXooEtuhEq2pvm/edit?tab=t.0",
   },
   {
     id: "2",
-    title: "UX/UI Designer",
+    title: "Project Manager",
     description:
-      "Design user-friendly interfaces and experiences for our software applications, ensuring a seamless user journey.",
+      "Oversee and drive AI-focused projects from inception to completion, ensuring alignment with company goals and seamless cross-functional collaboration.",
     qualifications: [
-      "Bachelor's degree in Design or related field",
-      "2+ years of experience in UX/UI design",
-      "Proficiency in design tools like Figma, Sketch, or Adobe XD.",
+      "Proven experience in project management, preferably in AI, SaaS, or tech startups.",
+      "Experience in agile project management methodologies.",
+      "Excellent communication and leadership skills to drive collaboration.",
     ],
-  },
-  {
-    id: "3",
-    title: "Marketing Specialist",
-    description:
-      "Develop and implement marketing strategies to promote our products and services, driving brand awareness and customer engagement.",
-    qualifications: [
-      "Bachelor's degree in Marketing or related field",
-      "2+ years of experience in digital marketing",
-      "Strong analytical skills and proficiency in marketing tools.",
-    ],
+    href: "https://lnkd.in/dAaJPx6A",
   },
 ];
 
@@ -326,5 +318,188 @@ export const jobPostings = [
     applyUrl: "/apply/product-manager",
     postedAt: "2025-03-28",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
+  },
+];
+
+export const careersPageList = [
+  {
+    id: "0",
+    title: "Chief Sales Officer",
+    description:
+      "Lead the global sales strategy, drive client acquisition, and spearhead revenue growth at a fast-growing AI startup transforming business communication.",
+    qualifications: [
+      "2 to 15+ years of B2B sales experience (preferably in AI, SaaS, or tech).",
+      "Proven ability to negotiate and close high-value deals.",
+      "Entrepreneurial mindset with a passion for scaling businesses.",
+    ],
+    href: "https://docs.google.com/document/d/1FI8mhk7kJIHhVWa0xx_7KQzNQKlLiI_s/edit?tab=t.0",
+  },
+  {
+    id: "1",
+    title: "Hands-on Product Manager",
+    description:
+      "Lead the roadmap and execution of AI-driven customer support products, working closely with cross-functional teams to build impactful solutions.",
+    qualifications: [
+      "5+ years of experience in product management, preferably in AI or SaaS.",
+      "Strong technical understanding of AI, NLP, and automation technologies.",
+      "Ability to balance strategic vision with hands-on execution.",
+    ],
+    href: "https://docs.google.com/document/d/1SgepPzwa0xW8OcT208YXooEtuhEq2pvm/edit?tab=t.0",
+  },
+  {
+    id: "2",
+    title: "Project Manager",
+    description:
+      "Oversee and drive AI-focused projects from inception to completion, ensuring alignment with company goals and seamless cross-functional collaboration.",
+    qualifications: [
+      "Proven experience in project management, preferably in AI, SaaS, or tech startups.",
+      "Experience in agile project management methodologies.",
+      "Excellent communication and leadership skills to drive collaboration.",
+    ],
+    href: "https://lnkd.in/dAaJPx6A",
+  },
+  {
+    id: "3",
+    title: "Fundraising Manager",
+    description:
+      "Develop and execute fundraising strategies, build investor relations, and secure funding to accelerate growth for a cutting-edge AI startup.",
+    qualifications: [
+      "5+ years of experience in fundraising, investor relations, or business development.",
+      "Proven track record in securing funding for startups or tech ventures.",
+      "Strong negotiation and communication skills.",
+    ],
+    href: "https://lnkd.in/dXW2zDed",
+  },
+  {
+    id: "4",
+    title: "Customer Success & Client Onboarding Manager",
+    description:
+      "Ensure smooth onboarding and long-term engagement with AI solutions by guiding clients through setup, support, and continued success strategies.",
+    qualifications: [
+      "5+ years of experience in customer success, onboarding, or account management.",
+      "Experience in AI, SaaS, or B2B technology solutions.",
+      "Strong communication and problem-solving skills.",
+    ],
+    href: "https://lnkd.in/dPzaaZmm",
+  },
+  {
+    id: "5",
+    title: "M&A Specialist Manager",
+    description:
+      "Drive strategic growth through mergers, acquisitions, and partnerships by identifying opportunities, leading negotiations, and ensuring seamless integrations.",
+    qualifications: [
+      "Experience negotiating deals in M&A, partnerships, or other business agreements.",
+      "Excellent financial analysis, communication, and leadership skills.",
+      "Passion for working in a fast-paced startup environment with the ability to drive independent projects.",
+    ],
+    href: "https://lnkd.in/dWTkFPPw",
+  },
+  {
+    id: "6",
+    title: "Head - M&A",
+    description:
+      "Lead the M&A strategy by identifying growth opportunities, structuring strategic deals, and overseeing integrations to drive long-term success for an AI startup.",
+    qualifications: [
+      "Strong ability to evaluate business opportunities and make decisions that align with company growth.",
+      "Experience negotiating deals in M&A, partnerships, or other business agreements.",
+      "A passion for working in a startup environment, with the drive to scale the company through strategic acquisitions and partnerships.",
+    ],
+    href: "https://lnkd.in/dn9t_K7A",
+  },
+  {
+    id: "7",
+    title: "Chief Human Resource Officer",
+    description:
+      "Define and lead the HR strategy across talent acquisition, organizational culture, and employee development to build a high-performing remote team in a growing AI startup.",
+    qualifications: [
+      "3 to 15+ years of HR experience, preferably in a startup or tech environment.",
+      "Proven experience in recruitment, employee engagement, and organizational development.",
+      "Strong leadership and communication skills with the ability to influence at all levels.",
+    ],
+    href: "https://lnkd.in/dZHafn-R",
+  },
+  {
+    id: "8",
+    title: "Chief Operating Officer",
+    description:
+      "Build and scale the operational foundation of a fast-growing AI startup by driving efficiency, optimizing processes, and leading cross-functional teams.",
+    qualifications: [
+      "3 to 15+ years of experience in operations management, preferably in a fast-growing tech or AI startup.",
+      "Leadership experience in managing cross-functional teams and driving a high-performance culture.",
+      "Strategic thinker with the ability to execute in a dynamic and fast-paced environment.",
+    ],
+    href: "https://lnkd.in/dcaw_zdp",
+  },
+  {
+    id: "9",
+    title: "Chief Fundraising Officer",
+    description:
+      "Lead and execute fundraising efforts for a fast-growing AI startup by building investor relationships, crafting persuasive pitches, and managing funding rounds.",
+    qualifications: [
+      "2 to 15+ years of proven experience in securing funding for startups, with a strong investor network.",
+      "Ability to craft persuasive pitches and confidently engage with investors.",
+      "Hands-on, self-driven approach to securing funding and scaling startups.",
+    ],
+    href: "https://lnkd.in/ddwgnsqY",
+  },
+  {
+    id: "10",
+    title: "Human Resource Manager",
+    description:
+      "Lead recruitment, employee engagement, and HR strategy to build a supportive and high-performing culture at a fast-growing AI startup.",
+    qualifications: [
+      "3 to 15+ years of HR experience, preferably in a startup or tech environment.",
+      "Proven experience in recruitment, employee engagement, and organizational development.",
+      "Exceptional communication skills, both written and verbal, with the ability to influence at all levels.",
+    ],
+    href: "https://lnkd.in/dMGiKUjq",
+  },
+  {
+    id: "11",
+    title: "Executive Assistant to Founder & CEO",
+    description:
+      "Support the Founder & CEO by managing executive operations, coordinating communication, and executing special projects to drive efficiency and strategic growth at a high-impact AI startup.",
+    qualifications: [
+      "2+ years supporting C-level executives (startup experience preferred).",
+      "Expert-level proficiency in GSuite, Slack, and Zoom.",
+      "Superhuman organizational skills with obsessive attention to detail.",
+    ],
+    href: "https://lnkd.in/dYVs6Uwa",
+  },
+  {
+    id: "12",
+    title: "Full Stack Hands-on Engineering Manager/Lead",
+    description:
+      "Drive the development and innovation of AI-powered customer support solutions by leading full-stack engineering efforts and aligning technical strategy with business goals.",
+    qualifications: [
+      "At least 5 years of software engineering experience, with a minimum of 2 years in a leadership role.",
+      "Expertise in both front-end and back-end development (web, mobile apps).",
+      "Proficiency in languages such as Python, Java, or C++, and familiarity with AI frameworks like TensorFlow or PyTorch.",
+    ],
+    href: "https://lnkd.in/dVhrhUrq",
+  },
+  {
+    id: "13",
+    title: "Chief Technology Officer (CTO)",
+    description:
+      "Shape and lead the technical vision of a fast-growing AI startup by building scalable infrastructure, driving innovation, and managing high-performing engineering teams.",
+    qualifications: [
+      "5 to 15+ years of experience in technology leadership, ideally in AI, machine learning, or software tech startups.",
+      "Proven track record in developing and scaling AI-driven products and technologies.",
+      "Strong leadership experience in building and leading high-performing technical teams.",
+    ],
+    href: "https://lnkd.in/dmshACNY",
+  },
+  {
+    id: "14",
+    title: "Full Stack Developer Intern",
+    description:
+      "Work alongside experienced developers to build real-world web and mobile applications, enhancing both front-end and back-end skills in a fast-paced AI startup.",
+    qualifications: [
+      "Basic knowledge of front-end technologies (HTML, CSS, JavaScript) and back-end technologies (Node.js, Python, Java).",
+      "Strong problem-solving abilities and a passion for learning new tools and technologies.",
+      "Eagerness to grow in a fast-paced environment with adaptability and continuous improvement mindset.",
+    ],
+    href: "https://lnkd.in/dPH3mx4x",
   },
 ];
