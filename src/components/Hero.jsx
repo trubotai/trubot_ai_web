@@ -12,7 +12,7 @@ import { heroIcons } from "../constants";
 const TextChanger = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const texts = ["AI Voicebot", "AI Chatbot", "AI Telecalling"];
+  const texts = ["AI Voicebot", "AI Chatbot", "AI Telecalling", "AI Agents"];
 
   const changeText = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
