@@ -26,7 +26,7 @@ const CareerList = () => {
             ))}
           </ul>
 
-          <Button className="mt-auto" href="#contact" white>
+          <Button className="mt-auto" href={item.href} target="_blank" white>
             Apply Now
           </Button>
         </div>

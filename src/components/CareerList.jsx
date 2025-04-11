@@ -28,7 +28,7 @@ const CareerList = () => {
             ))}
           </ul>
 
-          <Button className="mb-6" href="#contact" white>
+          <Button className="mb-6" href="/careers" white>
             Apply Now
           </Button>
         </div>
