@@ -14,6 +14,7 @@ export default function SectionHeader({
   return (
     <div className={`mb-10 ${alignment}`}>
       <h2 className="text-3xl font-bold text-navy mb-2">{title}</h2>
+
       {subtitle && <p className="text-gray-600 max-w-xl mx-auto">{subtitle}</p>}
     </div>
   );

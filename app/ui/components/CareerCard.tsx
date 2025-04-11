@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface CareerCardProps {
   title: string;
   location: string;
@@ -14,15 +16,17 @@ export default function CareerCard({
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
       <h3 className="text-lg font-bold text-navy mb-1">{title}</h3>
+
       <p className="text-sm text-gray-500 mb-2">
         {location} · {type}
       </p>
-      <a
+
+      <Link
         href={href}
         className="text-electric text-sm font-medium hover:underline"
       >
         Apply Now →
-      </a>
+      </Link>
     </div>
   );
 }

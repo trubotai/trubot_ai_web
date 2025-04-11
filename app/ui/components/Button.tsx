@@ -1,8 +1,13 @@
+import Link from "next/link";
+
 interface ButtonProps {
   href?: string;
   children: React.ReactNode;
   variant?: "primary" | "outline" | "ghost";
   className?: string;
+  as?: "button" | "link";
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 }
 
 export default function Button({
@@ -10,6 +15,9 @@ export default function Button({
   children,
   variant = "primary",
   className = "",
+  as = "link",
+  onClick,
+  type = "button",
 }: ButtonProps) {
   const baseStyles =
     "inline-block px-6 py-3 rounded-lg font-semibold transition";
@@ -19,12 +27,24 @@ export default function Button({
     ghost: "text-electric hover:underline",
   };
 
+  if (as === "button") {
+    return (
+      <button
+        type={type}
+        onClick={onClick}
+        className={`${baseStyles} ${variants[variant]} ${className}`}
+      >
+        {children}
+      </button>
+    );
+  }
+
   return (
-    <a
+    <Link
       href={href}
       className={`${baseStyles} ${variants[variant]} ${className}`}
     >
       {children}
-    </a>
+    </Link>
   );
 }
