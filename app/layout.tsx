@@ -1,3 +1,5 @@
+import { Sora } from "next/font/google";
+
 import Header from "./ui/components/Header";
 import Footer from "./ui/components/Footer";
 
@@ -34,6 +36,12 @@ export const metadata = {
   },
 };
 
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -41,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900">
+      <body className={`bg-white text-gray-900 ${sora.className}`}>
         <Header />
 
         <main>{children}</main>

@@ -34,3 +34,19 @@ body {
   background-color: var(--color-light);
   color: var(--color-navy);
 }
+
+@layer utilities {
+  .animate-sway {
+    animation: sway 3s ease-in-out infinite;
+  }
+
+  @keyframes sway {
+    0%,
+    100% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+  }
+}
