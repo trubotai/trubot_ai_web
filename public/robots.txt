@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://trubotai.com/sitemap.xml
+Sitemap: https://www.trubotai.com/sitemap.xml
