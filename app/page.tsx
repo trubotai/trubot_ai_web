@@ -1,14 +1,16 @@
-export default function HomePage() {
+const HomePage = () => {
   return (
     <section className="min-h-screen flex items-center justify-center text-center">
       <div>
         <h1 className="text-5xl font-bold mb-4">
           Transform Business Communication with AI
         </h1>
+
         <p className="text-lg text-gray-600 mb-8">
           Meet TruBot AI – Chatbots, Voicebots, and AI Agents tailored for
           modern growth.
         </p>
+
         <div className="space-x-4">
           <a
             href="/products"
@@ -26,4 +28,6 @@ export default function HomePage() {
       </div>
     </section>
   );
-}
+};
+
+export default HomePage;
