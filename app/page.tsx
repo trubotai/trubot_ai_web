@@ -2,6 +2,7 @@ import PageLayout from "./ui/components/PageLayout";
 import SectionHeader from "./ui/components/SectionHeader";
 import ProductCard from "./ui/components/ProductCard";
 import Button from "./ui/components/Button";
+import FinalCTASection from "./ui/components/FinalCTASection";
 import { homePageProductsList } from "./ui/libs/constants/products";
 
 const Page = () => {
@@ -159,23 +160,12 @@ const Page = () => {
       </PageLayout>
 
       {/* Final CTA */}
-      <section className="bg-navy py-20 text-center text-white">
-        <h2 className="text-3xl font-bold mb-4">
-          Ready to See TruBot AI in Action?
-        </h2>
-
-        <p className="text-gray-300 mb-8">
-          Book a demo and let our team help you explore what’s possible.
-        </p>
-
-        <Button
-          href="/contact"
-          variant="primary"
-          className="bg-white text-navy hover:bg-gray-100"
-        >
-          Talk to Our Team
-        </Button>
-      </section>
+      <FinalCTASection
+        title="Ready to See TruBot AI in Action?"
+        subtitle="Book a demo and let our team help you explore what’s possible."
+        ctaLabel="Talk to Our Team"
+        ctaLink="/contact"
+      />
     </>
   );
 };
