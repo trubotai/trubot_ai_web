@@ -16,19 +16,11 @@ export async function generateStaticParams() {
   return Object.keys(productPagesMap).map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const data: ProductPageData = productPagesMap[slug] as ProductPageData;
-
-  if (!data)
-    return {
-      title: "TruBot AI – Product Not Found",
-      description: "The page you’re looking for does not exist.",
-    };
+  const { slug } = await props.params;
+  const data = productPagesMap[slug] as ProductPageData;
 
   return {
     title: `${data?.title} – TruBot AI`,
@@ -36,8 +28,8 @@ export async function generateMetadata({
   };
 }
 
-const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const { slug } = await params;
+const Page = async (props: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await props.params;
   const data: ProductPageData = productPagesMap[slug] as ProductPageData;
 
   if (!data) return notFound();
