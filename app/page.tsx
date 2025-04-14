@@ -2,21 +2,21 @@ import PageLayout from "./ui/components/PageLayout";
 import SectionHeader from "./ui/components/SectionHeader";
 import ProductCard from "./ui/components/ProductCard";
 import Button from "./ui/components/Button";
-import { productsList } from "./ui/libs/constants/products";
+import { homePageProductsList } from "./ui/libs/constants/products";
 
-export default function HomePage() {
+const Page = () => {
   return (
     <>
       {/* Hero Section */}
       <PageLayout className="text-center py-24">
         <div className="max-w-3xl mx-auto px-4">
           <h1 className="text-5xl font-bold text-navy mb-4">
-            Transform Business Communication with AI
+            Boost Support. Drive Sales. Automate Smarter.
           </h1>
 
           <p className="text-lg text-gray-600 mb-8">
-            TruBot AI delivers powerful automation through chatbots, voicebots,
-            and multi-agent workflows.
+            AI chatbots, voice bots, and multi-agent systems built to save time
+            and supercharge customer engagement.
           </p>
 
           <div className="flex justify-center gap-4">
@@ -32,17 +32,16 @@ export default function HomePage() {
       <div className="bg-gray-50">
         <PageLayout>
           <SectionHeader
-            title="Our Product Stack"
+            title="Our AI Product Suite"
             subtitle="AI tools built for your team’s productivity — and your customer’s satisfaction."
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {productsList.map((product) => (
+            {homePageProductsList.map((product) => (
               <ProductCard
-                key={product.id}
+                key={product.name}
                 title={product.name}
                 description={product.description}
-                icon={<span className="text-3xl">{product.icon}</span>}
                 href={product.href}
               />
             ))}
@@ -69,7 +68,6 @@ export default function HomePage() {
             <h4 className="font-semibold text-navy mb-1">
               Reduce Support Costs
             </h4>
-
             <p className="text-sm text-gray-600">
               Automate up to 80% of common queries with no-code chat and voice
               flows.
@@ -78,11 +76,9 @@ export default function HomePage() {
 
           <div>
             <div className="text-4xl mb-2">⚙️</div>
-
             <h4 className="font-semibold text-navy mb-1">
               Automate Repetitive Tasks
             </h4>
-
             <p className="text-sm text-gray-600">
               Free your team from FAQ hell, follow-ups, and manual data entry.
             </p>
@@ -90,9 +86,7 @@ export default function HomePage() {
 
           <div>
             <div className="text-4xl mb-2">📈</div>
-
             <h4 className="font-semibold text-navy mb-1">Get Real ROI on AI</h4>
-
             <p className="text-sm text-gray-600">
               Launch in days, not weeks — with measurable results from Day 1.
             </p>
@@ -111,12 +105,14 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
               <p className="text-xl">💻</p>
-              <p className="mt-2 text-sm font-medium text-navy">SaaS</p>
+              <p className="mt-2 text-sm font-medium text-navy">Tech & SaaS</p>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
               <p className="text-xl">🎨</p>
-              <p className="mt-2 text-sm font-medium text-navy">Agencies</p>
+              <p className="mt-2 text-sm font-medium text-navy">
+                Digital Agencies
+              </p>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
@@ -132,7 +128,7 @@ export default function HomePage() {
         </PageLayout>
       </div>
 
-      {/* Testimonials (placeholder) */}
+      {/* Testimonials */}
       <PageLayout>
         <SectionHeader
           title="What Our Customers Say"
@@ -145,7 +141,6 @@ export default function HomePage() {
               “TruBot AI helped us reduce inbound calls by 40% — and gave our
               support team their evenings back.”
             </p>
-
             <p className="mt-2 text-sm font-semibold text-navy">
               — Samir, Founder @ SaaSBox
             </p>
@@ -156,7 +151,6 @@ export default function HomePage() {
               “Setup took less than an hour, and our AI agent closed 3 deals in
               the first week. Unreal.”
             </p>
-
             <p className="mt-2 text-sm font-semibold text-navy">
               — Rina, Growth Lead @ SparkAgency
             </p>
@@ -184,4 +178,6 @@ export default function HomePage() {
       </section>
     </>
   );
-}
+};
+
+export default Page;

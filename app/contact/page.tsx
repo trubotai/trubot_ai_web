@@ -7,39 +7,17 @@ export const metadata = {
     "Get in touch with our team for demo requests, business inquiries, or support.",
 };
 
-export default function ContactPage() {
+const Page = () => {
   return (
-    <PageLayout>
+    <PageLayout className="min-h-screen flex flex-col items-center justify-center">
       <SectionHeader
         title="Let’s Connect"
         subtitle="Have a question, want a demo, or just want to say hi? We’d love to hear from you."
       />
 
-      <div className="space-y-6 text-center ">
-        <div>
-          <h4 className="text-lg font-semibold text-navy mb-1">
-            Sales & Partnerships
-          </h4>
-
-          <p className="text-sm text-gray-600">
-            Reach out to our team for a personalized demo or business
-            collaboration.
-          </p>
-
-          <a
-            href="mailto:support@trubotai.com"
-            className="text-electric font-medium"
-          >
-            support@trubotai.com
-          </a>
-        </div>
-
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
         <div>
           <h4 className="text-lg font-semibold text-navy mb-1">Careers</h4>
-          <p className="text-sm text-gray-600">
-            Want to join us? Reach out directly or check our openings.
-          </p>
-
           <a
             href="mailto:careers@trubotai.com"
             className="text-electric font-medium"
@@ -47,7 +25,48 @@ export default function ContactPage() {
             careers@trubotai.com
           </a>
         </div>
+
+        <div>
+          <h4 className="text-lg font-semibold text-navy mb-1">Leadership</h4>
+          <a
+            href="mailto:gopal@trubotai.com"
+            className="text-electric font-medium"
+          >
+            gopal@trubotai.com
+          </a>
+        </div>
+
+        <div>
+          <h4 className="text-lg font-semibold text-navy mb-1">
+            Sales Inquiries
+          </h4>
+          <a
+            href="mailto:sales@trubotai.com"
+            className="text-electric font-medium"
+          >
+            sales@trubotai.com
+          </a>
+        </div>
+      </div>
+
+      <div className="text-center text-white mt-6">
+        <h5 className="text-lg font-semibold text-navy mb-1">
+          Connect with Us
+        </h5>
+
+        <p className="text-gray-700 text-sm">
+          <a
+            href="https://www.linkedin.com/in/gopalakrishnan-k-79474727/"
+            className="hover:text-blue-400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Founder’s LinkedIn – Gopalakrishnan K
+          </a>
+        </p>
       </div>
     </PageLayout>
   );
-}
+};
+
+export default Page;

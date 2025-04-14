@@ -1,26 +1,82 @@
 export const solutionsList = [
   {
-    id: "saas",
-    title: "For SaaS Companies",
-    description:
-      "Automate onboarding, support, and renewals with AI-powered chat and voice workflows.",
+    id: "commerce",
+    title: "Commerce & Retail",
+    items: [
+      {
+        title: "eCommerce",
+        description:
+          "AI-powered chatbots for storefronts, customer support, and sales.",
+      },
+      {
+        title: "Retail Chains",
+        description:
+          "Automate feedback, support, and loyalty flows across branches.",
+      },
+    ],
   },
   {
-    id: "agencies",
-    title: "For Digital Agencies",
-    description:
-      "Streamline client communications, lead qualification, and reporting with smart AI tools.",
+    id: "finance",
+    title: "Finance & Insurance",
+    items: [
+      {
+        title: "Fintech",
+        description:
+          "Streamline onboarding, fraud alerts, and customer support with conversational AI.",
+      },
+      {
+        title: "Insurance",
+        description:
+          "Automate claims processing, quote generation, and policy renewals.",
+      },
+    ],
   },
   {
-    id: "ecommerce",
-    title: "For eCommerce Brands",
-    description:
-      "Turn browsers into buyers with 24/7 product support, order tracking, and returns automation.",
+    id: "health",
+    title: "Healthcare & Life Sciences",
+    items: [
+      {
+        title: "Healthcare Providers",
+        description:
+          "Schedule appointments, handle queries, and follow-up with patients automatically.",
+      },
+      {
+        title: "Wellness & Fitness",
+        description:
+          "Keep users engaged with personalized AI-based coaching and check-ins.",
+      },
+    ],
   },
   {
-    id: "healthcare",
-    title: "For Healthcare Providers",
-    description:
-      "Handle appointment scheduling, prescription refills, and patient follow-ups via voice or chat bots.",
+    id: "education",
+    title: "Education & Nonprofit",
+    items: [
+      {
+        title: "EdTech Platforms",
+        description:
+          "Boost engagement with smart tutors, support bots, and content delivery.",
+      },
+      {
+        title: "Nonprofits",
+        description:
+          "Improve donor relations, automate support, and manage volunteer outreach.",
+      },
+    ],
+  },
+  {
+    id: "ops",
+    title: "Ops & Infrastructure",
+    items: [
+      {
+        title: "Logistics & Supply Chain",
+        description:
+          "Provide shipment updates, automate order support, and reduce manual queries.",
+      },
+      {
+        title: "IT Services",
+        description:
+          "Build internal AI agents to support ticketing and knowledge base access.",
+      },
+    ],
   },
 ];

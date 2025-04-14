@@ -9,7 +9,7 @@ export const metadata = {
     "Join our growing team and help shape the future of AI-powered business automation.",
 };
 
-export default function CareersPage() {
+const Page = () => {
   return (
     <PageLayout>
       <SectionHeader
@@ -39,4 +39,6 @@ export default function CareersPage() {
       </div>
     </PageLayout>
   );
-}
+};
+
+export default Page;

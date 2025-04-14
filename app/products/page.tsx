@@ -11,7 +11,7 @@ export const metadata = {
     "Explore TruBot AI’s suite of chat, voice, and agent automation tools.",
 };
 
-export default function ProductsPage() {
+const Page = () => {
   return (
     <PageLayout>
       <SectionHeader
@@ -19,26 +19,37 @@ export default function ProductsPage() {
         subtitle="Chatbots, voice assistants, and AI agents that power real business outcomes."
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {productsList.map((product) => (
-          <ProductCard
-            key={product.id}
-            title={product.name}
-            description={product.description}
-            icon={<span className="text-3xl">{product.icon}</span>}
-            href={product.href}
-          />
+      <div className="space-y-20">
+        {productsList.map((group) => (
+          <section key={group.id}>
+            <h3 className="text-2xl font-bold text-navy mb-6 text-center">
+              {group.title}
+            </h3>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {group.items.map((product) => (
+                <ProductCard
+                  key={product.name}
+                  title={product.name}
+                  description={product.description}
+                  href={product.href}
+                />
+              ))}
+            </div>
+          </section>
         ))}
       </div>
 
       <div className="text-center mt-16">
         <Link
           href="/contact"
-          className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700"
+          className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
         >
           Not sure what fits? Talk to our team
         </Link>
       </div>
     </PageLayout>
   );
-}
+};
+
+export default Page;

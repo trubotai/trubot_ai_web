@@ -9,7 +9,7 @@ export const metadata = {
     "Learn more about the team, mission, and story behind TruBot AI.",
 };
 
-export default function AboutPage() {
+const Page = () => {
   return (
     <PageLayout>
       <SectionHeader
@@ -17,42 +17,41 @@ export default function AboutPage() {
         subtitle="Making AI accessible, actionable, and ROI-driven for small to mid-sized businesses."
       />
 
-      <div className="space-y-10 text-gray-700">
-        <div>
-          <h3 className="text-xl font-semibold text-navy mb-2">Our Mission</h3>
-
-          <p>
-            We believe that powerful AI shouldn’t be limited to large
-            enterprises. TruBot AI empowers growing businesses with intelligent,
-            easy-to-use automation tools across chat, voice, and multi-agent
-            workflows.
+      <div className="max-w-3xl mx-auto space-y-16 text-gray-700">
+        <section className="text-center">
+          <h3 className="text-2xl font-bold text-navy mb-3">Our Mission</h3>
+          <p className="leading-relaxed">
+            Our mission is to revolutionize customer support and business
+            communication through AI-powered solutions. From AI chatbots and
+            voice-enabled bots to intelligent agents and social media tools, we
+            equip businesses to scale while staying personal.
           </p>
-        </div>
+        </section>
 
-        <div>
-          <h3 className="text-xl font-semibold text-navy mb-2">Our Journey</h3>
-
-          <p>
-            Born out of the need for unified automation across support, sales,
-            and marketing — TruBot AI combines years of product research and
-            hands-on implementation into a single, plug-and-play platform.
+        <section className="text-center">
+          <h3 className="text-2xl font-bold text-navy mb-3">Our Journey</h3>
+          <p className="leading-relaxed">
+            TruBot AI was founded by a visionary with 15+ years in AI and data
+            science. With leadership experience at CitiBank and Fidelity, our
+            founder brings deep domain expertise and a passion for solving
+            real-world inefficiencies with smart technology.
           </p>
-        </div>
+        </section>
 
-        <div>
-          <h3 className="text-xl font-semibold text-navy mb-2">Our Approach</h3>
-
-          <p>
-            We combine proven AI tools with seamless workflows — from WhatsApp
-            to web to phone. Whether it’s resolving queries or generating leads,
-            we help teams achieve more with less.
+        <section className="text-center">
+          <h3 className="text-2xl font-bold text-navy mb-3">Our Approach</h3>
+          <p className="leading-relaxed">
+            We believe in automation that enhances—not replaces—human
+            connection. Our tools help businesses deliver faster, smarter, and
+            more personalized experiences across chat, voice, and digital
+            platforms.
           </p>
-        </div>
+        </section>
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <Link
             href="/contact"
-            className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700"
+            className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
           >
             Get in Touch
           </Link>
@@ -60,4 +59,6 @@ export default function AboutPage() {
       </div>
     </PageLayout>
   );
-}
+};
+
+export default Page;

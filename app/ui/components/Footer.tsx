@@ -43,21 +43,21 @@ export default function Footer() {
             </li>
 
             <li className="pt-2 flex gap-4">
-              <a
+              <Link
                 href="https://www.linkedin.com/company/trubot-ai/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 LinkedIn
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="https://www.linkedin.com/company/trubot-ai/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Twitter
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
