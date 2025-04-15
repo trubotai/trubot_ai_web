@@ -1,4 +1,5 @@
 import Button from "./Button";
+import PageLayout from "./PageLayout";
 
 interface FinalCTASectionProps {
   title: string;
@@ -25,20 +26,20 @@ export default function FinalCTASection({
       : "text-center";
 
   return (
-    <section
-      className={`bg-navy py-20 text-white ${alignmentClass} ${className}`}
-    >
-      <h2 className="text-3xl font-bold mb-4">{title}</h2>
+    <div className="bg-navy py-20 text-white">
+      <PageLayout className={`${alignmentClass} ${className}`}>
+        <h2 className="text-3xl font-bold mb-4">{title}</h2>
 
-      <p className="text-gray-300 mb-8">{subtitle}</p>
+        <p className="text-gray-300 mb-8">{subtitle}</p>
 
-      <Button
-        href={ctaLink}
-        variant="primary"
-        className="bg-white text-navy hover:bg-gray-100"
-      >
-        {ctaLabel}
-      </Button>
-    </section>
+        <Button
+          href={ctaLink}
+          variant="primary"
+          className="bg-white text-navy hover:bg-gray-100"
+        >
+          {ctaLabel}
+        </Button>
+      </PageLayout>
+    </div>
   );
 }
