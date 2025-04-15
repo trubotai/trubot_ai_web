@@ -1,5 +1,6 @@
 import { Sora } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 import Header from "./ui/components/Header";
 import Footer from "./ui/components/Footer";
@@ -55,6 +56,8 @@ export default function RootLayout({
 
         <main>{children}</main>
         <SpeedInsights />
+        <Analytics />
+
         <Footer />
       </body>
     </html>
