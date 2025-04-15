@@ -44,7 +44,7 @@ export default function Footer() {
 
             <li className="pt-2 flex gap-4">
               <Link
-                href="https://www.linkedin.com/company/trubot-ai/"
+                href="https://www.linkedin.com/company/trubotai/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -52,7 +52,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="https://www.linkedin.com/company/trubot-ai/"
+                href="https://www.linkedin.com/company/trubotai/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
