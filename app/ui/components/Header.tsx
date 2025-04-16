@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { navLinks } from "../libs/constants/site";
 
@@ -13,8 +14,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold text-navy">
-          TruBot AI
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/images/logo.png"
+            alt="TruBot AI Logo"
+            className="rounded-full"
+            width={40}
+            height={40}
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
