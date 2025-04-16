@@ -79,4 +79,25 @@ export const solutionsList = [
       },
     ],
   },
+  {
+    id: "businesses",
+    title: "Local & Specialized Businesses",
+    items: [
+      {
+        title: "Real Estate",
+        description:
+          "Automate property listings, lead capture, and client follow-ups with AI chat.",
+      },
+      {
+        title: "SMEs",
+        description:
+          "Use chatbots and workflows to manage customer support, feedback, and lead generation.",
+      },
+      {
+        title: "Home Services",
+        description:
+          "Help professionals like plumbers, electricians, and carpenters handle bookings, reviews, and client support.",
+      },
+    ],
+  },
 ];
