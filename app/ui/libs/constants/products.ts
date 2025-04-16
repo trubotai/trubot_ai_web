@@ -57,6 +57,32 @@ export const productsList = [
     ],
   },
   {
+    id: "voice",
+    title: "Voice AI",
+    items: [
+      {
+        name: "Voice Bots",
+        description: "Voice-enable your support and lead workflows.",
+        href: "/products/voice",
+      },
+      {
+        name: "Voice Agents",
+        description: "Coming Soon – AI-powered voice interactions.",
+        href: "/products/voice",
+      },
+      {
+        name: "Voice-enabled Chatbots",
+        description: "Coming Soon – Merge chat and voice for seamless UX.",
+        href: "/products/voice",
+      },
+      {
+        name: "Voice Assistant Apps",
+        description: "Coming Soon – Build custom AI voice apps.",
+        href: "/products/voice",
+      },
+    ],
+  },
+  {
     id: "agents",
     title: "AI Agents (In Progress)",
     items: [
@@ -89,32 +115,6 @@ export const productsList = [
         name: "AI Agent Studio",
         description: "Coming Soon – Build and train your own AI agents.",
         href: "/products/agents",
-      },
-    ],
-  },
-  {
-    id: "voice",
-    title: "Voice AI",
-    items: [
-      {
-        name: "Voice Bots",
-        description: "Voice-enable your support and lead workflows.",
-        href: "/products/voice",
-      },
-      {
-        name: "Voice Agents",
-        description: "Coming Soon – AI-powered voice interactions.",
-        href: "/products/voice",
-      },
-      {
-        name: "Voice-enabled Chatbots",
-        description: "Coming Soon – Merge chat and voice for seamless UX.",
-        href: "/products/voice",
-      },
-      {
-        name: "Voice Assistant Apps",
-        description: "Coming Soon – Build custom AI voice apps.",
-        href: "/products/voice",
       },
     ],
   },
@@ -165,6 +165,36 @@ export const productsList = [
     ],
   },
   {
+    id: "custom",
+    title: "Custom Development",
+    items: [
+      {
+        name: "Website Development",
+        description:
+          "Design and build modern, responsive websites tailored to your brand.",
+        href: "/products/custom",
+      },
+      {
+        name: "Mobile App Development",
+        description:
+          "Create cross-platform mobile apps for Android and iOS to boost engagement.",
+        href: "/products/custom",
+      },
+      {
+        name: "Software Development Lifecycle",
+        description:
+          "End-to-end support for planning, building, and maintaining enterprise-grade software.",
+        href: "/products/custom",
+      },
+      {
+        name: "Custom Solutions",
+        description:
+          "Get tailor-made digital solutions built to solve your unique business needs.",
+        href: "/products/custom",
+      },
+    ],
+  },
+  {
     id: "others",
     title: "Other Tools",
     items: [
@@ -181,6 +211,11 @@ export const productsList = [
       {
         name: "SME Product Aggregator",
         description: "Discover curated AI tools for small businesses.",
+        href: "/products/tools",
+      },
+      {
+        name: "AI Automation",
+        description: "Orchestrate workflows with custom automation bots.",
         href: "/products/tools",
       },
     ],
