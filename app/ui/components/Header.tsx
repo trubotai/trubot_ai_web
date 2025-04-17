@@ -12,19 +12,21 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-2">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/images/logo.png"
             alt="TruBot AI Logo"
-            className="rounded-full"
+            className="rounded-full transition-transform duration-300 ease-in-out group-hover:rotate-6 group-hover:shadow-md"
             width={40}
             height={40}
             priority
           />
         </Link>
 
+        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map(({ href, label }) => (
             <Link
@@ -40,22 +42,24 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="ml-4 bg-electric text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700"
+            className="ml-4 bg-electric text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition"
           >
             Request Demo
           </Link>
         </nav>
 
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-navy"
+          className="md:hidden text-2xl text-navy focus:outline-none"
         >
           ☰
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4">
+        <div className="md:hidden px-4 pb-6 flex flex-col gap-2 items-center">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
@@ -71,7 +75,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="block mt-2 bg-electric text-white text-center px-4 py-2 rounded-md font-semibold hover:bg-blue-700"
+            className="block mt-2 bg-electric text-white text-center px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition"
             onClick={() => setMenuOpen(false)}
           >
             Request Demo

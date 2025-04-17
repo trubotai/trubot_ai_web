@@ -16,7 +16,7 @@ const Page = () => {
     <PageLayout>
       <SectionHeader
         title="Explore Our AI Products"
-        subtitle="Chatbots, voice assistants, and AI agents that power real business outcomes."
+        subtitle="AI chatbots, voice bots, multi-agent systems, and productivity tools — all tailored for your business growth."
       />
 
       <div className="space-y-20">

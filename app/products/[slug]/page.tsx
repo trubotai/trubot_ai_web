@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { JSX } from "react";
 import { notFound } from "next/navigation";
 
 import PageLayout from "@/app/ui/components/PageLayout";
@@ -16,10 +15,12 @@ export async function generateStaticParams() {
   return Object.keys(productPagesMap).map((slug) => ({ slug }));
 }
 
-export async function generateMetadata(props: {
+export async function generateMetadata({
+  params,
+}: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await props.params;
+  const { slug } = await params;
   const data = productPagesMap[slug] as ProductPageData;
 
   return {
@@ -28,9 +29,9 @@ export async function generateMetadata(props: {
   };
 }
 
-const Page = async (props: { params: Promise<{ slug: string }> }) => {
-  const { slug } = await props.params;
-  const data: ProductPageData = productPagesMap[slug] as ProductPageData;
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const data = productPagesMap[slug] as ProductPageData;
 
   if (!data) return notFound();
 
@@ -38,50 +39,44 @@ const Page = async (props: { params: Promise<{ slug: string }> }) => {
 
   return (
     <>
+      {/* Overview Section */}
       <PageLayout>
         <SectionHeader title={title} subtitle={description} />
 
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
-          {platforms.map(
-            (
-              platform: JSX.IntrinsicAttributes & {
-                name: string;
-                feature: string;
-                icon?: React.ReactNode;
-              }
-            ) => (
-              <PlatformCard key={platform.name} {...platform} />
-            )
-          )}
+          {platforms.map((platform) => (
+            <PlatformCard key={platform.name} {...platform} />
+          ))}
         </section>
       </PageLayout>
 
-      {/* How It Works */}
+      {/* How It Works Section */}
       <div className="bg-gray-50">
         <PageLayout className="py-20">
           <SectionHeader
             title="How It Works"
-            subtitle="Launch AI chatbots without writing a single line of code."
+            subtitle="Launch AI-powered experiences in just a few easy steps."
           />
 
           <HowItWorksSteps steps={steps} />
         </PageLayout>
       </div>
 
+      {/* Industries Section */}
       <PageLayout className="py-20">
         <SectionHeader
-          title="Industries Using AI Chatbots"
-          subtitle="Our technology adapts to your domain."
+          title="Industries We Serve"
+          subtitle="Flexible and scalable across diverse industries."
         />
 
         <UseCasesGrid industries={industries} />
       </PageLayout>
 
-      {/* Final CTA */}
+      {/* Final CTA Section */}
       <FinalCTASection
-        title="See AI Chatbots in Action"
-        subtitle="Book a live demo and discover what TruBot AI can do for your business."
-        ctaLabel="Talk to Our Team"
+        title="See It in Action"
+        subtitle="Talk to our team and discover what TruBot AI can do for your business."
+        ctaLabel="Request Demo"
         ctaLink="/contact"
       />
     </>

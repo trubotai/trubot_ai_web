@@ -50,4 +50,109 @@
       transform: rotate(2deg);
     }
   }
+
+  /* Generic Card Hover - Pop Up */
+  .hover-animate-card {
+    transition: all 0.3s ease-out;
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      background-color: #f5f5f5;
+    }
+  }
+  /* Glow Effect on Hover */
+  .hover-glow-card {
+    transition: all 0.3s ease-out;
+    &:hover {
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+      background-color: #ebf8ff;
+    }
+  }
+  /* Rotate Slightly on Hover */
+  .hover-rotate-card {
+    transition: transform 0.3s ease-out;
+    &:hover {
+      transform: rotate(1deg);
+    }
+  }
+  /* Light Scale Up on Hover */
+  .hover-scale-card {
+    transition: transform 0.3s ease-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  /* Combined Effects */
+  /* Pop Up + Glow */
+  .hover-pop-glow {
+    transition: all 0.3s ease-out;
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+      background-color: #ebf8ff;
+    }
+  }
+  /* Pop Up + Rotate */
+  .hover-pop-rotate {
+    transition: transform 0.3s ease-out;
+  }
+  .hover-pop-rotate:hover {
+    transform: translateY(-0.5rem) rotate(1deg);
+  }
+
+  /* Scale + Glow */
+  .hover-scale-glow {
+    transition: all 0.3s ease-out;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+      background-color: #ebf8ff;
+    }
+  }
+
+  /* Rotate + Glow */
+  .hover-rotate-glow {
+    transition: all 0.3s ease-out;
+    &:hover {
+      transform: rotate(1deg);
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+      background-color: #ebf8ff;
+    }
+  }
+}
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-up {
+  animation: fade-slide-up 0.8s ease-out forwards;
+}
+
+.animation-delay-100 {
+  animation-delay: 0.1s;
+}
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+.animation-delay-600 {
+  animation-delay: 0.6s;
 }

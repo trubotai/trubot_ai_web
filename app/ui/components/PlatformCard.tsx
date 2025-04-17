@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Link from "next/link";
 
 interface PlatformCardProps {
   name: string;
@@ -7,6 +8,7 @@ interface PlatformCardProps {
   href?: string;
   className?: string;
 }
+
 export default function PlatformCard({
   name,
   feature,
@@ -14,18 +16,26 @@ export default function PlatformCard({
   href,
   className = "",
 }: PlatformCardProps) {
-  const Wrapper = href ? "a" : "div";
-
-  return (
-    <Wrapper
-      className={`block bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center hover:shadow-md transition ${className}`}
-      {...(href ? { href, target: "_blank", rel: "noopener noreferrer" } : {})}
+  return href ? (
+    <Link
+      href={href}
+      className={`block bg-white border border-gray-200 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-transform duration-300 hover:-translate-y-1 ${className}`}
     >
-      {icon && <div className="text-3xl mb-2">{icon}</div>}
+      {icon && <div className="text-4xl mb-4">{icon}</div>}
 
       <h4 className="text-lg font-semibold text-navy mb-1">{name}</h4>
 
       <p className="text-sm text-gray-600">{feature}</p>
-    </Wrapper>
+    </Link>
+  ) : (
+    <div
+      className={`block bg-white border border-gray-200 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-transform duration-300 hover:-translate-y-1 ${className}`}
+    >
+      {icon && <div className="text-4xl mb-4">{icon}</div>}
+
+      <h4 className="text-lg font-semibold text-navy mb-1">{name}</h4>
+
+      <p className="text-sm text-gray-600">{feature}</p>
+    </div>
   );
 }
