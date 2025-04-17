@@ -18,21 +18,27 @@ const Page = () => {
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {CareersList.map((role) => (
-          <CareerCard
+        {CareersList.map((role, index) => (
+          <div
             key={role.id}
-            title={role.title}
-            location={role.location}
-            type={role.type}
-            href={role.href}
-          />
+            className={`opacity-0 animate-fade-slide-up ${
+              index > 0 ? `animation-delay-${index * 100}` : ""
+            }`}
+          >
+            <CareerCard
+              title={role.title}
+              location={role.location}
+              type={role.type}
+              href={role.href}
+            />
+          </div>
         ))}
       </div>
 
-      <div className="text-center mt-16">
+      <div className="text-center mt-16 animate-fade-slide-up animation-delay-600">
         <a
           href="mailto:careers@trubotai.com?subject=Open Role Inquiry"
-          className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700"
+          className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
         >
           Don’t see your role? Reach out anyway
         </a>

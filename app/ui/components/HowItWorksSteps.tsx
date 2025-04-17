@@ -16,15 +16,18 @@ export default function HowItWorksSteps({
       ? "text-right"
       : "text-center";
 
+  const wrapperClass = align === "center" ? "mx-auto max-w-2xl" : "max-w-3xl";
+
   return (
     <div className={`mb-20 ${alignmentClass} ${className}`}>
       <ul
-        className={`space-y-4 ${
-          align === "center" ? "mx-auto max-w-lg" : ""
-        } list-decimal pl-5 text-gray-700`}
+        className={`list-decimal pl-6 space-y-6 text-gray-700 ${wrapperClass}`}
       >
-        {steps.map((step, i) => (
-          <li key={i} className="text-base leading-relaxed">
+        {steps.map((step, index) => (
+          <li
+            key={index}
+            className="text-base leading-relaxed hover:translate-x-1 transition-transform duration-300"
+          >
             {step}
           </li>
         ))}

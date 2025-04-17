@@ -16,7 +16,11 @@ const Hero = () => {
 
         <div className="flex justify-center gap-4">
           <Button href="/products">Explore Products</Button>
-          <Button href="/contact" variant="outline">
+          <Button
+            className="hover-scale-glow"
+            href="/contact"
+            variant="outline"
+          >
             Request Demo
           </Button>
         </div>
@@ -24,4 +28,5 @@ const Hero = () => {
     </PageLayout>
   );
 };
+
 export default Hero;

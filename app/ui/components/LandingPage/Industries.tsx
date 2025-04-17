@@ -15,9 +15,12 @@ const Industries = () => {
           {industryList.map((industry) => (
             <div
               key={industry.label}
-              className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm"
+              className="
+                bg-white border border-gray-200 rounded-xl p-6
+                hover-pop-glow
+              "
             >
-              <p className="text-xl">{industry.icon}</p>
+              <p className="text-3xl">{industry.icon}</p>
               <p className="mt-2 text-sm font-medium text-navy">
                 {industry.label}
               </p>

@@ -18,13 +18,17 @@ export default function UseCasesGrid({
 
   return (
     <div className={`mb-20 ${alignmentClass} ${className}`}>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
         {industries.map((industry) => (
           <div
             key={industry}
-            className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition"
+            className="group relative overflow-hidden rounded-xl p-6 bg-white border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
           >
-            <p className="text-sm font-medium text-navy">{industry}</p>
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-electric to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <div className="relative z-10">
+              <p className="text-sm font-semibold text-navy">{industry}</p>
+            </div>
           </div>
         ))}
       </div>
