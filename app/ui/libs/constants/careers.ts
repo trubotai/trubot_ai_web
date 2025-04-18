@@ -49,7 +49,7 @@ export const CareersList = [
     title: "Head of Products",
     location: "Remote",
     type: "Full-time/Part-time",
-    href: " https://lnkd.in/drSGxjma",
+    href: "https://lnkd.in/drSGxjma",
   },
 
   // Managers
@@ -142,7 +142,7 @@ export const CareersList = [
     href: "https://lnkd.in/dPH3mx4x",
   },
 
-  // Special / Executive Assistant
+  // Special Executive Assistant Role
   {
     id: "executive-assistant-to-founder-and-ceo",
     title: "Executive Assistant to Founder & CEO",
