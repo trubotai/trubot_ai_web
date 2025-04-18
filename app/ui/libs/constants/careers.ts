@@ -1,4 +1,21 @@
 export const CareersList = [
+  // Chiefs
+  {
+    id: "chief-operating-officer",
+    title: "Chief Operating Officer",
+    location: "Remote",
+    type: "Full-time/Part-time",
+    href: "https://lnkd.in/dcaw_zdp",
+  },
+  {
+    id: "chief-technology-officer",
+    title: "Chief Technology Officer (CTO)",
+    location: "Remote",
+    type: "Full-time/Part-time",
+    href: "https://lnkd.in/dmshACNY",
+  },
+
+  // Heads
   {
     id: "country-head-sales",
     title: "Country Head - Sales",
@@ -32,21 +49,16 @@ export const CareersList = [
     title: "Head of Products",
     location: "Remote",
     type: "Full-time/Part-time",
-    href: " https://lnkd.in/drSGxjma",
+    href: "https://lnkd.in/drSGxjma",
   },
+
+  // Managers
   {
-    id: "product-designer-lead",
-    title: "Product Designer Lead",
+    id: "project-manager-1",
+    title: "Project Manager",
     location: "Remote",
     type: "Full-time/Part-time",
-    href: "https://lnkd.in/dv8QHPCD",
-  },
-  {
-    id: "full-stack-hands-on-engineering-manager-lead",
-    title: "Full Stack Hands-on Engineering Manager/Lead",
-    location: "Remote",
-    type: "Full-time/Part-time",
-    href: " https://lnkd.in/dVhrhUrq",
+    href: "https://lnkd.in/dAaJPx6A",
   },
   {
     id: "product-manager",
@@ -54,13 +66,6 @@ export const CareersList = [
     location: "Remote",
     type: "Full-time/Part-time",
     href: "https://lnkd.in/dNtJTWGr",
-  },
-  {
-    id: "project-manager-1",
-    title: "Project Manager",
-    location: "Remote",
-    type: "Full-time/Part-time",
-    href: "https://lnkd.in/dAaJPx6A",
   },
   {
     id: "fundraising-manager",
@@ -90,27 +95,24 @@ export const CareersList = [
     type: "Full-time/Part-time",
     href: "https://lnkd.in/dMGiKUjq",
   },
+
+  // Leads
   {
-    id: "executive-assistant-to-founder-and-ceo",
-    title: "Executive Assistant to Founder & CEO",
-    location: "Tampa, FL",
-    type: "Part-time",
-    href: "https://lnkd.in/dYVs6Uwa",
-  },
-  {
-    id: "chief-operating-officer",
-    title: "Chief Operating Officer",
+    id: "product-designer-lead",
+    title: "Product Designer Lead",
     location: "Remote",
     type: "Full-time/Part-time",
-    href: "https://lnkd.in/dcaw_zdp",
+    href: "https://lnkd.in/dv8QHPCD",
   },
   {
-    id: "chief-technology-officer",
-    title: "Chief Technology Officer (CTO)",
+    id: "full-stack-hands-on-engineering-manager-lead",
+    title: "Full Stack Hands-on Engineering Manager/Lead",
     location: "Remote",
     type: "Full-time/Part-time",
-    href: "https://lnkd.in/dmshACNY",
+    href: " https://lnkd.in/dVhrhUrq",
   },
+
+  // Interns
   {
     id: "sales-intern",
     title: "Sales Intern",
@@ -138,5 +140,14 @@ export const CareersList = [
     location: "Remote",
     type: "Internship",
     href: "https://lnkd.in/dPH3mx4x",
+  },
+
+  // Special Executive Assistant Role
+  {
+    id: "executive-assistant-to-founder-and-ceo",
+    title: "Executive Assistant to Founder & CEO",
+    location: "Tampa, FL",
+    type: "Part-time",
+    href: "https://lnkd.in/dYVs6Uwa",
   },
 ];

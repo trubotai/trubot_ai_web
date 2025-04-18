@@ -98,6 +98,11 @@ export const solutionsList = [
         description:
           "Help professionals like plumbers, electricians, and carpenters handle bookings, reviews, and client support.",
       },
+      {
+        title: "Education & eLearning",
+        description:
+          "Enhance student engagement, automate queries, and manage course enrollments with AI bots.",
+      },
     ],
   },
 ];

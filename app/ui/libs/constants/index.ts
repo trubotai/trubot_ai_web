@@ -6,4 +6,5 @@ export const industryList = [
   { icon: "🏢", label: "Real Estate" },
   { icon: "🏪", label: "Small & Medium Enterprises" },
   { icon: "🛠️", label: "Home Services (Plumbers, Electricians, etc.)" },
+  { icon: "🎓", label: "Education & eLearning" },
 ];

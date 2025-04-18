@@ -24,6 +24,9 @@ export default function Header() {
             height={40}
             priority
           />
+          <span className="text-lg font-bold text-navy hidden sm:inline">
+            TruBot AI
+          </span>
         </Link>
 
         {/* Desktop Nav */}
