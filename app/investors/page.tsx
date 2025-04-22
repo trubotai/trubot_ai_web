@@ -61,7 +61,7 @@ const Page = () => {
       <div className="text-center mb-24 animate-fade-slide-up">
         <Link
           href="mailto:careers@trubotai.com?subject=Request%20for%20Investor%20Deck"
-          className="inline-block bg-electric text-white px-8 py-4 rounded-lg font-semibold"
+          className="inline-block bg-electric text-white px-8 py-4 rounded-lg font-semibold hover-scale-glow animate-fade-slide-up"
         >
           Request Investor Deck
         </Link>
