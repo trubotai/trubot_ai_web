@@ -11,6 +11,4 @@ export interface CareerPageData {
   benefits: string[];
   applyInstructions: string;
   applyEmail: string;
-  applyCC: string;
-  applyLink: string;
 }

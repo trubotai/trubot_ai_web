@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 
 import PageLayout from "@/app/ui/components/PageLayout";
 import SectionHeader from "@/app/ui/components/SectionHeader";
-import CareerIntro from "@/app/ui/components/CareerPage/CareerIntro";
 import CareerSection from "@/app/ui/components/CareerPage/CareerSection";
 import CareerListSection from "@/app/ui/components/CareerPage/CareerListSection";
 import CareerApplyCTA from "@/app/ui/components/CareerPage/CareerApplyCTA";
@@ -46,34 +45,38 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     benefits,
     applyInstructions,
     applyEmail,
-    applyCC,
-    applyLink,
   } = data;
 
   return (
     <PageLayout>
       <SectionHeader title={title} />
-      <CareerIntro location={location} type={type} />
 
-      <div className="prose prose-gray max-w-none mb-12">
+      <p className="text-sm text-gray-600 mb-6 text-center">
+        {location} · {type}
+      </p>
+
+      <div className="prose prose-gray max-w-3xl mx-auto mb-12">
         <CareerSection heading="Who are we?" content={about} />
+
         <CareerSection heading="Who are we looking for?" content={roleIntro} />
+
         <CareerListSection
           heading="Key Responsibilities"
           items={responsibilities}
         />
+
         <CareerListSection
           heading="Qualifications & Attributes"
           items={qualifications}
         />
+
         <CareerListSection heading="Why Join Us?" items={benefits} />
       </div>
 
       <CareerApplyCTA
+        title={title}
         instructions={applyInstructions}
         applyEmail={applyEmail}
-        applyCC={applyCC}
-        applyLink={applyLink}
       />
     </PageLayout>
   );

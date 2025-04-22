@@ -1,37 +1,40 @@
+import Link from "next/link";
+
 interface CareerApplyCTAProps {
+  title: string;
   instructions: string;
   applyEmail: string;
-  applyCC: string;
-  applyLink: string;
 }
 
 const CareerApplyCTA = ({
+  title,
   instructions,
   applyEmail,
-  applyCC,
-  applyLink,
 }: CareerApplyCTAProps) => {
+  const emailSubject = `Application for ${title}`;
+
   return (
-    <section className="text-center mt-16">
-      <p className="text-gray-700 mb-6">
+    <section className="text-center max-w-2xl mx-auto space-y-6">
+      <p className="text-gray-700 leading-relaxed">
         {instructions}{" "}
-        <a
-          href={`mailto:${applyEmail}`}
+        <Link
+          href={`mailto:${applyEmail}?subject=${encodeURIComponent(
+            emailSubject
+          )}`}
           className="text-electric font-semibold hover:underline"
         >
           {applyEmail}
-        </a>{" "}
-        (cc: {applyCC})
+        </Link>
       </p>
 
-      <a
-        href={applyLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700"
+      <Link
+        href={`mailto:${applyEmail}?subject=${encodeURIComponent(
+          emailSubject
+        )}`}
+        className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
       >
         Apply Now
-      </a>
+      </Link>
     </section>
   );
 };
