@@ -1,8 +1,8 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const productDesignerLeadPageData: CareerPageData = {
-  id: "product-designer-lead",
-  title: "Product Designer Lead",
+export const leadProductDesignerPageData: CareerPageData = {
+  id: "lead-product-designer",
+  title: "Lead Product Designer",
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
@@ -10,7 +10,7 @@ export const productDesignerLeadPageData: CareerPageData = {
   about:
     "We’re TruBot AI, a stealth-mode, fast-growing AI startup transforming business communication. Our unified platform includes 24/7 AI-powered chatbots, voice assistants, AI agents, and multi-channel integration with platforms like WhatsApp, Facebook Messenger, Telegram, and more. We empower businesses to scale intelligently through automation and innovation.",
   roleIntro:
-    "We are seeking a talented Product Designer Lead to drive the user experience and visual design of our next-generation AI solutions. You will play a critical role in shaping how users interact with TruBot AI’s cutting-edge technology across web and mobile platforms.",
+    "We are seeking a talented Lead Product Designer to drive the user experience and visual design of our next-generation AI solutions. You will play a critical role in shaping how users interact with TruBot AI’s cutting-edge technology across web and mobile platforms.",
   responsibilities: [
     "Design intuitive wireframes, prototypes, and high-fidelity UIs for AI-driven web and mobile applications.",
     "Conduct user research, usability testing, and competitive analysis to inform and enhance product design decisions.",
@@ -35,6 +35,6 @@ export const productDesignerLeadPageData: CareerPageData = {
     "💡 End-to-End Involvement – Own the design journey across major AI product launches.",
   ],
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Product Designer Lead'.",
+    "Email us with your resume with the subject line – 'Application for Lead Product Designer'.",
   applyEmail: "careers@trubotai.com",
 };

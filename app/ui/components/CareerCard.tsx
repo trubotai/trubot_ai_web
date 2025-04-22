@@ -33,8 +33,6 @@ export default function CareerCard({
       <Link
         href={href}
         className="text-electric text-sm font-semibold transition-colors duration-300 hover:text-blue-700 mt-auto"
-        target="_blank"
-        rel="noopener noreferrer"
       >
         Apply Now →
       </Link>

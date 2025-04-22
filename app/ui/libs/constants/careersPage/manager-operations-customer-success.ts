@@ -1,16 +1,16 @@
 import { CareerPageData } from "../../types/careerPage";
 
 export const customerSuccessManagerPageData: CareerPageData = {
-  id: "customer-success-client-onboarding-manager",
-  title: "Customer Success & Client Onboarding Manager",
+  id: "manager-operations-customer-success",
+  title: "Customer Success Manager",
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
-    "Join TruBot AI as a Customer Success & Client Onboarding Manager and help drive exceptional experiences for our growing client base in the AI automation industry.",
+    "Join TruBot AI as a Customer Success Manager and help drive exceptional experiences for our growing client base in the AI automation industry.",
   about:
     "TruBot AI is a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with AI chatbots, voice bots, multi-agent systems, social media automation, and intelligent invoicing — making customer support faster, smarter, and scalable.",
   roleIntro:
-    "We are seeking a proactive Customer Success & Client Onboarding Manager to ensure seamless adoption, engagement, and long-term retention of our AI-driven solutions. You will be the voice of our customers, ensuring they unlock the full value of TruBot AI.",
+    "We are seeking a proactive Customer Success Manager to ensure seamless adoption, engagement, and long-term retention of our AI-driven solutions. You will be the voice of our customers, ensuring they unlock the full value of TruBot AI.",
   responsibilities: [
     "Lead smooth onboarding processes, guiding new customers through setup and product implementation.",
     "Develop strong client relationships to drive engagement, satisfaction, and long-term retention.",
@@ -32,6 +32,6 @@ export const customerSuccessManagerPageData: CareerPageData = {
     "💡 High-Impact Role – Help build a category-defining AI solution trusted by modern businesses.",
   ],
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Customer Success & Client Onboarding Manager'.",
+    "Email us with your resume with the subject line – 'Application for Customer Success Manager'.",
   applyEmail: "careers@trubotai.com",
 };

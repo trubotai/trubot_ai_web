@@ -1,16 +1,16 @@
 import { CareerPageData } from "../../types/careerPage";
 
 export const productManagerPageData: CareerPageData = {
-  id: "product-manager",
-  title: "Hands-on Product Manager",
+  id: "manager-product",
+  title: "Product Manager",
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
-    "Shape the future of AI-driven business automation at TruBot AI as a Hands-on Product Manager. Drive product strategy and innovation for cutting-edge AI solutions.",
+    "Shape the future of AI-driven business automation at TruBot AI as a Product Manager. Drive product strategy and innovation for cutting-edge AI solutions.",
   about:
     "TruBot AI is a fast-growing AI startup revolutionizing how businesses communicate through advanced automation. Our unified platform empowers SMEs with AI chatbots, voice bots, multi-agent systems, social media automation, and invoice management — delivering faster support, greater efficiency, and measurable business growth.",
   roleIntro:
-    "We are looking for a hands-on, technically savvy Product Manager to own the roadmap and execution of our AI-powered customer support solutions. You’ll collaborate across engineering, design, and business teams to deliver innovative products that reshape how companies automate communication.",
+    "We are looking for a technically savvy Product Manager to own the roadmap and execution of our AI-powered customer support solutions. You’ll collaborate across engineering, design, and business teams to deliver innovative products that reshape how companies automate communication.",
   responsibilities: [
     "Define the product roadmap aligned with overall business goals.",
     "Lead feature development from concept through launch and iteration.",
@@ -32,6 +32,6 @@ export const productManagerPageData: CareerPageData = {
     "💡 High-Impact Role – Drive innovations in the booming AI and automation space.",
   ],
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Hands-on Product Manager'.",
+    "Email us with your resume with the subject line – 'Application for Product Manager'.",
   applyEmail: "careers@trubotai.com",
 };

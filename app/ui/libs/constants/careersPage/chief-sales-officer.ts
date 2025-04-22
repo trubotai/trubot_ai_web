@@ -1,6 +1,6 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const chiefSalesOfficerPageData: CareerPageData = {
+export const CSOPageData: CareerPageData = {
   id: "chief-sales-officer",
   title: "Chief Sales Officer",
   location: "Remote (Global)",

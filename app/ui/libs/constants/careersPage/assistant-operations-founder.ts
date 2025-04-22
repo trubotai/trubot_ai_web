@@ -1,16 +1,16 @@
 import { CareerPageData } from "../../types/careerPage";
 
 export const executiveAssistantPageData: CareerPageData = {
-  id: "executive-assistant-to-founder-and-ceo",
-  title: "Executive Assistant to Founder & CEO",
+  id: "assistant-operations-founder",
+  title: "Executive Assistant to Founder",
   location: "Onsite – Tampa, Florida (Hybrid Flexibility)",
   type: "Part-time (20 hours/week) | Morning or Afternoon Shift Options",
   shortDescription:
-    "Become a trusted strategic partner to the Founder & CEO at TruBot AI. Drive executive productivity and operational excellence at a transformative AI startup.",
+    "Become a trusted strategic partner to the Founder at TruBot AI. Drive executive productivity and operational excellence at a transformative AI startup.",
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through intelligent automation solutions. Our unified platform features AI-powered chatbots, voice agents, customer support tools, social media management, and invoice automation, helping SMEs cut operational costs by 40% while boosting customer satisfaction.",
   roleIntro:
-    "As Executive Assistant to our Founder & CEO, you’ll act as a crucial extension of leadership, ensuring seamless communication, time management, and execution of strategic initiatives. You'll be integral in scaling operations and shaping the foundation of TruBot AI’s growth.",
+    "As Executive Assistant to our Founder, you’ll act as a crucial extension of leadership, ensuring seamless communication, time management, and execution of strategic initiatives. You'll be integral in scaling operations and shaping the foundation of TruBot AI’s growth.",
   responsibilities: [
     "Provide strategic support by prioritizing tasks, preparing materials for investor meetings, and tracking key initiatives.",
     "Manage complex calendar scheduling, coordinate meetings across time zones, and handle confidential documentation.",
@@ -34,6 +34,6 @@ export const executiveAssistantPageData: CareerPageData = {
     "🏡 Future Hybrid Flexibility – Transition to a hybrid setup after probationary period.",
   ],
   applyInstructions:
-    "Email us with your resume and a short cover note answering: 1) Why you're excited about early-stage startups, 2) Your preferred work schedule, and 3) An example of how you improved an executive's productivity. Use the subject line – 'Application for Executive Assistant to Founder & CEO'.",
+    "Email us with your resume and a short cover note answering: 1) Why you're excited about early-stage startups, 2) Your preferred work schedule, and 3) An example of how you improved an executive's productivity. Use the subject line – 'Application for Executive Assistant to Founder'.",
   applyEmail: "careers@trubotai.com",
 };

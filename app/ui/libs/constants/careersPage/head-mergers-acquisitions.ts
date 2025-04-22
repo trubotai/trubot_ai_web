@@ -1,8 +1,8 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const headMAndAPageData: CareerPageData = {
-  id: "head-m-a",
-  title: "Head - Mergers & Acquisitions (M&A)",
+export const headMAPageData: CareerPageData = {
+  id: "head-mergers-acquisitions",
+  title: "Head of M&A",
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
@@ -35,6 +35,6 @@ export const headMAndAPageData: CareerPageData = {
     "💡 High-Impact Role – Drive strategic growth in a dynamic AI startup ecosystem.",
   ],
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Head - M&A'.",
+    "Email us with your resume with the subject line – 'Application for Head of M&A'.",
   applyEmail: "careers@trubotai.com",
 };

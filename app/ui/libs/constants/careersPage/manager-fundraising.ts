@@ -1,7 +1,7 @@
 import { CareerPageData } from "../../types/careerPage";
 
 export const fundraisingManagerPageData: CareerPageData = {
-  id: "fundraising-manager",
+  id: "manager-fundraising",
   title: "Fundraising Manager",
   location: "Remote (Global)",
   type: "Full-time/Part-time",

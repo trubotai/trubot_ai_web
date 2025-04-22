@@ -1,8 +1,8 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const fullStackLeadPageData: CareerPageData = {
-  id: "full-stack-hands-on-engineering-manager-lead",
-  title: "Full Stack Hands-on Engineering Manager/Lead",
+export const fullStackEngineeringManagerPageData: CareerPageData = {
+  id: "manager-technology-fullstack-engineer",
+  title: "Full Stack Engineering Manager",
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
@@ -10,7 +10,7 @@ export const fullStackLeadPageData: CareerPageData = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs to streamline operations with AI-powered chatbots, voice bots, AI agents, social media management, and invoice automation.",
   roleIntro:
-    "We are seeking a Full Stack Hands-on Engineering Manager/Lead to drive our technical strategy, develop scalable AI-powered products, and mentor a growing team. You will be instrumental in building next-gen customer support solutions using AI, NLP, and machine learning technologies.",
+    "We are seeking a Full Stack Engineering Manager to drive our technical strategy, develop scalable AI-powered products, and mentor a growing team. You will be instrumental in building next-gen customer support solutions using AI, NLP, and machine learning technologies.",
   responsibilities: [
     "Shape and execute the technical vision aligned with business goals and market demands.",
     "Lead development of AI-powered chatbots, NLP systems, sentiment analysis tools, and intelligent lead generation platforms.",
@@ -38,6 +38,6 @@ export const fullStackLeadPageData: CareerPageData = {
     "💡 High-Impact Role – Build a category-defining AI solution from the ground up.",
   ],
   applyInstructions:
-    "Email us your resume with the subject line – 'Application for Full Stack Engineer Manager/Lead' and take the first step in building the next big thing in AI!",
+    "Email us your resume with the subject line – 'Application for Full Stack Engineering Manager' and take the first step in building the next big thing in AI!",
   applyEmail: "careers@trubotai.com",
 };

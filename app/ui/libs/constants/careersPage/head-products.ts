@@ -1,7 +1,7 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const headOfProductsPageData: CareerPageData = {
-  id: "head-of-products",
+export const headProductsPageData: CareerPageData = {
+  id: "head-products",
   title: "Head of Products",
   location: "Remote (Global)",
   type: "Full-time/Part-time",

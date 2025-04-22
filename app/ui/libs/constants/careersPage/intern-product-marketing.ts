@@ -1,7 +1,7 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const productInternPageData: CareerPageData = {
-  id: "product-intern",
+export const productMarketingInternPageData: CareerPageData = {
+  id: "intern-product-marketing",
   title: "Product Marketing Intern",
   location: "Remote (Global)",
   type: "Internship | 3–6 Months",

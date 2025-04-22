@@ -1,8 +1,8 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const hRManagerPageData: CareerPageData = {
-  id: "hr-manager",
-  title: "Human Resource Manager",
+export const humanResourcesManagerPageData: CareerPageData = {
+  id: "manager-human-resources",
+  title: "Human Resources Manager",
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
@@ -10,7 +10,7 @@ export const hRManagerPageData: CareerPageData = {
   about:
     "We are TruBot AI, a fast-growing AI startup transforming business communication through AI-driven chatbots, voicebots, AI agents, and multi-channel automation. Our mission is to help SMEs scale operations, streamline customer support, and grow faster with intelligent automation.",
   roleIntro:
-    "As our Human Resource Manager, you will be a key force behind building our team and culture. You will lead recruitment, employee development, and HR operations, ensuring a thriving, innovative, and people-first work environment.",
+    "As our Human Resources Manager, you will be a key force behind building our team and culture. You will lead recruitment, employee development, and HR operations, ensuring a thriving, innovative, and people-first work environment.",
   responsibilities: [
     "Lead talent acquisition, defining hiring needs and attracting top-tier, diverse talent.",
     "Foster a positive and inclusive company culture that promotes employee well-being and engagement.",
@@ -37,6 +37,6 @@ export const hRManagerPageData: CareerPageData = {
     "💡 High-Impact Role – Build the culture and systems for a category-defining AI startup.",
   ],
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Human Resource Manager'.",
+    "Email us with your resume with the subject line – 'Application for Human Resources Manager'.",
   applyEmail: "careers@trubotai.com",
 };

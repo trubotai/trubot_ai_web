@@ -1,7 +1,7 @@
 import { CareerPageData } from "../../types/careerPage";
 
 export const fullStackDeveloperInternPageData: CareerPageData = {
-  id: "full-stack-developer-intern",
+  id: "intern-technology-fullstack-developer",
   title: "Full Stack Developer Intern",
   location: "Remote (Global)",
   type: "Internship (3–6 Months)",

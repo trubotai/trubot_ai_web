@@ -1,8 +1,8 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const cTOPageData: CareerPageData = {
+export const CTOPageData: CareerPageData = {
   id: "chief-technology-officer",
-  title: "Chief Technology Officer (CTO)",
+  title: "Chief Technology Officer",
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
@@ -10,7 +10,7 @@ export const cTOPageData: CareerPageData = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs to automate operations using AI-powered chatbots, voice bots, AI agents, social media management, and invoice automation.",
   roleIntro:
-    "We are seeking a visionary Chief Technology Officer (CTO) to define and execute our technical roadmap. As a core member of our founding team, you will lead the development of AI-driven products, oversee scalability, and foster a culture of innovation.",
+    "We are seeking a visionary Chief Technology Officer to define and execute our technical roadmap. As a core member of our founding team, you will lead the development of AI-driven products, oversee scalability, and foster a culture of innovation.",
   responsibilities: [
     "Develop and execute a long-term technical strategy aligned with business goals and growth plans.",
     "Lead the end-to-end development of AI-powered products and ensure on-time, high-quality delivery.",

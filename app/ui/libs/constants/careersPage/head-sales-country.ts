@@ -1,16 +1,16 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const countryHeadSalesPageData: CareerPageData = {
-  id: "country-head-sales",
-  title: "Country Head – Sales",
+export const headSalesCountryPageData: CareerPageData = {
+  id: "head-sales-country",
+  title: "Head of Sales - Country",
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
-    "Lead regional growth at TruBot AI as Country Head – Sales. Drive client acquisition and establish our footprint in AI-powered customer engagement.",
+    "Lead regional growth at TruBot AI as Head of Sales - Country. Drive client acquisition and establish our footprint in AI-powered customer engagement.",
   about:
     "TruBot AI is a fast-growing AI startup revolutionizing business communication through next-generation automation solutions. Our platform empowers SMEs with AI chatbots, voice bots, multi-agent systems, social media management, and invoice automation to streamline operations, enhance customer experience, and scale efficiently.",
   roleIntro:
-    "We are seeking an ambitious Country Head – Sales to lead our regional market expansion. You will define go-to-market strategies, build high-impact client relationships, and drive revenue growth as a critical part of our founding team.",
+    "We are seeking an ambitious Head of Sales - Country to lead our regional market expansion. You will define go-to-market strategies, build high-impact client relationships, and drive revenue growth as a critical part of our founding team.",
   responsibilities: [
     "Design and execute regional sales and go-to-market strategies.",
     "Develop and nurture strong relationships with key enterprise decision-makers.",
@@ -34,6 +34,6 @@ export const countryHeadSalesPageData: CareerPageData = {
     "💡 High-Impact Role – Contribute directly to building a leading AI platform.",
   ],
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Country Head – Sales'.",
+    "Email us with your resume with the subject line – 'Application for Head of Sales - Country'.",
   applyEmail: "careers@trubotai.com",
 };

@@ -1,8 +1,8 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const headHRPageData: CareerPageData = {
-  id: "head-hr",
-  title: "Head Human Resource Officer",
+export const headHumanResourcesPageData: CareerPageData = {
+  id: "head-human-resources",
+  title: "Head of Human Resources",
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
@@ -10,7 +10,7 @@ export const headHRPageData: CareerPageData = {
   about:
     "TruBot AI is a fast-growing AI startup transforming how businesses communicate and scale through automation. Our unified platform empowers SMEs by integrating AI chatbots, voice bots, multi-agent systems, social media management, and smart invoicing, revolutionizing business efficiency.",
   roleIntro:
-    "We are seeking a Head Human Resource Officer to architect and drive our HR strategy across recruitment, culture building, employee development, and performance management. As a core member of our leadership team, you’ll lay the foundation for a strong, engaged, and high-performing workforce at TruBot AI.",
+    "We are seeking a Head of Human Resources to architect and drive our HR strategy across recruitment, culture building, employee development, and performance management. As a core member of our leadership team, you’ll lay the foundation for a strong, engaged, and high-performing workforce at TruBot AI.",
   responsibilities: [
     "Lead the full-cycle recruitment strategy, attracting and retaining top global talent.",
     "Build and nurture an inclusive, collaborative, and high-performance culture.",
@@ -36,6 +36,6 @@ export const headHRPageData: CareerPageData = {
     "💡 High-Impact Role – Build a thriving, people-centric culture from the ground up.",
   ],
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Head HR'.",
+    "Email us with your resume with the subject line – 'Application for Head of Human Resources'.",
   applyEmail: "careers@trubotai.com",
 };

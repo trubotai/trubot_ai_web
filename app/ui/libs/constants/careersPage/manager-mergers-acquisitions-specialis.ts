@@ -1,7 +1,7 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const mASpecialistManagerPageData: CareerPageData = {
-  id: "m-a-specialist-manager",
+export const MASpecialistManagerPageData: CareerPageData = {
+  id: "manager-mergers-acquisitions-specialist",
   title: "M&A Specialist Manager",
   location: "Remote (Global)",
   type: "Full-time/Part-time",

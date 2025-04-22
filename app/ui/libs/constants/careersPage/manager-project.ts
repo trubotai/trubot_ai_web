@@ -1,7 +1,7 @@
 import { CareerPageData } from "../../types/careerPage";
 
 export const projectManagerPageData: CareerPageData = {
-  id: "project-manager",
+  id: "manager-project",
   title: "Project Manager",
   location: "Remote (Global)",
   type: "Full-time/Part-time",

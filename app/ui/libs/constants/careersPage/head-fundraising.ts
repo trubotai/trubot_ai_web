@@ -1,8 +1,8 @@
 import { CareerPageData } from "../../types/careerPage";
 
-export const headFundraisingOfficerPageData: CareerPageData = {
-  id: "head-fundraising-officer",
-  title: "Head Fundraising Officer",
+export const headFundraisingPageData: CareerPageData = {
+  id: "head-fundraising",
+  title: "Head of Fundraising",
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
@@ -10,7 +10,7 @@ export const headFundraisingOfficerPageData: CareerPageData = {
   about:
     "TruBot AI is a fast-growing AI startup transforming how businesses engage and scale through intelligent automation. Our platform integrates AI chatbots, voice bots, AI agents, social media automation, and invoicing solutions — helping SMEs streamline customer interactions and optimize operations.",
   roleIntro:
-    "We are seeking a strategic and driven Head Fundraising Officer to spearhead our investment strategy. You will lead fundraising initiatives, build strong investor relationships, and help secure the financial foundation for our ambitious growth plans in the AI and SaaS space.",
+    "We are seeking a strategic and driven Head of Fundraising to spearhead our investment strategy. You will lead fundraising initiatives, build strong investor relationships, and help secure the financial foundation for our ambitious growth plans in the AI and SaaS space.",
   responsibilities: [
     "Develop and execute a comprehensive fundraising strategy aligned with company growth goals.",
     "Build, nurture, and expand relationships with investors, VCs, and financial stakeholders.",
@@ -36,6 +36,6 @@ export const headFundraisingOfficerPageData: CareerPageData = {
     "💡 High-Impact Leadership Role – Drive financial growth for a category-defining AI solution.",
   ],
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Head Fundraising Officer'.",
+    "Email us with your resume with the subject line – 'Application for Head of Fundraising'.",
   applyEmail: "careers@trubotai.com",
 };
