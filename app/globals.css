@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "./ui/styles/animations.css";
+
+/* Tailwind CSS v4 uses CSS variables — define custom theme variables */
+@theme {
+  --color-navy: #1f2937;
+  --color-electric: #3b82f6;
+  --color-gray-soft: #f3f4f6;
+  --color-light: #ffffff;
+  --color-dark: #0f172a;
+
+  --font-sans: "Sora", sans-serif;
+}
+
+/* Custom utility classes if needed */
+.bg-light {
+  background-color: var(--color-light);
+}
+
+.text-navy {
+  color: var(--color-navy);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Global element defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-light);
+  color: var(--color-navy);
+}
