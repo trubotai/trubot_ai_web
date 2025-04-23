@@ -1,14 +1,14 @@
-export interface Platform {
+export interface PlatformType {
   name: string;
   feature: string;
   icon?: React.ReactNode;
 }
 
-export interface ProductPageData {
+export interface ProductPageDataType {
   id: string;
   title: string;
   description: string;
-  platforms: Platform[];
+  platforms: PlatformType[];
   steps: string[];
   industries: string[];
 }

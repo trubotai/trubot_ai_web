@@ -1,7 +1,8 @@
 import PageLayout from "../ui/components/PageLayout";
 import SectionHeader from "../ui/components/SectionHeader";
 import CareerCard from "../ui/components/CareerCard";
-import { CareersList } from "../ui/libs/constants/careers";
+import Button from "../ui/components/Button";
+import { careerList } from "../ui/libs/constants/careers";
 
 export const metadata = {
   title: "Careers – TruBot AI",
@@ -18,11 +19,11 @@ const Page = () => {
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {CareersList.map((role, index) => (
+        {careerList.map((role, index) => (
           <div
             key={role.id}
-            className={`opacity-0 animate-fade-slide-up ${
-              index > 0 ? `animation-delay-${index * 100}` : ""
+            className={`animate-fade-slide-up animation-delay-${
+              (index + 1) * 100
             }`}
           >
             <CareerCard
@@ -36,12 +37,12 @@ const Page = () => {
       </div>
 
       <div className="text-center mt-16 animate-fade-slide-up animation-delay-600">
-        <a
+        <Button
           href="mailto:careers@trubotai.com?subject=Open Role Inquiry"
-          className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+          variant="primary"
         >
           Don’t see your role? Reach out anyway
-        </a>
+        </Button>
       </div>
     </PageLayout>
   );

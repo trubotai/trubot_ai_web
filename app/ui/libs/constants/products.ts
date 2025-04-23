@@ -1,4 +1,4 @@
-export const productsList = [
+const productList = [
   {
     id: "chatbots",
     title: "AI Chatbots",
@@ -222,7 +222,7 @@ export const productsList = [
   },
 ];
 
-export const homePageProductsList = [
+const homePageProductList = [
   {
     name: "Instagram Chatbot",
     description: "Automate DMs, lead capture, and comment replies with ease.",
@@ -239,3 +239,5 @@ export const homePageProductsList = [
     href: "/products/voice",
   },
 ];
+
+export { productList, homePageProductList };

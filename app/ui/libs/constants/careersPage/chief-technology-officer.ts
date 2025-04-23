@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const CTOPageData: CareerPageData = {
+const CTOPageData: CareerPageDataType = {
   id: "chief-technology-officer",
   title: "Chief Technology Officer",
   location: "Remote (Global)",
@@ -37,7 +37,12 @@ export const CTOPageData: CareerPageData = {
     "💰 Performance-Based Compensation – Equity and commissions transitioning to competitive salary.",
     "💡 High-Impact Role – Shape the future of AI-powered business automation from the ground up.",
   ],
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
   applyInstructions:
     "Email us your resume with the subject line – 'Application for CTO' and become a part of TruBot AI's leadership team!",
   applyEmail: "careers@trubotai.com",
 };
+
+export { CTOPageData };

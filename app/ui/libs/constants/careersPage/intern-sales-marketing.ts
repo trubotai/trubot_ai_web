@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const salesMarketingInternPageData: CareerPageData = {
+const salesMarketingInternPageData: CareerPageDataType = {
   id: "intern-sales-marketing",
   title: "Sales and Marketing Intern",
   location: "Remote (Global)",
@@ -35,3 +35,5 @@ export const salesMarketingInternPageData: CareerPageData = {
     "Email us with your resume and subject line – 'Application for Sales and Marketing Intern' to start your journey with TruBot AI.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { salesMarketingInternPageData };

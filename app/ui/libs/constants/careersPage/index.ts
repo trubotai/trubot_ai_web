@@ -1,4 +1,4 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
 import { executiveAssistantPageData } from "./assistant-operations-founder";
 import { COOPageData } from "./chief-operations-officer";
@@ -22,7 +22,7 @@ import { productManagerPageData } from "./manager-product";
 import { projectManagerPageData } from "./manager-project";
 import { fullStackEngineeringManagerPageData } from "./manager-technology-fullstack-engineering";
 
-export const careerPagesMap: Record<string, CareerPageData> = {
+export const careerPagesMap: Record<string, CareerPageDataType> = {
   "assistant-operations-founder": executiveAssistantPageData,
   "chief-operations-officer": COOPageData,
   "chief-sales-officer": CSOPageData,

@@ -1,6 +1,6 @@
-import { ProductPageData } from "../../types/productPage";
+import { ProductPageDataType } from "../../types/productPage";
 
-export const socialToolsPageData: ProductPageData = {
+const socialToolsPageData: ProductPageDataType = {
   id: "social",
   title: "AI Tools for Social Media Growth & SEO Success",
   description:
@@ -57,3 +57,5 @@ export const socialToolsPageData: ProductPageData = {
     "Health & Wellness",
   ],
 };
+
+export { socialToolsPageData };

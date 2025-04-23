@@ -1,15 +1,23 @@
+import { JSX } from "react";
+
 interface PageLayoutProps {
   children: React.ReactNode;
   className?: string;
+  id?: string;
+  as?: keyof JSX.IntrinsicElements;
 }
 
-export default function PageLayout({
+const PageLayout = ({
   children,
   className = "",
-}: PageLayoutProps) {
+  id,
+  as: Component = "section",
+}: PageLayoutProps) => {
   return (
-    <section className={`max-w-7xl px-4 mx-auto py-16 ${className}`}>
+    <Component id={id} className={`max-w-7xl mx-auto px-4 py-16 ${className}`}>
       {children}
-    </section>
+    </Component>
   );
-}
+};
+
+export default PageLayout;

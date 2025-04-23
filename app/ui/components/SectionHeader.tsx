@@ -3,14 +3,16 @@ interface SectionHeaderProps {
   subtitle?: string;
   align?: "center" | "left" | "right";
   className?: string;
+  animate?: boolean;
 }
 
-export default function SectionHeader({
+const SectionHeader = ({
   title,
   subtitle,
   align = "center",
   className = "",
-}: SectionHeaderProps) {
+  animate = true,
+}: SectionHeaderProps) => {
   const alignment =
     align === "center"
       ? "text-center"
@@ -22,7 +24,11 @@ export default function SectionHeader({
     align === "center" ? "mx-auto" : align === "right" ? "ml-auto" : "";
 
   return (
-    <div className={`mb-10 ${alignment} ${className}`}>
+    <div
+      className={`mb-10 ${alignment} ${className} ${
+        animate ? "animate-fade-slide-up" : ""
+      }`}
+    >
       <h2 className="text-3xl font-extrabold text-navy mb-4 leading-tight">
         {title}
       </h2>
@@ -34,4 +40,6 @@ export default function SectionHeader({
       )}
     </div>
   );
-}
+};
+
+export default SectionHeader;
