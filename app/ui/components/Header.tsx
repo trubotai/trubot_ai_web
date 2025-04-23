@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 import { navLinkList } from "../libs/constants/site";
 
-export default function Header() {
+const Header = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -30,12 +30,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden xl:flex items-center gap-6">
           {navLinkList.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`text-sm font-medium hover:text-electric transition ${
+              className={`text-sm font-medium transition-transform duration-200 ease-out transform hover:scale-[1.05] hover:text-electric hover:underline underline-offset-4 decoration-electric ${
                 pathname === href ? "text-electric" : "text-gray-700"
               }`}
             >
@@ -45,7 +45,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="ml-4 bg-electric text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition"
+            className="ml-4 bg-electric text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition hover-scale-glow"
           >
             Request Demo
           </Link>
@@ -53,21 +53,27 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-2xl text-navy focus:outline-none"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          className="xl:hidden text-2xl text-navy focus:outline-none"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
-          ☰
+          <span
+            key={menuOpen ? "close" : "open"}
+            className="transition-all duration-300 ease-in-out"
+          >
+            {menuOpen ? "✕" : "☰"}
+          </span>
         </button>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-6 flex flex-col gap-2 items-center">
+        <div className="xl:hidden px-4 pb-6 flex flex-col gap-2 items-center animate-fade-slide-up">
           {navLinkList.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`block py-2 text-sm font-medium ${
+              className={`block py-2 text-sm font-medium transition-transform duration-200 ease-out transform hover:scale-[1.05] hover:text-electric ${
                 pathname === href ? "text-electric" : "text-gray-700"
               }`}
               onClick={() => setMenuOpen(false)}
@@ -78,7 +84,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="block mt-2 bg-electric text-white text-center px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition"
+            className="block mt-2 bg-electric text-white text-center px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition hover-scale-glow"
             onClick={() => setMenuOpen(false)}
           >
             Request Demo
@@ -87,4 +93,6 @@ export default function Header() {
       )}
     </header>
   );
-}
+};
+
+export default Header;

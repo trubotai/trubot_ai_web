@@ -11,4 +11,10 @@ const navLinkList = [
   { href: "/contact", label: "Contact" },
 ];
 
-export { navLinkList };
+const footerLinkList = [
+  { href: "/products", label: "Products" },
+  { href: "/solutions", label: "Solutions" },
+  { href: "/careers", label: "Careers" },
+];
+
+export { navLinkList, footerLinkList };

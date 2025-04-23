@@ -1,15 +1,18 @@
 import Link from "next/link";
 
-export default function Footer() {
+import { footerLinkList } from "../libs/constants/site";
+
+const Footer = () => {
   return (
     <footer className="bg-gray-100 text-sm text-gray-600 py-10 border-t">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Company Info */}
         <div>
           <p className="text-navy font-bold text-lg">TruBot AI</p>
 
-          <p className="mt-2 text-sm">
-            Building AI that works for real businesses.
+          <p className="mt-2 text-sm leading-relaxed">
+            Building AI that works for real businesses. Automating the future —
+            one workflow at a time.
           </p>
         </div>
 
@@ -18,32 +21,16 @@ export default function Footer() {
           <h4 className="font-semibold text-navy mb-2">Links</h4>
 
           <ul className="space-y-2">
-            <li>
-              <Link
-                href="/products"
-                className="hover:text-electric transition-colors duration-300"
-              >
-                Products
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/solutions"
-                className="hover:text-electric transition-colors duration-300"
-              >
-                Solutions
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/careers"
-                className="hover:text-electric transition-colors duration-300"
-              >
-                Careers
-              </Link>
-            </li>
+            {footerLinkList.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="transition-all duration-300 hover:text-electric hover:underline underline-offset-4 hover:scale-[1.05] inline-block"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -53,21 +40,21 @@ export default function Footer() {
 
           <ul className="space-y-2">
             <li>
-              <a
+              <Link
                 href="mailto:support@trubotai.com"
-                className="hover:text-electric transition-colors duration-300"
+                className="transition-all duration-300 hover:text-electric hover:underline underline-offset-4 hover:scale-[1.05] inline-block"
               >
                 support@trubotai.com
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 href="mailto:careers@trubotai.com"
-                className="hover:text-electric transition-colors duration-300"
+                className="transition-all duration-300 hover:text-electric hover:underline underline-offset-4 hover:scale-[1.05] inline-block"
               >
                 careers@trubotai.com
-              </a>
+              </Link>
             </li>
 
             <li className="flex gap-4 pt-2">
@@ -75,16 +62,18 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/trubotai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-electric transition-colors duration-300"
+                aria-label="TruBot AI on LinkedIn"
+                className="transition-all duration-300 hover:text-electric hover:underline underline-offset-4 hover:scale-[1.05]"
               >
                 LinkedIn
               </Link>
 
               <Link
-                href="https://twitter.com/trubotai"
+                href="https://www.linkedin.com/company/trubotai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-electric transition-colors duration-300"
+                aria-label="TruBot AI on Twitter"
+                className="transition-all duration-300 hover:text-electric hover:underline underline-offset-4 hover:scale-[1.05]"
               >
                 Twitter
               </Link>
@@ -97,7 +86,7 @@ export default function Footer() {
       <div className="text-center mt-8 text-xs space-x-4">
         <Link
           href="/privacy"
-          className="hover:text-electric transition-colors duration-300"
+          className="transition-all duration-300 hover:text-electric hover:underline underline-offset-4 hover:scale-[1.05] inline-block"
         >
           Privacy Policy
         </Link>
@@ -106,11 +95,13 @@ export default function Footer() {
 
         <Link
           href="/terms"
-          className="hover:text-electric transition-colors duration-300"
+          className="transition-all duration-300 hover:text-electric hover:underline underline-offset-4 hover:scale-[1.05] inline-block"
         >
           Terms of Service
         </Link>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
