@@ -14,18 +14,20 @@ export default function GlobalError({
   }, [error]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center p-6">
-      <h1 className="text-4xl font-bold text-navy mb-2">
+    <div className="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 animate-fade-slide-up">
+      <h1 className="text-4xl font-bold text-navy mb-3">
         Something went wrong
       </h1>
 
-      <p className="text-gray-600 mb-4">
-        An unexpected error occurred. Please try again or contact support.
+      <p className="text-gray-600 max-w-md mb-6">
+        An unexpected error occurred. Please try again or contact our support
+        team if the issue persists.
       </p>
 
       <button
-        onClick={() => reset()}
-        className="bg-electric text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700"
+        onClick={reset}
+        className="bg-electric text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
+        aria-label="Try Again"
       >
         Try Again
       </button>
