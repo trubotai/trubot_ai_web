@@ -31,6 +31,9 @@ const fundraisingManagerPageData: CareerPageDataType = {
     "💰 Performance-Based Compensation – Success-based commissions transitioning to competitive salary.",
     "💡 High-Impact Role – Influence the growth of a next-gen AI platform shaping the future of automation.",
   ],
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary.",
+  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
   applyInstructions:
     "Email us with your resume with the subject line – 'Application for Fundraising Manager'.",
   applyEmail: "careers@trubotai.com",

@@ -36,6 +36,9 @@ const COOPageData: CareerPageDataType = {
     "💰 Performance-Based Compensation – Sales commissions evolving into a competitive salary post-profitability.",
     "💡 High-Impact Leadership Role – Build and scale a category-defining AI solution from the ground up.",
   ],
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
   applyInstructions:
     "Email us with your resume with the subject line – 'Application for Chief Operating Officer'.",
   applyEmail: "careers@trubotai.com",

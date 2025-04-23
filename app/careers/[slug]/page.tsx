@@ -45,6 +45,8 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     benefits,
     applyInstructions,
     applyEmail,
+    workingHours,
+    compensation, // added the new field here
   } = data;
 
   return (
@@ -67,6 +69,22 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           content={roleIntro}
           className="animate-fade-slide-up animation-delay-400"
         />
+
+        {workingHours && (
+          <CareerSection
+            heading="Working Hours"
+            content={workingHours}
+            className="animate-fade-slide-up animation-delay-800"
+          />
+        )}
+
+        {compensation && (
+          <CareerSection
+            heading="Compensation"
+            content={compensation}
+            className="animate-fade-slide-up animation-delay-900"
+          />
+        )}
 
         <CareerListSection
           heading="Key Responsibilities"

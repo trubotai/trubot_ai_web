@@ -8,12 +8,12 @@ const headFundraisingPageData: CareerPageDataType = {
   shortDescription:
     "Lead fundraising strategies, drive investor engagement, and secure funding to scale TruBot AI’s next phase of growth.",
   about:
-    "TruBot AI is a fast-growing AI startup transforming how businesses engage and scale through intelligent automation. Our platform integrates AI chatbots, voice bots, AI agents, social media automation, and invoicing solutions — helping SMEs streamline customer interactions and optimize operations.",
+    "TruBot AI is a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified AI platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation. We are transforming how businesses interact with customers, automate processes, and scale operations.",
   roleIntro:
-    "We are seeking a strategic and driven Head of Fundraising to spearhead our investment strategy. You will lead fundraising initiatives, build strong investor relationships, and help secure the financial foundation for our ambitious growth plans in the AI and SaaS space.",
+    "We are seeking a dynamic and strategic Head of Fundraising to lead our efforts in securing investment and driving financial growth. Your ability to build relationships, craft compelling pitches, and secure funding will be critical to our success.",
   responsibilities: [
     "Develop and execute a comprehensive fundraising strategy aligned with company growth goals.",
-    "Build, nurture, and expand relationships with investors, VCs, and financial stakeholders.",
+    "Build and maintain strong relationships with investors, venture capitalists, and financial stakeholders.",
     "Create compelling pitch decks, financial projections, and investment materials showcasing TruBot AI’s vision and market potential.",
     "Lead funding rounds, ensuring preparedness for due diligence and seamless execution.",
     "Collaborate with leadership to align financial planning with operational scaling strategies.",

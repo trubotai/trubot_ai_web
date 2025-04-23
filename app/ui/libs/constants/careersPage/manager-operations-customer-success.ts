@@ -6,11 +6,11 @@ const customerSuccessManagerPageData: CareerPageDataType = {
   location: "Remote (Global)",
   type: "Full-time/Part-time",
   shortDescription:
-    "Join TruBot AI as a Customer Success Manager and help drive exceptional experiences for our growing client base in the AI automation industry.",
+    "Join TruBot AI as a Customer Success & Client Onboarding Manager and help drive exceptional experiences for our growing client base in the AI automation industry.",
   about:
     "TruBot AI is a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with AI chatbots, voice bots, multi-agent systems, social media automation, and intelligent invoicing — making customer support faster, smarter, and scalable.",
   roleIntro:
-    "We are seeking a proactive Customer Success Manager to ensure seamless adoption, engagement, and long-term retention of our AI-driven solutions. You will be the voice of our customers, ensuring they unlock the full value of TruBot AI.",
+    "We are seeking a proactive Customer Success & Client Onboarding Manager to ensure seamless adoption, engagement, and long-term retention of our AI-driven solutions. You will be the voice of our customers, ensuring they unlock the full value of TruBot AI.",
   responsibilities: [
     "Lead smooth onboarding processes, guiding new customers through setup and product implementation.",
     "Develop strong client relationships to drive engagement, satisfaction, and long-term retention.",
@@ -31,6 +31,9 @@ const customerSuccessManagerPageData: CareerPageDataType = {
     "💰 Performance-Based Compensation – Commissions transitioning to competitive salary post-profitability.",
     "💡 High-Impact Role – Help build a category-defining AI solution trusted by modern businesses.",
   ],
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
   applyInstructions:
     "Email us with your resume with the subject line – 'Application for Customer Success Manager'.",
   applyEmail: "careers@trubotai.com",

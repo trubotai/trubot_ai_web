@@ -8,29 +8,31 @@ const headProductsPageData: CareerPageDataType = {
   shortDescription:
     "Lead the product vision, strategy, and execution for TruBot AI’s next-generation chatbots, voice automation, and AI solutions.",
   about:
-    "TruBot AI is a stealth-mode, fast-growing AI startup redefining customer engagement. Our unified platform offers 24/7 AI-powered chatbots, voice bots, AI agents, multi-channel integrations, and AI-driven lead generation to empower businesses to automate, scale, and thrive.",
+    "We are TruBot AI, a stealth-mode, fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified AI platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation. We are transforming how businesses interact with customers, automate processes, and scale operations.",
   roleIntro:
     "We are seeking an innovative and hands-on Head of Products to lead the strategic roadmap and development of our AI-powered customer engagement solutions. You’ll work closely with engineering, design, and leadership teams to deliver market-leading AI products that drive real-world impact.",
   responsibilities: [
-    "Define and execute product vision, strategy, and roadmaps aligned with business growth goals.",
-    "Oversee the full lifecycle of AI product development — from ideation to launch and optimization.",
-    "Conduct deep customer research to understand user pain points and identify market opportunities.",
-    "Analyze product metrics, gather user feedback, and drive data-informed product iterations.",
-    "Lead cross-functional collaboration between engineering, design, and business teams to ensure seamless product launches.",
+    "Product Strategy & Vision: Define and align the roadmap with business goals.",
+    "Feature Development: Oversee the end-to-end execution of product features.",
+    "Market Research: Conduct customer research to identify pain points and opportunities.",
+    "Data-Driven Decision Making: Analyze performance metrics and iterate based on insights.",
+    "Stakeholder Collaboration: Work cross-functionally to ensure seamless product launches.",
   ],
   qualifications: [
-    "5+ years of experience in product management, preferably within AI, SaaS, or tech innovation environments.",
-    "Strong technical understanding of AI, NLP (Natural Language Processing), and automation platforms.",
-    "Proficiency in Agile methodologies, sprint planning, and iterative development processes.",
-    "Exceptional ability to translate vision into actionable roadmaps while maintaining hands-on execution focus.",
-    "Excellent leadership, communication, and stakeholder management skills.",
+    "5+ years of experience in product management, preferably in AI or SaaS.",
+    "Strong technical understanding of AI, NLP, and automation technologies.",
+    "Experience in Agile methodologies and roadmap planning.",
+    "Ability to balance strategic vision with hands-on execution.",
   ],
   benefits: [
-    "🌍 Equity Ownership – Be a founding stakeholder shaping our product future.",
-    "🚀 Remote & Flexible – Define your best work environment.",
-    "💰 Performance-Based Compensation – Transitioning to competitive salary as we scale.",
-    "💡 High-Impact Leadership Role – Build a category-defining AI product suite.",
+    "🌍 Equity Ownership – Be a key stakeholder in TruBot AI’s growth journey.",
+    "🚀 Remote & Flexible – Enjoy location freedom and flexible work schedules.",
+    "💰 Performance-Based Compensation – Commissions evolving into a competitive salary package.",
+    "💡 High-Impact Role – Drive innovations in the booming AI and automation space.",
   ],
+  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
   applyInstructions:
     "Email us with your resume with the subject line – 'Application for Head of Products'.",
   applyEmail: "careers@trubotai.com",

@@ -10,7 +10,7 @@ const fullStackEngineeringManagerPageData: CareerPageDataType = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs to streamline operations with AI-powered chatbots, voice bots, AI agents, social media management, and invoice automation.",
   roleIntro:
-    "We are seeking a Full Stack Engineering Manager to drive our technical strategy, develop scalable AI-powered products, and mentor a growing team. You will be instrumental in building next-gen customer support solutions using AI, NLP, and machine learning technologies.",
+    "We are seeking a Full Stack Hands-on Engineering Manager/Lead to drive our technical strategy, develop scalable AI-powered products, and mentor a growing team. You will be instrumental in building next-gen customer support solutions using AI, NLP, and machine learning technologies.",
   responsibilities: [
     "Shape and execute the technical vision aligned with business goals and market demands.",
     "Lead development of AI-powered chatbots, NLP systems, sentiment analysis tools, and intelligent lead generation platforms.",
@@ -37,6 +37,9 @@ const fullStackEngineeringManagerPageData: CareerPageDataType = {
     "💰 Performance-Based Compensation – Equity and commissions transitioning to competitive salary.",
     "💡 High-Impact Role – Build a category-defining AI solution from the ground up.",
   ],
+  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
   applyInstructions:
     "Email us your resume with the subject line – 'Application for Full Stack Engineering Manager' and take the first step in building the next big thing in AI!",
   applyEmail: "careers@trubotai.com",
