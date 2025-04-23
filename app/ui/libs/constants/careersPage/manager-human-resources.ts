@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const humanResourcesManagerPageData: CareerPageData = {
+const humanResourcesManagerPageData: CareerPageDataType = {
   id: "manager-human-resources",
   title: "Human Resources Manager",
   location: "Remote (Global)",
@@ -8,7 +8,7 @@ export const humanResourcesManagerPageData: CareerPageData = {
   shortDescription:
     "Shape TruBot AI’s growth by building a strong organizational culture and leading recruitment and HR strategy.",
   about:
-    "We are TruBot AI, a fast-growing AI startup transforming business communication through AI-driven chatbots, voicebots, AI agents, and multi-channel automation. Our mission is to help SMEs scale operations, streamline customer support, and grow faster with intelligent automation.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified AI platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation. We are transforming how businesses interact with customers, automate processes, and scale operations.",
   roleIntro:
     "As our Human Resources Manager, you will be a key force behind building our team and culture. You will lead recruitment, employee development, and HR operations, ensuring a thriving, innovative, and people-first work environment.",
   responsibilities: [
@@ -36,7 +36,12 @@ export const humanResourcesManagerPageData: CareerPageData = {
     "💰 Performance-Based Compensation – Transition to a competitive salary as we scale.",
     "💡 High-Impact Role – Build the culture and systems for a category-defining AI startup.",
   ],
+  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
   applyInstructions:
     "Email us with your resume with the subject line – 'Application for Human Resources Manager'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { humanResourcesManagerPageData };

@@ -1,5 +1,4 @@
-export const CareersList = [
-  // Chiefs (Sale → Operations → Technology)
+const careerList = [
   {
     id: "chief-sales-officer",
     title: "Chief Sales Officer",
@@ -21,8 +20,6 @@ export const CareersList = [
     type: "Full-time/Part-time",
     href: "/careers/chief-technology-officer",
   },
-
-  // Heads (Sale → Operations → Technology)
   {
     id: "head-sales-country",
     title: "Head of Sales - Country",
@@ -58,8 +55,6 @@ export const CareersList = [
     type: "Full-time/Part-time",
     href: "/careers/head-fundraising",
   },
-
-  // Managers (Sale → Operations → Technology)
   {
     id: "manager-operations-customer-success",
     title: "Customer Success Manager",
@@ -109,8 +104,6 @@ export const CareersList = [
     type: "Full-time/Part-time",
     href: "/careers/manager-project",
   },
-
-  // Leads (Sale → Operations → Technology)
   {
     id: "lead-product-designer",
     title: "Lead Product Designer",
@@ -118,8 +111,6 @@ export const CareersList = [
     type: "Full-time/Part-time",
     href: "/careers/lead-product-designer",
   },
-
-  // Interns (Sale → Operations → Technology)
   {
     id: "intern-sales-marketing",
     title: "Sales and Marketing Intern",
@@ -148,8 +139,6 @@ export const CareersList = [
     type: "Internship",
     href: "/careers/intern-technology-fullstack-developer",
   },
-
-  // Special Executive Assistant Role
   {
     id: "assistant-operations-founder",
     title: "Executive Assistant to Founder",
@@ -158,3 +147,5 @@ export const CareersList = [
     href: "/careers/assistant-operations-founder",
   },
 ];
+
+export { careerList };

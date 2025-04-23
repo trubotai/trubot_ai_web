@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const projectManagerPageData: CareerPageData = {
+const projectManagerPageData: CareerPageDataType = {
   id: "manager-project",
   title: "Project Manager",
   location: "Remote (Global)",
@@ -8,31 +8,36 @@ export const projectManagerPageData: CareerPageData = {
   shortDescription:
     "Join TruBot AI as a Project Manager to drive AI innovation projects from idea to execution. Deliver impact across fast-scaling teams and industries.",
   about:
-    "TruBot AI is a fast-growing AI startup redefining how businesses communicate, automate, and scale. Our platform empowers SMEs with AI-powered chatbots, voice bots, multi-agent systems, social media automation, and invoice management — enabling them to deliver better customer experiences and streamline operations.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified AI platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation. We are transforming how businesses interact with customers, automate processes, and scale operations.",
   roleIntro:
-    "We’re looking for a proactive, results-driven Project Manager to oversee AI-driven initiatives across engineering, product, and operations. You will ensure smooth execution, seamless collaboration, and project success in a fast-paced, growth-focused environment.",
+    "As a Project Manager, you will play a key role in overseeing and driving projects from inception to completion, ensuring alignment with company goals, timelines, and quality standards. You will work closely with cross-functional teams to implement processes, track progress, and optimize workflows.",
   responsibilities: [
-    "Develop, manage, and execute detailed project plans aligned with company goals.",
-    "Coordinate with developers, marketers, and strategists to streamline operations.",
-    "Identify potential risks, address bottlenecks, and optimize workflows.",
-    "Implement agile methodologies and ensure best practices in project execution.",
-    "Monitor project performance metrics and deliver regular progress reports.",
-    "Drive cross-functional communication and ensure stakeholder alignment.",
+    "Develop, manage, and execute project plans, ensuring all objectives are met.",
+    "Coordinate with developers, marketers, and business strategists to streamline operations.",
+    "Identify potential risks, bottlenecks, and process improvements to optimize efficiency.",
+    "Implement agile methodologies and best practices for project execution.",
+    "Monitor project performance, track key metrics, and provide regular updates to stakeholders.",
+    "Ensure seamless communication and collaboration across teams.",
   ],
   qualifications: [
-    "Proven experience in project management, preferably within AI, SaaS, or technology startups.",
-    "Strong organizational and problem-solving skills with the ability to juggle multiple projects.",
-    "Hands-on experience with Agile project management frameworks (Scrum, Kanban, etc.).",
-    "Exceptional communication and leadership skills to drive collaboration.",
-    "Entrepreneurial spirit with adaptability to a fast-evolving startup environment.",
+    "Proven experience in project management, preferably in AI, SaaS, or tech startups.",
+    "Strong problem-solving skills with the ability to manage multiple projects simultaneously.",
+    "Experience in agile project management methodologies.",
+    "Excellent communication and leadership skills to drive collaboration.",
+    "A passion for working in a startup environment with a proactive mindset.",
   ],
   benefits: [
-    "🌍 Equity Ownership – Become a true stakeholder in TruBot AI’s growth journey.",
-    "🚀 Remote & Flexible – Enjoy freedom of location and flexible working hours.",
-    "💰 Performance-Based Compensation – Commissions evolving into competitive salary.",
-    "💡 High-Impact Role – Help build and lead AI projects that redefine customer experience.",
+    "🌍 Equity Ownership – Be a key stakeholder in our success.",
+    "🚀 Remote & Flexible – Work from anywhere, on your terms.",
+    "💰 Performance-Based Compensation – Sales commissions transitioning to competitive salary.",
+    "💡 High-Impact Role – Build a category-defining AI solution from the ground up.",
   ],
+  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
   applyInstructions:
     "Email us with your resume with the subject line – 'Application for Project Manager'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { projectManagerPageData };

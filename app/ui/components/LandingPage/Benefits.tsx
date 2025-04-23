@@ -1,40 +1,22 @@
 import PageLayout from "../PageLayout";
 import SectionHeader from "../SectionHeader";
-
-const benefitsList = [
-  {
-    icon: "💸",
-    title: "Reduce Support Costs",
-    description:
-      "Automate up to 80% of common queries with no-code chat and voice flows.",
-  },
-  {
-    icon: "⚙️",
-    title: "Automate Repetitive Tasks",
-    description:
-      "Free your team from FAQ hell, follow-ups, and manual data entry.",
-  },
-  {
-    icon: "📈",
-    title: "Get Real ROI on AI",
-    description:
-      "Launch in days, not weeks — with measurable results from Day 1.",
-  },
-];
+import { benefitList } from "../../libs/constants";
 
 const Benefits = () => {
   return (
-    <PageLayout>
+    <PageLayout className="animate-fade-in">
       <SectionHeader
         title="Why Teams Choose TruBot AI"
         subtitle="We help you save time, boost performance, and scale without limits."
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-        {benefitsList.map((benefit) => (
+        {benefitList.map((benefit, index) => (
           <div
             key={benefit.title}
-            className="group bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition hover:-translate-y-1 duration-300"
+            className={`group bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-transform duration-300 hover:-translate-y-1 animate-fade-slide-up animation-delay-${
+              (index + 1) * 100
+            }`}
           >
             <div className="text-4xl mb-4 transition-transform duration-300 group-hover:-translate-y-1">
               {benefit.icon}

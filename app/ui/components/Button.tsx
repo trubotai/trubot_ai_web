@@ -8,9 +8,12 @@ interface ButtonProps {
   as?: "button" | "link";
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
+  fullWidth?: boolean;
+  animate?: boolean;
+  ariaLabel?: string;
 }
 
-export default function Button({
+const Button = ({
   href = "#",
   children,
   variant = "primary",
@@ -18,21 +21,28 @@ export default function Button({
   as = "link",
   onClick,
   type = "button",
-}: ButtonProps) {
-  const baseStyles =
-    "inline-block px-6 py-3 rounded-lg font-semibold transition";
+  fullWidth = false,
+  animate = false,
+  ariaLabel,
+}: ButtonProps) => {
+  const baseStyles = `inline-block px-6 py-3 rounded-lg font-semibold transition focus:outline-none focus:ring-2 focus:ring-electric focus:ring-offset-2`;
   const variants = {
     primary: "bg-electric text-white hover:bg-blue-700",
     outline: "border border-electric text-electric hover:bg-blue-50",
     ghost: "text-electric hover:underline",
   };
 
+  const combinedClass = `${baseStyles} ${variants[variant]} ${
+    fullWidth ? "w-full" : ""
+  } ${animate ? "animate-fade-slide-up" : ""} ${className}`;
+
   if (as === "button") {
     return (
       <button
         type={type}
         onClick={onClick}
-        className={`${baseStyles} ${variants[variant]} ${className}`}
+        className={combinedClass}
+        aria-label={ariaLabel}
       >
         {children}
       </button>
@@ -42,9 +52,13 @@ export default function Button({
   return (
     <Link
       href={href}
-      className={`${baseStyles} ${variants[variant]} ${className}`}
+      className={combinedClass}
+      aria-label={ariaLabel}
+      role="button"
     >
       {children}
     </Link>
   );
-}
+};
+
+export default Button;

@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const executiveAssistantPageData: CareerPageData = {
+const executiveAssistantPageData: CareerPageDataType = {
   id: "assistant-operations-founder",
   title: "Executive Assistant to Founder",
   location: "Onsite – Tampa, Florida (Hybrid Flexibility)",
@@ -37,3 +37,5 @@ export const executiveAssistantPageData: CareerPageData = {
     "Email us with your resume and a short cover note answering: 1) Why you're excited about early-stage startups, 2) Your preferred work schedule, and 3) An example of how you improved an executive's productivity. Use the subject line – 'Application for Executive Assistant to Founder'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { executiveAssistantPageData };

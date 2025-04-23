@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const HRInternPageData: CareerPageData = {
+const HRInternPageData: CareerPageDataType = {
   id: "intern-human-resources",
   title: "HR Intern",
   location: "Remote (Global)",
@@ -37,3 +37,5 @@ export const HRInternPageData: CareerPageData = {
     "Email us with your resume and subject line – 'Application for HR Intern' to start your HR journey with TruBot AI.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { HRInternPageData };
