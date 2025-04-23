@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const fullStackEngineeringManagerPageData: CareerPageData = {
+const fullStackEngineeringManagerPageData: CareerPageDataType = {
   id: "manager-technology-fullstack-engineer",
   title: "Full Stack Engineering Manager",
   location: "Remote (Global)",
@@ -41,3 +41,5 @@ export const fullStackEngineeringManagerPageData: CareerPageData = {
     "Email us your resume with the subject line – 'Application for Full Stack Engineering Manager' and take the first step in building the next big thing in AI!",
   applyEmail: "careers@trubotai.com",
 };
+
+export { fullStackEngineeringManagerPageData };

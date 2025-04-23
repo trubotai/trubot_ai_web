@@ -1,6 +1,6 @@
-import { ProductPageData } from "../../types/productPage";
+import { ProductPageDataType } from "../../types/productPage";
 
-export const voicePageData: ProductPageData = {
+const voicePageData: ProductPageDataType = {
   id: "voice",
   title: "Voice AI for Smart, Scalable Customer Conversations",
   description:
@@ -47,3 +47,5 @@ export const voicePageData: ProductPageData = {
     "Telecom",
   ],
 };
+
+export { voicePageData };

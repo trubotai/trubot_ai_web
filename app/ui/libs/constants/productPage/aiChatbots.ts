@@ -1,6 +1,6 @@
-import { ProductPageData } from "../../types/productPage";
+import { ProductPageDataType } from "../../types/productPage";
 
-export const aiChatbotsPageData: ProductPageData = {
+const aiChatbotsPageData: ProductPageDataType = {
   id: "chatbots",
   title: "AI Chatbots for Every Channel",
   description:
@@ -48,3 +48,5 @@ export const aiChatbotsPageData: ProductPageData = {
     "Finance",
   ],
 };
+
+export { aiChatbotsPageData };

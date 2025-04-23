@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const COOPageData: CareerPageData = {
+const COOPageData: CareerPageDataType = {
   id: "chief-operations-officer",
   title: "Chief Operating Officer",
   location: "Remote (Global)",
@@ -40,3 +40,5 @@ export const COOPageData: CareerPageData = {
     "Email us with your resume with the subject line – 'Application for Chief Operating Officer'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { COOPageData };

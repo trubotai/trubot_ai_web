@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const headHumanResourcesPageData: CareerPageData = {
+const headHumanResourcesPageData: CareerPageDataType = {
   id: "head-human-resources",
   title: "Head of Human Resources",
   location: "Remote (Global)",
@@ -39,3 +39,5 @@ export const headHumanResourcesPageData: CareerPageData = {
     "Email us with your resume with the subject line – 'Application for Head of Human Resources'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { headHumanResourcesPageData };

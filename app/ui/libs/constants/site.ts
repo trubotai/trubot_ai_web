@@ -1,4 +1,4 @@
-export const navLinks = [
+const navLinkList = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
   { href: "/solutions", label: "Solutions" },
@@ -10,3 +10,5 @@ export const navLinks = [
   { href: "/work-culture", label: "Work Culture" },
   { href: "/contact", label: "Contact" },
 ];
+
+export { navLinkList };

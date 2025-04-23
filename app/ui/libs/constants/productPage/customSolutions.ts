@@ -1,6 +1,6 @@
-import { ProductPageData } from "../../types/productPage";
+import { ProductPageDataType } from "../../types/productPage";
 
-export const customSolutionsPageData: ProductPageData = {
+const customSolutionsPageData: ProductPageDataType = {
   id: "custom",
   title: "Custom Development Services for Every Business",
   description:
@@ -42,3 +42,5 @@ export const customSolutionsPageData: ProductPageData = {
     "Real Estate",
   ],
 };
+
+export { customSolutionsPageData };

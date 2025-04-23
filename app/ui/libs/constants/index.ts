@@ -1,4 +1,4 @@
-export const industryList = [
+const industryList = [
   { icon: "💻", label: "Tech & SaaS" },
   { icon: "🎨", label: "Digital Agencies" },
   { icon: "🛍️", label: "eCommerce" },
@@ -8,3 +8,5 @@ export const industryList = [
   { icon: "🛠️", label: "Home Services (Plumbers, Electricians, etc.)" },
   { icon: "🎓", label: "Education & eLearning" },
 ];
+
+export { industryList };

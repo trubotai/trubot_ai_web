@@ -1,6 +1,6 @@
-import { ProductPageData } from "../../types/productPage";
+import { ProductPageDataType } from "../../types/productPage";
 
-export const aiAgentsPageData: ProductPageData = {
+const aiAgentsPageData: ProductPageDataType = {
   id: "agents",
   title: "AI Agents Built for Sales, Support, and Growth",
   description:
@@ -47,3 +47,5 @@ export const aiAgentsPageData: ProductPageData = {
     "Finance",
   ],
 };
+
+export { aiAgentsPageData };

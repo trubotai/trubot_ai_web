@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const customerSuccessManagerPageData: CareerPageData = {
+const customerSuccessManagerPageData: CareerPageDataType = {
   id: "manager-operations-customer-success",
   title: "Customer Success Manager",
   location: "Remote (Global)",
@@ -35,3 +35,5 @@ export const customerSuccessManagerPageData: CareerPageData = {
     "Email us with your resume with the subject line – 'Application for Customer Success Manager'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { customerSuccessManagerPageData };

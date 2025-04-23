@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const productManagerPageData: CareerPageData = {
+const productManagerPageData: CareerPageDataType = {
   id: "manager-product",
   title: "Product Manager",
   location: "Remote (Global)",
@@ -35,3 +35,5 @@ export const productManagerPageData: CareerPageData = {
     "Email us with your resume with the subject line – 'Application for Product Manager'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { productManagerPageData };

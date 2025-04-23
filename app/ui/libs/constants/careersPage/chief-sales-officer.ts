@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const CSOPageData: CareerPageData = {
+const CSOPageData: CareerPageDataType = {
   id: "chief-sales-officer",
   title: "Chief Sales Officer",
   location: "Remote (Global)",
@@ -38,3 +38,5 @@ export const CSOPageData: CareerPageData = {
     "Email us with your resume with the subject line – 'Application for Chief Sales Officer'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { CSOPageData };

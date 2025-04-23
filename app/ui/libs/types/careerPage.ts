@@ -1,4 +1,4 @@
-export interface CareerPageData {
+export interface CareerPageDataType {
   id: string;
   title: string;
   location: string;

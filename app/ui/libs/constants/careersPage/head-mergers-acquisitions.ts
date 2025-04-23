@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const headMAPageData: CareerPageData = {
+const headMAPageData: CareerPageDataType = {
   id: "head-mergers-acquisitions",
   title: "Head of M&A",
   location: "Remote (Global)",
@@ -38,3 +38,5 @@ export const headMAPageData: CareerPageData = {
     "Email us with your resume with the subject line – 'Application for Head of M&A'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { headMAPageData };

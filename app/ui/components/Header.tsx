@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-import { navLinks } from "../libs/constants/site";
+import { navLinkList } from "../libs/constants/site";
 
 export default function Header() {
   const pathname = usePathname();
@@ -31,7 +31,7 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map(({ href, label }) => (
+          {navLinkList.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
@@ -63,7 +63,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden px-4 pb-6 flex flex-col gap-2 items-center">
-          {navLinks.map(({ href, label }) => (
+          {navLinkList.map(({ href, label }) => (
             <Link
               key={href}
               href={href}

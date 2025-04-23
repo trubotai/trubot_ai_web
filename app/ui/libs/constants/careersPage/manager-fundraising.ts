@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const fundraisingManagerPageData: CareerPageData = {
+const fundraisingManagerPageData: CareerPageDataType = {
   id: "manager-fundraising",
   title: "Fundraising Manager",
   location: "Remote (Global)",
@@ -35,3 +35,5 @@ export const fundraisingManagerPageData: CareerPageData = {
     "Email us with your resume with the subject line – 'Application for Fundraising Manager'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { fundraisingManagerPageData };

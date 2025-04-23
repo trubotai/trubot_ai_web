@@ -1,4 +1,4 @@
-export const coreValues = [
+const coreValueList = [
   {
     title: "Transparency",
     description:
@@ -28,3 +28,5 @@ export const coreValues = [
       "We trust people to take initiative and own their contributions.",
   },
 ];
+
+export { coreValueList };

@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const MASpecialistManagerPageData: CareerPageData = {
+const MASpecialistManagerPageData: CareerPageDataType = {
   id: "manager-mergers-acquisitions-specialist",
   title: "M&A Specialist Manager",
   location: "Remote (Global)",
@@ -38,3 +38,5 @@ export const MASpecialistManagerPageData: CareerPageData = {
     "Email us with your resume with the subject line – 'Application for M&A Specialist Manager'.",
   applyEmail: "careers@trubotai.com",
 };
+
+export { MASpecialistManagerPageData };

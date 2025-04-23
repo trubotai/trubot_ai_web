@@ -1,4 +1,4 @@
-export const highLightsList = [
+const highLightList = [
   {
     title: "Fast-Growing Market",
     description:
@@ -15,3 +15,5 @@ export const highLightsList = [
       "Focusing on underserved SME market, offering solutions at 30%-40% lower operational cost.",
   },
 ];
+
+export { highLightList };

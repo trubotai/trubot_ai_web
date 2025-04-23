@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const CTOPageData: CareerPageData = {
+const CTOPageData: CareerPageDataType = {
   id: "chief-technology-officer",
   title: "Chief Technology Officer",
   location: "Remote (Global)",
@@ -41,3 +41,5 @@ export const CTOPageData: CareerPageData = {
     "Email us your resume with the subject line – 'Application for CTO' and become a part of TruBot AI's leadership team!",
   applyEmail: "careers@trubotai.com",
 };
+
+export { CTOPageData };

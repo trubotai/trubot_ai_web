@@ -1,4 +1,4 @@
-export const smeEmpowermentHighlights = [
+const highLightList = [
   {
     title: "Affordable AI Solutions",
     description:
@@ -20,3 +20,5 @@ export const smeEmpowermentHighlights = [
       "Grow without limits — our AI solutions scale as your business expands.",
   },
 ];
+
+export { highLightList };
