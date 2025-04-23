@@ -26,22 +26,24 @@ export default function FinalCTASection({
       : "text-center";
 
   return (
-    <section className="bg-navy py-20 text-white">
+    <div className="bg-navy text-white">
       <PageLayout className={`${alignmentClass} ${className}`}>
-        <div className="space-y-6">
-          <h2 className="text-3xl font-bold">{title}</h2>
+        <div className="space-y-6 animate-fade-slide-up">
+          <h2 className="text-3xl font-bold animate-fade-in">{title}</h2>
 
-          <p className="text-gray-300">{subtitle}</p>
+          <p className="text-gray-300 animate-fade-slide-up animation-delay-200">
+            {subtitle}
+          </p>
 
           <Button
             href={ctaLink}
             variant="primary"
-            className="bg-white text-navy hover:bg-gray-100"
+            className="bg-white text-navy hover:bg-gray-100 animate-fade-scale animation-delay-300"
           >
             {ctaLabel}
           </Button>
         </div>
       </PageLayout>
-    </section>
+    </div>
   );
 }

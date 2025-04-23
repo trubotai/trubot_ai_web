@@ -12,15 +12,16 @@ const CareerApplyCTA = ({
   applyEmail,
 }: CareerApplyCTAProps) => {
   const emailSubject = `Application for ${title}`;
+  const mailtoLink = `mailto:${applyEmail}?subject=${encodeURIComponent(
+    emailSubject
+  )}`;
 
   return (
-    <section className="text-center max-w-2xl mx-auto space-y-6">
+    <section className="text-center max-w-2xl mx-auto space-y-6 animate-fade-slide-up">
       <p className="text-gray-700 leading-relaxed">
         {instructions}{" "}
         <Link
-          href={`mailto:${applyEmail}?subject=${encodeURIComponent(
-            emailSubject
-          )}`}
+          href={mailtoLink}
           className="text-electric font-semibold hover:underline"
         >
           {applyEmail}
@@ -28,10 +29,8 @@ const CareerApplyCTA = ({
       </p>
 
       <Link
-        href={`mailto:${applyEmail}?subject=${encodeURIComponent(
-          emailSubject
-        )}`}
-        className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+        href={mailtoLink}
+        className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold transition hover:bg-blue-700 hover-scale-glow"
       >
         Apply Now
       </Link>

@@ -1,9 +1,8 @@
-import Link from "next/link";
-
 import PageLayout from "../ui/components/PageLayout";
 import SectionHeader from "../ui/components/SectionHeader";
 import ProductCard from "../ui/components/ProductCard";
-import { productsList } from "../ui/libs/constants/products";
+import Button from "../ui/components/Button";
+import { productList } from "../ui/libs/constants/products";
 
 export const metadata = {
   title: "Products – TruBot AI",
@@ -20,7 +19,7 @@ const Page = () => {
       />
 
       <div className="space-y-20">
-        {productsList.map((group) => (
+        {productList.map((group) => (
           <section key={group.id}>
             <h3 className="text-2xl font-bold text-navy mb-6 text-center">
               {group.title}
@@ -41,12 +40,7 @@ const Page = () => {
       </div>
 
       <div className="text-center mt-16">
-        <Link
-          href="/contact"
-          className="inline-block bg-electric text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-        >
-          Not sure what fits? Talk to our team
-        </Link>
+        <Button href="/contact">Not sure what fits? Talk to our team</Button>
       </div>
     </PageLayout>
   );

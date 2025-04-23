@@ -1,91 +1,100 @@
-import Link from "next/link";
-
 import PageLayout from "@/app/ui/components/PageLayout";
 import SectionHeader from "@/app/ui/components/SectionHeader";
-import TimelineStep from "@/app/ui/components/TimelineStep";
 import QuoteBox from "@/app/ui/components/QuoteBox";
+import BulletList from "@/app/ui/components/BulletList";
+import Button from "@/app/ui/components/Button";
+import {
+  targetList,
+  dealStructureList,
+  successStoryList,
+} from "../ui/libs/constants/mna";
 
 export const metadata = {
   title: "Mergers & Acquisitions – TruBot AI",
   description:
-    "Discover TruBot AI’s strategy for strategic mergers, acquisitions, and partnerships that drive intelligent business automation forward.",
+    "Sell your B2B SaaS or Hosting company for 100X returns. Explore our acquisition strategy and deal structures.",
 };
 
 const Page = () => {
   return (
     <>
-      <PageLayout className="flex flex-col items-center justify-center text-center animate-fade-slide-up">
+      {/* Hero Section */}
+      <PageLayout className="flex flex-col items-center justify-center animate-fade-slide-up">
         <SectionHeader
-          title="TruBot AI M&A Strategy"
-          subtitle="Accelerating Growth Through Strategic Acquisitions and Partnerships."
+          title="Sell Your B2B SaaS or Hosting Company for 100X Returns"
+          subtitle="We acquire companies with $10M–$100M revenue. Stay onboard with equity, or exit fully."
         />
 
-        <div className="prose prose-gray max-w-3xl mx-auto text-center mb-16">
-          <p>
-            At TruBot AI, mergers and acquisitions are not just transactions —
-            they&apos;re part of our mission to build the future of AI-driven
-            business solutions. We seek strategic partnerships that amplify
-            innovation, extend market reach, and deliver greater value to
-            customers worldwide.
-          </p>
-        </div>
+        <p className="text-gray-700 max-w-2xl mx-auto mt-4 leading-relaxed text-center">
+          At TruBot AI, we don’t just acquire companies — we scale them into
+          category leaders using AI innovation, cross-sell strategies, and deep
+          technical integration.
+        </p>
       </PageLayout>
 
-      <PageLayout className="space-y-12">
-        <SectionHeader
-          title="Our M&A Journey"
-          subtitle="How we identify, acquire, and integrate strategic opportunities."
+      {/* Target Criteria */}
+      <div className="bg-gray-50">
+        <PageLayout className="animate-fade-slide-up">
+          <BulletList
+            title="Our Ideal Acquisition Targets"
+            items={targetList}
+            iconPrefix="🔹"
+            align="center"
+          />
+        </PageLayout>
+      </div>
+
+      {/* Deal Structures */}
+      <PageLayout className="animate-fade-slide-up">
+        <BulletList
+          title="💼 Deal Structures We Offer"
+          items={dealStructureList}
+          align="center"
         />
-
-        <div className="space-y-12">
-          <TimelineStep
-            step="Step 1: Vision Alignment"
-            description="We target companies that share our mission of AI-powered customer engagement and operational efficiency."
-            delay={0.1}
-          />
-
-          <TimelineStep
-            step="Step 2: Opportunity Assessment"
-            description="Our team conducts rigorous evaluations of the market, technology, and operational synergies to ensure strategic fit."
-            delay={0.2}
-          />
-
-          <TimelineStep
-            step="Step 3: Due Diligence"
-            description="We engage in thorough financial, legal, and operational reviews to validate the opportunity and minimize risk."
-            delay={0.3}
-          />
-
-          <TimelineStep
-            step="Step 4: Integration Planning"
-            description="Integration is not an afterthought — we build detailed roadmaps to ensure smooth cultural and technological integration."
-            delay={0.4}
-          />
-
-          <TimelineStep
-            step="Step 5: Scaling Together"
-            description="Post-integration, we focus on accelerated growth, shared innovation, and maximizing value creation for all stakeholders."
-            delay={0.5}
-          />
-        </div>
       </PageLayout>
 
+      {/* Success Stories */}
+      <div className="bg-gray-50">
+        <PageLayout className="animate-fade-slide-up">
+          <BulletList
+            title="🛠️ Integration Success Stories"
+            items={successStoryList}
+            iconPrefix="✅"
+            align="center"
+          />
+        </PageLayout>
+      </div>
+
+      {/* Quote Box */}
       <PageLayout>
-        <QuoteBox
-          quote="We view every acquisition as an opportunity to create more intelligent, more scalable, and more human-centric business solutions."
-          author="Gopalakrishnan K"
-          role="Founder & CEO, TruBot AI"
-        />
+        <QuoteBox quote="Tech founders deserve more than exits—they deserve legacy growth." />
       </PageLayout>
 
-      {/* Final CTA */}
-      <div className="text-center mb-16">
-        <Link
-          href="mailto:careers@trubotai.com?subject=Explore%20M&A%20Opportunities"
-          className="inline-block bg-electric text-white px-8 py-4 rounded-lg font-semibold hover-scale-glow animate-fade-slide-up"
-        >
-          Discuss M&A Opportunities
-        </Link>
+      {/* CTA Section */}
+      <div className="bg-gray-50">
+        <PageLayout className="text-center animate-fade-slide-up">
+          <SectionHeader
+            title="Submit Your Company"
+            subtitle="Reach us at acquisitions@trubotai.com or share your details via the form below."
+          />
+
+          <div className="flex justify-center flex-wrap gap-4">
+            <Button
+              href="mailto:acquisitions@trubotai.com?subject=M&A%20Interest"
+              variant="primary"
+              className="hover-scale-glow"
+            >
+              Contact Acquisitions
+            </Button>
+            <Button
+              href="/contact"
+              variant="outline"
+              className="hover-scale-glow"
+            >
+              Contact →
+            </Button>
+          </div>
+        </PageLayout>
       </div>
     </>
   );

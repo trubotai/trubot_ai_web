@@ -1,6 +1,6 @@
-import { ProductPageData } from "../../types/productPage";
+import { ProductPageDataType } from "../../types/productPage";
 
-export const otherToolsPageData: ProductPageData = {
+const otherToolsPageData: ProductPageDataType = {
   id: "tools",
   title: "AI Utilities for Invoicing, Marketplaces & SME Growth",
   description:
@@ -77,3 +77,5 @@ export const otherToolsPageData: ProductPageData = {
     "Legal",
   ],
 };
+
+export { otherToolsPageData };

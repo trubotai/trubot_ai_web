@@ -1,4 +1,4 @@
-export const solutionsList = [
+const solutionList = [
   {
     id: "commerce",
     title: "Commerce & Retail",
@@ -106,3 +106,5 @@ export const solutionsList = [
     ],
   },
 ];
+
+export { solutionList };

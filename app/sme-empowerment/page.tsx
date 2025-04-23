@@ -1,16 +1,14 @@
-import Link from "next/link";
-
 import PageLayout from "@/app/ui/components/PageLayout";
 import SectionHeader from "@/app/ui/components/SectionHeader";
-import HighlightGrid from "@/app/ui/components/HighlightGrid";
 import QuoteBox from "@/app/ui/components/QuoteBox";
-
-import { smeEmpowermentHighlights } from "../ui/libs/constants/sme-empowerment";
+import BulletList from "@/app/ui/components/BulletList";
+import Button from "@/app/ui/components/Button";
+import { stepList, whyJoinList } from "../ui/libs/constants/sme-empowerment";
 
 export const metadata = {
-  title: "SME Empowerment – TruBot AI",
+  title: "SME Empower Program – TruBot AI",
   description:
-    "Learn how TruBot AI empowers small and medium businesses (SMEs) with cutting-edge AI automation tools for growth and efficiency.",
+    "Join the SME Empower Partner Program to earn, trade, and grow 10X faster with TruBot AI’s powerful network.",
 };
 
 const Page = () => {
@@ -19,59 +17,75 @@ const Page = () => {
       {/* Hero Section */}
       <PageLayout className="flex flex-col items-center justify-center animate-fade-slide-up">
         <SectionHeader
-          title="Empowering Small Businesses with AI"
-          subtitle="Transforming SME operations with intelligent, scalable automation."
+          title="SME Empower Partner Program: Earn. Trade. Thrive."
+          subtitle="Pay just 10% on successful sales—no hidden fees, no lock-ins."
         />
 
-        <div className="prose prose-gray max-w-3xl mx-auto text-center mb-16">
-          <p className="text-gray-700 leading-relaxed">
-            At TruBot AI, we believe that small and medium businesses deserve
-            enterprise-grade AI tools to thrive in today&apos;s competitive
-            world. Our mission is to democratize access to automation,
-            empowering entrepreneurs to focus on growth, innovation, and
-            customer relationships.
-          </p>
-        </div>
+        <p className="text-gray-700 max-w-2xl mx-auto mt-4 leading-relaxed text-center">
+          We’re building a mutually profitable SME ecosystem. Become a partner
+          and access trade-ready businesses through a powerful AI-driven
+          platform.
+        </p>
       </PageLayout>
 
-      {/* Challenges Section */}
-      <PageLayout className="animate-fade-slide-up animation-delay-200">
-        <h2 className="text-3xl font-bold text-navy mb-6 text-center">
-          Challenges SMEs Face
-        </h2>
+      {/* How It Works */}
+      <div className="bg-gray-50">
+        <PageLayout className="animate-fade-slide-up">
+          <BulletList title="How It Works" items={stepList} align="center" />
+        </PageLayout>
+      </div>
 
-        <div className="prose prose-gray max-w-3xl mx-auto text-center mb-16">
-          <p className="text-gray-700 leading-relaxed">
-            High operational costs, inconsistent customer support, and limited
-            resources often hinder SME growth. Traditional automation solutions
-            are expensive and complex. TruBot AI offers a smarter, simpler way
-            forward — AI that adapts to your business needs.
-          </p>
-        </div>
-      </PageLayout>
-
-      {/* Highlights Section */}
-      <PageLayout className="animate-fade-slide-up animation-delay-300">
-        <HighlightGrid items={smeEmpowermentHighlights} />
-      </PageLayout>
-
-      {/* Quote Section */}
-      <PageLayout className="animate-fade-slide-up animation-delay-400">
-        <QuoteBox
-          quote="Small businesses deserve big technology. TruBot AI makes enterprise-grade automation accessible to every entrepreneur."
-          author="Gopalakrishnan K"
-          role="Founder & CEO, TruBot AI"
+      {/* Why Join */}
+      <PageLayout className="animate-fade-slide-up">
+        <BulletList
+          title="Why Join TruBot AI’s SME Network?"
+          items={whyJoinList}
+          align="center"
         />
+      </PageLayout>
+
+      {/* Case Study */}
+      <div className="bg-gray-50">
+        <PageLayout className="text-center animate-fade-slide-up">
+          <h3 className="text-xl font-bold text-navy mb-3">🏆 Case Study</h3>
+
+          <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+            DigitalEdge scaled to $7.2M in revenue by partnering with 45+
+            Empower SMEs.
+          </p>
+        </PageLayout>
+      </div>
+
+      {/* Quote Box */}
+      <PageLayout>
+        <QuoteBox quote="A single deal in our network can 10X your business." />
       </PageLayout>
 
       {/* Final CTA */}
-      <div className="text-center mb-16 animate-fade-slide-up animation-delay-500">
-        <Link
-          href="mailto:careers@trubotai.com?subject=Request%20for%20SME%20Empowerment%20Program%20Details"
-          className="inline-block bg-electric text-white px-8 py-4 rounded-lg font-semibold hover-scale-glow"
-        >
-          Empower My Business
-        </Link>
+      <div className="bg-gray-50">
+        <PageLayout className="animate-fade-slide-up">
+          <SectionHeader
+            title="Enroll Now"
+            subtitle="Have questions? Reach us at empowersme@trubotai.com or apply directly below."
+          />
+
+          <div className="flex justify-center flex-wrap gap-4">
+            <Button
+              href="mailto:empowersme@trubotai.com?subject=SME%20Empower%20Program%20Signup"
+              variant="primary"
+              className="hover-scale-glow"
+            >
+              Contact Us
+            </Button>
+            <Button
+              href="/contact"
+              variant="outline"
+              className="hover-scale-glow"
+            >
+              Contact →
+            </Button>
+          </div>
+        </PageLayout>
       </div>
     </>
   );

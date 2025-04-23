@@ -7,19 +7,14 @@ interface CareerCardProps {
   href?: string;
 }
 
-export default function CareerCard({
-  title,
-  location,
-  type,
-  href = "#",
-}: CareerCardProps) {
+const CareerCard = ({ title, location, type, href = "#" }: CareerCardProps) => {
   return (
     <div
       className="
         bg-white border border-gray-200 rounded-xl p-6
         shadow-sm hover-pop-glow
         flex flex-col justify-between
-        transition-all duration-300
+        transition-all duration-300 animate-fade-slide-up
       "
     >
       <div>
@@ -33,9 +28,12 @@ export default function CareerCard({
       <Link
         href={href}
         className="text-electric text-sm font-semibold transition-colors duration-300 hover:text-blue-700 mt-auto"
+        aria-label={`Apply for ${title}`}
       >
         Apply Now →
       </Link>
     </div>
   );
-}
+};
+
+export default CareerCard;

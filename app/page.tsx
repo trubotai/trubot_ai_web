@@ -5,6 +5,12 @@ import Industries from "./ui/components/LandingPage/Industries";
 import Testimonials from "./ui/components/LandingPage/Testimonials";
 import FinalCTASection from "./ui/components/FinalCTASection";
 
+export const metadata = {
+  title: "TruBot AI – AI Automation for Modern Teams",
+  description:
+    "TruBot AI helps businesses reduce support costs, automate tasks, and drive real ROI with intelligent chat, voice, and agent solutions.",
+};
+
 const Page = () => {
   return (
     <>

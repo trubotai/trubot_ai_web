@@ -1,6 +1,6 @@
-import { CareerPageData } from "../../types/careerPage";
+import { CareerPageDataType } from "../../types/careerPage";
 
-export const fullStackDeveloperInternPageData: CareerPageData = {
+const fullStackDeveloperInternPageData: CareerPageDataType = {
   id: "intern-technology-fullstack-developer",
   title: "Full Stack Developer Intern",
   location: "Remote (Global)",
@@ -32,7 +32,12 @@ export const fullStackDeveloperInternPageData: CareerPageData = {
     "🎯 Mentorship – Work closely with senior developers to sharpen your coding skills.",
     "🌟 Potential Full-Time Opportunity – High-performing interns may be considered for permanent roles.",
   ],
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
   applyInstructions:
     "Email us your resume with the subject line – 'Application for Full Stack Developer Intern' and join TruBot AI’s innovation journey!",
   applyEmail: "careers@trubotai.com",
 };
+
+export { fullStackDeveloperInternPageData };
