@@ -1,19 +1,17 @@
 interface QuoteBoxProps {
   quote: string;
-  author: string;
-  role: string;
+  className?: string;
 }
 
-const QuoteBox = ({ quote, author, role }: QuoteBoxProps) => {
+const QuoteBox = ({ quote, className = "" }: QuoteBoxProps) => {
   return (
-    <div className="bg-gray-100 p-8 rounded-xl text-center my-12 shadow-sm hover-scale-card animate-fade-slide-up">
-      <blockquote className="text-xl italic text-navy mb-4">
+    <figure
+      className={`bg-gray-100 p-8 rounded-xl text-center my-12 shadow-sm hover-scale-card animate-fade-slide-up ${className}`}
+    >
+      <blockquote className="text-xl italic text-navy leading-relaxed">
         “{quote}”
       </blockquote>
-
-      <p className="font-semibold text-gray-700">{author}</p>
-      <p className="text-sm text-gray-500">{role}</p>
-    </div>
+    </figure>
   );
 };
 
