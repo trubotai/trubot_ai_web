@@ -6,5 +6,6 @@ export const navLinks = [
   { href: "/careers", label: "Careers" },
   { href: "/investors", label: "Investors" },
   { href: "/mna", label: "M&A" },
+  { href: "/sme-empowerment", label: "SME Empowerment" },
   { href: "/contact", label: "Contact" },
 ];
