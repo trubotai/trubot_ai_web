@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import PageLayout from "../ui/components/PageLayout";
 import SectionHeader from "../ui/components/SectionHeader";
+import Button from "../ui/components/Button";
 import { emailList, locationList } from "../ui/libs/constants/contact";
 
 export const metadata = {
@@ -51,7 +52,7 @@ const Page = () => {
             Connect with Us
           </h5>
 
-          <p className="text-gray-700 text-sm">
+          <p className="text-gray-700 text-sm mb-4">
             <Link
               href="https://www.linkedin.com/in/gopalakrishnan-k-79474727/"
               className="hover:text-blue-500 transition-colors"
@@ -61,6 +62,14 @@ const Page = () => {
               Founder’s LinkedIn – Gopalakrishnan K
             </Link>
           </p>
+
+          <Button
+            href="https://calendly.com/trubotai_founder_ceo/quick_connect_with_founder"
+            variant="outline"
+            className="hover-scale-glow"
+          >
+            Book a Meeting with Founder
+          </Button>
         </div>
       </PageLayout>
 
