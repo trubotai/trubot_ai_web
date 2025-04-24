@@ -33,6 +33,10 @@ const HRInternPageData: CareerPageDataType = {
     "🧠 Skill Development – Build a portfolio of impactful HR initiatives and solutions.",
     "🎯 Full-Time Opportunity – Outstanding interns may be considered for full-time HR roles based on performance.",
   ],
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+  workingHours:
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
   applyInstructions:
     "Email us with your resume and subject line – 'Application for HR Intern' to start your HR journey with TruBot AI.",
   applyEmail: "careers@trubotai.com",

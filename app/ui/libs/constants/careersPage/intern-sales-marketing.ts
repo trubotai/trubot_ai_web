@@ -31,6 +31,8 @@ const salesMarketingInternPageData: CareerPageDataType = {
     "🧠 Skill Development – Enhance your communication, marketing, and sales skills with mentorship from industry leaders.",
     "🎯 Full-Time Opportunity – Outstanding interns may be offered full-time roles based on performance.",
   ],
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
   applyInstructions:
     "Email us with your resume and subject line – 'Application for Sales and Marketing Intern' to start your journey with TruBot AI.",
   applyEmail: "careers@trubotai.com",

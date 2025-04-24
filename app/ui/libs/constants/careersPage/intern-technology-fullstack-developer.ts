@@ -6,35 +6,35 @@ const fullStackDeveloperInternPageData: CareerPageDataType = {
   location: "Remote (Global)",
   type: "Internship (3–6 Months)",
   shortDescription:
-    "Launch your tech career as a Full Stack Developer Intern at TruBot AI. Build real-world AI-driven web and mobile applications.",
+    "Start your tech journey at TruBot AI as a Full Stack Developer Intern. Gain hands-on experience building real-world AI-driven applications.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs through a unified platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation, helping businesses scale and automate operations effectively.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified AI platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation — helping businesses automate processes and scale operations effectively.",
   roleIntro:
-    "We are seeking passionate Full Stack Developer Interns ready to dive into real-world development challenges. You'll work alongside senior engineers to design, build, and refine AI-driven mobile and web applications.",
+    "We are looking for passionate Full Stack Developer Interns eager to tackle real-world challenges. You’ll collaborate with senior engineers to develop mobile and web applications while gaining exposure to AI-powered tools and frameworks.",
   responsibilities: [
-    "Independently develop web applications implementing both front-end and back-end technologies.",
-    "Collaborate with senior developers on software design, coding, and testing tasks.",
-    "Participate in code reviews to ensure high-quality, efficient, and maintainable codebases.",
-    "Troubleshoot, debug, and optimize applications for maximum performance and scalability.",
-    "Continuously learn and apply new tools, frameworks, and technologies in dynamic projects.",
+    "Independently develop web applications using both front-end and back-end technologies for mobile and desktop platforms.",
+    "Collaborate with senior developers in software design, implementation, and testing.",
+    "Participate in code reviews and provide constructive feedback to uphold code quality.",
+    "Troubleshoot, debug, and optimize applications to ensure top performance.",
+    "Continuously improve skills by exploring new technologies and development practices.",
   ],
   qualifications: [
     "Basic knowledge of front-end technologies (HTML, CSS, JavaScript).",
     "Familiarity with back-end technologies such as Node.js, Python, or Java.",
-    "Strong problem-solving abilities and eagerness to explore new tech stacks.",
-    "Attention to detail and passion for clean, efficient coding practices.",
-    "Adaptability to work in a fast-paced startup environment and rapidly evolving projects.",
+    "Strong problem-solving mindset, attention to detail, and eagerness to learn.",
+    "Ability to work in a fast-paced startup environment with continuous improvement.",
   ],
   benefits: [
-    "🌍 Remote Work – Gain professional experience from anywhere in the world.",
-    "🚀 Real-World Development – Contribute to full-stack web and mobile application projects.",
-    "💡 Hands-on Learning – Exposure to AI-driven tools and emerging technologies.",
-    "🎯 Mentorship – Work closely with senior developers to sharpen your coding skills.",
-    "🌟 Potential Full-Time Opportunity – High-performing interns may be considered for permanent roles.",
+    "🌍 Remote Work – Work from anywhere and gain global experience.",
+    "🚀 Real-World Development – Contribute to full-stack projects involving websites and mobile apps.",
+    "💡 AI Exposure – Learn AI agents and tools used in modern automation.",
+    "🎯 Mentorship – Receive guidance and support from experienced developers.",
+    "🌟 Career Opportunity – High-performing interns may be considered for full-time roles.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
-  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
+  workingHours:
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
   applyInstructions:
     "Email us your resume with the subject line – 'Application for Full Stack Developer Intern' and join TruBot AI’s innovation journey!",
   applyEmail: "careers@trubotai.com",

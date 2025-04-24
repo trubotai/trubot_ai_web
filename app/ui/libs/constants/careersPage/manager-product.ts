@@ -4,35 +4,36 @@ const productManagerPageData: CareerPageDataType = {
   id: "manager-product",
   title: "Product Manager",
   location: "Remote (Global)",
-  type: "Full-time/Part-time",
+  type: "Full-Time / Part-Time",
   shortDescription:
-    "Shape the future of AI-driven business automation at TruBot AI as a Hands-on Product Manager. Drive product strategy and innovation for cutting-edge AI solutions.",
+    "Drive AI innovation as a Hands-on Product Manager at TruBot AI. Lead product strategy and execution for intelligent customer support solutions.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified AI platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation. We are transforming how businesses interact with customers, automate processes, and scale operations.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and invoice automation — transforming how businesses engage with customers and scale operations.",
   roleIntro:
-    "We are seeking a Hands-on Product Manager to lead the roadmap and execution of our AI-driven customer support products. This role involves working closely with engineers, designers, and business teams to build world-class solutions.",
+    "We are seeking a Hands-on Product Manager to define the roadmap and lead execution for our AI-powered support products. You will work cross-functionally with engineers, designers, and business leaders to build world-class, scalable solutions.",
   responsibilities: [
-    "Product Strategy & Vision: Define the roadmap and align it with business goals.",
-    "Feature Development: Oversee the end-to-end execution of product features.",
-    "Market Research: Conduct customer research to identify pain points and opportunities.",
-    "Data-Driven Decision Making: Analyze performance metrics and iterate based on insights.",
-    "Stakeholder Collaboration: Work cross-functionally to ensure seamless product launches.",
+    "Product Strategy & Vision – Define and align the product roadmap with long-term business goals.",
+    "Feature Development – Lead the end-to-end execution of product features, from ideation to launch.",
+    "Market Research – Conduct deep customer research and competitive analysis to guide prioritization.",
+    "Data-Driven Decision Making – Use metrics, feedback, and insights to iterate and improve products.",
+    "Stakeholder Collaboration – Coordinate with cross-functional teams to ensure smooth delivery and adoption.",
   ],
   qualifications: [
-    "4+ years of experience in product management, preferably in AI or SaaS.",
+    "4+ years of experience in product management, preferably within AI, SaaS, or tech startups.",
     "Strong technical understanding of AI, NLP, and automation technologies.",
-    "Experience in Agile methodologies and roadmap planning.",
-    "Ability to balance strategic vision with hands-on execution.",
+    "Proficiency in Agile workflows, sprint planning, and roadmap ownership.",
+    "Ability to navigate strategy and roll up sleeves for hands-on execution.",
   ],
   benefits: [
-    "🌍 Equity Ownership – Be a key stakeholder in TruBot AI’s growth journey.",
-    "🚀 Remote & Flexible – Enjoy location freedom and flexible work schedules.",
-    "💰 Performance-Based Compensation – Commissions evolving into a competitive salary package.",
-    "💡 High-Impact Role – Drive innovations in the booming AI and automation space.",
+    "🌍 Equity Ownership – Be a key stakeholder in our success.",
+    "🚀 Remote & Flexible – Work from anywhere, at your own pace.",
+    "💰 Performance-Based Compensation – Commissions transitioning to a competitive salary.",
+    "💡 High-Impact Role – Build the foundation of a category-defining AI solution.",
   ],
-  workingHours: "6:00 PM – 11:00 PM IST / 8:30 AM – 1:30 PM EST",
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+  workingHours:
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
   applyInstructions:
     "Email us with your resume with the subject line – 'Application for Product Manager'.",
   applyEmail: "careers@trubotai.com",
