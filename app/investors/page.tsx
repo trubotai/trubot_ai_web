@@ -47,6 +47,7 @@ const Page = () => {
       {/* Investor Snapshot */}
       <PageLayout className="animate-fade-slide-up">
         <BulletList
+          iconPrefix="📈"
           title="📊 Investor Snapshot"
           align="center"
           items={snapshotList}
