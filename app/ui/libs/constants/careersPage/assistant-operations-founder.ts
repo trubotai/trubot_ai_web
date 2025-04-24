@@ -33,6 +33,8 @@ const executiveAssistantPageData: CareerPageDataType = {
     "🎯 Mission-Driven – Play a pivotal role in building a transformative, category-defining AI company.",
     "🏡 Future Hybrid Flexibility – Transition to a hybrid setup after probationary period.",
   ],
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
   applyInstructions:
     "Email us with your resume and a short cover note answering: 1) Why you're excited about early-stage startups, 2) Your preferred work schedule, and 3) An example of how you improved an executive's productivity. Use the subject line – 'Application for Executive Assistant to Founder'.",
   applyEmail: "careers@trubotai.com",
