@@ -14,8 +14,10 @@ const Page = () => {
   return (
     <PageLayout>
       <SectionHeader
-        title="Explore Our AI Products"
-        subtitle="AI chatbots, voice bots, multi-agent systems, and productivity tools — all tailored for your business growth."
+        title="All-in-One AI Solutions for Modern Businesses"
+        subtitle="Supercharge your business with TruBot AI's powerful suite of AI chatbots, voice bots, agents, and automation tools.
+Whether you want to automate customer support, scale marketing, manage invoicing, or grow your online presence, our ready-to-deploy solutions are built to drive results.
+Trusted by businesses across industries, TruBot AI makes advanced AI accessible, affordable, and effective — so you can focus on growth, not guesswork."
       />
 
       <div className="space-y-20">
