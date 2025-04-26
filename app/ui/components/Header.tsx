@@ -24,7 +24,7 @@ const Header = () => {
             height={40}
             priority
           />
-          <span className="text-lg font-bold text-navy hidden sm:inline">
+          <span className="text-base sm:text-lg font-bold text-navy">
             TruBot AI
           </span>
         </Link>
