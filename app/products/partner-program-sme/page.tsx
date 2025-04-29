@@ -28,6 +28,12 @@ import {
   storyList,
 } from "@/app/ui/libs/constants/productPage/partner-program-sme";
 
+export const metadata = {
+  title: "Partner Program for SMEs – Expand Your AI Market Reach | TruBot AI",
+  description:
+    "Join our Partner Program and access new SME markets, co-marketing opportunities, technical support, and business development resources. Accelerate your growth in the AI ecosystem.",
+};
+
 const Page = () => {
   return (
     <>

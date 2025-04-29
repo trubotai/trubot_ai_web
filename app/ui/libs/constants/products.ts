@@ -240,7 +240,7 @@ const productList = [
         name: "SME AI Product Aggregator",
         description:
           "Discover curated AI tools built specifically for small businesses.",
-        href: "/products/tools",
+        href: "/products/partner-program-sme",
       },
       {
         name: "AI Automation",
