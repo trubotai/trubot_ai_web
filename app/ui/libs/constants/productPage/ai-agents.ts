@@ -276,4 +276,40 @@ const caseStudyList = [
   },
 ];
 
-export { featureList, useCaseList, techSpecList, pricingList, caseStudyList };
+const faqList = [
+  {
+    question:
+      "What makes your AI agents different from traditional automation?",
+    answer:
+      "Unlike traditional automation that follows predefined rules, our AI agents understand context, make decisions based on multiple factors, and adapt as circumstances change. They can handle tasks that typically require human judgment.",
+  },
+  {
+    question: "How long does it take to implement AI agents?",
+    answer:
+      "Basic implementation can be done in 2–4 weeks. More complex deployments may take 6–8 weeks. Our team ensures a smooth rollout tailored to your systems.",
+  },
+  {
+    question: "Do I need technical expertise to use AI agents?",
+    answer:
+      "Not at all. Business users can manage agents through a no-code interface, and developers can extend functionality using our SDK.",
+  },
+  {
+    question: "How do AI agents learn and improve over time?",
+    answer:
+      "They leverage a mix of supervised learning, reinforcement learning, and user feedback loops to get better with each interaction.",
+  },
+  {
+    question: "What kind of ROI can I expect?",
+    answer:
+      "Most customers report ROI within 3–6 months, typically seeing a 40–70% drop in processing costs and 30–50% increase in operational efficiency.",
+  },
+];
+
+export {
+  featureList,
+  useCaseList,
+  techSpecList,
+  pricingList,
+  caseStudyList,
+  faqList,
+};
