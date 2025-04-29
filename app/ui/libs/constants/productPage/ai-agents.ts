@@ -8,6 +8,10 @@ import {
   DollarSign,
   Truck,
   FileText,
+  PlugZap,
+  Settings,
+  ShieldCheck,
+  Cloud,
 } from "lucide-react";
 
 const featureList = [
@@ -102,4 +106,47 @@ const useCaseList = [
   },
 ];
 
-export { featureList, useCaseList };
+const techSpecList = [
+  {
+    icon: PlugZap,
+    title: "Integration Capabilities",
+    bg: "bg-gray-50",
+    items: [
+      "RESTful APIs and webhook support for seamless integration",
+      "Ready-to-use connectors for Salesforce, SAP, Oracle, and more",
+      "Professional services for custom integrations",
+    ],
+  },
+  {
+    icon: Settings,
+    title: "Customization Options",
+    bg: "bg-light",
+    items: [
+      "No-code UI for quick setup by business users",
+      "Low-code visual workflow builder for custom processes",
+      "Full SDK access for deep developer control",
+    ],
+  },
+  {
+    icon: ShieldCheck,
+    title: "Security and Compliance",
+    bg: "bg-gray-50",
+    items: [
+      "SOC 2 Type II, ISO 27001, and GDPR compliant",
+      "End-to-end encryption and fine-grained access control",
+      "Complete audit trails for all agent activity",
+    ],
+  },
+  {
+    icon: Cloud,
+    title: "Deployment Options",
+    bg: "bg-light",
+    items: [
+      "Fully managed SaaS (cloud-hosted) with 99.9% uptime",
+      "Private cloud deployment in your own environment",
+      "On-premises option for high-security use cases",
+    ],
+  },
+];
+
+export { featureList, useCaseList, techSpecList };
