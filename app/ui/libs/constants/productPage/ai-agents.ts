@@ -149,4 +149,95 @@ const techSpecList = [
   },
 ];
 
-export { featureList, useCaseList, techSpecList };
+const pricingList = {
+  monthly: [
+    {
+      name: "Starter",
+      price: "$1,500/month",
+      features: [
+        "Up to 5 AI agents",
+        "1,000 agent tasks per month",
+        "Standard integrations",
+        "Email support",
+      ],
+      cta: "Get Started",
+      link: "/start-trial",
+      popular: false,
+    },
+    {
+      name: "Professional",
+      price: "$4,500/month",
+      features: [
+        "Up to 20 AI agents",
+        "10,000 agent tasks per month",
+        "Advanced integrations",
+        "Priority support",
+        "Custom agent training",
+      ],
+      cta: "Get Started",
+      link: "/start-trial",
+      popular: true,
+    },
+    {
+      name: "Enterprise",
+      price: "Custom Pricing",
+      features: [
+        "Unlimited AI agents",
+        "Unlimited agent tasks",
+        "All integrations",
+        "24/7 dedicated support",
+        "Custom development",
+        "On-premises option",
+      ],
+      cta: "Contact Sales",
+      link: "/contact-sales",
+      popular: false,
+    },
+  ],
+  yearly: [
+    {
+      name: "Starter",
+      price: "$15,000/year",
+      features: [
+        "Up to 5 AI agents",
+        "12,000 agent tasks/year",
+        "Standard integrations",
+        "Priority email support",
+      ],
+      cta: "Get Started",
+      link: "/start-trial",
+      popular: false,
+    },
+    {
+      name: "Professional",
+      price: "$45,000/year",
+      features: [
+        "Up to 20 AI agents",
+        "120,000 agent tasks/year",
+        "All integrations",
+        "Priority support",
+        "Custom agent training",
+      ],
+      cta: "Get Started",
+      link: "/start-trial",
+      popular: true,
+    },
+    {
+      name: "Enterprise",
+      price: "Custom Pricing",
+      features: [
+        "Unlimited AI agents",
+        "Unlimited tasks",
+        "All integrations",
+        "24/7 dedicated support",
+        "Custom development",
+        "On-premises option",
+      ],
+      cta: "Contact Sales",
+      link: "/contact-sales",
+      popular: false,
+    },
+  ],
+};
+
+export { featureList, useCaseList, techSpecList, pricingList };
