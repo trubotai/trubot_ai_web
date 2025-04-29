@@ -1,5 +1,6 @@
 import HeroSection from "./components/HerSection";
 import KeyFeaturesSection from "./components/KeyFeatures";
+import TechnicalSpecsSection from "./components/TechSpecs";
 import UseCasesSection from "./components/UseCases";
 
 const Page = () => {
@@ -8,6 +9,7 @@ const Page = () => {
       <HeroSection />
       <KeyFeaturesSection />
       <UseCasesSection />
+      <TechnicalSpecsSection />
     </>
   );
 };
