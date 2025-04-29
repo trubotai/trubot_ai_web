@@ -12,6 +12,8 @@ import {
   Settings,
   ShieldCheck,
   Cloud,
+  Building2,
+  ShoppingBag,
 } from "lucide-react";
 
 const featureList = [
@@ -240,4 +242,38 @@ const pricingList = {
   ],
 };
 
-export { featureList, useCaseList, techSpecList, pricingList };
+const caseStudyList = [
+  {
+    title: "Global Financial Services Firm",
+    icon: Building2,
+    challenge:
+      "Processing thousands of compliance documents manually led to delays and inconsistencies.",
+    solution:
+      "Implemented AI agents to extract key information, flag potential issues, and route for appropriate action.",
+    results: [
+      "85% faster processing time",
+      "95% compliance accuracy",
+      "$2.3M saved annually",
+      "60% fewer regulatory findings",
+    ],
+    link: "/case-studies/financial-firm",
+    badge: "Finance",
+  },
+  {
+    title: "E-commerce Retailer",
+    icon: ShoppingBag,
+    challenge:
+      "Customer support overwhelmed by repetitive inquiries caused long wait times.",
+    solution:
+      "AI agents resolved routine queries, accessed orders, and processed returns autonomously.",
+    results: [
+      "70% of inquiries auto-resolved",
+      "Response time cut from 24h to 2m",
+      "35% higher customer satisfaction",
+    ],
+    link: "/case-studies/ecommerce-retailer",
+    badge: "Retail",
+  },
+];
+
+export { featureList, useCaseList, techSpecList, pricingList, caseStudyList };
