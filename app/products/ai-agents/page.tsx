@@ -5,6 +5,7 @@ import TechSpecs from "./components/TechSpecs";
 import PricingSection from "./components/PricingSection";
 import CaseStudies from "./components/CaseStudies";
 import FAQSection from "./components/FAQSection";
+import RelatedProducts from "./components/RelatedProducts";
 
 const Page = () => {
   return (
@@ -16,6 +17,7 @@ const Page = () => {
       <PricingSection />
       <CaseStudies />
       <FAQSection />
+      <RelatedProducts />
     </>
   );
 };

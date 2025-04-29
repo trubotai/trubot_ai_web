@@ -14,6 +14,7 @@ import {
   Cloud,
   Building2,
   ShoppingBag,
+  Mic,
 } from "lucide-react";
 
 const featureList = [
@@ -305,6 +306,33 @@ const faqList = [
   },
 ];
 
+const productList = [
+  {
+    icon: Mic,
+    name: "AI Voice Bots",
+    description:
+      "Enhance customer experiences with voice assistants that understand context and provide real-time support.",
+    link: "/products/ai-voice-bots",
+    featured: true,
+  },
+  {
+    icon: MessageCircle,
+    name: "AI Chatbots",
+    description:
+      "Deploy intelligent chatbots across your website and apps to assist users and drive engagement.",
+    link: "/products/ai-chatbots",
+    featured: false,
+  },
+  {
+    icon: FileText,
+    name: "Invoice Management",
+    description:
+      "Streamline accounts payable with AI-powered invoice processing and payment workflows.",
+    link: "/products/invoice-management",
+    featured: false,
+  },
+];
+
 export {
   featureList,
   useCaseList,
@@ -312,4 +340,5 @@ export {
   pricingList,
   caseStudyList,
   faqList,
+  productList,
 };
