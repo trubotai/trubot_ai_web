@@ -33,4 +33,55 @@ const featureList = [
   },
 ];
 
-export { featureList };
+const useCaseList = [
+  {
+    title: "Customer Support",
+    subtitle: "24/7 Intelligent Assistance",
+    description:
+      "Provide instant, accurate responses to customer inquiries around the clock, resolving common issues without human intervention while ensuring complex cases are properly escalated.",
+    results: [
+      "80% of routine inquiries resolved without human assistance",
+      "Average response time reduced from hours to seconds",
+      "45% reduction in support costs",
+      "35% improvement in customer satisfaction scores",
+    ],
+  },
+  {
+    title: "Lead Generation and Qualification",
+    subtitle: "Convert More Visitors into Qualified Leads",
+    description:
+      "Engage website visitors proactively, answer product questions, qualify prospects, and schedule meetings with sales representatives—all through natural conversation.",
+    results: [
+      "60% increase in lead capture rate",
+      "40% improvement in lead quality",
+      "30% reduction in cost per qualified lead",
+      "25% higher conversion rates from lead to opportunity",
+    ],
+  },
+  {
+    title: "E-commerce Sales",
+    subtitle: "Guide Customers to Purchase",
+    description:
+      "Help customers find products, answer questions, provide recommendations, and facilitate checkout, creating a personalized shopping assistant that drives revenue.",
+    results: [
+      "35% increase in conversion rates",
+      "28% higher average order value",
+      "45% reduction in cart abandonment",
+      "50% increase in repeat purchases",
+    ],
+  },
+  {
+    title: "Internal Employee Support",
+    subtitle: "Streamline Internal Operations",
+    description:
+      "Provide employees with instant access to information, automate HR processes, and support IT troubleshooting, improving productivity and reducing operational costs.",
+    results: [
+      "70% reduction in time spent searching for information",
+      "50% decrease in routine HR inquiries to staff",
+      "40% faster resolution of common IT issues",
+      "30% improvement in employee satisfaction with internal services",
+    ],
+  },
+];
+
+export { featureList, useCaseList };
