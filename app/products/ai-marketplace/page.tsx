@@ -10,6 +10,7 @@ import SolutionCard from "@/app/ui/components/shared/SolutionCard";
 import BenefitCard from "@/app/ui/components/shared/BenefitCard";
 import FAQSection from "@/app/ui/components/shared/FAQSection";
 import ProductCard from "@/app/ui/components/shared/ProductCard";
+import CallToActionSection from "@/app/ui/components/shared/CTASection";
 import SolutionCategoriesTabs from "./components/SolutionCategories";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import {
@@ -21,6 +22,7 @@ import {
   benefitList,
   faqSection,
   relatedProductList,
+  CTASection,
 } from "@/app/ui/libs/constants/products/ai-marketplace";
 
 const Page = () => {
@@ -172,6 +174,9 @@ const Page = () => {
           ))}
         </div>
       </PageLayout>
+
+      {/* Call To Action */}
+      <CallToActionSection {...CTASection} />
     </>
   );
 };

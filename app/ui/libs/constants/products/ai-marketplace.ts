@@ -382,6 +382,14 @@ const relatedProductList = [
   },
 ];
 
+const CTASection = {
+  title: "Ready to Transform Your Business with AI?",
+  subtitle:
+    "Explore our curated marketplace of enterprise-grade AI solutions and find the perfect tools to drive innovation, efficiency, and growth for your organization.",
+  primaryCTA: { label: "Explore the Marketplace", href: "/products" },
+  secondaryCTA: { label: "Schedule a Guided Tour", href: "/contact" },
+};
+
 export {
   heroSection,
   featureList,
@@ -393,4 +401,5 @@ export {
   testimonialList,
   faqSection,
   relatedProductList,
+  CTASection,
 };
