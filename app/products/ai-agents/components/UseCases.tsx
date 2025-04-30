@@ -1,6 +1,6 @@
 import PageLayout from "@/app/ui/components/PageLayout";
 import SectionHeader from "@/app/ui/components/SectionHeader";
-import { useCaseList } from "@/app/ui/libs/constants/productPage/ai-agents";
+import { useCaseList } from "@/app/ui/libs/constants/products/ai-agents";
 
 const UseCases = () => {
   return (

@@ -17,7 +17,14 @@ interface ButtonProps {
   iconRight?: ElementType;
   iconAnimate?: boolean;
   label: string;
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "link";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "outline"
+    | "ghost"
+    | "link"
+    | "coral"
+    | "teal";
   disabled?: boolean;
   target?: "_blank" | "_self";
   rel?: string;
@@ -57,23 +64,31 @@ const Button = ({
   };
 
   const variantClasses = {
-    primary: "bg-electric text-light hover:bg-[color:var(--color-electric)/.8]",
-    secondary: "bg-navy text-light hover:bg-[var(--color-navy)/.9]",
-    outline: "border border-electric text-electric hover:bg-gray-soft",
-    ghost: "text-electric hover:underline",
-    link: "text-electric underline hover:text-[color:var(--color-electric)/.8]",
+    primary: "bg-electric text-light hover:bg-electric/80 hover-glow",
+    secondary: "bg-navy text-light hover:bg-navy/90 hover-raise",
+    outline:
+      "border border-electric text-electric hover:bg-gray-soft hover-scale",
+    ghost: "text-electric bg-transparent hover:bg-teal/10 hover-glow",
+    link: "text-electric bg-transparent hover:text-teal hover-raise",
+    coral: "bg-coral text-light hover:bg-coral/80 hover-glow",
+    teal: "bg-teal text-light hover:bg-teal/80 hover-glow",
   };
 
-  const iconClass = `h-5 w-5 ${iconAnimate ? "animate-float" : ""}`;
+  const iconClass = `h-5 w-5 ${iconAnimate ? "float" : ""}`;
+
+  const baseButtonClass = `
+    inline-flex items-center justify-center font-semibold font-body
+    transition focus:outline-none focus:ring-2 focus:ring-electric focus:ring-offset-2
+    ripple-effect
+  `;
 
   const buttonClass = `
-    inline-flex items-center justify-center font-semibold font-body transition
-    focus:outline-none focus:ring-2 focus:ring-electric focus:ring-offset-2
+    ${baseButtonClass}
     ${sizeClasses[size]}
     ${roundedClasses[rounded]}
     ${variantClasses[variant]}
     ${fullWidth ? "w-full" : ""}
-    ${animate ? "animate-fade-slide-up" : ""}
+    ${animate ? "fade-in scale-up" : ""}
     ${disabled ? "opacity-50 cursor-not-allowed" : ""}
     ${className}
   `;

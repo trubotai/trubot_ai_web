@@ -1,8 +1,5 @@
 @layer utilities {
-  /* ==== Fade Animations ==== */
-  .animate-fade-in {
-    animation: fade-in 0.8s ease-in-out forwards;
-  }
+  /* === Fade === */
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -11,42 +8,14 @@
       opacity: 1;
     }
   }
-
-  .animate-fade-slide-up {
-    animation: fade-slide-up 0.8s ease-in-out forwards;
-  }
-  @keyframes fade-slide-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .fade-in {
+    animation: fade-in 0.5s ease-out forwards;
   }
 
-  .animate-fade-scale {
-    animation: fade-scale 0.8s ease-in-out forwards;
-  }
-  @keyframes fade-scale {
+  /* === Slide In Directions === */
+  @keyframes slide-in-up {
     from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  /* ==== Slide Animations ==== */
-  .animate-slide-up {
-    animation: slide-up 0.8s ease-in-out forwards;
-  }
-  @keyframes slide-up {
-    from {
-      transform: translateY(20px);
+      transform: translateY(1rem);
       opacity: 0;
     }
     to {
@@ -54,13 +23,29 @@
       opacity: 1;
     }
   }
-
-  .animate-slide-in-left {
-    animation: slide-in-left 0.8s ease-in-out forwards;
+  @keyframes slide-in-down {
+    from {
+      transform: translateY(-1rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
   @keyframes slide-in-left {
     from {
-      transform: translateX(-30px);
+      transform: translateX(-1rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(1rem);
       opacity: 0;
     }
     to {
@@ -69,26 +54,23 @@
     }
   }
 
-  .animate-slide-in-bottom-right {
-    animation: slide-in-bottom-right 0.8s ease-in-out forwards;
+  .slide-in-up {
+    animation: slide-in-up 0.5s ease-out forwards;
   }
-  @keyframes slide-in-bottom-right {
-    from {
-      transform: translate(20px, 20px);
-      opacity: 0;
-    }
-    to {
-      transform: translate(0, 0);
-      opacity: 1;
-    }
+  .slide-in-down {
+    animation: slide-in-down 0.5s ease-out forwards;
+  }
+  .slide-in-left {
+    animation: slide-in-left 0.5s ease-out forwards;
+  }
+  .slide-in-right {
+    animation: slide-in-right 0.5s ease-out forwards;
   }
 
-  .animate-zoom-in {
-    animation: zoom-in 0.5s ease-in-out forwards;
-  }
-  @keyframes zoom-in {
+  /* === Scale/Zoom === */
+  @keyframes scale-up {
     from {
-      transform: scale(0.85);
+      transform: scale(0.95);
       opacity: 0;
     }
     to {
@@ -96,114 +78,105 @@
       opacity: 1;
     }
   }
-
-  /* ==== Floating & Pulsing ==== */
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
+  @keyframes scale-down {
+    from {
+      transform: scale(1);
+      opacity: 1;
     }
-    50% {
-      transform: translateY(-8px);
+    to {
+      transform: scale(0.95);
+      opacity: 0;
     }
   }
 
-  .animate-sway {
-    animation: sway 3s ease-in-out infinite;
+  .scale-up {
+    animation: scale-up 0.4s ease-out forwards;
   }
-  @keyframes sway {
-    0%,
-    100% {
-      transform: rotate(-2deg);
-    }
-    50% {
-      transform: rotate(2deg);
-    }
+  .scale-down {
+    animation: scale-down 0.4s ease-in forwards;
   }
 
-  .animate-pulse-slow {
-    animation: pulse 3s ease-in-out infinite;
-  }
+  /* === Pulse === */
   @keyframes pulse {
     0%,
     100% {
       opacity: 1;
+      transform: scale(1);
     }
     50% {
-      opacity: 0.6;
+      opacity: 0.7;
+      transform: scale(1.05);
     }
+  }
+  .pulse {
+    animation: pulse 1.5s infinite ease-in-out;
   }
 
-  /* ==== Typing Effects ==== */
-  .animate-typing {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 3s steps(30, end) infinite, blink 0.7s step-end infinite;
-    border-right: 2px solid currentColor;
-  }
-  @keyframes typing {
-    0% {
-      width: 0;
-    }
-    50% {
-      width: 100%;
-    }
-    100% {
-      width: 0;
-    }
-  }
-  @keyframes blink {
-    0%,
-    100% {
-      border-color: transparent;
-    }
-    50% {
-      border-color: currentColor;
-    }
-  }
-
-  /* ==== Scroll / Progress Bar ==== */
-  .animate-scroll-progress {
-    animation: scroll-progress-bar 3s ease-out forwards;
-  }
-  @keyframes scroll-progress-bar {
+  /* === Rotate === */
+  @keyframes rotate {
     from {
-      width: 0%;
+      transform: rotate(0deg);
     }
     to {
-      width: 100%;
+      transform: rotate(360deg);
     }
   }
+  .rotate {
+    animation: rotate 1s linear infinite;
+  }
 
-  /* ==== Ripple Tap Feedback ==== */
-  .ripple-effect {
-    position: relative;
+  /* === Hover Effects === */
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-raise {
+    transition: transform 0.3s ease;
+  }
+  .hover-raise:hover {
+    transform: translateY(-0.25rem);
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s ease;
+  }
+  .hover-glow:hover {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+
+  /* === Loading Spinner === */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .loading-spinner {
+    border: 2px solid #ccc;
+    border-top: 2px solid #3b82f6;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    animation: spin 1s linear infinite;
+  }
+
+  /* === Accordion === */
+  .accordion-open {
+    max-height: 1000px; /* Enough room for longer answers */
+    opacity: 1;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
     overflow: hidden;
   }
-  .ripple-effect::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.1);
-    transform: scale(0);
+  .accordion-close {
+    max-height: 0;
     opacity: 0;
-    pointer-events: none;
-    transition: transform 0.4s, opacity 0.4s;
-  }
-  .ripple-effect:active::after {
-    transform: scale(2);
-    opacity: 1;
-    transition: 0s;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    overflow: hidden;
   }
 
-  /* ==== Animation Delay Utilities ==== */
+  /* === Delay + Duration === */
   .animation-delay-100 {
     animation-delay: 0.1s;
   }
@@ -233,45 +206,7 @@
     animation-duration: 0.8s;
   }
 
-  /* ==== Hover Effects ==== */
-  .hover-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease,
-      background-color 0.3s ease;
-  }
-
-  .hover-raise:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .hover-glow:hover {
-    background-color: #ebf8ff;
-    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
-  }
-
-  .hover-scale:hover {
-    transform: scale(1.05);
-  }
-
-  .hover-rotate:hover {
-    transform: rotate(1deg);
-  }
-
-  .hover-pop-glow:hover {
-    transform: translateY(-0.5rem);
-    background-color: #ebf8ff;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1),
-      0 0 0 4px rgba(59, 130, 246, 0.3);
-  }
-
-  .hover-scale-glow:hover {
-    transform: scale(1.05);
-    color: black;
-    background-color: #ebf8ff;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
-  }
-
-  /* ==== ✅ Accessibility ==== */
+  /* === Accessibility === */
   @media (prefers-reduced-motion: reduce) {
     * {
       animation: none !important;

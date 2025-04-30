@@ -5,7 +5,7 @@ import { useState } from "react";
 import PageLayout from "@/app/ui/components/PageLayout";
 import SectionHeader from "@/app/ui/components/SectionHeader";
 import Button from "@/app/ui/components/Button";
-import { pricingList } from "@/app/ui/libs/constants/productPage/ai-agents";
+import { pricingList } from "@/app/ui/libs/constants/products/ai-agents";
 
 const PricingSection = () => {
   const [duration, setDuration] = useState<"monthly" | "yearly">("monthly");

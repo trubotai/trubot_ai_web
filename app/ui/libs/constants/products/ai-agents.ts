@@ -15,7 +15,17 @@ import {
   Building2,
   ShoppingBag,
   Mic,
+  BrainCircuit,
 } from "lucide-react";
+
+const heroSection = {
+  title: "Intelligent AI Agents The Future of Business Automation",
+  subtitle:
+    "Harness the power of autonomous AI agents that can reason, plan, and execute complex tasks with minimal human intervention.",
+  primaryCTA: { label: "Start Free Trial", href: "/contact" },
+  secondaryCTA: { label: "Schedule a Demo", href: "/contact" },
+  icon: BrainCircuit,
+};
 
 const featureList = [
   {
@@ -334,6 +344,7 @@ const productList = [
 ];
 
 export {
+  heroSection,
   featureList,
   useCaseList,
   techSpecList,

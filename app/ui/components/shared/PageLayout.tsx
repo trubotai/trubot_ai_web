@@ -28,16 +28,16 @@ const PageLayout = ({
   }[maxWidth];
 
   const backgroundClass = {
-    white: "bg-light",
-    gray: "bg-gray-soft",
+    white: "bg-light text-navy",
+    gray: "bg-gray-soft text-navy",
     dark: "bg-dark text-light",
-    transparent: "",
+    transparent: "text-navy",
   }[background];
 
   const paddingClass = {
-    default: "px-4 py-16",
+    default: "px-4 py-16 md:py-20",
     none: "",
-    lg: "px-6 py-24",
+    lg: "px-6 py-24 md:py-32",
   }[padding];
 
   return (
@@ -47,8 +47,8 @@ const PageLayout = ({
         ${maxWidthClass} mx-auto
         ${paddingClass}
         ${backgroundClass}
-        font-body text-navy
-        ${animate ? "animate-fade-in" : ""}
+        font-body
+        ${animate ? "fade-in" : ""}
         ${className}
       `}
     >

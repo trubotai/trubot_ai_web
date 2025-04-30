@@ -13,28 +13,31 @@ const SectionHeader = ({
   className = "",
   animate = true,
 }: SectionHeaderProps) => {
-  const alignment =
-    align === "center"
-      ? "text-center"
-      : align === "right"
-      ? "text-right"
-      : "text-left";
+  const alignment = {
+    center: "text-center",
+    right: "text-right",
+    left: "text-left",
+  }[align];
 
-  const subtitleWrapper =
-    align === "center" ? "mx-auto" : align === "right" ? "ml-auto" : "";
+  const subtitleWrapper = {
+    center: "mx-auto",
+    right: "ml-auto",
+    left: "",
+  }[align];
 
   return (
     <div
-      className={`mb-10 ${alignment} ${className} ${
-        animate ? "animate-fade-slide-up" : ""
+      className={`mb-8 md:mb-10 ${alignment} ${className} ${
+        animate ? "fade-in slide-in-up" : ""
       }`}
     >
       <h2 className="text-3xl font-heading text-navy mb-4 leading-tight">
         {title}
       </h2>
+
       {subtitle && (
         <p
-          className={`font-body text-[color:var(--color-navy)/0.7] max-w-2xl ${subtitleWrapper}`}
+          className={`font-body text-navy text-opacity-70 max-w-2xl ${subtitleWrapper}`}
         >
           {subtitle}
         </p>

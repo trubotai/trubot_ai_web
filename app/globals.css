@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "./ui/styles/animations.css";
+@import "./ui/styles/fancy-animations.css";
 
+/* Theme Variables */
 @theme {
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Sora", sans-serif;
@@ -14,6 +16,7 @@
   --color-dark: #0f172a;
 }
 
+/* Base Styles */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -25,70 +28,5 @@
     color: var(--color-navy);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-}
-
-@layer utilities {
-  /* === Font Family Utilities === */
-  .font-heading {
-    font-family: var(--font-heading);
-  }
-
-  .font-body {
-    font-family: var(--font-body);
-  }
-
-  /* === Text Color Utilities === */
-  .text-navy {
-    color: var(--color-navy);
-  }
-
-  .text-electric {
-    color: var(--color-electric);
-  }
-
-  .text-coral {
-    color: var(--color-coral);
-  }
-
-  .text-teal {
-    color: var(--color-teal);
-  }
-
-  .text-light {
-    color: var(--color-light);
-  }
-
-  .text-dark {
-    color: var(--color-dark);
-  }
-
-  /* === Background Color Utilities === */
-  .bg-navy {
-    background-color: var(--color-navy);
-  }
-
-  .bg-electric {
-    background-color: var(--color-electric);
-  }
-
-  .bg-coral {
-    background-color: var(--color-coral);
-  }
-
-  .bg-teal {
-    background-color: var(--color-teal);
-  }
-
-  .bg-gray-soft {
-    background-color: var(--color-gray-soft);
-  }
-
-  .bg-light {
-    background-color: var(--color-light);
-  }
-
-  .bg-dark {
-    background-color: var(--color-dark);
   }
 }

@@ -3,7 +3,7 @@ import { Mic, MessageCircle, FileText, ArrowRight } from "lucide-react";
 import PageLayout from "@/app/ui/components/PageLayout";
 import SectionHeader from "@/app/ui/components/SectionHeader";
 import Button from "@/app/ui/components/Button";
-import { productList } from "@/app/ui/libs/constants/productPage/ai-agents";
+import { productList } from "@/app/ui/libs/constants/products/ai-agents";
 
 const RelatedProducts = () => {
   return (
