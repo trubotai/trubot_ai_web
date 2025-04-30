@@ -39,7 +39,7 @@ const Page = () => {
 
       {/* Key Features */}
       <div className="bg-gray-soft">
-        <PageLayout>
+        <PageLayout id="features" animate>
           <SectionHeader
             title="Key Features"
             subtitle="Explore what makes our AI Marketplace the preferred platform for enterprises"
