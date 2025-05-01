@@ -1,57 +1,52 @@
 import PageLayout from "../ui/components/PageLayout";
 import SectionHeader from "../ui/components/SectionHeader";
-import Button from "../ui/components/Button";
+import OurStory from "../ui/components/AboutPage/OurStory";
+import OurMission from "../ui/components/AboutPage/OurMission";
+import OurApproach from "../ui/components/AboutPage/OurApproach";
+import OurValues from "../ui/components/AboutPage/OurValues";
+import ResponsibleAI from "../ui/components/AboutPage/ResponsibleAI";
+import FinalCTASection from "../ui/components/FinalCTASection";
+import {
+  storyList,
+  missionList,
+  approachList,
+  valueList,
+  responsibilityList,
+} from "../ui/libs/constants/about";
 
 export const metadata = {
   title: "About – TruBot AI",
   description:
-    "Learn more about the team, mission, and story behind TruBot AI.",
+    "Discover how TruBot AI is making AI solutions accessible and transformative for businesses worldwide.",
 };
 
 const Page = () => {
   return (
-    <PageLayout className="animate-fade-in">
-      <SectionHeader
-        title="About TruBot AI"
-        subtitle="Making AI accessible, actionable, and ROI-driven for small to mid-sized businesses."
+    <>
+      <PageLayout>
+        <SectionHeader
+          title="Pioneering the Future of AI for Business"
+          subtitle="We're on a mission to make powerful AI solutions accessible, practical, and transformative for organizations of all sizes."
+        />
+      </PageLayout>
+
+      <OurStory storyList={storyList} />
+
+      <OurMission missionList={missionList} />
+
+      <OurApproach approachList={approachList} />
+
+      <OurValues valueList={valueList} />
+
+      <ResponsibleAI responsibilityList={responsibilityList} />
+
+      <FinalCTASection
+        title="Ready to Explore AI for Your Business?"
+        subtitle="Our team is here to help. Let’s discuss how we can transform your operations with powerful, accessible AI solutions."
+        ctaLabel="Contact Our Team"
+        ctaLink="/contact"
       />
-
-      <div className="max-w-3xl mx-auto space-y-16 text-gray-700">
-        <section className="text-center animate-fade-slide-up animation-delay-100">
-          <h3 className="text-2xl font-bold text-navy mb-3">Our Mission</h3>
-          <p className="leading-relaxed">
-            Our mission is to revolutionize customer support and business
-            communication through AI-powered solutions. From AI chatbots and
-            voice-enabled bots to intelligent agents and social media tools, we
-            equip businesses to scale while staying personal.
-          </p>
-        </section>
-
-        <section className="text-center animate-fade-slide-up animation-delay-200">
-          <h3 className="text-2xl font-bold text-navy mb-3">Our Journey</h3>
-          <p className="leading-relaxed">
-            TruBot AI was founded by a visionary with 15+ years in AI and data
-            science. With leadership experience at CitiBank and Fidelity, our
-            founder brings deep domain expertise and a passion for solving
-            real-world inefficiencies with smart technology.
-          </p>
-        </section>
-
-        <section className="text-center animate-fade-slide-up animation-delay-300">
-          <h3 className="text-2xl font-bold text-navy mb-3">Our Approach</h3>
-          <p className="leading-relaxed">
-            We believe in automation that enhances—not replaces—human
-            connection. Our tools help businesses deliver faster, smarter, and
-            more personalized experiences across chat, voice, and digital
-            platforms.
-          </p>
-        </section>
-
-        <div className="text-center mt-12 animate-fade-slide-up animation-delay-400">
-          <Button href="/contact">Get in Touch</Button>
-        </div>
-      </div>
-    </PageLayout>
+    </>
   );
 };
 

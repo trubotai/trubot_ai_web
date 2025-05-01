@@ -36,12 +36,16 @@ const BulletList = ({
 
       <ul
         role="list"
-        className={`list-disc ${
+        className={`${
           align === "center" ? "list-inside" : "pl-5"
         } text-gray-700 leading-relaxed`}
       >
         {items.map((item, idx) => (
-          <li key={idx} role="listitem" className={itemSpacing}>
+          <li
+            key={idx}
+            role="listitem"
+            className={`${itemSpacing} leading-relaxed transition-transform duration-300 hover:translate-x-1`}
+          >
             {iconPrefix && (
               <span className="mr-2 text-lg leading-none">{iconPrefix}</span>
             )}

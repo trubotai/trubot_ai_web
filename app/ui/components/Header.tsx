@@ -24,7 +24,7 @@ const Header = () => {
             height={40}
             priority
           />
-          <span className="text-lg font-bold text-navy hidden sm:inline">
+          <span className="text-base sm:text-lg font-bold text-navy">
             TruBot AI
           </span>
         </Link>
@@ -44,7 +44,9 @@ const Header = () => {
           ))}
 
           <Link
-            href="/contact"
+            href="https://calendly.com/trubotai_founder_ceo/quick_connect_with_founder"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ml-4 bg-electric text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition hover-scale-glow"
           >
             Request Demo
@@ -88,6 +90,15 @@ const Header = () => {
             onClick={() => setMenuOpen(false)}
           >
             Request Demo
+          </Link>
+          <Link
+            href="https://calendly.com/trubotai_founder_ceo/quick_connect_with_founder"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-navy text-white text-center px-4 py-2 rounded-md font-semibold hover:bg-gray-800 transition hover-scale-glow"
+            onClick={() => setMenuOpen(false)}
+          >
+            Book an Appointment
           </Link>
         </div>
       )}

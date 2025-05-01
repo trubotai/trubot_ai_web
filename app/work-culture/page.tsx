@@ -18,7 +18,7 @@ const Page = () => {
       <PageLayout className="flex flex-col items-center justify-center animate-fade-slide-up">
         <SectionHeader
           title="Redefine Your Career at TruBot AI — 4-Day Work Weeks & Equity Freedom"
-          subtitle="Build AI’s future while owning your own—reach financial freedom in 5 years."
+          subtitle="Build AI’s future while owning your own—reach financial freedom in 5 years, and leave a legacy of financial freedom for generations."
         />
         <p className="text-gray-700 max-w-2xl mt-4 leading-relaxed">
           At TruBot AI, work isn&lsquo;t about clocking hours — it&apos;s about
