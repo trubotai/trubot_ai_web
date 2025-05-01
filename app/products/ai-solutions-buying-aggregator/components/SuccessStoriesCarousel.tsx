@@ -7,15 +7,6 @@ import SectionHeader from "@/app/ui/components/SectionHeader";
 import Button from "@/app/ui/components/Button";
 import { storyList } from "@/app/ui/libs/constants/productPage/ai-solutions-buying-aggregator";
 
-interface Story {
-  company: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  linkLabel: string;
-  linkHref: string;
-}
-
 const SuccessStoriesCarousel = () => {
   const [showScrollHint, setShowScrollHint] = useState(false);
 

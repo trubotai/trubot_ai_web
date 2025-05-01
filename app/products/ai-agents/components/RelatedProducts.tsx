@@ -1,5 +1,3 @@
-import { Mic, MessageCircle, FileText, ArrowRight } from "lucide-react";
-
 import PageLayout from "@/app/ui/components/PageLayout";
 import SectionHeader from "@/app/ui/components/SectionHeader";
 import Button from "@/app/ui/components/Button";

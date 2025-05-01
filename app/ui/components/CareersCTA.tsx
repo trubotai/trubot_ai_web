@@ -13,7 +13,7 @@ const CareersCTA = () => {
           Join Our Team
         </h2>
         <p className="text-gray-600 text-lg mb-10">
-          We're always looking for passionate individuals who share our vision
+          We&apos;re always looking for passionate individuals who share our vision
           of making AI accessible and impactful for businesses of all sizes.
         </p>
         <Link

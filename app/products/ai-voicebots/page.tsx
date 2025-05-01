@@ -108,7 +108,7 @@ const Page = () => {
                 />
               </div>
               <p className="mt-4 text-sm text-navy/80 font-body typing-effect max-w-xs mx-auto">
-                “Hi there! I'm your virtual assistant—ask me anything!”
+                “Hi there! I&apos;m your virtual assistant—ask me anything!”
               </p>
             </div>
 
