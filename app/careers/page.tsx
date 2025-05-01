@@ -1,8 +1,7 @@
-import PageLayout from "../ui/components/PageLayout";
-import SectionHeader from "../ui/components/SectionHeader";
-import CareerCard from "../ui/components/CareerCard";
-import Button from "../ui/components/Button";
-import { careerList } from "../ui/libs/constants/careers";
+import PageLayout from "../ui/components/shared/PageLayout";
+import SolutionCard from "../ui/components/shared/SolutionCard";
+import Button from "../ui/components/shared/Button";
+import { roleList } from "../ui/libs/constants/careers";
 
 export const metadata = {
   title: "Careers – TruBot AI",
@@ -12,37 +11,40 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <PageLayout>
-      <SectionHeader
-        title="Join the Team"
-        subtitle="We're building the future of business automation — and we’d love to work with you."
-      />
+    <PageLayout id="join-the-team">
+      <div className="text-center mb-10 fade-in slide-in-up">
+        <h1 className="text-4xl md:text-5xl font-heading font-bold text-navy mb-4">
+          Join the Team
+        </h1>
 
+        <p className="text-navy/80 font-body max-w-2xl mx-auto text-base md:text-lg">
+          We&apos;re building the future of business automation — and we’d love
+          to work with you.
+        </p>
+      </div>
+
+      {/* Role Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {careerList.map((role, index) => (
+        {roleList.map((role, index) => (
           <div
-            key={role.id}
-            className={`animate-fade-slide-up animation-delay-${
+            key={index}
+            className={`fade-in slide-in-up animation-delay-${
               (index + 1) * 100
             }`}
           >
-            <CareerCard
-              title={role.title}
-              location={role.location}
-              type={role.type}
-              href={role.href}
-            />
+            <SolutionCard {...role} />
           </div>
         ))}
       </div>
 
-      <div className="text-center mt-16 animate-fade-slide-up animation-delay-600">
+      {/* General CTA */}
+      <div className="text-center mt-16 fade-in slide-in-up animation-delay-600">
         <Button
           href="mailto:careers@trubotai.com?subject=Open Role Inquiry"
           variant="primary"
-        >
-          Don’t see your role? Reach out anyway
-        </Button>
+          animate
+          label="Don’t see your role? Reach out anyway"
+        />
       </div>
     </PageLayout>
   );
