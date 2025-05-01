@@ -1,0 +1,131 @@
+import FeatureCard from "@/app/ui/components/shared/FeatureCard";
+import HeroSection from "@/app/ui/components/shared/HeroSection";
+import PageLayout from "@/app/ui/components/shared/PageLayout";
+import SectionHeader from "@/app/ui/components/shared/SectionHeader";
+import UseCaseCard from "@/app/ui/components/shared/UseCaseCard";
+import TabCard from "@/app/ui/components/shared/TabCard";
+import StoryCard from "@/app/ui/components/shared/StoryCard";
+import FAQSection from "@/app/ui/components/shared/FAQSection";
+import ProductCard from "@/app/ui/components/shared/ProductCard";
+import CTASection from "@/app/ui/components/shared/CTASection";
+import TechSpecs from "./components/TechSpecs";
+import PricingSection from "./components/Pricing";
+import {
+  caseStudyList,
+  ctaSection,
+  faqSection,
+  featureList,
+  heroSection,
+  relatedProductList,
+  roiSection,
+  useCaseList,
+} from "@/app/ui/libs/constants/products/invoice-management-solutions";
+
+const Page = () => {
+  return (
+    <>
+      {/* Hero Section */}
+      <HeroSection {...heroSection} />
+
+      {/* Key Features */}
+      <div className="bg-gray-soft">
+        <PageLayout id="features" animate>
+          <SectionHeader
+            title="Key Features"
+            subtitle="Discover the intelligent features that power our invoice management solution."
+            align="center"
+            animate
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featureList.map((feature, index) => (
+              <FeatureCard key={index} index={index} {...feature} />
+            ))}
+          </div>
+        </PageLayout>
+      </div>
+
+      {/* Use Cases */}
+      <PageLayout id="use-cases" animate>
+        <SectionHeader
+          title="Real-World Use Cases"
+          subtitle="Discover how businesses of all sizes benefit from our AI-powered invoice management solution."
+          align="center"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {useCaseList.map((useCase, index) => (
+            <UseCaseCard key={index} index={index} {...useCase} />
+          ))}
+        </div>
+      </PageLayout>
+
+      {/* Tech Specs */}
+      <div className="bg-gray-soft">
+        <TechSpecs />
+      </div>
+
+      {/* Pricing */}
+      <PricingSection />
+
+      {/* ROI Calculator */}
+      <div className="bg-gray-soft">
+        <PageLayout id="roi-calculator" animate>
+          <SectionHeader
+            title="ROI Calculator"
+            subtitle="See how much you can save with our intelligent invoice management solution."
+            align="center"
+          />
+
+          <div className="max-w-3xl mx-auto">
+            <TabCard {...roiSection} />
+          </div>
+        </PageLayout>
+      </div>
+
+      {/* Case Study */}
+      <PageLayout id="case-studies" animate>
+        <SectionHeader
+          title="Customer Success Stories"
+          subtitle="See how real businesses achieved measurable results with our solution."
+          align="center"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {caseStudyList.map((study, index) => (
+            <StoryCard key={index} delay={index * 150} {...study} />
+          ))}
+        </div>
+      </PageLayout>
+
+      {/* FAQ */}
+      <div className="bg-gray-soft">
+        <FAQSection {...faqSection} />
+      </div>
+
+      {/* Related Products */}
+      <PageLayout id="related-products" animate>
+        <SectionHeader
+          title="Related Products"
+          subtitle="Explore other tools in our AI suite to enhance your finance operations."
+          align="center"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {relatedProductList.map((product, index) => (
+            <ProductCard
+              key={index}
+              animationDelay={index * 100}
+              {...product}
+            />
+          ))}
+        </div>
+      </PageLayout>
+
+      {/* CTA Section */}
+      <CTASection {...ctaSection} />
+    </>
+  );
+};
+
+export default Page;
