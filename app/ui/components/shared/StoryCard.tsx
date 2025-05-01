@@ -28,18 +28,20 @@ const StoryCard = ({
   return (
     <div
       className={`flex flex-col justify-between bg-light border border-gray-200 rounded-2xl p-8 
-          shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300
-          fade-in slide-in-up`}
+        shadow-sm hover:shadow-lg hover:-translate-y-1 transition-transform duration-300
+        fade-in slide-in-up`}
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="space-y-6">
         {/* Title */}
-        <div className="space-y-2 text-center">
-          <h3 className="text-2xl font-bold text-navy font-heading">{title}</h3>
+        <div className="space-y-2">
+          <h3 className="text-2xl font-bold text-navy font-heading text-center">
+            {title}
+          </h3>
         </div>
 
         {/* Details */}
-        <div className="space-y-6 text-left">
+        <div className="space-y-6">
           {/* Challenge */}
           <div className="space-y-1">
             <div className="flex items-center gap-2">
@@ -70,7 +72,9 @@ const StoryCard = ({
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <FaChartLine className="text-electric" />
-              <h4 className="font-semibold text-navy font-heading">Results:</h4>
+              <h4 className="font-semibold text-navy font-heading">
+                Results:
+              </h4>
             </div>
             <ul className="list-disc list-inside text-sm text-navy/80 font-body space-y-1">
               {results.map((item, index) => (

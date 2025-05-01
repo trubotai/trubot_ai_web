@@ -24,7 +24,7 @@ const SolutionCard = ({
 }: SolutionCardProps) => {
   return (
     <div
-      className={`rounded-xl p-6 flex flex-col items-start shadow-md hover:shadow-lg transition-shadow duration-300 ${bgColor}`}
+      className={`rounded-xl p-6 flex flex-col items-start shadow-md hover:shadow-lg transition-shadow duration-300 fade-in slide-in-up ${bgColor}`}
     >
       <div className="w-12 h-12 mb-4 flex items-center justify-center bg-white rounded-full shadow">
         <Icon className="w-6 h-6 text-electric" />
@@ -34,7 +34,6 @@ const SolutionCard = ({
         {name}
       </h4>
       <p className="text-sm text-navy/60 font-body mb-2">{provider}</p>
-
       <p className="text-navy/80 font-body mb-4">{description}</p>
 
       <div className="flex flex-wrap gap-2 mb-4">

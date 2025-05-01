@@ -19,7 +19,7 @@ const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <div
-      className="bg-light rounded-lg p-6 shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 fade-in slide-in-up"
+      className="bg-light rounded-lg p-6 shadow-md hover:shadow-lg hover-scale transition-all duration-300 fade-in slide-in-up"
       style={{ animationDelay: `${animationDelay}ms` }}
     >
       <div className="mb-4 w-12 h-12 rounded-full bg-electric/10 flex items-center justify-center">

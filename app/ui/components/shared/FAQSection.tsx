@@ -31,8 +31,8 @@ const FAQSection = ({
   };
 
   return (
-    <PageLayout id={id} animate>
-      <SectionHeader title={title} subtitle={subtitle} align="center" animate />
+    <PageLayout id={id}>
+      <SectionHeader title={title} subtitle={subtitle} align="center"/>
 
       <div className="mt-12 max-w-3xl mx-auto space-y-4">
         {faqList.map((faq, index) => (

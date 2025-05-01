@@ -17,7 +17,9 @@ const TestimonialCard = ({
     <div className="bg-light rounded-xl shadow-lg p-8 text-center fade-in slide-in-up transition duration-700 ease-in-out">
       <FaQuoteLeft className="text-electric text-3xl mb-4 mx-auto opacity-50" />
 
-      <p className="text-lg text-navy/90 italic mb-6 font-body">&quot;{quote}&quot;</p>
+      <blockquote className="text-lg text-navy/90 italic mb-6 font-body">
+        “{quote}”
+      </blockquote>
 
       <div className="text-navy font-heading font-semibold text-base">
         {name}

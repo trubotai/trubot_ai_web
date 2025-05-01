@@ -35,7 +35,7 @@ const HeroSection: FC<HeroSectionProps> = ({
     <div className={`relative py-28 sm:py-36 ${className}`}>
       <PageLayout
         id="hero"
-        aria-label="Hero Section"
+        aria-label="hero-section"
         className={`relative z-10 ${
           hasIcon
             ? "grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
@@ -44,7 +44,7 @@ const HeroSection: FC<HeroSectionProps> = ({
       >
         {/* Content */}
         <div className={`${contentAlignment} fade-in slide-in-up`}>
-          <h1 className="text-5xl sm:text-6xl font-heading font-extrabold text-navy leading-tight mb-6">
+          <h1 id="hero-section" className="text-5xl sm:text-6xl font-heading font-extrabold text-navy leading-tight mb-6">
             <span className="bg-gradient-to-r from-electric to-navy bg-clip-text text-transparent">
               {title}
             </span>

@@ -19,7 +19,7 @@ const PageLayout = ({
   id,
   padding = "default",
   as: Component = "section",
-  animate = false,
+  animate = true,
 }: PageLayoutProps) => {
   const maxWidthClass = {
     default: "max-w-7xl",
