@@ -1,58 +1,50 @@
-import PageLayout from "../ui/components/PageLayout";
-import SectionHeader from "../ui/components/SectionHeader";
-import Button from "../ui/components/Button";
-import { solutionList } from "../ui/libs/constants/solutions";
+import { FaRocket } from "react-icons/fa";
 
-export const metadata = {
-  title: "Solutions – TruBot AI",
-  description:
-    "See how TruBot AI streamlines operations across industries like SaaS, eCommerce, healthcare, and more.",
-};
+import SolutionCard from "../ui/components/shared/SolutionCard";
+import CTASection from "../ui/components/shared/CTASection";
+import PageLayout from "../ui/components/PageLayout";
+import { ctaSection, solutionList } from "../ui/libs/constants/solutions";
 
 const Page = () => {
   return (
-    <PageLayout className="animate-fade-in">
-      {/* Header */}
-      <SectionHeader
-        title="AI Solutions by Industry"
-        subtitle="TruBot AI adapts to your workflows — empowering you to automate smarter and scale faster."
-      />
+    <>
+      <PageLayout id="solutions-by-industry">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-heading text-navy mb-4">
+            AI Solutions by Industry
+          </h1>
+          <p className="text-navy/70 font-body max-w-3xl mx-auto">
+            TruBot AI adapts to your workflows — empowering you to automate
+            smarter and scale faster.
+          </p>
+        </div>
+      </PageLayout>
 
-      {/* Industry Groups */}
-      <div className="space-y-20">
-        {solutionList.map((group) => (
-          <section key={group.id}>
-            <h3 className="text-2xl font-bold text-navy mb-8 text-center">
-              {group.title}
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              {group.items.map((item, itemIdx) => (
-                <div
-                  key={item.title}
-                  className={`bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition hover-scale-glow animate-fade-slide-up animation-delay-${
-                    (itemIdx + 1) * 100
-                  }`}
-                >
-                  <h4 className="text-lg font-semibold text-navy mb-2">
-                    {item.title}
-                  </h4>
-
-                  <p className="text-gray-600 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+      <PageLayout>
+        {solutionList.map((category) => (
+          <section key={category.id} className="mb-16">
+            <h2 className="text-2xl font-heading text-navy mb-6">
+              {category.title}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {category.items.map((item, index) => (
+                <SolutionCard
+                  key={`${category.id}-${index}`}
+                  name={item.title}
+                  provider={category.title}
+                  description={item.description}
+                  icon={FaRocket}
+                  tags={[category.title]}
+                  link="#"
+                />
               ))}
             </div>
           </section>
         ))}
-      </div>
+      </PageLayout>
 
-      {/* Final CTA */}
-      <div className="text-center mt-24 animate-fade-slide-up animation-delay-400">
-        <Button href="/contact">Let’s Explore Your Solutions</Button>
-      </div>
-    </PageLayout>
+      <CTASection {...ctaSection} />
+    </>
   );
 };
 
