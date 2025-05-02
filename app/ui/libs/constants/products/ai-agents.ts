@@ -123,7 +123,6 @@ const techSpecList = [
   {
     icon: PlugZap,
     title: "Integration Capabilities",
-    bg: "bg-gray-50",
     items: [
       "RESTful APIs and webhook support for seamless integration",
       "Ready-to-use connectors for Salesforce, SAP, Oracle, and more",
@@ -133,7 +132,6 @@ const techSpecList = [
   {
     icon: Settings,
     title: "Customization Options",
-    bg: "bg-light",
     items: [
       "No-code UI for quick setup by business users",
       "Low-code visual workflow builder for custom processes",
@@ -143,7 +141,6 @@ const techSpecList = [
   {
     icon: ShieldCheck,
     title: "Security and Compliance",
-    bg: "bg-gray-50",
     items: [
       "SOC 2 Type II, ISO 27001, and GDPR compliant",
       "End-to-end encryption and fine-grained access control",
@@ -153,7 +150,6 @@ const techSpecList = [
   {
     icon: Cloud,
     title: "Deployment Options",
-    bg: "bg-light",
     items: [
       "Fully managed SaaS (cloud-hosted) with 99.9% uptime",
       "Private cloud deployment in your own environment",
@@ -162,7 +158,7 @@ const techSpecList = [
   },
 ];
 
-const pricingList = {
+const pricingSection = {
   monthly: [
     {
       name: "Starter",
@@ -174,7 +170,7 @@ const pricingList = {
         "Email support",
       ],
       cta: "Get Started",
-      link: "/start-trial",
+      link: "/contact",
       popular: false,
     },
     {
@@ -188,7 +184,7 @@ const pricingList = {
         "Custom agent training",
       ],
       cta: "Get Started",
-      link: "/start-trial",
+      link: "/contact",
       popular: true,
     },
     {
@@ -203,7 +199,7 @@ const pricingList = {
         "On-premises option",
       ],
       cta: "Contact Sales",
-      link: "/contact-sales",
+      link: "/contact",
       popular: false,
     },
   ],
@@ -218,7 +214,7 @@ const pricingList = {
         "Priority email support",
       ],
       cta: "Get Started",
-      link: "/start-trial",
+      link: "/contact",
       popular: false,
     },
     {
@@ -232,7 +228,7 @@ const pricingList = {
         "Custom agent training",
       ],
       cta: "Get Started",
-      link: "/start-trial",
+      link: "/contact",
       popular: true,
     },
     {
@@ -247,7 +243,7 @@ const pricingList = {
         "On-premises option",
       ],
       cta: "Contact Sales",
-      link: "/contact-sales",
+      link: "/contact",
       popular: false,
     },
   ],
@@ -267,8 +263,8 @@ const caseStudyList = [
       "$2.3M saved annually",
       "60% fewer regulatory findings",
     ],
-    link: "/case-studies/financial-firm",
-    badge: "Finance",
+    link: "/contact",
+    linkLabel: "Learn More",
   },
   {
     title: "E-commerce Retailer",
@@ -282,52 +278,56 @@ const caseStudyList = [
       "Response time cut from 24h to 2m",
       "35% higher customer satisfaction",
     ],
-    link: "/case-studies/ecommerce-retailer",
-    badge: "Retail",
+    link: "/contact",
+    linkLabel: "Learn More",
   },
 ];
 
-const faqList = [
-  {
-    question:
-      "What makes your AI agents different from traditional automation?",
-    answer:
-      "Unlike traditional automation that follows predefined rules, our AI agents understand context, make decisions based on multiple factors, and adapt as circumstances change. They can handle tasks that typically require human judgment.",
-  },
-  {
-    question: "How long does it take to implement AI agents?",
-    answer:
-      "Basic implementation can be done in 2–4 weeks. More complex deployments may take 6–8 weeks. Our team ensures a smooth rollout tailored to your systems.",
-  },
-  {
-    question: "Do I need technical expertise to use AI agents?",
-    answer:
-      "Not at all. Business users can manage agents through a no-code interface, and developers can extend functionality using our SDK.",
-  },
-  {
-    question: "How do AI agents learn and improve over time?",
-    answer:
-      "They leverage a mix of supervised learning, reinforcement learning, and user feedback loops to get better with each interaction.",
-  },
-  {
-    question: "What kind of ROI can I expect?",
-    answer:
-      "Most customers report ROI within 3–6 months, typically seeing a 40–70% drop in processing costs and 30–50% increase in operational efficiency.",
-  },
-];
+const faqSection = {
+  title: "Frequently Asked Questions",
+  subtitle: "Frequently Asked Questions",
+  faqList: [
+    {
+      question:
+        "What makes your AI agents different from traditional automation?",
+      answer:
+        "Unlike traditional automation that follows predefined rules, our AI agents understand context, make decisions based on multiple factors, and adapt as circumstances change. They can handle tasks that typically require human judgment.",
+    },
+    {
+      question: "How long does it take to implement AI agents?",
+      answer:
+        "Basic implementation can be done in 2–4 weeks. More complex deployments may take 6–8 weeks. Our team ensures a smooth rollout tailored to your systems.",
+    },
+    {
+      question: "Do I need technical expertise to use AI agents?",
+      answer:
+        "Not at all. Business users can manage agents through a no-code interface, and developers can extend functionality using our SDK.",
+    },
+    {
+      question: "How do AI agents learn and improve over time?",
+      answer:
+        "They leverage a mix of supervised learning, reinforcement learning, and user feedback loops to get better with each interaction.",
+    },
+    {
+      question: "What kind of ROI can I expect?",
+      answer:
+        "Most customers report ROI within 3–6 months, typically seeing a 40–70% drop in processing costs and 30–50% increase in operational efficiency.",
+    },
+  ],
+};
 
-const productList = [
+const relatedProductList = [
   {
     icon: Mic,
-    name: "AI Voice Bots",
+    title: "AI Voice Bots",
     description:
       "Enhance customer experiences with voice assistants that understand context and provide real-time support.",
-    link: "/products/ai-voice-bots",
+    link: "/products/ai-voicebots",
     featured: true,
   },
   {
     icon: MessageCircle,
-    name: "AI Chatbots",
+    title: "AI Chatbots",
     description:
       "Deploy intelligent chatbots across your website and apps to assist users and drive engagement.",
     link: "/products/ai-chatbots",
@@ -335,21 +335,36 @@ const productList = [
   },
   {
     icon: FileText,
-    name: "Invoice Management",
+    title: "Invoice Management",
     description:
       "Streamline accounts payable with AI-powered invoice processing and payment workflows.",
-    link: "/products/invoice-management",
+    link: "/products/invoice-management-solutions",
     featured: false,
   },
 ];
+
+const ctaSection = {
+  title: "Ready to Transform Your Business with Intelligent AI Agents?",
+  subtitle:
+    "Join industry leaders who are already leveraging our AI agents to automate complex processes, reduce costs, and deliver exceptional experiences.",
+  primaryCTA: {
+    label: "Start Your Free Trial",
+    href: "/start-trial",
+  },
+  secondaryCTA: {
+    label: "Schedule a Personalized Demo",
+    href: "/schedule-demo",
+  },
+};
 
 export {
   heroSection,
   featureList,
   useCaseList,
   techSpecList,
-  pricingList,
+  pricingSection,
   caseStudyList,
-  faqList,
-  productList,
+  faqSection,
+  relatedProductList,
+  ctaSection,
 };
