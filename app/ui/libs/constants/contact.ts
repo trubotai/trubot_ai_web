@@ -1,19 +1,46 @@
+import { HiMail } from "react-icons/hi";
+
+const heroSection = {
+  title: "Let's Start Your AI Journey Together",
+  subtitle:
+    "Our team of AI experts is ready to help you discover the right solutions for your business needs.",
+  primaryCTA: {
+    label: "Contact Us",
+    href: "#email-section",
+  },
+};
+
 const emailList = [
   {
-    label: "Sales Inquiries",
-    subheading: "Discuss AI solutions tailored to your business needs.",
-    email: "sales@trubotai.com",
+    audience: "Sales Inquiries",
+    subtitle: "Discuss AI solutions tailored to your business needs.",
+    benefits: [
+      {
+        icon: HiMail,
+        text: "sales@trubotai.com",
+      },
+    ],
   },
   {
-    label: "Technical Support",
-    subheading: "Need help? Get fast and reliable technical assistance.",
-    email: "support@trubotai.com",
+    audience: "Technical Support",
+    subtitle: "Need help? Get fast and reliable technical assistance.",
+    benefits: [
+      {
+        icon: HiMail,
+        text: "support@trubotai.com",
+      },
+    ],
   },
   {
-    label: "Partnership Opportunities",
-    subheading:
+    audience: "Partnership Opportunities",
+    subtitle:
       "Collaborate with TruBot AI to create future-ready AI ecosystems.",
-    email: "gopal@trubotai.com",
+    benefits: [
+      {
+        icon: HiMail,
+        text: "gopal@trubotai.com",
+      },
+    ],
   },
 ];
 
@@ -34,40 +61,38 @@ const locationList = [
   },
 ];
 
-const faqList = [
-  {
-    question:
-      "How long does it take to deploy a TruBot AI chatbot or voice solution?",
-    answer:
-      "Most of our chatbot and voice AI solutions can be deployed within 5–7 business days, depending on the complexity and customization requirements.",
-  },
-  {
-    question:
-      "Can I customize the chatbot conversation flows according to my business needs?",
-    answer:
-      "Absolutely! All chatbot conversation flows, triggers, and responses are fully customizable to align with your business goals, brand tone, and operational workflows.",
-  },
-  {
-    question:
-      "Does TruBot AI integrate with CRMs like Salesforce, HubSpot, and Zoho?",
-    answer:
-      "Yes, our solutions offer seamless integration with major CRM platforms such as Salesforce, HubSpot, Zoho, Freshdesk, and many others via APIs or connectors.",
-  },
-  {
-    question: "What support services are included after project delivery?",
-    answer:
-      "We provide comprehensive post-launch support, including technical troubleshooting, performance monitoring, chatbot optimization, and access to our emergency response team.",
-  },
-  {
-    question: "Can I request a demo before committing to a full deployment?",
-    answer:
-      "Of course! We encourage you to schedule a free consultation and demo session to experience TruBot AI solutions in action before making a decision.",
-  },
-  {
-    question: "What industries does TruBot AI serve?",
-    answer:
-      "TruBot AI solutions are trusted by businesses across e-commerce, SaaS, financial services, healthcare, digital marketing, real estate, hospitality, and education sectors.",
-  },
-];
+const faqSection = {
+  title: "Frequently Asked Questions",
+  subtitle:
+    "Find answers to common questions about our AI solutions and services.",
+  faqList: [
+    {
+      question: "What happens after I submit the contact form?",
+      answer:
+        "You'll receive an immediate confirmation email, and one of our team members will respond to your inquiry within one business day.",
+    },
+    {
+      question:
+        "I'm not sure which solution is right for my business. Who should I contact?",
+      answer:
+        'Start with our general inquiries contact or use the contact form and select "Not sure" in the interest field. Our team will help guide you to the right solution based on your business needs.',
+    },
+    {
+      question: "Do you offer implementation services?",
+      answer:
+        "Yes, we provide implementation support for all our solutions. The level of support varies by product and plan. Contact our sales team for specific details related to your needs.",
+    },
+    {
+      question: "How quickly can we implement your solutions?",
+      answer:
+        "Implementation timelines vary by solution and your organization's readiness. Many of our solutions can be implemented in as little as 2–4 weeks, while more complex enterprise deployments may take 8–12 weeks. Our team can provide a more accurate timeline after understanding your specific requirements.",
+    },
+    {
+      question: "Do you offer custom solutions or only pre-built products?",
+      answer:
+        "While we offer a comprehensive suite of pre-built AI solutions, we understand that some businesses have unique requirements. Our enterprise plans include customization options, and we can develop tailored solutions for specific use cases. Contact our sales team to discuss your custom needs.",
+    },
+  ],
+};
 
-export { emailList, locationList, faqList };
+export { heroSection, emailList, locationList, faqSection };

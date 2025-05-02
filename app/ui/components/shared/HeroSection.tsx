@@ -44,7 +44,10 @@ const HeroSection: FC<HeroSectionProps> = ({
       >
         {/* Content */}
         <div className={`${contentAlignment} fade-in slide-in-up`}>
-          <h1 id="hero-section" className="text-5xl sm:text-6xl font-heading font-extrabold text-navy leading-tight mb-6">
+          <h1
+            id="hero-section"
+            className="text-5xl sm:text-6xl font-heading font-extrabold text-navy leading-tight mb-6"
+          >
             <span className="bg-gradient-to-r from-electric to-navy bg-clip-text text-transparent">
               {title}
             </span>

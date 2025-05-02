@@ -1,11 +1,24 @@
 import Link from "next/link";
+import {
+  FaArrowRight,
+  FaFacebook,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaTwitter,
+} from "react-icons/fa";
 
-import PageLayout from "../ui/components/PageLayout";
-import SectionHeader from "../ui/components/SectionHeader";
-import ContactCard from "../ui/components/ContactCard";
-import FAQItem from "../ui/components/FAQItem";
-import Button from "../ui/components/Button";
-import { emailList, locationList, faqList } from "../ui/libs/constants/contact";
+import HeroSection from "../ui/components/shared/HeroSection";
+import PageLayout from "../ui/components/shared/PageLayout";
+import SectionHeader from "../ui/components/shared/SectionHeader";
+import BenefitCard from "../ui/components/shared/BenefitCard";
+import Button from "../ui/components/shared/Button";
+import FAQSection from "../ui/components/shared/FAQSection";
+import {
+  heroSection,
+  emailList,
+  locationList,
+  faqSection,
+} from "../ui/libs/constants/contact";
 
 export const metadata = {
   title: "Contact – TruBot AI",
@@ -16,138 +29,192 @@ export const metadata = {
 const Page = () => {
   return (
     <>
-      {/* Contact Info */}
-      <PageLayout className="flex flex-col items-center justify-center py-12 sm:py-16">
+      {/* Hero */}
+      <HeroSection {...heroSection} />
+
+      {/* Email list */}
+      <PageLayout id="connect-team">
         <SectionHeader
-          title="Let’s Connect"
-          subtitle="Have a question, want a demo, or just want to say hi? We’d love to hear from you."
+          title="Connect With the Right Team"
+          subtitle="Reach out directly to the appropriate contact for your needs."
+          align="center"
         />
-
-        {/* Short SEO Text */}
-        <p className="text-center text-gray-600 max-w-2xl mb-10 sm:mb-12 animate-fade-slide-up">
-          Get in touch with TruBot AI — your partner in AI-driven business
-          automation, customer support, and growth solutions.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 fade-in slide-in-up">
           {emailList.map((item, index) => (
-            <ContactCard key={index} {...item} />
+            <BenefitCard key={index} {...item} />
           ))}
         </div>
+      </PageLayout>
 
-        {/* Founder CTA */}
-        <div className="text-center mt-12 sm:mt-16 animate-fade-slide-up">
-          <h3 className="text-2xl font-bold mb-4">Connect with Our Founder</h3>
+      {/* Office Location */}
+      <div className="bg-gray-soft">
+        <PageLayout id="global-offices">
+          <SectionHeader
+            title="Our Global Offices"
+            subtitle="Discover our presence around the world."
+            align="center"
+          />
 
-          <p className="text-gray-700 text-sm sm:text-base mb-6">
-            Have questions about how AI can transform your business? Connect
-            directly with our founder or schedule a free consultation to explore
-            tailored solutions.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+            {locationList.map((location, index) => (
+              <div
+                key={index}
+                className="bg-light rounded-xl shadow-md hover:shadow-lg hover-scale fade-in slide-in-up overflow-hidden"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <iframe
+                  src={location.iframeSrc}
+                  loading="lazy"
+                  title={`Map of ${location.title}`}
+                  aria-label={`Map showing location of ${location.title}`}
+                  className="w-full h-64 md:h-80 border-0"
+                  allowFullScreen
+                />
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-2">
+                    <FaMapMarkerAlt className="text-electric" />
+                    <h3 className="text-xl sm:text-2xl font-heading font-semibold text-navy">
+                      {location.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm sm:text-base text-navy/80 font-body">
+                    {location.description}
+                  </p>
+                  <Button
+                    href={`https://maps.google.com/?q=${encodeURIComponent(
+                      location.title
+                    )}`}
+                    label="Open in Google Maps"
+                    variant="link"
+                    target="_blank"
+                    iconRight={FaArrowRight}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </PageLayout>
+      </div>
+
+      {/* Contact Info */}
+      <PageLayout id="book-consultation">
+        <SectionHeader
+          title="Book a Personalized Consultation"
+          subtitle="Schedule a 30-minute session with our founder or an AI expert to explore tailored solutions, see our technology in action, and get answers to your questions."
+          align="center"
+        />
+
+        <div className="text-center mt-12 sm:mt-16 fade-in slide-in-up">
+          <p className="text-navy/70 text-sm sm:text-base font-body max-w-2xl mx-auto mb-6">
+            Whether you&apos;re exploring how AI can transform your operations
+            or have specific goals in mind, we&apos;re here to help you take the
+            next step confidently. Connect directly with our founder for
+            personalized advice or schedule a free consultation to discover the
+            right solutions for your business.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
-            <Link
+            <Button
               href="https://www.linkedin.com/in/gopalakrishnan-k-79474727/"
+              variant="link"
+              label="Connect on LinkedIn"
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 font-medium hover:underline"
-            >
-              Connect on LinkedIn
-            </Link>
-
+              animate
+            />
             <Button
               href="https://calendly.com/trubotai_founder_ceo/quick_connect_with_founder"
               variant="outline"
-              className="hover-scale-glow"
-            >
-              Book a Free Consultation
-            </Button>
+              label="Book a Free Consultation"
+              target="_blank"
+              animate
+            />
           </div>
         </div>
       </PageLayout>
 
-      {/* 🌍 Our Offices Section */}
-      <PageLayout className="py-12 sm:py-16">
+      {/* FAQ */}
+      <div className="bg-gray-soft">
+        <FAQSection {...faqSection} />
+      </div>
+
+      {/* Connect with Us */}
+      <PageLayout id="connect">
         <SectionHeader
-          title="Our Offices"
-          subtitle="We’re proud to have a global presence to support our clients worldwide."
+          title="Connect With Us"
+          subtitle="Stay updated with the latest AI trends, best practices, and company news."
+          align="center"
         />
 
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
-          {locationList.map((office, index) => (
-            <div
-              key={office.title}
-              className={`animate-fade-slide-up animation-delay-${
-                300 + index * 100
-              }
-                bg-white border border-gray-200 rounded-2xl overflow-hidden
-                shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.01]`}
-            >
-              <div className="w-full aspect-video">
-                <iframe
-                  title={office.title}
-                  src={office.iframeSrc}
-                  width="100%"
-                  height="100%"
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full border-none"
-                />
-              </div>
-
-              <div className="p-5 text-center">
-                <h4 className="text-lg font-semibold text-navy mb-2">
-                  {office.title}
-                </h4>
-                <p className="text-sm text-gray-600">{office.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </PageLayout>
-
-      {/* FAQ Section */}
-      <PageLayout className="py-12 sm:py-16">
-        <div className="w-full max-w-3xl mx-auto animate-fade-slide-up">
-          <h3 className="text-2xl font-bold mb-8 text-center">
-            Frequently Asked Questions
+        {/* Social Media */}
+        <div className="mt-10 text-center fade-in slide-in-up">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4">
+            Follow Us on Social Media
           </h3>
-
-          <div className="space-y-4">
-            {faqList.map((faq, index) => (
-              <FAQItem key={index} {...faq} />
-            ))}
+          <div className="flex justify-center gap-6 text-2xl text-electric">
+            <Link
+              href="https://www.linkedin.com/company/trubotai"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin className="hover-scale hover:text-teal transition" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/trubotai"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <FaTwitter className="hover-scale hover:text-teal transition" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/trubotai"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <FaFacebook className="hover-scale hover:text-teal transition" />
+            </Link>
           </div>
         </div>
-      </PageLayout>
 
-      {/* Connect with Us Section */}
-      <PageLayout className="py-12 sm:py-16">
-        <div className="text-center animate-fade-slide-up">
-          <h3 className="text-2xl font-bold mb-4">Follow Us</h3>
-          <p className="text-gray-700 mb-6">
-            Stay updated on the latest AI innovations, insights, and TruBot AI
-            announcements by following us on LinkedIn.
-          </p>
-          <Link
-            href="https://www.linkedin.com/company/trubotai"
-            target="_blank"
-            className="text-blue-600 font-medium hover:underline"
-          >
-            TruBot AI LinkedIn
-          </Link>
+        {/* Blog and Newsletter */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 text-center fade-in slide-in-up">
+          <div>
+            <h4 className="text-lg font-heading font-semibold text-navy mb-2">
+              Blog and Resources
+            </h4>
+            <p className="text-navy/70 font-body text-sm mb-4">
+              Stay informed on AI innovations, implementation tips, and industry
+              insights.
+            </p>
+            <Button
+              href="/blog"
+              variant="link"
+              label="Visit Our Blog"
+              animate
+            />
+          </div>
+          <div>
+            <h4 className="text-lg font-heading font-semibold text-navy mb-2">
+              Newsletter
+            </h4>
+            <p className="text-navy/70 font-body text-sm mb-4">
+              Subscribe to our monthly newsletter for AI insights, product
+              updates, and more.
+            </p>
+            <Button
+              href="/newsletter"
+              variant="link"
+              label="Subscribe Now"
+              animate
+            />
+          </div>
         </div>
-      </PageLayout>
 
-      {/* Emergency Support */}
-      <PageLayout className="py-12 sm:py-16">
-        <div className="text-center bg-red-50 p-6 sm:p-8 rounded-2xl animate-fade-slide-up max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold mb-4 text-red-600">
+        {/* Emergency Support */}
+        <div className="mt-16 text-center bg-red-50 p-6 sm:p-8 rounded-2xl fade-in slide-in-up max-w-3xl mx-auto">
+          <h3 className="text-2xl font-heading font-bold mb-4 text-red-600">
             Emergency Support
           </h3>
-
-          <p className="text-gray-700 mb-4">
+          <p className="text-navy font-body mb-4">
             Experiencing a critical issue or service disruption? Our team is
             here to assist you promptly. Please email{" "}
             <a
@@ -158,8 +225,7 @@ const Page = () => {
             </a>{" "}
             for immediate support.
           </p>
-
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 text-sm font-body">
             We guarantee a response within 2 hours for all emergency support
             requests.
           </p>
