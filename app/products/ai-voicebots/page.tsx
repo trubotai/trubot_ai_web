@@ -10,7 +10,7 @@ import Button from "@/app/ui/components/shared/Button";
 import StoryCard from "@/app/ui/components/shared/StoryCard";
 import FAQSection from "@/app/ui/components/shared/FAQSection";
 import ProductCard from "@/app/ui/components/shared/ProductCard";
-import CallToActionSection from "@/app/ui/components/shared/CTASection";
+import CTASection from "@/app/ui/components/shared/CTASection";
 import TechSpecs from "./components/TechSpecs";
 import PricingSection from "./components/Pricing";
 import {
@@ -20,7 +20,7 @@ import {
   heroSection,
   relatedProductList,
   useCaseList,
-  CTASection,
+  ctaSection,
 } from "@/app/ui/libs/constants/products/ai-voicebots";
 
 const Page = () => {
@@ -31,12 +31,10 @@ const Page = () => {
 
       {/* Key Features */}
       <div className="bg-gray-soft">
-        <PageLayout id="features" animate>
+        <PageLayout id="features">
           <SectionHeader
             title="Key Features"
             subtitle="Discover the powerful capabilities of our AI Voice Bots."
-            align="center"
-            animate
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -54,12 +52,10 @@ const Page = () => {
       </div>
 
       {/* Use Cases */}
-      <PageLayout id="use-cases" animate>
+      <PageLayout id="use-cases">
         <SectionHeader
           title="Use Cases"
           subtitle="Explore how our AI Voice Bots can transform key areas of your business."
-          align="center"
-          animate
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
@@ -87,12 +83,10 @@ const Page = () => {
 
       {/* Demo */}
       <div className="bg-gray-soft">
-        <PageLayout id="interactive-demo" animate>
+        <PageLayout id="interactive-demo">
           <SectionHeader
             title="Interactive Voice Bot Demo"
             subtitle="Experience our AI voice bot technology firsthand. Click below to interact with a demo voice bot that can answer questions about our platform, provide product information, and showcase key features."
-            align="center"
-            animate
           />
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12">
@@ -130,15 +124,11 @@ const Page = () => {
       </div>
 
       {/* Case Study */}
-      <PageLayout id="case-studies" animate>
+      <PageLayout id="case-studies">
         <SectionHeader
           title="Case Studies"
           subtitle="Discover how our AI Voice Bots have transformed businesses across various industries."
-          align="center"
-          animate
         />
-
-        {/* Story Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {caseStudyList.map((story, index) => (
             <StoryCard
@@ -161,12 +151,10 @@ const Page = () => {
       </div>
 
       {/* Related Products */}
-      <PageLayout id="related-products" animate>
+      <PageLayout id="related-products">
         <SectionHeader
           title="Related Products"
           subtitle="Explore additional offerings to enhance your AI journey"
-          align="center"
-          animate
         />
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10">
@@ -184,7 +172,7 @@ const Page = () => {
       </PageLayout>
 
       {/* Call To Action */}
-      <CallToActionSection {...CTASection} />
+      <CTASection {...ctaSection} />
     </>
   );
 };

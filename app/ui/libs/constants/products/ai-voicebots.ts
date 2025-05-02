@@ -332,7 +332,7 @@ const relatedProductList = [
   },
 ];
 
-const CTASection = {
+const ctaSection = {
   title: "Ready to Transform Customer Experiences with Voice AI?",
   subtitle:
     "Join forward-thinking companies already using our voice technology to create exceptional customer experiences, reduce costs, and drive business growth.",
@@ -355,5 +355,5 @@ export {
   caseStudyList,
   faqSection,
   relatedProductList,
-  CTASection,
+  ctaSection,
 };
