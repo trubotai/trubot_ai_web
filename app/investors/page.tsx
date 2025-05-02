@@ -72,8 +72,8 @@ const Page = () => {
       <div className="bg-gray-soft">
         <PageLayout id="investor-quote">
           <div className="text-center max-w-2xl mx-auto fade-in slide-in-up">
-            <FaQuoteLeft className="text-electric text-2xl mb-4 mx-auto opacity-60 pulse-slow" />
-            <blockquote className="text-2xl sm:text-3xl font-heading text-navy italic leading-relaxed fade-in slide-in-up animation-delay-200">
+            <FaQuoteLeft className="text-electric text-2xl mb-4 mx-auto opacity-60 float" />
+            <blockquote className="text-2xl sm:text-3xl font-heading text-navy italic leading-relaxed">
               “Your capital. Our innovation. Exponential returns.”
             </blockquote>
           </div>
