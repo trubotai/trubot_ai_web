@@ -46,7 +46,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     applyInstructions,
     applyEmail,
     workingHours,
-    compensation, // added the new field here
+    compensation,
   } = data;
 
   return (
