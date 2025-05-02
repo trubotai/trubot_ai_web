@@ -382,7 +382,7 @@ const relatedProductList = [
   },
 ];
 
-const CTASection = {
+const ctaSection = {
   title: "Ready to Transform Your Business with AI?",
   subtitle:
     "Explore our curated marketplace of enterprise-grade AI solutions and find the perfect tools to drive innovation, efficiency, and growth for your organization.",
@@ -401,5 +401,5 @@ export {
   testimonialList,
   faqSection,
   relatedProductList,
-  CTASection,
+  ctaSection,
 };

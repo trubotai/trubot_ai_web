@@ -35,12 +35,10 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <PageLayout id="testimonialList" animate>
+    <PageLayout id="testimonialList">
       <SectionHeader
         title="What Our Customers Say"
         subtitle="Real feedback from enterprises, SMEs, and solution providers"
-        align="center"
-        animate
       />
 
       <div className="mt-12 relative max-w-3xl mx-auto">
