@@ -8,16 +8,16 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <PageLayout>
+    <PageLayout id="privacy-policy">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-navy mb-4">Privacy Policy</h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-700 max-w-2xl mx-auto font-body">
           Your privacy is important to us. This page explains how TruBot AI
           collects, uses, and safeguards your data.
         </p>
       </div>
 
-      <div className="max-w-3xl mx-auto space-y-10 text-gray-700 leading-relaxed">
+      <div className="max-w-3xl mx-auto space-y-10 text-gray-700 leading-relaxed font-body fade-in">
         <section>
           <h2 className="text-2xl font-bold text-navy mb-2">Data Collection</h2>
           <p>
