@@ -330,7 +330,7 @@ const relatedProductList = [
     title: "AI Voice Bots",
     description:
       "Complement your social media presence with voice assistants that maintain your brand voice across audio touchpoints.",
-    link: "/products/ai-voice-bots",
+    link: "/products/ai-voicebots",
   },
   {
     icon: Grid,

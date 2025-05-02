@@ -12,12 +12,10 @@ const PricingSection = () => {
   const plans = pricingSection[duration];
 
   return (
-    <PageLayout id="pricing" animate>
+    <PageLayout id="pricing">
       <SectionHeader
         title="Pricing Options"
         subtitle="Simple and scalable plans to fit your business needs"
-        align="center"
-        animate
       />
 
       {/* Billing Toggle */}

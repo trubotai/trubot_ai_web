@@ -31,12 +31,10 @@ const Page = () => {
 
       {/* Key Features */}
       <div className="bg-gray-soft">
-        <PageLayout id="features" animate>
+        <PageLayout id="features">
           <SectionHeader
             title="Key Features"
             subtitle="Everything you need to streamline and supercharge your social media strategy."
-            align="center"
-            animate
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -48,12 +46,10 @@ const Page = () => {
       </div>
 
       {/* Use Cases */}
-      <PageLayout id="use-cases" animate>
+      <PageLayout id="use-cases">
         <SectionHeader
           title="Use Cases"
           subtitle="Discover how different teams leverage our platform to achieve outstanding results."
-          align="center"
-          animate
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -73,12 +69,10 @@ const Page = () => {
 
       {/* Demo */}
       <div className="bg-gray-soft">
-        <PageLayout id="interactive-demo" animate>
+        <PageLayout id="interactive-demo">
           <SectionHeader
             title="Interactive Platform Demo"
             subtitle="Experience our AI social media tools in action. See how the platform can generate content, analyze performance, and optimize your social media strategy in real-time."
-            align="center"
-            animate
           />
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12">
@@ -116,7 +110,7 @@ const Page = () => {
       </div>
 
       {/* Case Study */}
-      <PageLayout id="case-studies" animate>
+      <PageLayout id="case-studies">
         <SectionHeader
           title="Case Studies"
           subtitle="See how leading brands use our platform to boost content performance and drive business results."
@@ -137,12 +131,10 @@ const Page = () => {
       </div>
 
       {/* Related Product */}
-      <PageLayout id="related-products" animate>
+      <PageLayout id="related-products">
         <SectionHeader
           title="Related Products"
           subtitle="Explore more AI-powered tools to boost your social media and customer engagement."
-          align="center"
-          animate
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
