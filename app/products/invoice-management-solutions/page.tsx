@@ -29,12 +29,10 @@ const Page = () => {
 
       {/* Key Features */}
       <div className="bg-gray-soft">
-        <PageLayout id="features" animate>
+        <PageLayout id="features">
           <SectionHeader
             title="Key Features"
             subtitle="Discover the intelligent features that power our invoice management solution."
-            align="center"
-            animate
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -46,11 +44,10 @@ const Page = () => {
       </div>
 
       {/* Use Cases */}
-      <PageLayout id="use-cases" animate>
+      <PageLayout id="use-cases">
         <SectionHeader
           title="Real-World Use Cases"
           subtitle="Discover how businesses of all sizes benefit from our AI-powered invoice management solution."
-          align="center"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -70,11 +67,10 @@ const Page = () => {
 
       {/* ROI Calculator */}
       <div className="bg-gray-soft">
-        <PageLayout id="roi-calculator" animate>
+        <PageLayout id="roi-calculator">
           <SectionHeader
             title="ROI Calculator"
             subtitle="See how much you can save with our intelligent invoice management solution."
-            align="center"
           />
 
           <div className="max-w-3xl mx-auto">
@@ -84,11 +80,10 @@ const Page = () => {
       </div>
 
       {/* Case Study */}
-      <PageLayout id="case-studies" animate>
+      <PageLayout id="case-studies">
         <SectionHeader
           title="Customer Success Stories"
           subtitle="See how real businesses achieved measurable results with our solution."
-          align="center"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -104,11 +99,10 @@ const Page = () => {
       </div>
 
       {/* Related Products */}
-      <PageLayout id="related-products" animate>
+      <PageLayout id="related-products">
         <SectionHeader
           title="Related Products"
           subtitle="Explore other tools in our AI suite to enhance your finance operations."
-          align="center"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

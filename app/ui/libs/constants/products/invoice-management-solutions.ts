@@ -24,11 +24,11 @@ const heroSection = {
     "Transform your accounts payable operations with our intelligent invoice management solution that captures data, matches invoices, detects fraud, and optimizes payments—all with minimal human intervention.",
   primaryCTA: {
     label: "Start Free Trial",
-    href: "/free-trial",
+    href: "/contact",
   },
   secondaryCTA: {
     label: "Calculate Your ROI",
-    href: "/roi-calculator",
+    href: "/contact",
   },
   icon: FaRobot,
 };

@@ -15,12 +15,10 @@ const TechSpecs = () => {
   };
 
   return (
-    <PageLayout id="technical-specs" animate>
+    <PageLayout id="technical-specs">
       <SectionHeader
         title="Technical Specifications"
         subtitle="Explore the robust technologies and capabilities behind our invoice management solution."
-        align="center"
-        animate
       />
 
       <div className="space-y-4">
