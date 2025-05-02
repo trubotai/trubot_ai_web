@@ -106,18 +106,20 @@ const Page = () => {
       <FAQSection {...faqSection} />
 
       {/* Related Products */}
-      <PageLayout id="related-products">
-        <SectionHeader
-          title="Related Products"
-          subtitle="Explore more intelligent solutions"
-          align="center"
-        />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-          {relatedProductList.map((product, idx) => (
-            <ProductCard key={idx} {...product} animationDelay={idx * 100} />
-          ))}
-        </div>
-      </PageLayout>
+      <div className="bg-gray-soft">
+        <PageLayout id="related-products">
+          <SectionHeader
+            title="Related Products"
+            subtitle="Explore more intelligent solutions"
+            align="center"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+            {relatedProductList.map((product, idx) => (
+              <ProductCard key={idx} {...product} animationDelay={idx * 100} />
+            ))}
+          </div>
+        </PageLayout>
+      </div>
 
       {/* CTA */}
       <CTASection {...ctaSection} />
