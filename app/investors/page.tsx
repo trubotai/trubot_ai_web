@@ -1,12 +1,15 @@
-import PageLayout from "@/app/ui/components/PageLayout";
-import SectionHeader from "@/app/ui/components/SectionHeader";
-import QuoteBox from "@/app/ui/components/QuoteBox";
-import BulletList from "@/app/ui/components/BulletList";
-import Button from "@/app/ui/components/Button";
+import { FaQuoteLeft } from "react-icons/fa";
 
+import PageLayout from "@/app/ui/components/shared/PageLayout";
+import SectionHeader from "@/app/ui/components/shared/SectionHeader";
+import HeroSection from "../ui/components/shared/HeroSection";
+import FeatureCard from "../ui/components/shared/FeatureCard";
+import CTASection from "../ui/components/shared/CTASection";
 import {
-  investReasonList,
+  heroSection,
+  featureList,
   snapshotList,
+  ctaSection,
 } from "@/app/ui/libs/constants/investors";
 
 export const metadata = {
@@ -19,73 +22,66 @@ const Page = () => {
   return (
     <>
       {/* Hero Section */}
-      <PageLayout className="flex flex-col items-center justify-center animate-fade-slide-up">
-        <SectionHeader
-          title="100X Your Investment with TruBot AI’s Multi-Product Powerhouse"
-          subtitle="Join the AI revolution—powered by a $1.3T market, 38% CAGR, and proven profitability."
-        />
-
-        <p className="text-gray-700 max-w-2xl mx-auto mt-4 leading-relaxed">
-          TruBot AI is redefining how businesses engage, support, and grow using
-          cutting-edge automation technologies. Our unified AI platform serves
-          SMEs globally — and we’re just getting started.
-        </p>
-      </PageLayout>
+      <HeroSection {...heroSection} />
 
       {/* Strategic Investment Highlights */}
-      <div className="bg-gray-50">
-        <PageLayout className="animate-fade-slide-up">
-          <BulletList
-            iconPrefix="✅"
+      <div className="bg-gray-soft">
+        <PageLayout id="investment-benefits">
+          <SectionHeader
             title="Why Invest in TruBot AI?"
+            subtitle="Unlock compounding growth across verticals with a product and acquisition-led strategy."
             align="center"
-            items={investReasonList}
           />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {featureList.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                index={index}
+              />
+            ))}
+          </div>
         </PageLayout>
       </div>
 
       {/* Investor Snapshot */}
-      <PageLayout className="animate-fade-slide-up">
-        <BulletList
-          iconPrefix="📈"
-          title="📊 Investor Snapshot"
+      <PageLayout id="investor-snapshot">
+        <SectionHeader
+          title="Investor Snapshot"
+          subtitle="Key financial insights that highlight the opportunity landscape for TruBot AI."
           align="center"
-          items={snapshotList}
         />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+          {snapshotList.map((text, index) => (
+            <div
+              key={index}
+              className="bg-light rounded-xl shadow-md p-6 text-center fade-in slide-in-up"
+              style={{ animationDelay: `${index * 120}ms` }}
+            >
+              <p className="text-navy font-body text-sm">{text}</p>
+            </div>
+          ))}
+        </div>
       </PageLayout>
 
-      {/* Quote Section */}
-      <div className="bg-gray-50">
-        <PageLayout>
-          <QuoteBox quote="Your capital. Our innovation. Exponential returns." />
+      {/* Quote */}
+      <div className="bg-gray-soft">
+        <PageLayout id="investor-quote">
+          <div className="text-center max-w-2xl mx-auto fade-in slide-in-up">
+            <FaQuoteLeft className="text-electric text-2xl mb-4 mx-auto opacity-60 pulse-slow" />
+            <blockquote className="text-2xl sm:text-3xl font-heading text-navy italic leading-relaxed fade-in slide-in-up animation-delay-200">
+              “Your capital. Our innovation. Exponential returns.”
+            </blockquote>
+          </div>
         </PageLayout>
       </div>
 
-      {/* Final CTA */}
-      <PageLayout className="text-center animate-fade-slide-up">
-        <SectionHeader
-          title="Schedule a Call"
-          subtitle="Ready to partner? Reach us directly at investors@trubotai.com or
-          schedule a discovery call today."
-        />
-        <div className="flex justify-center flex-wrap gap-4">
-          <Button
-            href="mailto:investors@trubotai.com?subject=Request%20Investor%20Deck"
-            variant="primary"
-            className="hover-scale-glow"
-            ariaLabel="Request the investor deck via email"
-          >
-            Request Investor Deck
-          </Button>
-          <Button
-            href="/contact"
-            variant="outline"
-            className="hover-scale-glow"
-          >
-            Contact →
-          </Button>
-        </div>
-      </PageLayout>
+      {/* CTA */}
+      <CTASection {...ctaSection} />
     </>
   );
 };
