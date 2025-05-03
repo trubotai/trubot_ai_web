@@ -19,7 +19,7 @@ import {
   stepList,
   storyList,
   ctaSection,
-} from "@/app/ui/libs/constants/products/ai-solutions-buying-aggregator";
+} from "@/app/ui/libs/constants/productPage/ai-solutions-buying-aggregator";
 
 const Page = () => {
   return (

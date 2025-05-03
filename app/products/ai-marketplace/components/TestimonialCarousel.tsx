@@ -11,7 +11,7 @@ import {
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import TestimonialCard from "@/app/ui/components/shared/TestimonialCard";
-import { testimonialList } from "@/app/ui/libs/constants/products/ai-marketplace";
+import { testimonialList } from "@/app/ui/libs/constants/productPage/ai-marketplace";
 
 const TestimonialCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);

@@ -334,22 +334,4 @@ const ctaSection = {
   secondaryCTA: { label: "Explore Use Cases", href: "/solutions" },
 };
 
-const homePageProductList = [
-  {
-    name: "Instagram Chatbot",
-    description: "Automate DMs, lead capture, and comment replies with ease.",
-    href: "/products/ai-chatbots",
-  },
-  {
-    name: "Sales Agent",
-    description: "AI-powered lead engagement that works 24/7.",
-    href: "/products/ai-agents",
-  },
-  {
-    name: "Voice Bot",
-    description: "Voice-enable your support and lead workflows.",
-    href: "/products/ai-voicebots",
-  },
-];
-
-export { heroSection, productList, ctaSection, homePageProductList };
+export { heroSection, productList, ctaSection };

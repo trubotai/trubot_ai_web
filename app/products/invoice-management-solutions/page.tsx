@@ -19,7 +19,7 @@ import {
   relatedProductList,
   roiSection,
   useCaseList,
-} from "@/app/ui/libs/constants/products/invoice-management-solutions";
+} from "@/app/ui/libs/constants/productPage/invoice-management-solutions";
 
 const Page = () => {
   return (

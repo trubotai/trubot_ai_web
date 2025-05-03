@@ -21,7 +21,7 @@ import {
   heroSection,
   relatedProductList,
   useCaseList,
-} from "@/app/ui/libs/constants/products/social-media-tools";
+} from "@/app/ui/libs/constants/productPage/social-media-tools";
 
 const Page = () => {
   return (

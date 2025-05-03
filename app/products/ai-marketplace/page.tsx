@@ -23,7 +23,7 @@ import {
   faqSection,
   relatedProductList,
   ctaSection,
-} from "@/app/ui/libs/constants/products/ai-marketplace";
+} from "@/app/ui/libs/constants/productPage/ai-marketplace";
 
 const Page = () => {
   return (

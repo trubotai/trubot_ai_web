@@ -21,7 +21,7 @@ import {
   relatedProductList,
   useCaseList,
   ctaSection,
-} from "@/app/ui/libs/constants/products/ai-voicebots";
+} from "@/app/ui/libs/constants/productPage/ai-voicebots";
 
 const Page = () => {
   return (

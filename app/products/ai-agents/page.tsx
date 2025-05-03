@@ -17,7 +17,7 @@ import {
   faqSection,
   relatedProductList,
   ctaSection,
-} from "@/app/ui/libs/constants/products/ai-agents";
+} from "@/app/ui/libs/constants/productPage/ai-agents";
 
 const Page = () => {
   return (
