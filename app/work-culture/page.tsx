@@ -1,9 +1,17 @@
-import PageLayout from "@/app/ui/components/PageLayout";
-import SectionHeader from "@/app/ui/components/SectionHeader";
-import BulletList from "@/app/ui/components/BulletList";
-import QuoteBox from "@/app/ui/components/QuoteBox";
-import Button from "@/app/ui/components/Button";
-import { whyJoinList, howWeWorkList } from "../ui/libs/constants/work-culture";
+import { FaQuoteLeft } from "react-icons/fa6";
+
+import PageLayout from "@/app/ui/components/shared/PageLayout";
+import SectionHeader from "@/app/ui/components/shared/SectionHeader";
+import HeroSection from "../ui/components/shared/HeroSection";
+import BenefitCard from "../ui/components/shared/BenefitCard";
+import VerticalTimeline from "../ui/components/shared/VerticalTimeline";
+import CTASection from "../ui/components/shared/CTASection";
+import {
+  howWeWorkList,
+  heroSection,
+  perkList,
+  ctaSection,
+} from "../ui/libs/constants/work-culture";
 
 export const metadata = {
   title: "Work Culture – TruBot AI",
@@ -14,65 +22,60 @@ export const metadata = {
 const Page = () => {
   return (
     <>
-      {/* Hero Section */}
-      <PageLayout className="flex flex-col items-center justify-center animate-fade-slide-up">
-        <SectionHeader
-          title="Redefine Your Career at TruBot AI — 4-Day Work Weeks & Equity Freedom"
-          subtitle="Build AI’s future while owning your own—reach financial freedom in 5 years."
-        />
-        <p className="text-gray-700 max-w-2xl mt-4 leading-relaxed">
-          At TruBot AI, work isn&lsquo;t about clocking hours — it&apos;s about
-          creating impact. Our culture empowers every team member to lead,
-          innovate, and grow without limits.
-        </p>
-      </PageLayout>
+      {/* Hero */}
+      <HeroSection {...heroSection} />
 
       {/* Why Join */}
-      <div className="bg-gray-50">
-        <PageLayout className="animate-fade-slide-up">
-          <BulletList
-            title="Why Join TruBot AI?"
-            items={whyJoinList}
-            align="center"
-          />
-        </PageLayout>
-      </div>
-
-      {/* How We Work */}
-      <PageLayout className="animate-fade-slide-up">
-        <BulletList title="How We Work" items={howWeWorkList} align="center" />
-      </PageLayout>
-
-      {/* Quote Box */}
-      <div className="bg-gray-50">
-        <PageLayout>
-          <QuoteBox quote="We don’t just build AI—we build legacies." />
-        </PageLayout>
-      </div>
-
-      {/* Final CTA */}
-      <PageLayout className="text-center animate-fade-slide-up">
+      <PageLayout id="join-trubot" background="white" padding="default">
         <SectionHeader
-          title="Join Our Team"
-          subtitle="Questions? Write to us at careers@trubotai.com or explore current openings."
+          title="Why Join TruBot AI?"
+          subtitle="We’ve built a place where the best minds thrive without burnout."
+          align="center"
         />
-        <div className="flex justify-center flex-wrap gap-4">
-          <Button
-            href="mailto:careers@trubotai.com?subject=TruBot%20AI%20Career%20Interest"
-            variant="primary"
-            className="hover-scale-glow"
-          >
-            Contact Careers Team
-          </Button>
-          <Button
-            href="/careers"
-            variant="outline"
-            className="hover-scale-glow"
-          >
-            View Open Roles →
-          </Button>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {perkList.map((perk, index) => (
+            <BenefitCard
+              key={index}
+              audience={perk.audience}
+              subtitle={perk.subtitle}
+              benefits={perk.benefits}
+              bgClass="bg-light fade-in slide-in-up"
+            />
+          ))}
         </div>
       </PageLayout>
+
+      {/* How We Work */}
+      <div className="bg-gray-soft">
+        <PageLayout id="how-we-work" background="gray" padding="default">
+          <SectionHeader
+            title="How We Work"
+            subtitle="Built on freedom, focus, and a flat structure that rewards outcomes."
+            align="center"
+          />
+
+          <div className="max-w-4xl mx-auto fade-in slide-in-up">
+            <VerticalTimeline
+              title="Our Core Culture Pillars"
+              steps={howWeWorkList}
+            />
+          </div>
+        </PageLayout>
+      </div>
+
+      {/* Quote Box */}
+      <PageLayout id="founder-quote">
+        <div className="text-center max-w-2xl mx-auto fade-in slide-in-up">
+          <FaQuoteLeft className="text-electric text-2xl mb-4 mx-auto opacity-60 float" />
+          <blockquote className="text-2xl sm:text-3xl font-heading text-navy italic leading-relaxed">
+            “We don’t just build AI—we build legacies.”
+          </blockquote>
+        </div>
+      </PageLayout>
+
+      {/* CTA */}
+      <CTASection {...ctaSection} />
     </>
   );
 };

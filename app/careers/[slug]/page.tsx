@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { FaClock } from "react-icons/fa";
 
-import PageLayout from "@/app/ui/components/PageLayout";
-import SectionHeader from "@/app/ui/components/SectionHeader";
-import CareerSection from "@/app/ui/components/CareerPage/CareerSection";
-import CareerListSection from "@/app/ui/components/CareerPage/CareerListSection";
-import CareerApplyCTA from "@/app/ui/components/CareerPage/CareerApplyCTA";
-
+import PageLayout from "@/app/ui/components/shared/PageLayout";
+import SectionHeader from "@/app/ui/components/shared/SectionHeader";
+import CheckList from "@/app/ui/components/shared/CheckList";
+import Button from "@/app/ui/components/shared/Button";
+import JobHeroSection from "./components/JobHeroSection";
 import { careerPagesMap } from "@/app/ui/libs/constants/careersPage";
 import { CareerPageDataType } from "@/app/ui/libs/types/careerPage";
 
@@ -38,6 +38,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     title,
     location,
     type,
+    shortDescription,
     about,
     roleIntro,
     responsibilities,
@@ -46,71 +47,144 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     applyInstructions,
     applyEmail,
     workingHours,
-    compensation, // added the new field here
+    compensation,
   } = data;
 
+  const emailSubject = `Application for ${title}`;
+  const mailtoLink = `mailto:${applyEmail}?subject=${encodeURIComponent(
+    emailSubject
+  )}`;
+
   return (
-    <PageLayout className="animate-fade-in">
-      <SectionHeader title={title} className="animate-fade-slide-up" />
-
-      <p className="text-sm text-gray-600 mb-6 text-center animate-fade-slide-up animation-delay-200">
-        {location} · {type}
-      </p>
-
-      <div className="prose prose-gray max-w-3xl mx-auto mb-12">
-        <CareerSection
-          heading="Who are we?"
-          content={about}
-          className="animate-fade-slide-up animation-delay-300"
-        />
-
-        <CareerSection
-          heading="Who are we looking for?"
-          content={roleIntro}
-          className="animate-fade-slide-up animation-delay-400"
-        />
-
-        {workingHours && (
-          <CareerSection
-            heading="Working Hours"
-            content={workingHours}
-            className="animate-fade-slide-up animation-delay-800"
-          />
-        )}
-
-        {compensation && (
-          <CareerSection
-            heading="Compensation"
-            content={compensation}
-            className="animate-fade-slide-up animation-delay-900"
-          />
-        )}
-
-        <CareerListSection
-          heading="Key Responsibilities"
-          items={responsibilities}
-          className="animate-fade-slide-up animation-delay-500"
-        />
-
-        <CareerListSection
-          heading="Qualifications & Attributes"
-          items={qualifications}
-          className="animate-fade-slide-up animation-delay-600"
-        />
-
-        <CareerListSection
-          heading="Why Join Us?"
-          items={benefits}
-          className="animate-fade-slide-up animation-delay-700"
-        />
-      </div>
-
-      <CareerApplyCTA
+    <>
+      {/* Hero */}
+      <JobHeroSection
         title={title}
-        instructions={applyInstructions}
-        applyEmail={applyEmail}
+        location={location}
+        type={type}
+        shortDescription={shortDescription}
+        applyHref={mailtoLink}
       />
-    </PageLayout>
+
+      {/* About TruBot AI */}
+      <PageLayout
+        id="about-trubot-ai"
+        maxWidth="narrow"
+        className="mb-12 fade-in slide-in-up animation-delay-300 pt-16 md:pt-20 px-4 md:px-0"
+        padding="none"
+      >
+        <SectionHeader title="Who are we?" subtitle={about} align="left" />
+      </PageLayout>
+
+      {/* Role Intro */}
+      <PageLayout
+        id="role-intro"
+        maxWidth="narrow"
+        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+        padding="none"
+      >
+        <SectionHeader
+          title="Who are we looking for?"
+          subtitle={roleIntro}
+          align="left"
+        />
+
+        {/* Optional Quote Block */}
+        <blockquote className="mt-6 italic text-navy/70 font-body border-l-4 border-electric pl-4">
+          “This role isn’t just about operations—it’s about shaping the future
+          of AI-driven business.”
+        </blockquote>
+      </PageLayout>
+
+      {/* Working hours */}
+      {workingHours && (
+        <PageLayout
+          id="working-hours"
+          maxWidth="narrow"
+          className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+          padding="none"
+        >
+          <div className="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+            <div className="flex items-center mb-4">
+              <FaClock className="text-electric text-lg mr-3" />
+              <h2 className="text-2xl font-heading font-semibold text-navy">
+                Working Hours
+              </h2>
+            </div>
+            <p className="text-navy/80 font-body text-base leading-relaxed">
+              {`${workingHours} We encourage asynchronous productivity with regular syncs.`}
+            </p>
+          </div>
+        </PageLayout>
+      )}
+
+      {/* Compensation */}
+      {compensation && (
+        <PageLayout
+          id="compensation"
+          maxWidth="narrow"
+          className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+          padding="none"
+        >
+          <SectionHeader
+            title="Compensation"
+            subtitle={compensation}
+            align="left"
+          />
+        </PageLayout>
+      )}
+
+      {/* Responsibilities */}
+      <PageLayout
+        id="responsibilities"
+        maxWidth="narrow"
+        padding="none"
+        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+      >
+        <SectionHeader title="Responsibilities" align="left" />
+        <CheckList items={responsibilities} />
+      </PageLayout>
+
+      {/* Qualification */}
+      <PageLayout
+        id="qualifications"
+        maxWidth="narrow"
+        padding="none"
+        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+      >
+        <SectionHeader title="Qualifications & Attributes" align="left" />
+        <CheckList items={qualifications} />
+      </PageLayout>
+
+      {/* Benefits */}
+      <PageLayout
+        id="benefits"
+        maxWidth="narrow"
+        padding="none"
+        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+      >
+        <SectionHeader title="Why Join Us?" align="left" />
+        <CheckList items={benefits} />
+      </PageLayout>
+
+      {/* CAT */}
+      <PageLayout id="apply" padding="default" className="fade-in slide-in-up">
+        <SectionHeader
+          title="Ready to Apply?"
+          subtitle={applyInstructions}
+          align="center"
+        />
+        <div className="mt-8 text-center">
+          <Button
+            href={mailtoLink}
+            label="Apply via Email"
+            variant="primary"
+            animate
+            rounded="full"
+          />
+        </div>
+      </PageLayout>
+    </>
   );
 };
 

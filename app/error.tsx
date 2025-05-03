@@ -2,6 +2,9 @@
 
 import { useEffect } from "react";
 
+import PageLayout from "@/app/ui/components/shared/PageLayout";
+import Button from "@/app/ui/components/shared/Button";
+
 export default function GlobalError({
   error,
   reset,
@@ -14,23 +17,19 @@ export default function GlobalError({
   }, [error]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 animate-fade-slide-up">
-      <h1 className="text-4xl font-bold text-navy mb-3">
+    <PageLayout padding="lg" animate className="text-center">
+      <h1 className="text-4xl font-heading text-navy mb-4 slide-in-up">
         Something went wrong
       </h1>
 
-      <p className="text-gray-600 max-w-md mb-6">
+      <p className="font-body text-navy/70 max-w-xl mx-auto mb-8 fade-in animation-delay-200">
         An unexpected error occurred. Please try again or contact our support
         team if the issue persists.
       </p>
 
-      <button
-        onClick={reset}
-        className="bg-electric text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
-        aria-label="Try Again"
-      >
-        Try Again
-      </button>
-    </div>
+      <div className="fade-in animation-delay-300">
+        <Button as="button" onClick={reset} label="Try Again" />
+      </div>
+    </PageLayout>
   );
 }

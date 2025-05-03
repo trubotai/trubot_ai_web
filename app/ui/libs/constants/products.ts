@@ -1,3 +1,41 @@
+import {
+  Globe,
+  Mic,
+  UserCog,
+  Video,
+  Mail,
+  Search,
+  UsersRound,
+  MessageCircle,
+  Monitor,
+  Smartphone,
+  Code2,
+  Wand2,
+  FileCheck2,
+  Store,
+  Layers3,
+  Zap,
+} from "lucide-react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaMicrosoft,
+  FaRobot,
+  FaTelegram,
+  FaWhatsapp,
+  FaWordpress,
+} from "react-icons/fa6";
+import { SiShopify, SiWoocommerce, SiSquarespace } from "react-icons/si";
+
+const heroSection = {
+  title: "All-in-One AI Solutions for Modern Businesses",
+  subtitle:
+    "Discover chatbots, voice bots, smart agents, and automation tools — built to accelerate growth across every industry. No complexity, just results.",
+  primaryCTA: { label: "Explore Use Cases", href: "/solutions" },
+  secondaryCTA: { label: "Contact Sales", href: "/contact" },
+  icon: FaRobot,
+};
+
 const productList = [
   {
     id: "chatbots",
@@ -6,53 +44,72 @@ const productList = [
       {
         name: "Instagram Chatbot",
         description:
-          "Automate DMs, comment replies, lead capture, and 24/7 support.",
-        href: "/products/chatbots",
+          "Automate DMs, comment replies, lead capture, and 24/7 support to maximize Instagram engagement.",
+        href: "/products/ai-chatbots",
+        icon: FaInstagram,
       },
       {
         name: "WhatsApp Chatbot",
-        description: "Reply automation, bookings, bulk messages, and more.",
-        href: "/products/chatbots",
+        description:
+          "Reply automation, bookings, FAQs, and bulk messaging for seamless communication.",
+        href: "/products/ai-chatbots",
+        icon: FaWhatsapp,
       },
       {
         name: "Facebook Chatbot",
-        description: "Automate replies, promotions, and lead gen.",
-        href: "/products/chatbots",
+        description:
+          "Automate replies, promotions, and lead generation to grow your Facebook presence.",
+        href: "/products/ai-chatbots",
+        icon: FaFacebook,
       },
       {
         name: "Telegram Chatbot",
-        description: "Bookings, file sharing, and real-time notifications.",
-        href: "/products/chatbots",
+        description:
+          "Handle bookings, file sharing, lead capture, and real-time notifications.",
+        href: "/products/ai-chatbots",
+        icon: FaTelegram,
       },
       {
         name: "Website Chatbot",
-        description: "Manage leads, sales, and queries via chat.",
-        href: "/products/chatbots",
+        description:
+          "Capture leads, drive sales, and provide 24/7 customer support through your website.",
+        href: "/products/ai-chatbots",
+        icon: Globe,
       },
       {
         name: "WordPress Chatbot",
-        description: "Live chat, lead capture, surveys, and more.",
-        href: "/products/chatbots",
+        description:
+          "Live chat, surveys, appointment scheduling, and lead capture for WordPress sites.",
+        href: "/products/ai-chatbots",
+        icon: FaWordpress,
       },
       {
         name: "Microsoft Teams Chatbot",
-        description: "Workflow automation and internal collaboration.",
-        href: "/products/chatbots",
+        description:
+          "Boost internal collaboration and automate meeting workflows in Teams.",
+        href: "/products/ai-chatbots",
+        icon: FaMicrosoft,
       },
       {
         name: "Shopify Chatbot",
-        description: "Order updates, cart recovery, and support.",
-        href: "/products/chatbots",
+        description:
+          "Automate order updates, cart recovery, and customer support for Shopify stores.",
+        href: "/products/ai-chatbots",
+        icon: SiShopify,
       },
       {
         name: "WooCommerce Chatbot",
-        description: "24/7 chat, orders, and personal shopping.",
-        href: "/products/chatbots",
+        description:
+          "Deliver personalized shopping experiences and 24/7 support on WooCommerce.",
+        href: "/products/ai-chatbots",
+        icon: SiWoocommerce,
       },
       {
         name: "Squarespace Chatbot",
-        description: "Lead generation and customer service.",
-        href: "/products/chatbots",
+        description:
+          "Streamline lead generation, appointment booking, and service inquiries.",
+        href: "/products/ai-chatbots",
+        icon: SiSquarespace,
       },
     ],
   },
@@ -62,23 +119,31 @@ const productList = [
     items: [
       {
         name: "Voice Bots",
-        description: "Voice-enable your support and lead workflows.",
-        href: "/products/voice",
+        description:
+          "Voice-enable customer support and lead workflows for hands-free engagement.",
+        href: "/products/ai-voicebots",
+        icon: Mic,
       },
       {
         name: "Voice Agents",
-        description: "Coming Soon – AI-powered voice interactions.",
-        href: "/products/voice",
+        description:
+          "Coming Soon – AI-powered voice interactions that streamline operations.",
+        href: "/products/ai-voicebots",
+        icon: Mic,
       },
       {
         name: "Voice-enabled Chatbots",
-        description: "Coming Soon – Merge chat and voice for seamless UX.",
-        href: "/products/voice",
+        description:
+          "Coming Soon – Merge chat and voice for a seamless user experience.",
+        href: "/products/ai-voicebots",
+        icon: Mic,
       },
       {
         name: "Voice Assistant Apps",
-        description: "Coming Soon – Build custom AI voice apps.",
-        href: "/products/voice",
+        description:
+          "Coming Soon – Build custom AI voice apps tailored to your brand.",
+        href: "/products/ai-voicebots",
+        icon: Mic,
       },
     ],
   },
@@ -88,33 +153,45 @@ const productList = [
     items: [
       {
         name: "Sales Agent",
-        description: "Automate customer engagement and drive conversions.",
-        href: "/products/agents",
+        description:
+          "Automate customer engagement, follow-ups, and drive faster conversions.",
+        href: "/products/ai-agents",
+        icon: UserCog,
       },
       {
         name: "Marketing Agent",
-        description: "Optimize campaigns with AI-powered marketing flows.",
-        href: "/products/agents",
+        description:
+          "Optimize campaigns with AI-driven marketing flows for higher ROI.",
+        href: "/products/ai-agents",
+        icon: UserCog,
       },
       {
         name: "Customer Support Agent",
-        description: "Coming Soon – AI-powered support automation.",
-        href: "/products/agents",
+        description:
+          "Coming Soon – Automate and enhance customer support operations.",
+        href: "/products/ai-agents",
+        icon: UserCog,
       },
       {
         name: "Shopping Agent",
-        description: "Coming Soon – Personalized AI shopping assistant.",
-        href: "/products/agents",
+        description:
+          "Coming Soon – Personalized AI shopping assistants for e-commerce.",
+        href: "/products/ai-agents",
+        icon: UserCog,
       },
       {
         name: "Multi-Agents",
-        description: "Coming Soon – Cross-functional AI agent management.",
-        href: "/products/agents",
+        description:
+          "Coming Soon – Manage multiple AI agents across different workflows.",
+        href: "/products/ai-agents",
+        icon: UserCog,
       },
       {
         name: "AI Agent Studio",
-        description: "Coming Soon – Build and train your own AI agents.",
-        href: "/products/agents",
+        description:
+          "Coming Soon – Build, train, and deploy your own custom AI agents.",
+        href: "/products/ai-agents",
+        icon: UserCog,
       },
     ],
   },
@@ -124,43 +201,59 @@ const productList = [
     items: [
       {
         name: "Short-Form Videos",
-        description: "Create thumb-stopping content for better reach.",
-        href: "/products/social",
+        description:
+          "Create engaging, thumb-stopping videos to grow your brand reach.",
+        href: "/products/social-media-tools",
+        icon: Video,
       },
       {
         name: "Email Design",
-        description: "Engaging, responsive email campaigns.",
-        href: "/products/social",
+        description:
+          "Craft responsive, visually stunning emails that boost conversions.",
+        href: "/products/social-media-tools",
+        icon: Mail,
       },
       {
         name: "SEO Backlinks",
-        description: "Build authority and boost rankings.",
-        href: "/products/social",
+        description:
+          "Build quality backlinks to improve domain authority and Google rankings.",
+        href: "/products/social-media-tools",
+        icon: Search,
       },
       {
         name: "UGC Videos",
-        description: "Coming Soon – Authentic user content creation.",
-        href: "/products/social",
+        description:
+          "Coming Soon – Tap into user-generated content to boost authenticity.",
+        href: "/products/social-media-tools",
+        icon: UsersRound,
       },
       {
         name: "SEO Blog Posts",
-        description: "Rank-worthy content, written with intent.",
-        href: "/products/social",
+        description:
+          "Publish optimized blog articles that drive organic traffic.",
+        href: "/products/social-media-tools",
+        icon: Search,
       },
       {
         name: "Review Management",
-        description: "Monitor and manage reviews across platforms.",
-        href: "/products/social",
+        description:
+          "Monitor, manage, and improve online reviews across platforms.",
+        href: "/products/social-media-tools",
+        icon: MessageCircle,
       },
       {
         name: "Instagram Growth",
-        description: "Boost engagement with real followers.",
-        href: "/products/social",
+        description:
+          "Boost your Instagram following and engagement with strategic automation.",
+        href: "/products/social-media-tools",
+        icon: FaInstagram,
       },
       {
         name: "Meta Ads Management",
-        description: "Coming Soon – High-ROI paid campaigns.",
-        href: "/products/social",
+        description:
+          "Coming Soon – Run optimized Meta (Facebook & Instagram) ad campaigns.",
+        href: "/products/social-media-tools",
+        icon: Monitor,
       },
     ],
   },
@@ -171,26 +264,30 @@ const productList = [
       {
         name: "Website Development",
         description:
-          "Design and build modern, responsive websites tailored to your brand.",
+          "Design and launch responsive, conversion-focused websites.",
         href: "/products/custom",
+        icon: Globe,
       },
       {
         name: "Mobile App Development",
         description:
-          "Create cross-platform mobile apps for Android and iOS to boost engagement.",
+          "Create cross-platform mobile apps for iOS and Android users.",
         href: "/products/custom",
+        icon: Smartphone,
       },
       {
         name: "Software Development Lifecycle",
         description:
-          "End-to-end support for planning, building, and maintaining enterprise-grade software.",
+          "Plan, build, and scale enterprise-grade software with full lifecycle management.",
         href: "/products/custom",
+        icon: Code2,
       },
       {
         name: "Custom Solutions",
         description:
-          "Get tailor-made digital solutions built to solve your unique business needs.",
+          "Develop tailor-made digital products built to your business needs.",
         href: "/products/custom",
+        icon: Wand2,
       },
     ],
   },
@@ -199,45 +296,42 @@ const productList = [
     title: "Other Tools",
     items: [
       {
-        name: "Invoice Automation",
-        description: "Automated invoicing, reminders, and collections.",
+        name: "Invoice Management Bot",
+        description:
+          "Automate invoices, reminders, and collections to accelerate cash flow.",
         href: "/products/tools",
+        icon: FileCheck2,
       },
       {
         name: "AI Marketplace",
-        description: "Explore and integrate 3rd-party AI tools.",
+        description: "Explore and integrate third-party AI solutions easily.",
         href: "/products/tools",
+        icon: Store,
       },
       {
-        name: "SME Product Aggregator",
-        description: "Discover curated AI tools for small businesses.",
-        href: "/products/tools",
+        name: "SME AI Product Aggregator",
+        description:
+          "Discover curated AI tools built specifically for small businesses.",
+        href: "/products/partner-program-sme",
+        icon: Layers3,
       },
       {
         name: "AI Automation",
-        description: "Orchestrate workflows with custom automation bots.",
+        description:
+          "Orchestrate complex workflows with custom AI automation bots.",
         href: "/products/tools",
+        icon: Zap,
       },
     ],
   },
 ];
 
-const homePageProductList = [
-  {
-    name: "Instagram Chatbot",
-    description: "Automate DMs, lead capture, and comment replies with ease.",
-    href: "/products/chatbots",
-  },
-  {
-    name: "Sales Agent",
-    description: "AI-powered lead engagement that works 24/7.",
-    href: "/products/agents",
-  },
-  {
-    name: "Voice Bot",
-    description: "Voice-enable your support and lead workflows.",
-    href: "/products/voice",
-  },
-];
+const ctaSection = {
+  title: "Not Sure What Fits Best?",
+  subtitle:
+    "Our team can help you find the right chatbot, voice bot, or automation tool to match your business goals.",
+  primaryCTA: { label: "Talk to Our Team", href: "/contact" },
+  secondaryCTA: { label: "Explore Use Cases", href: "/solutions" },
+};
 
-export { productList, homePageProductList };
+export { heroSection, productList, ctaSection };

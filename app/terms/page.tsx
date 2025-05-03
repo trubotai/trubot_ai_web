@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import PageLayout from "../ui/components/PageLayout";
+import PageLayout from "../ui/components/shared/PageLayout";
 
 export const metadata = {
   title: "Terms of Service – TruBot AI",
@@ -10,12 +10,12 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <PageLayout className="min-h-screen">
+    <PageLayout id="terms-of-service">
       <h1 className="text-3xl font-bold text-navy mb-8 text-center">
         Terms of Service
       </h1>
 
-      <div className="space-y-12 text-gray-700 leading-relaxed max-w-3xl mx-auto">
+      <div className="space-y-12 text-gray-700 leading-relaxed max-w-3xl mx-auto font-body fade-in">
         {/* Introduction */}
         <section>
           <h2 className="text-2xl font-bold text-navy mb-3">1. Introduction</h2>

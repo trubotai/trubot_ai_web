@@ -1,4 +1,4 @@
-const careerList = [
+const jobList = [
   {
     id: "chief-sales-officer",
     title: "Chief Sales Officer",
@@ -148,4 +148,4 @@ const careerList = [
   },
 ];
 
-export { careerList };
+export { jobList };

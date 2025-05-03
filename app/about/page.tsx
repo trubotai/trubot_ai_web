@@ -1,57 +1,125 @@
-import PageLayout from "../ui/components/PageLayout";
-import SectionHeader from "../ui/components/SectionHeader";
-import Button from "../ui/components/Button";
+import { Lightbulb, AlertTriangle, Network } from "lucide-react";
+
+import AboutHeroSection from "./components/AboutHeroSection";
+import OurApproach from "./components/OurApproach";
+import Commitments from "./components/Commitments";
+import PageLayout from "../ui/components/shared/PageLayout";
+import SectionHeader from "../ui/components/shared/SectionHeader";
+import VerticalTimeline from "../ui/components/shared/VerticalTimeline";
+import BenefitCard from "../ui/components/shared/BenefitCard";
+import FeatureCard from "../ui/components/shared/FeatureCard";
+import CTASection from "../ui/components/shared/CTASection";
+import {
+  missionList,
+  approachList,
+  valueList,
+  ctaSection,
+} from "../ui/libs/constants/about";
+
+const steps = [
+  {
+    title: "The Beginning",
+    description:
+      "Our journey began in 2023 when AI researchers, software veterans, and business leaders came together to make AI more accessible.",
+    icon: () => <Lightbulb className="float pulse text-electric" />, // animated icon
+  },
+  {
+    title: "The Problem We Solved",
+    description:
+      "SMEs struggled with fragmented, complex AI systems. We identified the need for unified, practical solutions with real-world value.",
+    icon: () => <AlertTriangle className="float text-coral" />,
+  },
+  {
+    title: "Our Solution",
+    description:
+      "We created an integrated AI ecosystem combining proprietary tools and partner solutions — built for accessibility and simplicity.",
+    icon: () => <Network className="float text-teal" />,
+  },
+];
 
 export const metadata = {
   title: "About – TruBot AI",
   description:
-    "Learn more about the team, mission, and story behind TruBot AI.",
+    "Discover how TruBot AI is making AI solutions accessible and transformative for businesses worldwide.",
 };
 
 const Page = () => {
   return (
-    <PageLayout className="animate-fade-in">
-      <SectionHeader
-        title="About TruBot AI"
-        subtitle="Making AI accessible, actionable, and ROI-driven for small to mid-sized businesses."
-      />
+    <>
+      {/* Hero Section */}
+      <AboutHeroSection />
 
-      <div className="max-w-3xl mx-auto space-y-16 text-gray-700">
-        <section className="text-center animate-fade-slide-up animation-delay-100">
-          <h3 className="text-2xl font-bold text-navy mb-3">Our Mission</h3>
-          <p className="leading-relaxed">
-            Our mission is to revolutionize customer support and business
-            communication through AI-powered solutions. From AI chatbots and
-            voice-enabled bots to intelligent agents and social media tools, we
-            equip businesses to scale while staying personal.
-          </p>
-        </section>
+      {/* Story */}
+      <div className="relative bg-gray-soft" aria-label="Our Story Section">
+        {/* Background glow decoration */}
+        <div className="absolute top-0 left-0 w-96 h-96 sm:w-64 sm:h-64 bg-electric opacity-10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 sm:w-64 sm:h-64 bg-coral opacity-10 rounded-full blur-3xl"></div>
 
-        <section className="text-center animate-fade-slide-up animation-delay-200">
-          <h3 className="text-2xl font-bold text-navy mb-3">Our Journey</h3>
-          <p className="leading-relaxed">
-            TruBot AI was founded by a visionary with 15+ years in AI and data
-            science. With leadership experience at CitiBank and Fidelity, our
-            founder brings deep domain expertise and a passion for solving
-            real-world inefficiencies with smart technology.
-          </p>
-        </section>
-
-        <section className="text-center animate-fade-slide-up animation-delay-300">
-          <h3 className="text-2xl font-bold text-navy mb-3">Our Approach</h3>
-          <p className="leading-relaxed">
-            We believe in automation that enhances—not replaces—human
-            connection. Our tools help businesses deliver faster, smarter, and
-            more personalized experiences across chat, voice, and digital
-            platforms.
-          </p>
-        </section>
-
-        <div className="text-center mt-12 animate-fade-slide-up animation-delay-400">
-          <Button href="/contact">Get in Touch</Button>
-        </div>
+        <PageLayout id="our-story" className="relative z-10">
+          <SectionHeader
+            title="Our Story"
+            subtitle="From an idea to an integrated AI platform — here’s how we got here."
+            align="center"
+          />
+          <div className="max-w-4xl mx-auto">
+            <VerticalTimeline
+              title="The Journey"
+              steps={steps}
+              animationOffset={200}
+            />
+          </div>
+        </PageLayout>
       </div>
-    </PageLayout>
+
+      {/* Mission */}
+      <PageLayout id="our-mission">
+        <SectionHeader
+          title="Our Mission"
+          subtitle="Guiding principles that shape how we build, innovate, and serve businesses of all sizes."
+          align="center"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          {missionList.map((item, idx) => (
+            <BenefitCard key={idx} {...item} />
+          ))}
+        </div>
+      </PageLayout>
+
+      {/* Approach */}
+      <div className="bg-gray-soft">
+        <OurApproach approachList={approachList} />
+      </div>
+
+      {/* Values */}
+      <PageLayout id="our-values">
+        <SectionHeader
+          title="Our Values"
+          subtitle="The principles that guide how we build, collaborate, and support our customers."
+          align="center"
+        />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          {valueList.map((value, index) => (
+            <FeatureCard
+              key={index}
+              title={value.title}
+              description={value.description}
+              icon={value.icon}
+              index={index}
+            />
+          ))}
+        </div>
+      </PageLayout>
+
+      {/* Commitment */}
+      <div className="bg-gray-soft">
+        <Commitments />
+      </div>
+
+      {/* CTA */}
+      <CTASection {...ctaSection} />
+    </>
   );
 };
 

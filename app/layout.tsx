@@ -1,4 +1,4 @@
-import { Sora } from "next/font/google";
+import { Sora, Montserrat } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -11,6 +11,11 @@ import "./globals.css";
 const sora = Sora({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
+  display: "swap",
+});
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
@@ -73,7 +78,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
 
-      <body className={`bg-white text-gray-900 ${sora.className}`}>
+      <body
+        className={`${sora.className} ${montserrat.className} bg-light text-navy font-body`}
+      >
         <Header />
         <StickyBanner />
         <main>{children}</main>
