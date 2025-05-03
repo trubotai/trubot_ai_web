@@ -1,5 +1,4 @@
 const navLinkList = [
-  { href: "/products", label: "Products" },
   { href: "/solutions", label: "Solutions" },
   { href: "/mna", label: "M&A" },
   { href: "/sme-empowerment", label: "SME Empower" },

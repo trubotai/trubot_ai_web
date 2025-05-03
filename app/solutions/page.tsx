@@ -2,7 +2,7 @@ import { FaRocket } from "react-icons/fa";
 
 import SolutionCard from "../ui/components/shared/SolutionCard";
 import CTASection from "../ui/components/shared/CTASection";
-import PageLayout from "../ui/components/PageLayout";
+import PageLayout from "../ui/components/shared/PageLayout";
 import { ctaSection, solutionList } from "../ui/libs/constants/solutions";
 
 const Page = () => {

@@ -1,4 +1,4 @@
-import PageLayout from "../ui/components/PageLayout";
+import PageLayout from "../ui/components/shared/PageLayout";
 
 export const metadata = {
   title: "Privacy Policy – TruBot AI",

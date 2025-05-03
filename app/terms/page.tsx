@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import PageLayout from "../ui/components/PageLayout";
+import PageLayout from "../ui/components/shared/PageLayout";
 
 export const metadata = {
   title: "Terms of Service – TruBot AI",
