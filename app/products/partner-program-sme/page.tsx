@@ -1,28 +1,21 @@
+import PageLayout from "@/app/ui/components/shared/PageLayout";
+import SectionHeader from "@/app/ui/components/shared/SectionHeader";
+import HeroSection from "@/app/ui/components/shared/HeroSection";
+import BenefitCard from "@/app/ui/components/shared/BenefitCard";
+import TierCard from "@/app/ui/components/shared/TierCard";
+import StoryCard from "@/app/ui/components/shared/StoryCard";
+import HorizontalTimeline from "@/app/ui/components/shared/HorizontalTimeline";
+import ProductCard from "@/app/ui/components/shared/ProductCard";
+import FAQSection from "@/app/ui/components/shared/FAQSection";
+import CTASection from "@/app/ui/components/shared/CTASection";
 import {
-  FaGlobe,
-  FaBullhorn,
-  FaCogs,
-  FaChartLine,
-  FaLightbulb,
-} from "react-icons/fa";
-
-import PageLayout from "@/app/ui/components/PageLayout";
-import SectionHeader from "@/app/ui/components/SectionHeader";
-import Button from "@/app/ui/components/Button";
-import ProgramBenefits from "@/app/ui/components/ProductPage/ProgramBenefits";
-import PartnerTypes from "@/app/ui/components/ProductPage/PartnerTypes";
-import ProgramTiers from "@/app/ui/components/ProductPage/ProgramTiers";
-import SuccessStories from "@/app/ui/components/ProductPage/SuccessStories";
-import PartnerJourney from "@/app/ui/components/ProductPage/PartnerJourney";
-import ResourcesSection from "@/app/ui/components/ProductPage/ResourcesSection";
-import FAQSection from "@/app/ui/components/ProductPage/FAQSection";
-import RelatedProducts from "@/app/ui/components/ProductPage/RelatedProducts";
-import FinalCTASection from "@/app/ui/components/FinalCTASection";
-import {
-  faqList,
+  benefitList,
+  ctaSection,
+  faqSection,
+  heroSection,
   partnerList,
-  productList,
   programList,
+  relatedProductList,
   resourceList,
   stepList,
   storyList,
@@ -37,81 +30,129 @@ export const metadata = {
 const Page = () => {
   return (
     <>
-      <PageLayout>
+      {/* Hero */}
+      <HeroSection {...heroSection} />
+
+      {/* Benefits */}
+      <div className="bg-gray-soft">
+        <PageLayout id="benefits">
+          <SectionHeader
+            title="Program Benefits"
+            subtitle="Here's what you gain when you join our partner ecosystem."
+          />
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
+            {benefitList.map((benefit, index) => (
+              <BenefitCard
+                key={index}
+                audience={benefit.title}
+                subtitle=""
+                benefits={[{ icon: benefit.icon, text: benefit.description }]}
+              />
+            ))}
+          </div>
+        </PageLayout>
+      </div>
+
+      {/* Partner Types */}
+      <PageLayout id="partner-types">
         <SectionHeader
-          title="Partner Program: Accelerate Your Growth in the AI Ecosystem"
-          subtitle="Join our thriving partner network to expand your market reach, access new customers, and collaborate on innovative AI solutions for small and medium enterprises."
+          title="Partner Types"
+          subtitle="Explore how your organization can collaborate with us."
         />
 
-        <div className="flex flex-wrap justify-center gap-4">
-          <Button href="/contact" className="animation-delay-100">
-            Apply to Partner Program
-          </Button>
-          <Button
-            className="hover-scale-glow animation-delay-200"
-            href="/contact"
-            variant="outline"
-          >
-            Download Partner Guide
-          </Button>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
+          {partnerList.map((partner, index) => (
+            <TierCard key={index} {...partner} index={index} />
+          ))}
         </div>
       </PageLayout>
 
-      <ProgramBenefits
-        benefits={[
-          {
-            title: "Expanded Market Reach",
-            description:
-              "Gain immediate exposure to thousands of SMEs actively seeking AI solutions through our marketplace.",
-            icon: <FaGlobe />,
-          },
-          {
-            title: "Co-Marketing Opportunities",
-            description:
-              "Leverage our marketing channels, joint campaigns, success stories, and events.",
-            icon: <FaBullhorn />,
-          },
-          {
-            title: "Technical Integration Support",
-            description:
-              "Receive dedicated technical assistance to integrate your solutions seamlessly with our platform.",
-            icon: <FaCogs />,
-          },
-          {
-            title: "Business Development Resources",
-            description:
-              "Access sales enablement tools, lead generation programs, and business support.",
-            icon: <FaChartLine />,
-          },
-          {
-            title: "Product Development Insights",
-            description:
-              "Gain valuable customer feedback to guide your product roadmap.",
-            icon: <FaLightbulb />,
-          },
-        ]}
-      />
+      {/* Program Tiers */}
+      <div className="bg-gray-soft">
+        <PageLayout id="program-tiers">
+          <SectionHeader
+            title="Program Tiers"
+            subtitle="Grow your partnership and unlock more value as you scale."
+          />
 
-      <PartnerTypes types={partnerList} />
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
+            {programList.map((tier, idx) => (
+              <TierCard key={idx} {...tier} />
+            ))}
+          </div>
+        </PageLayout>
+      </div>
 
-      <ProgramTiers tiers={programList} />
+      {/* Success Story */}
+      <PageLayout id="success-stories">
+        <SectionHeader
+          title="Success Stories"
+          subtitle="See how our partners are growing with us."
+        />
 
-      <SuccessStories stories={storyList} />
+        <div className="grid gap-6 md:grid-cols-2 mt-12">
+          {storyList.map((story, idx) => (
+            <StoryCard key={idx} {...story} />
+          ))}
+        </div>
+      </PageLayout>
 
-      <PartnerJourney steps={stepList} />
+      {/* Partner Journey */}
+      <div className="bg-gray-soft">
+        <PageLayout id="partner-journey" className="relative z-10">
+          <SectionHeader
+            title="Partner Journey"
+            subtitle="From application to growth, here’s how we guide you."
+            align="center"
+          />
 
-      <ResourcesSection resources={resourceList} />
+          {/* Timeline Line (only desktop) */}
+          <div className="hidden lg:block absolute top-[50%] left-1/2 transform -translate-x-1/2 w-full max-w-5xl h-1 bg-gray-200" />
 
-      <FAQSection faqs={faqList} />
+          <div className="mt-12 grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center">
+            {stepList.map((step, idx) => (
+              <HorizontalTimeline key={idx} {...step} delay={idx * 100} />
+            ))}
+          </div>
+        </PageLayout>
+      </div>
 
-      <RelatedProducts products={productList} />
+      {/* Resources */}
+      <PageLayout id="resources">
+        <SectionHeader
+          title="Resources"
+          subtitle="Everything you need to succeed as a partner."
+        />
 
-      <FinalCTASection
-        title="Join Our Partner Ecosystem and Accelerate Your Growth"
-        subtitle="Become part of a thriving network of AI innovators serving SMEs. Apply today to expand your reach."
-        ctaLabel="Apply to Partner Program"
-        ctaLink="/contact"
-      />
+        <div className="grid gap-6 md:grid-cols-2 mt-12">
+          {resourceList.map((res, idx) => (
+            <ProductCard key={idx} {...res} />
+          ))}
+        </div>
+      </PageLayout>
+
+      {/* FAQ */}
+      <div className="bg-gray-soft">
+        <FAQSection {...faqSection} />
+      </div>
+
+      {/* Related Product */}
+      <PageLayout id="related-products">
+        <SectionHeader
+          title="Related Products"
+          subtitle="Explore complementary offerings to maximize your impact."
+        />
+
+        <div className="grid gap-6 md:grid-cols-3 mt-12">
+          {relatedProductList.map((product, index) => (
+            <ProductCard key={index} {...product} />
+          ))}
+        </div>
+      </PageLayout>
+
+      {/* CTA */}
+      <CTASection {...ctaSection} />
     </>
   );
 };
