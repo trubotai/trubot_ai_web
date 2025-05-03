@@ -16,4 +16,21 @@ const footerLinkList = [
   { href: "/careers", label: "Careers" },
 ];
 
-export { navLinkList, footerLinkList };
+const productLinkList = [
+  { href: "/products/ai-agents", label: "AI Agents" },
+  { href: "/products/ai-chatbots", label: "AI Chatbots" },
+  { href: "/products/ai-marketplace", label: "AI Marketplace" },
+  {
+    href: "/products/ai-solutions-buying-aggregator",
+    label: "AI Solutions Aggregator",
+  },
+  { href: "/products/ai-voicebots", label: "AI Voicebots" },
+  {
+    href: "/products/invoice-management-solutions",
+    label: "Invoice Management",
+  },
+  { href: "/products/partner-program-sme", label: "Partner Program for SMEs" },
+  { href: "/products/social-media-tools", label: "Social Media Tools" },
+];
+
+export { navLinkList, footerLinkList, productLinkList };

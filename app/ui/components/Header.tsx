@@ -30,14 +30,19 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden xl:flex items-center gap-6">
+        <nav className="hidden xl:flex items-center gap-6" role="navigation">
           {navLinkList.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`text-sm font-medium transition-transform duration-200 ease-out transform hover:scale-[1.05] hover:text-electric hover:underline underline-offset-4 decoration-electric ${
-                pathname === href ? "text-electric" : "text-gray-700"
-              }`}
+              className={`
+                relative text-sm font-medium transition-all ease-out duration-200
+                hover:text-electric text-navy
+                before:content-[''] before:absolute before:bottom-0 before:left-0
+                before:h-[2px] before:bg-electric before:w-0 hover:before:w-full
+                before:transition-all before:duration-300
+                ${pathname === href ? "text-electric before:w-full" : ""}
+              `}
             >
               {label}
             </Link>
@@ -70,14 +75,16 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="xl:hidden px-4 pb-6 flex flex-col gap-2 items-center animate-fade-slide-up">
+        <div className="xl:hidden px-4 pb-6 flex flex-col gap-2 items-center fade-in slide-in-up">
           {navLinkList.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`block py-2 text-sm font-medium transition-transform duration-200 ease-out transform hover:scale-[1.05] hover:text-electric ${
-                pathname === href ? "text-electric" : "text-gray-700"
-              }`}
+              className={`
+                block py-2 text-sm font-medium transition-all ease-out duration-200 text-navy
+                hover:text-electric
+                ${pathname === href ? "text-electric" : ""}
+              `}
               onClick={() => setMenuOpen(false)}
             >
               {label}

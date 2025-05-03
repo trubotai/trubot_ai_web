@@ -94,7 +94,7 @@ const MainHero: FC = () => {
           />
           <Button
             href="/solutions"
-            variant="outline"
+            variant="teal"
             animate
             label="Explore Our Solutions"
           />
