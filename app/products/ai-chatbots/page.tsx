@@ -1,14 +1,9 @@
-import Image from "next/image";
-import { Bot } from "lucide-react";
-
 import TechSpecs from "./components/TechSpecs";
-import PricingSection from "./components/Pricing";
 import HeroSection from "@/app/ui/components/shared/HeroSection";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import FeatureCard from "@/app/ui/components/shared/FeatureCard";
 import UseCaseCard from "@/app/ui/components/shared/UseCaseCard";
-import Button from "@/app/ui/components/shared/Button";
 import StoryCard from "@/app/ui/components/shared/StoryCard";
 import FAQSection from "@/app/ui/components/shared/FAQSection";
 import ProductCard from "@/app/ui/components/shared/ProductCard";
@@ -65,11 +60,13 @@ const Page = () => {
         <TechSpecs />
       </div>
 
+      {/* Pricing to be added */}
       {/* Pricing */}
-      <PricingSection />
+      {/* <PricingSection /> */}
 
+      {/* Demo to be added */}
       {/* Demo */}
-      <div className="bg-gray-soft">
+      {/* <div className="bg-gray-soft">
         <PageLayout id="interactive-demo">
           <SectionHeader
             title="Interactive Chatbot Demo"
@@ -78,7 +75,6 @@ const Page = () => {
           />
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12">
-            {/* Image with float + typing-effect subtext */}
             <div className="w-full md:w-1/2 text-center">
               <div className="float inline-block">
                 <Image
@@ -94,7 +90,6 @@ const Page = () => {
               </p>
             </div>
 
-            {/* Button with sway icon + pulse-slow */}
             <div className="w-full md:w-1/3 text-center">
               <Button
                 href="/contact"
@@ -109,7 +104,7 @@ const Page = () => {
             </div>
           </div>
         </PageLayout>
-      </div>
+      </div> */}
 
       {/* Case Study */}
       <PageLayout id="case-studies">

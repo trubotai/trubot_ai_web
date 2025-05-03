@@ -1,5 +1,4 @@
 import TechSpecs from "./components/TechSpecs";
-import Pricing from "./components/Pricing";
 import HeroSection from "@/app/ui/components/shared/HeroSection";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
@@ -74,52 +73,51 @@ const Page = () => {
         <TechSpecs />
       </div>
 
+      {/* Pricing to be added */}
       {/* Pricing */}
-      <Pricing />
+      {/* <Pricing /> */}
 
       {/* Case Studies */}
-      <div className="bg-gray-soft">
-        <PageLayout id="case-studies">
-          <SectionHeader
-            title="Customer Success Stories"
-            subtitle="See how industry leaders drive impact with our AI agents"
-            align="center"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-            {caseStudyList.map((story, idx) => (
-              <StoryCard
-                key={idx}
-                delay={idx * 150}
-                title={story.title}
-                challenge={story.challenge}
-                solution={story.solution}
-                results={story.results}
-                linkHref={story.link}
-                linkLabel={story.linkLabel}
-              />
-            ))}
-          </div>
-        </PageLayout>
-      </div>
+      <PageLayout id="case-studies">
+        <SectionHeader
+          title="Customer Success Stories"
+          subtitle="See how industry leaders drive impact with our AI agents"
+          align="center"
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+          {caseStudyList.map((story, idx) => (
+            <StoryCard
+              key={idx}
+              delay={idx * 150}
+              title={story.title}
+              challenge={story.challenge}
+              solution={story.solution}
+              results={story.results}
+              linkHref={story.link}
+              linkLabel={story.linkLabel}
+            />
+          ))}
+        </div>
+      </PageLayout>
 
       {/* FAQ */}
-      <FAQSection {...faqSection} />
+      <div className="bg-gray-soft">
+        <FAQSection {...faqSection} />
+      </div>
 
       {/* Related Products */}
-      <div className="bg-gray-soft">
-        <PageLayout id="related-products">
-          <SectionHeader
-            title="Related Products"
-            subtitle="Explore more intelligent solutions"
-            align="center"
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-            {relatedProductList.map((product, idx) => (
-              <ProductCard key={idx} {...product} animationDelay={idx * 100} />
-            ))}
-          </div>
-        </PageLayout>
-      </div>
+      <PageLayout id="related-products">
+        <SectionHeader
+          title="Related Products"
+          subtitle="Explore more intelligent solutions"
+          align="center"
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+          {relatedProductList.map((product, idx) => (
+            <ProductCard key={idx} {...product} animationDelay={idx * 100} />
+          ))}
+        </div>
+      </PageLayout>
 
       {/* CTA */}
       <CTASection {...ctaSection} />

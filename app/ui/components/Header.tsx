@@ -79,7 +79,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <Button
-            href="https://calendly.com/trubotai_founder_ceo/quick_connect_with_founder"
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
             target="_blank"
             rel="noopener noreferrer"
             label="Request Demo"
@@ -163,7 +163,7 @@ const Header = () => {
             onClick={() => setMenuOpen(false)}
           />
           <Button
-            href="https://calendly.com/trubotai_founder_ceo/quick_connect_with_founder"
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
             label="Book an Appointment"
             variant="secondary"
             animate

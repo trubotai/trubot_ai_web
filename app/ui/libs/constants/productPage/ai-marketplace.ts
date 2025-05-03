@@ -247,7 +247,6 @@ const benefitList = [
         text: "Future-Proof Strategy: Evolving ecosystem of AI technologies",
       },
     ],
-    bgClass: "bg-[color:var(--color-teal)_/_10%]",
   },
   {
     audience: "SMEs",
@@ -271,7 +270,6 @@ const benefitList = [
         text: "Competitive Advantage: Leverage powerful AI tools",
       },
     ],
-    bgClass: "bg-[color:var(--color-electric)_/_10%]",
   },
   {
     audience: "Solution Providers",
@@ -298,7 +296,6 @@ const benefitList = [
         text: "Marketing Amplification: Co-marketing opportunities",
       },
     ],
-    bgClass: "bg-[color:var(--color-coral)_/_10%]",
   },
 ];
 

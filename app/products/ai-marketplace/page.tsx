@@ -125,7 +125,6 @@ const Page = () => {
                 audience={group.audience}
                 subtitle={group.subtitle}
                 benefits={group.benefits}
-                bgClass={group.bgClass}
               />
             ))}
           </div>

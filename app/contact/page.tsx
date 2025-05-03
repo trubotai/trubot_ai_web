@@ -122,7 +122,7 @@ const Page = () => {
               animate
             />
             <Button
-              href="https://calendly.com/trubotai_founder_ceo/quick_connect_with_founder"
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
               variant="outline"
               label="Book a Free Consultation"
               target="_blank"

@@ -9,7 +9,6 @@ import FAQSection from "@/app/ui/components/shared/FAQSection";
 import ProductCard from "@/app/ui/components/shared/ProductCard";
 import CTASection from "@/app/ui/components/shared/CTASection";
 import TechSpecs from "./components/TechSpecs";
-import PricingSection from "./components/Pricing";
 import {
   caseStudyList,
   ctaSection,
@@ -62,59 +61,60 @@ const Page = () => {
         <TechSpecs />
       </div>
 
+      {/* Pricing to be added */}
       {/* Pricing */}
-      <PricingSection />
+      {/* <PricingSection /> */}
 
       {/* ROI Calculator */}
+      <PageLayout id="roi-calculator">
+        <SectionHeader
+          title="ROI Calculator"
+          subtitle="See how much you can save with our intelligent invoice management solution."
+        />
+
+        <div className="max-w-3xl mx-auto">
+          <TabCard {...roiSection} />
+        </div>
+      </PageLayout>
+
+      {/* Case Study */}
       <div className="bg-gray-soft">
-        <PageLayout id="roi-calculator">
+        <PageLayout id="case-studies">
           <SectionHeader
-            title="ROI Calculator"
-            subtitle="See how much you can save with our intelligent invoice management solution."
+            title="Customer Success Stories"
+            subtitle="See how real businesses achieved measurable results with our solution."
           />
 
-          <div className="max-w-3xl mx-auto">
-            <TabCard {...roiSection} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {caseStudyList.map((study, index) => (
+              <StoryCard key={index} delay={index * 150} {...study} />
+            ))}
           </div>
         </PageLayout>
       </div>
 
-      {/* Case Study */}
-      <PageLayout id="case-studies">
-        <SectionHeader
-          title="Customer Success Stories"
-          subtitle="See how real businesses achieved measurable results with our solution."
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {caseStudyList.map((study, index) => (
-            <StoryCard key={index} delay={index * 150} {...study} />
-          ))}
-        </div>
-      </PageLayout>
-
       {/* FAQ */}
-      <div className="bg-gray-soft">
-        <FAQSection {...faqSection} />
-      </div>
+      <FAQSection {...faqSection} />
 
       {/* Related Products */}
-      <PageLayout id="related-products">
-        <SectionHeader
-          title="Related Products"
-          subtitle="Explore other tools in our AI suite to enhance your finance operations."
-        />
+      <div className="bg-gray-soft">
+        <PageLayout id="related-products">
+          <SectionHeader
+            title="Related Products"
+            subtitle="Explore other tools in our AI suite to enhance your finance operations."
+          />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {relatedProductList.map((product, index) => (
-            <ProductCard
-              key={index}
-              animationDelay={index * 100}
-              {...product}
-            />
-          ))}
-        </div>
-      </PageLayout>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {relatedProductList.map((product, index) => (
+              <ProductCard
+                key={index}
+                animationDelay={index * 100}
+                {...product}
+              />
+            ))}
+          </div>
+        </PageLayout>
+      </div>
 
       {/* CTA Section */}
       <CTASection {...ctaSection} />
