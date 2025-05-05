@@ -8,7 +8,7 @@ const leadProductDesignerPageData: CareerPageDataType = {
   shortDescription:
     "Design exceptional digital experiences for TruBot AI’s intelligent products. Lead end-to-end design of AI-powered solutions across platforms.",
   about:
-    "We’re a stealth-mode AI startup transforming customer support and business communication through cutting-edge AI solutions. Our mission is to enhance efficiency, drive growth, and enable businesses to deliver intelligent, human-like interactions across multiple platforms.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "As a Product Designer Lead at TruBot AI, you'll play a pivotal role in shaping intuitive, beautiful, and high-impact digital experiences. You'll drive UX/UI design across web and mobile platforms while collaborating closely with product managers, engineers, and stakeholders.",
   responsibilities: [
@@ -34,11 +34,11 @@ const leadProductDesignerPageData: CareerPageDataType = {
     "💡 End-to-End Design Ownership – Influence major product decisions across all AI touchpoints.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
     "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Lead Product Designer'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Lead Product Designer'.",
   applyEmail: "careers@trubotai.com",
 };
 

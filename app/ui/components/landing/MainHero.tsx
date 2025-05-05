@@ -98,7 +98,7 @@ const MainHero: FC = () => {
 
         {/* 💬 Typing Simulation */}
         <p className="bg-gray-soft px-4 py-2 rounded-full inline-block text-sm font-mono text-navy/80 shadow fade-in slide-in-up animation-delay-300">
-          🤖 TruBot:{" "}
+          🤖 TruChat:{" "}
           <span role="status" aria-live="polite" className="typing-effect">
             How can I help you today?
           </span>

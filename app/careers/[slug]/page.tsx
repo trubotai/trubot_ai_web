@@ -104,6 +104,39 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         </blockquote>
       </PageLayout>
 
+      {/* Responsibilities */}
+      <PageLayout
+        id="responsibilities"
+        maxWidth="narrow"
+        padding="none"
+        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+      >
+        <SectionHeader title="Responsibilities" align="left" />
+        <CheckList items={responsibilities} />
+      </PageLayout>
+
+      {/* Qualifications */}
+      <PageLayout
+        id="qualifications"
+        maxWidth="narrow"
+        padding="none"
+        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+      >
+        <SectionHeader title="Qualifications & Attributes" align="left" />
+        <CheckList items={qualifications} />
+      </PageLayout>
+
+      {/* Benefits */}
+      <PageLayout
+        id="benefits"
+        maxWidth="narrow"
+        padding="none"
+        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+      >
+        <SectionHeader title="Why Join Us?" align="left" />
+        <CheckList items={benefits} />
+      </PageLayout>
+
       {/* Working Hours */}
       {workingHours && (
         <PageLayout
@@ -142,39 +175,6 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           />
         </PageLayout>
       )}
-
-      {/* Responsibilities */}
-      <PageLayout
-        id="responsibilities"
-        maxWidth="narrow"
-        padding="none"
-        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
-      >
-        <SectionHeader title="Responsibilities" align="left" />
-        <CheckList items={responsibilities} />
-      </PageLayout>
-
-      {/* Qualifications */}
-      <PageLayout
-        id="qualifications"
-        maxWidth="narrow"
-        padding="none"
-        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
-      >
-        <SectionHeader title="Qualifications & Attributes" align="left" />
-        <CheckList items={qualifications} />
-      </PageLayout>
-
-      {/* Benefits */}
-      <PageLayout
-        id="benefits"
-        maxWidth="narrow"
-        padding="none"
-        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
-      >
-        <SectionHeader title="Why Join Us?" align="left" />
-        <CheckList items={benefits} />
-      </PageLayout>
 
       {/* Apply CTA */}
       <PageLayout id="apply">

@@ -37,11 +37,11 @@ const headHumanResourcesPageData: CareerPageDataType = {
     "💡 High-Impact Role – Shape the people strategy of a category-defining AI startup.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
     "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Head of Human Resources'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Head of Human Resources'.",
   applyEmail: "careers@trubotai.com",
 };
 
