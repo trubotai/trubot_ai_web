@@ -20,7 +20,6 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.trubotai.com"),
   title: "TruBot AI – AI Automation for Modern Teams",
   description:
     "Chatbots, voicebots, and AI agents tailored for modern business workflows. Discover TruBot AI today.",
@@ -83,7 +82,7 @@ export default function RootLayout({
       >
         <Header />
         <StickyBanner />
-        <main>{children}</main>
+        <main aria-label="Main content area">{children}</main>
         <SpeedInsights />
         <Analytics />
         <Footer />

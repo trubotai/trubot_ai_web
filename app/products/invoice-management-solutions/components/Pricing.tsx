@@ -19,7 +19,11 @@ const PricingSection = () => {
       />
 
       {/* Toggle Billing Option */}
-      <div className="flex justify-center gap-4 mb-10">
+      <div
+        className="flex justify-center gap-4 mb-10"
+        role="group"
+        aria-label="Billing options"
+      >
         {["monthly", "yearly"].map((option) => (
           <button
             key={option}
@@ -38,7 +42,7 @@ const PricingSection = () => {
       </div>
 
       {/* Plan Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8" aria-live="polite">
         {plans.map((plan, index) => (
           <PricingCard
             key={plan.name}

@@ -18,6 +18,24 @@ import {
   ctaSection,
 } from "@/app/ui/libs/constants/productPage/ai-chatbots";
 
+export const metadata = {
+  title: "AI Chatbot Solutions | No-Code Builder for SMEs & Enterprises",
+  description:
+    "Build and deploy multilingual AI chatbots across WhatsApp, Messenger, and websites. TruBot AI's no-code chatbot builder enables omnichannel customer engagement and support automation.",
+  keywords: [
+    "AI Chatbot Solutions",
+    "No-Code Chatbot Builder",
+    "Multilingual Chatbots",
+    "Omnichannel Customer Support",
+    "AI-Powered Customer Engagement",
+    "Chatbot for SMEs",
+    "WhatsApp Business Chatbot",
+    "Facebook Messenger Automation",
+    "Lead Generation Chatbot",
+    "Customer Support Automation",
+  ],
+};
+
 const Page = () => {
   return (
     <>
@@ -26,10 +44,13 @@ const Page = () => {
 
       {/* Key Features */}
       <div className="bg-gray-soft">
-        <PageLayout id="chatbot-features">
+        <PageLayout
+          id="chatbot-features"
+          ariaLabelledby="chatbot-features-heading"
+        >
           <SectionHeader
-            title="Key Features"
-            subtitle="Explore the powerful capabilities that set our AI chatbots apart."
+            title="Key Features of Our AI Chatbot Platform"
+            subtitle="Explore the powerful capabilities that set our multilingual, no-code AI chatbots apart."
             align="center"
           />
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -40,11 +61,11 @@ const Page = () => {
         </PageLayout>
       </div>
 
-      {/* Use Case */}
+      {/* Use Cases */}
       <PageLayout id="use-cases">
         <SectionHeader
-          title="Use Cases"
-          subtitle="See how our AI chatbots transform different industries and functions."
+          title="AI Chatbot Use Cases Across Industries"
+          subtitle="See how our AI chatbots transform customer support, sales, HR, and more."
           align="center"
         />
 
@@ -55,19 +76,18 @@ const Page = () => {
         </div>
       </PageLayout>
 
-      {/* Tech Specs */}
+      {/* Technical Specifications */}
       <div className="bg-gray-soft">
         <TechSpecs />
       </div>
 
-      {/* Pricing to be added */}
-      {/* Pricing */}
-      {/* <PricingSection /> */}
+      {/* Pricing Section - To be re-enabled */}
+      {/*       <PricingSection />      */}
 
-      {/* Demo to be added */}
-      {/* Demo */}
-      {/* <div className="bg-gray-soft">
-        <PageLayout id="interactive-demo">
+      {/* Demo Section - To be re-enabled */}
+      {/*
+      <div className="bg-gray-soft" ion" aria-labelledby="demo-heading">
+         <PageLayout id="interactive-demo">
           <SectionHeader
             title="Interactive Chatbot Demo"
             subtitle="Experience our AI chatbot technology firsthand. Interact with our demo chatbot to see how it handles different types of inquiries, provides personalized responses, and creates engaging conversations."
@@ -106,11 +126,11 @@ const Page = () => {
         </PageLayout>
       </div> */}
 
-      {/* Case Study */}
-      <PageLayout id="case-studies">
+      {/* Case Studies */}
+      <PageLayout id="case-studies" ariaLabelledby="case-studies-heading">
         <SectionHeader
-          title="Case Studies"
-          subtitle="See how leading businesses are achieving success with our AI chatbots."
+          title="Case Studies of AI Chatbot Success"
+          subtitle="See how leading businesses are achieving measurable results with our solutions."
           align="center"
         />
         <div className="grid gap-8 md:grid-cols-2">
@@ -120,16 +140,16 @@ const Page = () => {
         </div>
       </PageLayout>
 
-      {/* FAQ */}
-      <div className="bg-gray-soft">
-        <FAQSection {...faqSection} />
+      {/* FAQ Section */}
+      <div className="bg-gray-soft" role="region" aria-labelledby="faq-heading">
+        <FAQSection {...faqSection} id="faq-heading" />
       </div>
 
       {/* Related Products */}
       <PageLayout id="related-products">
         <SectionHeader
-          title="Related Products"
-          subtitle="Expand your capabilities with these AI-powered tools."
+          title="Related AI Tools for Customer Engagement"
+          subtitle="Expand your capabilities with these AI-powered platforms."
           align="center"
         />
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

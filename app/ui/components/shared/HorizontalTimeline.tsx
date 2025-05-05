@@ -19,16 +19,21 @@ const HorizontalTimeline = ({
     animationDelay: `${delay}ms`,
   };
 
+  const titleId = `timeline-step-title-${stepNumber}`;
+
   return (
     <div
-      className={`
-        flex flex-col items-center text-center space-y-4
-        fade-in slide-in-up transition-all hover-scale
-      `}
+      className="flex flex-col items-center text-center space-y-4 fade-in slide-in-up transition-all hover-scale"
       style={delayStyle}
+      role="group"
+      aria-roledescription="timeline step"
+      aria-labelledby={titleId}
     >
       {/* Step Circle */}
-      <div className="relative flex items-center justify-center w-16 h-16 rounded-full bg-electric text-light font-heading font-bold text-lg shadow-md hover-glow">
+      <div
+        className="relative flex items-center justify-center w-16 h-16 rounded-full bg-electric text-light font-heading font-bold text-lg shadow-md hover-glow"
+        aria-hidden="true"
+      >
         {Icon ? (
           <Icon className="w-6 h-6" />
         ) : (
@@ -37,7 +42,9 @@ const HorizontalTimeline = ({
       </div>
 
       {/* Title */}
-      <h4 className="text-xl font-heading font-semibold text-navy">{title}</h4>
+      <h4 id={titleId} className="text-xl font-heading font-semibold text-navy">
+        {title}
+      </h4>
 
       {/* Description */}
       <p className="text-sm text-navy/70 leading-relaxed max-w-xs font-body">

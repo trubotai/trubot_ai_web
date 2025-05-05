@@ -21,7 +21,7 @@ const productLinkList = [
   { href: "/products/ai-marketplace", label: "AI Marketplace" },
   {
     href: "/products/ai-solutions-buying-aggregator",
-    label: "AI Solutions Aggregator",
+    label: "Strategic AI Sourcing",
   },
   { href: "/products/ai-voicebots", label: "AI Voicebots" },
   {

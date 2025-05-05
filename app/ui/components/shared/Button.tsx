@@ -79,7 +79,6 @@ const Button = ({
   const baseButtonClass = `
     inline-flex items-center justify-center font-semibold font-body
     transition focus:outline-none focus:ring-2 focus:ring-electric focus:ring-offset-2
-    ripple-effect
   `;
 
   const buttonClass = `
@@ -106,13 +105,31 @@ const Button = ({
     return (
       <button
         type={type}
-        onClick={onClick}
+        onClick={disabled ? undefined : onClick}
         className={buttonClass}
         aria-label={ariaLabel || label}
+        aria-disabled={disabled}
+        role="button"
+        tabIndex={disabled ? -1 : 0}
         disabled={disabled}
       >
         {content}
       </button>
+    );
+  }
+
+  // If disabled link, fallback to <span>
+  if (disabled) {
+    return (
+      <span
+        className={buttonClass}
+        aria-label={ariaLabel || label}
+        aria-disabled="true"
+        role="link"
+        tabIndex={-1}
+      >
+        {content}
+      </span>
     );
   }
 
@@ -121,9 +138,10 @@ const Button = ({
       href={href}
       className={buttonClass}
       aria-label={ariaLabel || label}
+      role="button"
+      tabIndex={disabled ? -1 : 0}
       target={target}
       rel={target === "_blank" ? rel || "noopener noreferrer" : undefined}
-      role="button"
     >
       {content}
     </Link>

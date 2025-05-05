@@ -25,6 +25,16 @@ export async function generateMetadata({
   return {
     title: `${data?.title} – TruBot AI`,
     description: data?.shortDescription,
+    keywords: [
+      "TruBot AI Careers",
+      `${data?.title} Job Opening`,
+      `Remote ${data?.title} Role`,
+      `AI Job at TruBot AI`,
+      "AI Hiring",
+      "Join TruBot AI",
+      "Tech Startup Jobs",
+      "Open Roles at TruBot",
+    ],
   };
 }
 
@@ -76,7 +86,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         <SectionHeader title="Who are we?" subtitle={about} align="left" />
       </PageLayout>
 
-      {/* Role Intro */}
+      {/* Role Introduction */}
       <PageLayout
         id="role-intro"
         maxWidth="narrow"
@@ -88,15 +98,13 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           subtitle={roleIntro}
           align="left"
         />
-
-        {/* Optional Quote Block */}
         <blockquote className="mt-6 italic text-navy/70 font-body border-l-4 border-electric pl-4">
           “This role isn’t just about operations—it’s about shaping the future
           of AI-driven business.”
         </blockquote>
       </PageLayout>
 
-      {/* Working hours */}
+      {/* Working Hours */}
       {workingHours && (
         <PageLayout
           id="working-hours"
@@ -112,7 +120,8 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
               </h2>
             </div>
             <p className="text-navy/80 font-body text-base leading-relaxed">
-              {`${workingHours} We encourage asynchronous productivity with regular syncs.`}
+              {workingHours} We encourage asynchronous productivity with regular
+              syncs.
             </p>
           </div>
         </PageLayout>
@@ -145,7 +154,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         <CheckList items={responsibilities} />
       </PageLayout>
 
-      {/* Qualification */}
+      {/* Qualifications */}
       <PageLayout
         id="qualifications"
         maxWidth="narrow"
@@ -167,16 +176,13 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         <CheckList items={benefits} />
       </PageLayout>
 
-      {/* CAT */}
-      <PageLayout id="apply" padding="default" className="fade-in slide-in-up">
-        <SectionHeader
-          title="Ready to Apply?"
-          subtitle={applyInstructions}
-          align="center"
-        />
+      {/* Apply CTA */}
+      <PageLayout id="apply">
+        <SectionHeader title="Ready to Apply?" subtitle={applyInstructions} />
         <div className="mt-8 text-center">
           <Button
             href={mailtoLink}
+            aria-label={`Apply for ${title} role via email`}
             label="Apply via Email"
             variant="primary"
             animate

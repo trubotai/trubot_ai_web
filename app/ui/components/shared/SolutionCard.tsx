@@ -22,21 +22,27 @@ const SolutionCard = ({
   link,
   bgColor = "bg-light",
 }: SolutionCardProps) => {
+  const headingId = `solution-${name.toLowerCase().replace(/\s+/g, "-")}`;
+
   return (
-    <div
+    <article
       className={`rounded-xl p-6 flex flex-col items-start shadow-md hover:shadow-lg transition-shadow duration-300 fade-in slide-in-up ${bgColor}`}
+      aria-labelledby={headingId}
     >
       <div className="w-12 h-12 mb-4 flex items-center justify-center bg-white rounded-full shadow">
-        <Icon className="w-6 h-6 text-electric" />
+        <Icon className="w-6 h-6 text-electric" aria-hidden="true" />
       </div>
 
-      <h4 className="text-lg font-heading font-semibold text-navy mb-1">
+      <h4
+        id={headingId}
+        className="text-lg font-heading font-semibold text-navy mb-1"
+      >
         {name}
       </h4>
       <p className="text-sm text-navy/60 font-body mb-2">{provider}</p>
       <p className="text-navy/80 font-body mb-4">{description}</p>
 
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-2 mb-4" aria-label="Solution Tags">
         {tags.map((tag, idx) => (
           <span
             key={idx}
@@ -54,8 +60,9 @@ const SolutionCard = ({
         label="Learn More"
         iconRight={ArrowRight}
         iconAnimate
+        aria-label={`Learn more about ${name} solution`}
       />
-    </div>
+    </article>
   );
 };
 

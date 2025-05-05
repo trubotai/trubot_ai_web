@@ -15,10 +15,10 @@ const TechSpecs = () => {
   };
 
   return (
-    <PageLayout id="technical-specs">
+    <PageLayout id="technical-specs" ariaLabelledby="technical-specs-heading">
       <SectionHeader
-        title="Technical Specifications"
-        subtitle="Explore the robust capabilities and standards that power our AI chatbot platform."
+        title="AI Chatbot Technical Specifications"
+        subtitle="Explore the robust capabilities and integration standards that power our AI platform."
         align="center"
       />
 

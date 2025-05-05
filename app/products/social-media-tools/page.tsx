@@ -18,6 +18,24 @@ import {
   useCaseList,
 } from "@/app/ui/libs/constants/productPage/social-media-tools";
 
+export const metadata = {
+  title: "Social Media Tools – TruBot AI",
+  description:
+    "Supercharge your strategy with AI-powered social media tools for automation, content creation, analytics, and engagement.",
+  keywords: [
+    "AI Social Media Tools",
+    "Social Media Automation",
+    "AI-Powered Content Creation",
+    "Social Media Engagement Optimization",
+    "Social Media Analytics",
+    "AI Chatbots for Social Media",
+    "Social Media Marketing Automation",
+    "AI Content Generation",
+    "Social Media Management Tools",
+    "AI Tools for Digital Marketing",
+  ],
+};
+
 const Page = () => {
   return (
     <>
@@ -26,7 +44,7 @@ const Page = () => {
 
       {/* Key Features */}
       <div className="bg-gray-soft">
-        <PageLayout id="features">
+        <PageLayout id="features" ariaLabelledby="features-heading">
           <SectionHeader
             title="Key Features"
             subtitle="Everything you need to streamline and supercharge your social media strategy."
@@ -41,7 +59,7 @@ const Page = () => {
       </div>
 
       {/* Use Cases */}
-      <PageLayout id="use-cases">
+      <PageLayout id="use-cases" ariaLabelledby="use-cases-heading">
         <SectionHeader
           title="Use Cases"
           subtitle="Discover how different teams leverage our platform to achieve outstanding results."
@@ -60,7 +78,7 @@ const Page = () => {
       </div>
 
       {/* To be added */}
-      {/* Pricing */}
+      {/* <Pricing /> */}
       {/* <PricingSection /> */}
 
       {/* To be added */}
@@ -105,7 +123,7 @@ const Page = () => {
       </div> */}
 
       {/* Case Study */}
-      <PageLayout id="case-studies">
+      <PageLayout id="case-studies" ariaLabelledby="case-studies-heading">
         <SectionHeader
           title="Case Studies"
           subtitle="See how leading brands use our platform to boost content performance and drive business results."
@@ -125,8 +143,11 @@ const Page = () => {
         <FAQSection {...faqSection} />
       </div>
 
-      {/* Related Product */}
-      <PageLayout id="related-products">
+      {/* Related Products */}
+      <PageLayout
+        id="related-products"
+        ariaLabelledby="related-products-heading"
+      >
         <SectionHeader
           title="Related Products"
           subtitle="Explore more AI-powered tools to boost your social media and customer engagement."

@@ -17,8 +17,17 @@ export default function GlobalError({
   }, [error]);
 
   return (
-    <PageLayout padding="lg" animate className="text-center">
-      <h1 className="text-4xl font-heading text-navy mb-4 slide-in-up">
+    <PageLayout
+      padding="lg"
+      className="text-center"
+      aria-label="Application error"
+      aria-live="polite"
+      aria-busy="false"
+    >
+      <h1
+        className="text-4xl font-heading text-navy mb-4 slide-in-up"
+        role="alert"
+      >
         Something went wrong
       </h1>
 
@@ -28,7 +37,12 @@ export default function GlobalError({
       </p>
 
       <div className="fade-in animation-delay-300">
-        <Button as="button" onClick={reset} label="Try Again" />
+        <Button
+          as="button"
+          onClick={reset}
+          label="Try Again"
+          ariaLabel="Try loading the page again"
+        />
       </div>
     </PageLayout>
   );

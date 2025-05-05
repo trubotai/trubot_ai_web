@@ -25,13 +25,20 @@ const SectionHeader = ({
     left: "",
   }[align];
 
+  const headingId = `section-heading-${title
+    .toLowerCase()
+    .replace(/\s+/g, "-")}`;
+
   return (
     <div
       className={`mb-8 md:mb-10 ${alignment} ${className} ${
         animate ? "fade-in slide-in-up" : ""
       }`}
     >
-      <h2 className="text-3xl font-heading text-navy mb-4 leading-tight">
+      <h2
+        id={headingId}
+        className="text-3xl font-heading text-navy mb-4 leading-tight"
+      >
         {title}
       </h2>
 

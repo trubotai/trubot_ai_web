@@ -23,26 +23,46 @@ const MainHero: FC = () => {
   }, []);
 
   return (
-    <div className="relative bg-light overflow-hidden">
+    <div
+      className="relative bg-light overflow-hidden"
+      role="region"
+      aria-labelledby="main-hero-heading"
+    >
       {/* 🎨 Layer 1 – Background Gradient */}
-      <div className="absolute inset-0 z-0 animate-gradient-flow" />
+      <div
+        className="absolute inset-0 z-0 animate-gradient-flow"
+        aria-hidden="true"
+      />
 
       {/* 🌌 Floating particles */}
       <Image
         src="/svg/bg-particles.svg"
-        alt="Floating background particles"
+        alt=""
+        aria-hidden="true"
         className="absolute inset-0 z-0 object-cover opacity-10 float"
         width={200}
         height={200}
       />
 
       {/* 🔆 Radial light burst */}
-      <div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] bg-electric opacity-10 blur-[100px] rounded-full z-0" />
+      <div
+        className="absolute top-24 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] bg-electric opacity-10 blur-[100px] rounded-full z-0"
+        aria-hidden="true"
+      />
 
       {/* 🔄 Pulsing Nodes */}
-      <div className="absolute top-[20%] left-[30%] w-3 h-3 rounded-full bg-electric opacity-60 node-pulse jitter z-0" />
-      <div className="absolute top-[40%] left-[70%] w-2 h-2 rounded-full bg-teal opacity-60 node-pulse jitter z-0" />
-      <div className="absolute top-[60%] left-[50%] w-2.5 h-2.5 rounded-full bg-electric opacity-50 node-pulse jitter z-0" />
+      <div
+        className="absolute top-[20%] left-[30%] w-3 h-3 rounded-full bg-electric opacity-60 node-pulse jitter z-0"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute top-[40%] left-[70%] w-2 h-2 rounded-full bg-teal opacity-60 node-pulse jitter z-0"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute top-[60%] left-[50%] w-2.5 h-2.5 rounded-full bg-electric opacity-50 node-pulse jitter z-0"
+        aria-hidden="true"
+      />
 
       <PageLayout
         id="hero"
@@ -53,7 +73,7 @@ const MainHero: FC = () => {
         <div className="mb-6 group relative z-10">
           <Image
             src="/svg/ai-icon.svg"
-            alt="AI Icon"
+            alt="AI system illustration"
             width={200}
             height={200}
             priority
@@ -63,7 +83,10 @@ const MainHero: FC = () => {
         </div>
 
         {/* 🧠 Headline */}
-        <h1 className="text-5xl sm:text-6xl font-heading font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-electric to-navy leading-tight mb-6 fade-in slide-in-up">
+        <h1
+          id="main-hero-heading"
+          className="text-5xl sm:text-6xl font-heading font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-electric to-navy leading-tight mb-6 fade-in slide-in-up"
+        >
           Transform Your Business with Intelligent AI Solutions
         </h1>
 
@@ -76,11 +99,16 @@ const MainHero: FC = () => {
         {/* 💬 Typing Simulation */}
         <p className="bg-gray-soft px-4 py-2 rounded-full inline-block text-sm font-mono text-navy/80 shadow fade-in slide-in-up animation-delay-300">
           🤖 TruBot:{" "}
-          <span className="typing-effect">How can I help you today?</span>
+          <span role="status" aria-live="polite" className="typing-effect">
+            How can I help you today?
+          </span>
         </p>
 
         {/* 🔁 Rotating Tagline */}
-        <p className="text-md sm:text-lg text-electric font-mono mt-6 mb-10 transition-opacity duration-1000 fade-in slide-in-up animation-delay-400 typing-effect max-w-md">
+        <p
+          className="text-md sm:text-lg text-electric font-mono mt-6 mb-10 transition-opacity duration-1000 fade-in slide-in-up animation-delay-400 typing-effect max-w-md"
+          aria-live="polite"
+        >
           {taglines[currentTagline]}
         </p>
 
@@ -91,25 +119,31 @@ const MainHero: FC = () => {
             variant="primary"
             animate
             label="Request a Demo"
+            ariaLabel="Request a demo from TruBot AI"
           />
           <Button
             href="/solutions"
             variant="teal"
             animate
             label="Explore Our Solutions"
+            ariaLabel="Explore TruBot AI solutions"
           />
         </div>
 
         {/* 📊 Stats */}
-        <div className="mt-16 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center fade-in slide-in-up animation-delay-600">
+        <ul
+          role="list"
+          className="mt-16 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center fade-in slide-in-up animation-delay-600"
+        >
           {[
             { value: "85%", label: "Reduction in Manual Tasks" },
             { value: "$3.2M", label: "Average Annual Savings" },
             { value: "93%", label: "Customer Retention Rate" },
             { value: "250+", label: "AI Solutions Offered" },
           ].map((metric, index) => (
-            <div
+            <li
               key={index}
+              role="listitem"
               className="bg-light shadow rounded-xl p-6 hover-scale hover-glow transition"
             >
               <div className="text-2xl font-heading text-electric mb-2">
@@ -118,9 +152,9 @@ const MainHero: FC = () => {
               <div className="text-sm text-navy/70 font-body">
                 {metric.label}
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </PageLayout>
 
       {/* ⬇️ Scroll Indicator */}
@@ -131,7 +165,7 @@ const MainHero: FC = () => {
             .getElementById("overview")
             ?.scrollIntoView({ behavior: "smooth" })
         }
-        aria-label="Scroll down"
+        aria-label="Scroll down to Overview section"
       >
         <svg
           width="24"

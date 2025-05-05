@@ -31,8 +31,8 @@ const FAQSection = ({
   };
 
   return (
-    <PageLayout id={id}>
-      <SectionHeader title={title} subtitle={subtitle} align="center"/>
+    <PageLayout id={id} as="section" ariaLabelledby={`${id}-title`}>
+      <SectionHeader title={title} subtitle={subtitle} align="center" />
 
       <div className="mt-12 max-w-3xl mx-auto space-y-4">
         {faqList.map((faq, index) => (
@@ -43,6 +43,8 @@ const FAQSection = ({
             question={faq.question}
             answer={faq.answer}
             onToggle={() => toggleFAQ(index)}
+            ariaControlsId={`faq-answer-${index}`}
+            ariaLabelledById={`faq-question-${index}`}
           />
         ))}
       </div>

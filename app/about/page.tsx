@@ -21,7 +21,7 @@ const steps = [
     title: "The Beginning",
     description:
       "Our journey began in 2023 when AI researchers, software veterans, and business leaders came together to make AI more accessible.",
-    icon: () => <Lightbulb className="float pulse text-electric" />, // animated icon
+    icon: () => <Lightbulb className="float pulse text-electric" />,
   },
   {
     title: "The Problem We Solved",
@@ -51,11 +51,14 @@ const Page = () => {
 
       {/* Story */}
       <div className="relative bg-gray-soft" aria-label="Our Story Section">
-        {/* Background glow decoration */}
-        <div className="absolute top-0 left-0 w-96 h-96 sm:w-64 sm:h-64 bg-electric opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 sm:w-64 sm:h-64 bg-coral opacity-10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 sm:w-64 sm:h-64 bg-electric opacity-10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 sm:w-64 sm:h-64 bg-coral opacity-10 rounded-full blur-3xl" />
 
-        <PageLayout id="our-story" className="relative z-10">
+        <PageLayout
+          id="our-story"
+          className="relative z-10"
+          aria-label="The Story of TruBot AI"
+        >
           <SectionHeader
             title="Our Story"
             subtitle="From an idea to an integrated AI platform — here’s how we got here."
@@ -72,7 +75,7 @@ const Page = () => {
       </div>
 
       {/* Mission */}
-      <PageLayout id="our-mission">
+      <PageLayout id="our-mission" aria-label="Mission Section">
         <SectionHeader
           title="Our Mission"
           subtitle="Guiding principles that shape how we build, innovate, and serve businesses of all sizes."
@@ -87,12 +90,12 @@ const Page = () => {
       </PageLayout>
 
       {/* Approach */}
-      <div className="bg-gray-soft">
+      <div className="bg-gray-soft" aria-label="Our Approach Section">
         <OurApproach approachList={approachList} />
       </div>
 
       {/* Values */}
-      <PageLayout id="our-values">
+      <PageLayout id="our-values" aria-label="Company Values Section">
         <SectionHeader
           title="Our Values"
           subtitle="The principles that guide how we build, collaborate, and support our customers."
@@ -113,7 +116,7 @@ const Page = () => {
       </PageLayout>
 
       {/* Commitment */}
-      <div className="bg-gray-soft">
+      <div className="bg-gray-soft" aria-label="Commitments Section">
         <Commitments />
       </div>
 

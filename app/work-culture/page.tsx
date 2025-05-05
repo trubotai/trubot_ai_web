@@ -17,6 +17,18 @@ export const metadata = {
   title: "Work Culture – TruBot AI",
   description:
     "Explore a career at TruBot AI — 4-day work weeks, equity ownership, and a culture that prioritizes impact and innovation.",
+  keywords: [
+    "TruBot AI Careers",
+    "Work Culture at TruBot AI",
+    "4-Day Work Week Tech Companies",
+    "AI Company Employee Benefits",
+    "Innovative Tech Work Environment",
+    "Flat Hierarchy Tech Firms",
+    "Employee Equity in Startups",
+    "Remote Work Opportunities in AI",
+    "Tech Company Retreats",
+    "Career Growth in AI Industry",
+  ],
 };
 
 const Page = () => {
@@ -26,11 +38,10 @@ const Page = () => {
       <HeroSection {...heroSection} />
 
       {/* Why Join */}
-      <PageLayout id="join-trubot" background="white" padding="default">
+      <PageLayout id="join-trubot" aria-label="Why Join TruBot AI?">
         <SectionHeader
           title="Why Join TruBot AI?"
           subtitle="We’ve built a place where the best minds thrive without burnout."
-          align="center"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -48,11 +59,10 @@ const Page = () => {
 
       {/* How We Work */}
       <div className="bg-gray-soft">
-        <PageLayout id="how-we-work" background="gray" padding="default">
+        <PageLayout id="how-we-work" aria-label="How We Work">
           <SectionHeader
             title="How We Work"
             subtitle="Built on freedom, focus, and a flat structure that rewards outcomes."
-            align="center"
           />
 
           <div className="max-w-4xl mx-auto fade-in slide-in-up">
@@ -64,14 +74,14 @@ const Page = () => {
         </PageLayout>
       </div>
 
-      {/* Quote Box */}
-      <PageLayout id="founder-quote">
-        <div className="text-center max-w-2xl mx-auto fade-in slide-in-up">
+      {/* Founder Quote */}
+      <PageLayout id="founder-quote" aria-label="Founder Quote">
+        <figure className="text-center max-w-2xl mx-auto fade-in slide-in-up">
           <FaQuoteLeft className="text-electric text-2xl mb-4 mx-auto opacity-60 float" />
           <blockquote className="text-2xl sm:text-3xl font-heading text-navy italic leading-relaxed">
             “We don’t just build AI—we build legacies.”
           </blockquote>
-        </div>
+        </figure>
       </PageLayout>
 
       {/* CTA */}

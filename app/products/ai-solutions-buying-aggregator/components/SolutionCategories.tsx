@@ -13,8 +13,8 @@ const SolutionCategoriesTabs = () => {
   return (
     <PageLayout id="solution-categories">
       <SectionHeader
-        title="Solution Categories"
-        subtitle="Explore AI solutions tailored to the functional needs and realities of SMEs across every business domain."
+        title="AI Solution Categories for SMEs"
+        subtitle="Browse intelligent AI solutions built to solve functional business needs in sales, marketing, HR, finance, and customer support."
       />
 
       {/* Tabs */}
@@ -23,7 +23,11 @@ const SolutionCategoriesTabs = () => {
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`flex items-center gap-2 px-5 py-2 rounded-full font-medium transition-all duration-300 font-body
+            role="tab"
+            aria-selected={activeTab === index}
+            aria-controls={`tab-panel-${index}`}
+            id={`tab-${index}`}
+            className={`flex items-center gap-2 px-5 py-2 rounded-full font-medium transition-all duration-300 font-body focus:outline-none focus:ring-2 focus:ring-electric
               ${
                 activeTab === index
                   ? "bg-electric text-light shadow-md"
@@ -31,7 +35,7 @@ const SolutionCategoriesTabs = () => {
               }
             `}
           >
-            <span className="text-lg">
+            <span className="text-lg" aria-hidden="true">
               {category.icon && category.icon({})}
             </span>
             <span className="hidden sm:inline">{category.title}</span>
@@ -39,14 +43,20 @@ const SolutionCategoriesTabs = () => {
         ))}
       </div>
 
-      {/* Tab Content */}
-      <TabCard
-        title={solutionList[activeTab].title}
-        description={solutionList[activeTab].description}
-        solutions={solutionList[activeTab].solutions}
-        linkLabel={solutionList[activeTab].linkLabel}
-        linkHref={solutionList[activeTab].linkHref}
-      />
+      {/* Active Tab Panel */}
+      <div
+        id={`tab-panel-${activeTab}`}
+        role="tabpanel"
+        aria-labelledby={`tab-${activeTab}`}
+      >
+        <TabCard
+          title={solutionList[activeTab].title}
+          description={solutionList[activeTab].description}
+          solutions={solutionList[activeTab].solutions}
+          linkLabel={solutionList[activeTab].linkLabel}
+          linkHref={solutionList[activeTab].linkHref}
+        />
+      </div>
     </PageLayout>
   );
 };

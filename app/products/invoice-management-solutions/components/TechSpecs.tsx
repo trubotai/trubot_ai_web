@@ -21,7 +21,11 @@ const TechSpecs = () => {
         subtitle="Explore the robust technologies and capabilities behind our invoice management solution."
       />
 
-      <div className="space-y-4">
+      <div
+        className="space-y-4"
+        aria-labelledby="technical-specs-heading"
+        role="region"
+      >
         {techSpecList.map((card, index) => (
           <ExpandableSpecCard
             key={index}

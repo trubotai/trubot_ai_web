@@ -19,6 +19,8 @@ export async function generateMetadata({
   const { slug } = await params;
   const data = productPagesMap[slug] as ProductPageDataType;
 
+  if (!data) return {};
+
   return {
     title: `${data?.title} – TruBot AI`,
     description: data?.description,
@@ -49,7 +51,10 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             >
               <div className="bg-light border border-gray-200 rounded-xl p-6 text-center shadow-sm hover:shadow-md hover-scale transition-all">
                 {platform.icon && (
-                  <div className="text-4xl mb-4 text-electric">
+                  <div
+                    className="text-4xl mb-4 text-electric"
+                    aria-hidden="true"
+                  >
                     {platform.icon}
                   </div>
                 )}
@@ -102,12 +107,9 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             {industries.map((industry, index) => (
               <div
                 key={industry}
-                className={`
-                  group relative overflow-hidden rounded-xl p-6 bg-light 
-                  border border-gray-200 shadow-sm 
-                  transition-all duration-300 hover:-translate-y-1 hover:shadow-md 
-                  fade-in slide-in-up animation-delay-${(index + 1) * 100}
-                `}
+                className={`group relative overflow-hidden rounded-xl p-6 bg-light border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md fade-in slide-in-up animation-delay-${
+                  (index + 1) * 100
+                }`}
               >
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-electric to-teal opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative z-10">

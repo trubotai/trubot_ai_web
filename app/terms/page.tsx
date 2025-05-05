@@ -17,18 +17,20 @@ const Page = () => {
 
       <div className="space-y-12 text-gray-700 leading-relaxed max-w-3xl mx-auto font-body fade-in">
         {/* Introduction */}
-        <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">1. Introduction</h2>
+        <div role="region" aria-labelledby="tos-intro">
+          <h2 id="tos-intro" className="text-2xl font-bold text-navy mb-3">
+            1. Introduction
+          </h2>
           <p>
             Welcome to TruBot AI. These Terms of Service (&quot;Terms&quot;)
             govern your use of our website, products, and services. By accessing
             or using TruBot AI, you agree to be bound by these Terms.
           </p>
-        </section>
+        </div>
 
         {/* Use of Services */}
-        <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">
+        <div role="region" aria-labelledby="tos-usage">
+          <h2 id="tos-usage" className="text-2xl font-bold text-navy mb-3">
             2. Use of Our Services
           </h2>
           <p>
@@ -36,11 +38,11 @@ const Page = () => {
             accordance with these Terms. TruBot AI reserves the right to suspend
             or terminate access for violations.
           </p>
-        </section>
+        </div>
 
         {/* Intellectual Property */}
-        <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">
+        <div role="region" aria-labelledby="tos-ip">
+          <h2 id="tos-ip" className="text-2xl font-bold text-navy mb-3">
             3. Intellectual Property
           </h2>
           <p>
@@ -48,11 +50,11 @@ const Page = () => {
             or our licensors. You may not copy, modify, distribute, or sell any
             part of our services without our prior written consent.
           </p>
-        </section>
+        </div>
 
-        {/* Privacy */}
-        <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">
+        {/* Privacy Policy */}
+        <div role="region" aria-labelledby="tos-privacy">
+          <h2 id="tos-privacy" className="text-2xl font-bold text-navy mb-3">
             4. Privacy Policy
           </h2>
           <p>
@@ -62,11 +64,11 @@ const Page = () => {
             </Link>{" "}
             to understand how we collect, use, and protect your information.
           </p>
-        </section>
+        </div>
 
-        {/* Payment Terms (if applicable) */}
-        <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">
+        {/* Payment Terms */}
+        <div role="region" aria-labelledby="tos-payments">
+          <h2 id="tos-payments" className="text-2xl font-bold text-navy mb-3">
             5. Payments and Subscriptions
           </h2>
           <p>
@@ -74,42 +76,49 @@ const Page = () => {
             fees. Subscription terms, billing cycles, and refund policies will
             be outlined at the time of purchase.
           </p>
-        </section>
+        </div>
 
         {/* Termination */}
-        <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">6. Termination</h2>
+        <div role="region" aria-labelledby="tos-termination">
+          <h2
+            id="tos-termination"
+            className="text-2xl font-bold text-navy mb-3"
+          >
+            6. Termination
+          </h2>
           <p>
             TruBot AI may suspend or terminate your access if you breach these
             Terms or engage in any prohibited activities. Upon termination, your
             right to use our services will immediately cease.
           </p>
-        </section>
+        </div>
 
-        {/* Disclaimer of Warranties */}
-        <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">7. Disclaimers</h2>
+        {/* Disclaimers */}
+        <div role="region" aria-labelledby="tos-disclaimer">
+          <h2 id="tos-disclaimer" className="text-2xl font-bold text-navy mb-3">
+            7. Disclaimers
+          </h2>
           <p>
             Our services are provided on an &quot;as-is&quot; basis. We do not
             guarantee that the services will always be safe, secure, or
             error-free.
           </p>
-        </section>
+        </div>
 
-        {/* Limitation of Liability */}
-        <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">
+        {/* Liability */}
+        <div role="region" aria-labelledby="tos-liability">
+          <h2 id="tos-liability" className="text-2xl font-bold text-navy mb-3">
             8. Limitation of Liability
           </h2>
           <p>
             TruBot AI shall not be liable for any indirect, incidental, or
             consequential damages arising from your use of our services.
           </p>
-        </section>
+        </div>
 
         {/* Governing Law */}
-        <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">
+        <div role="region" aria-labelledby="tos-law">
+          <h2 id="tos-law" className="text-2xl font-bold text-navy mb-3">
             9. Governing Law
           </h2>
           <p>
@@ -117,11 +126,13 @@ const Page = () => {
             the laws of State of Florida, USA without regard to its conflict of
             law principles.
           </p>
-        </section>
+        </div>
 
-        {/* Contact Information */}
-        <section>
-          <h2 className="text-2xl font-bold text-navy mb-3">10. Contact Us</h2>
+        {/* Contact */}
+        <div role="region" aria-labelledby="tos-contact">
+          <h2 id="tos-contact" className="text-2xl font-bold text-navy mb-3">
+            10. Contact Us
+          </h2>
           <p>
             For any questions regarding these Terms, please contact us at{" "}
             <a
@@ -132,7 +143,7 @@ const Page = () => {
             </a>
             .
           </p>
-        </section>
+        </div>
       </div>
     </PageLayout>
   );

@@ -25,6 +25,18 @@ export const metadata = {
   title: "Partner Program for SMEs – Expand Your AI Market Reach | TruBot AI",
   description:
     "Join our Partner Program and access new SME markets, co-marketing opportunities, technical support, and business development resources. Accelerate your growth in the AI ecosystem.",
+  keywords: [
+    "AI Partner Program for SMEs",
+    "TruBot AI Partnership Opportunities",
+    "SME AI Solutions Partnership",
+    "AI Implementation Partner Program",
+    "Technology Partner Program for AI",
+    "AI Solution Partner Benefits",
+    "SME AI Integration Support",
+    "AI Co-Marketing Opportunities",
+    "TruBot Partner Portal Access",
+    "AI Business Development Resources",
+  ],
 };
 
 const Page = () => {
