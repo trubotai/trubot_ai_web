@@ -20,7 +20,7 @@ const Footer = () => {
     ));
 
   const renderContact = () => (
-    <>
+    <ul className="space-y-2">
       <li>
         <Link href="mailto:support@trubotai.com" className={linkClass}>
           support@trubotai.com
@@ -60,11 +60,11 @@ const Footer = () => {
           <FaYoutube />
         </Link>
       </li>
-    </>
+    </ul>
   );
 
   return (
-    <footer id="footer">
+    <footer role="contentinfo" id="footer">
       <div className="bg-gray-soft text-sm font-body text-navy py-10 border-t">
         <div className="max-w-7xl mx-auto px-4">
           {/* Desktop Layout */}
@@ -77,22 +77,37 @@ const Footer = () => {
               </p>
             </div>
 
-            <nav aria-label="Products">
-              <h4 className="font-bold font-heading mb-2">Products</h4>
+            <nav aria-labelledby="footer-products-heading">
+              <h4
+                id="footer-products-heading"
+                className="font-bold font-heading mb-2"
+              >
+                Products
+              </h4>
               <ul className="space-y-2">{renderLinks(productLinkList)}</ul>
             </nav>
 
             <div>
-              <nav aria-label="Footer Links">
-                <h4 className="font-bold font-heading mb-2">Links</h4>
+              <nav aria-labelledby="footer-links-heading">
+                <h4
+                  id="footer-links-heading"
+                  className="font-bold font-heading mb-2"
+                >
+                  Links
+                </h4>
                 <ul className="space-y-2 mb-4">
                   {renderLinks(footerLinkList)}
                 </ul>
               </nav>
 
               <address className="not-italic">
-                <h4 className="font-bold font-heading mb-2">Contact</h4>
-                <ul className="space-y-2">{renderContact()}</ul>
+                <h4
+                  id="footer-contact-heading"
+                  className="font-bold font-heading mb-2"
+                >
+                  Contact
+                </h4>
+                {renderContact()}
               </address>
             </div>
           </div>
@@ -100,12 +115,27 @@ const Footer = () => {
           {/* Mobile Accordion */}
           <div className="md:hidden space-y-6 fade-in">
             {[
-              { title: "Products", content: renderLinks(productLinkList) },
-              { title: "Links", content: renderLinks(footerLinkList) },
-              { title: "Contact", content: renderContact() },
-            ].map(({ title, content }, idx) => (
+              {
+                title: "Products",
+                id: "mobile-products",
+                content: renderLinks(productLinkList),
+              },
+              {
+                title: "Links",
+                id: "mobile-links",
+                content: renderLinks(footerLinkList),
+              },
+              {
+                title: "Contact",
+                id: "mobile-contact",
+                content: renderContact(),
+              },
+            ].map(({ title, content, id }, idx) => (
               <details key={idx}>
-                <summary className="font-bold font-heading cursor-pointer">
+                <summary
+                  id={id}
+                  className="font-bold font-heading cursor-pointer"
+                >
                   {title}
                 </summary>
                 <ul className="mt-2 space-y-2 pl-4">{content}</ul>
@@ -126,7 +156,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-navy text-white text-center text-xs py-2">
+      <div className="bg-navy text-white text-center text-xs py-2" lang="en">
         © {new Date().getFullYear()} TruBot AI. All rights reserved.
       </div>
     </footer>

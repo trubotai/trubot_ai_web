@@ -19,16 +19,19 @@ const CheckList: FC<CheckListProps> = ({
   return (
     <ul
       className={`grid ${gridCols} gap-x-10 gap-y-6 text-navy font-body text-base ${className}`}
+      role="list"
     >
       {items.map((item, index) => (
         <li
           key={index}
-          className={`
-            flex items-start fade-in slide-in-up
-          `}
+          className="flex items-start fade-in slide-in-up"
           style={{ animationDelay: `${index * 100}ms` }}
         >
-          <Icon className="text-electric mt-1 mr-3 shrink-0" />
+          <Icon
+            className="text-electric mt-1 mr-3 shrink-0"
+            aria-hidden="true"
+            focusable="false"
+          />
           <span className="leading-relaxed">{item}</span>
         </li>
       ))}

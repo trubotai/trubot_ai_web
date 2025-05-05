@@ -19,6 +19,18 @@ export const metadata = {
   title: "SME Empower Program – TruBot AI",
   description:
     "Join the SME Empower Partner Program to earn, trade, and grow 10X faster with TruBot AI’s powerful network.",
+  keywords: [
+    "SME Empowerment Program",
+    "AI Solutions for SMEs",
+    "TruBot AI Partnership",
+    "SME Automation Tools",
+    "Small Business AI Integration",
+    "AI Chatbots for SMEs",
+    "SME Digital Transformation",
+    "TruBot AI SME Network",
+    "Business Growth for SMEs",
+    "AI-Driven SME Solutions",
+  ],
 };
 
 const Page = () => {

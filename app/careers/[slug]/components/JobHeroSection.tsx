@@ -23,12 +23,16 @@ const JobHeroSection: FC<JobHeroSectionProps> = ({
     <div
       id="job-hero"
       role="region"
-      aria-label="Job Hero Section"
+      aria-labelledby="job-hero-heading"
+      aria-describedby="job-hero-description"
       className="relative bg-gradient-to-br from-electric to-navy text-light py-24 px-6 overflow-hidden"
     >
       <PageLayout className="text-center relative z-10">
         <div className="max-w-4xl mx-auto fade-in text-light slide-in-up">
-          <h1 className="text-4xl md:text-5xl  font-heading font-extrabold mb-6">
+          <h1
+            id="job-hero-heading"
+            className="text-4xl md:text-5xl font-heading font-extrabold mb-6"
+          >
             {title}
           </h1>
 
@@ -43,13 +47,17 @@ const JobHeroSection: FC<JobHeroSectionProps> = ({
             </span>
           </div>
 
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-body">
+          <p
+            id="job-hero-description"
+            className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-body"
+          >
             {shortDescription}
           </p>
 
           <Button
             href={applyHref}
             label="Apply Now"
+            aria-label={`Apply now for ${title} position`}
             variant="teal"
             animate
             rounded="full"

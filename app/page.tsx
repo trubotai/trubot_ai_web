@@ -17,9 +17,21 @@ import {
 } from "./ui/libs/constants";
 
 export const metadata = {
-  title: "TruBot AI – AI Automation for Modern Teams",
+  title: "AI Chatbot Solutions for SMEs | TruBot AI",
   description:
-    "TruBot AI helps businesses reduce support costs, automate tasks, and drive real ROI with intelligent chat, voice, and agent solutions.",
+    "AI chatbot solutions for small and medium businesses. No-code chatbot builder for WhatsApp, Messenger & websites. Automate customer support & lead generation.",
+  keywords: [
+    "AI Chatbot Solutions",
+    "No-Code Chatbot Builder",
+    "Multilingual Chatbots",
+    "Omnichannel Customer Support",
+    "AI-Powered Customer Engagement",
+    "Chatbot for SMEs",
+    "WhatsApp Business Chatbot",
+    "Facebook Messenger Automation",
+    "Lead Generation Chatbot",
+    "Customer Support Automation",
+  ],
 };
 
 const Page = () => {
@@ -100,6 +112,7 @@ const Page = () => {
               label="Explore the Full Marketplace"
               variant="outline"
               animate
+              ariaLabel="Explore the full AI marketplace"
             />
           </div>
         </PageLayout>
@@ -153,8 +166,10 @@ const Page = () => {
       <CTASection
         title="Ready to Transform Your Business with AI?"
         subtitle="Join hundreds of forward-thinking companies leveraging our AI solutions to drive efficiency, innovation, and growth."
-        primaryCTA={{ label: "Request a Demo", href: "/request-demo" }}
-        secondaryCTA={{ label: "Contact Our Team", href: "/contact" }}
+        primaryCTA={{
+          label: "Request a Demo",
+          href: "/contact",
+        }}
       />
     </>
   );

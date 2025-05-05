@@ -12,36 +12,42 @@ const PricingSection = () => {
   const plans = pricingSection[duration];
 
   return (
-    <PageLayout id="pricing">
+    <PageLayout id="pricing" ariaLabelledby="pricing-heading">
       <SectionHeader
-        title="Pricing Options"
+        title="Flexible AI Chatbot Pricing Options"
         subtitle="Choose a plan that fits your business—monthly or annually."
-        align="center"
       />
 
       {/* Toggle Billing Option */}
       <div className="flex justify-center gap-4 mb-10">
-        {["monthly", "yearly"].map((option, i) => (
-          <button
-            key={option}
-            onClick={() => setDuration(option as "monthly" | "yearly")}
-            role="button"
-            aria-pressed={duration === option}
-            aria-controls="pricing-options"
-            aria-label={`Toggle to ${option} billing`}
-            className={`
-        px-5 py-2 rounded-full text-sm font-medium transition-all
-        fade-in scale-up animation-delay-${i === 0 ? "100" : "200"}
-        ${
-          duration === option
-            ? "bg-electric text-white shadow"
-            : "bg-white text-navy border border-electric"
-        }
-      `}
-          >
-            {option === "monthly" ? "Monthly Billing" : "Yearly Billing"}
-          </button>
-        ))}
+        <button
+          type="button"
+          onClick={() => setDuration("monthly")}
+          aria-pressed={duration === "monthly"}
+          aria-controls="pricing-options"
+          aria-label="Switch to monthly billing"
+          className={`px-5 py-2 rounded-full text-sm font-medium transition-all fade-in scale-up animation-delay-100 ${
+            duration === "monthly"
+              ? "bg-electric text-white shadow"
+              : "bg-white text-navy border border-electric"
+          }`}
+        >
+          Monthly Billing
+        </button>
+        <button
+          type="button"
+          onClick={() => setDuration("yearly")}
+          aria-pressed={duration === "yearly"}
+          aria-controls="pricing-options"
+          aria-label="Switch to yearly billing"
+          className={`px-5 py-2 rounded-full text-sm font-medium transition-all fade-in scale-up animation-delay-200 ${
+            duration === "yearly"
+              ? "bg-electric text-white shadow"
+              : "bg-white text-navy border border-electric"
+          }`}
+        >
+          Yearly Billing
+        </button>
       </div>
 
       {/* Plan Cards */}

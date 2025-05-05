@@ -21,13 +21,31 @@ import {
   ctaSection,
 } from "@/app/ui/libs/constants/productPage/ai-solutions-buying-aggregator";
 
+export const metadata = {
+  title: "Strategic AI Sourcing for SMEs | TruBot AI",
+  description:
+    "Compare, discover, and implement AI tools tailored for small and medium businesses. Explore the best AI marketplace platform today.",
+  keywords: [
+    "Strategic AI Sourcing",
+    "AI Tools Comparison Platform",
+    "AI Marketplace for SMEs",
+    "AI Solutions Buying Guide",
+    "AI Tools Directory",
+    "AI Solutions Finder",
+    "AI Tools Aggregator Platform",
+    "AI Solutions Comparison Tool",
+    "AI Marketplace Platform",
+    "AI Solutions for Businesses",
+  ],
+};
+
 const Page = () => {
   return (
     <>
       {/* Hero */}
       <HeroSection {...heroSection} />
 
-      {/* Key Feature */}
+      {/* Key Features */}
       <div className="bg-gray-soft">
         <PageLayout id="features">
           <SectionHeader
@@ -54,12 +72,12 @@ const Page = () => {
         </div>
       </PageLayout>
 
-      {/* Solution Category */}
+      {/* Solution Categories */}
       <div className="bg-gray-soft">
         <SolutionCategoriesTabs />
       </div>
 
-      {/* SME Benefit */}
+      {/* SME Benefits */}
       <PageLayout id="sme-benefits">
         <SectionHeader
           title="Benefits for SMEs"
@@ -74,7 +92,7 @@ const Page = () => {
         </div>
       </PageLayout>
 
-      {/* Success Story */}
+      {/* Success Stories */}
       <div className="bg-gray-soft">
         <PageLayout id="success-stories">
           <SectionHeader
@@ -116,7 +134,7 @@ const Page = () => {
         <FAQSection {...faqSection} />
       </div>
 
-      {/* Related Products */}
+      {/* Related Services */}
       <PageLayout id="related-services">
         <SectionHeader
           title="Related Services"

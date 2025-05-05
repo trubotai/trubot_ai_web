@@ -20,6 +20,25 @@ import {
   useCaseList,
 } from "@/app/ui/libs/constants/productPage/invoice-management-solutions";
 
+export const metadata = {
+  title:
+    "AI Invoice Management Solution – Automate Your Accounts Payable | TruBot AI",
+  description:
+    "Discover TruBot AI’s intelligent invoice automation platform. Streamline accounts payable, prevent fraud, ensure compliance, and boost finance team productivity.",
+  keywords: [
+    "AI Invoice Management",
+    "Automated Invoice Processing",
+    "Invoice Automation Software",
+    "Accounts Payable Automation",
+    "Intelligent Invoice Matching",
+    "Fraud Detection in Invoicing",
+    "Payment Optimization Tools",
+    "Compliance Management Solutions",
+    "Invoice Data Extraction AI",
+    "TruBot AI Invoice Solutions",
+  ],
+};
+
 const Page = () => {
   return (
     <>

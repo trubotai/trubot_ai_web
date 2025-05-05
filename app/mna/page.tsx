@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { FaQuoteLeft } from "react-icons/fa6";
 
 import PageLayout from "@/app/ui/components/shared/PageLayout";
@@ -15,10 +16,27 @@ import {
   ctaSection,
 } from "../ui/libs/constants/mna";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Mergers & Acquisitions – TruBot AI",
   description:
-    "Sell your B2B SaaS or Hosting company for 100X returns. Explore our acquisition strategy and deal structures.",
+    "Sell your B2B SaaS or Hosting company for 100X returns. Explore our AI-led acquisition strategy, deal automation tools, and M&A integration success stories.",
+  keywords: [
+    "AI M&A Solutions",
+    "AI for Mergers and Acquisitions",
+    "Intelligent M&A Automation",
+    "AI-Powered Due Diligence",
+    "AI Risk Assessment M&A",
+    "AI Tools for M&A Strategy",
+    "AI in Business Acquisitions",
+    "M&A Data Analysis with AI",
+    "Deal Flow Automation AI",
+    "TruBot AI M&A Platform",
+    "AI for Financial Modeling",
+    "Predictive Analytics for M&A",
+    "Machine Learning in M&A",
+    "AI M&A Deal Insights",
+    "Automated M&A Process Tools",
+  ],
 };
 
 const Page = () => {
@@ -27,7 +45,7 @@ const Page = () => {
       {/* Hero */}
       <HeroSection {...heroSection} />
 
-      {/* Target Criteria */}
+      {/* Acquisition Targets */}
       <div className="bg-gray-soft">
         <PageLayout id="acquisition-targets">
           <SectionHeader
@@ -98,10 +116,16 @@ const Page = () => {
       </div>
 
       {/* Quote Box */}
-      <PageLayout id="founder-quote">
+      <PageLayout id="founder-quote" ariaLabelledby="founder-quote-heading">
         <div className="text-center max-w-2xl mx-auto fade-in slide-in-up">
-          <FaQuoteLeft className="text-electric text-2xl mb-4 mx-auto opacity-60 float" />
-          <blockquote className="text-2xl sm:text-3xl font-heading text-navy italic leading-relaxed">
+          <FaQuoteLeft
+            className="text-electric text-2xl mb-4 mx-auto opacity-60 float"
+            aria-hidden="true"
+          />
+          <blockquote
+            className="text-2xl sm:text-3xl font-heading text-navy italic leading-relaxed"
+            id="founder-quote-heading"
+          >
             “Tech founders deserve more than exits—they deserve legacy growth.”
           </blockquote>
         </div>

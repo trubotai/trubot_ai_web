@@ -15,13 +15,16 @@ const TechSpecs = () => {
   };
 
   return (
-    <PageLayout id="specifications">
+    <PageLayout id="specifications" ariaLabelledby="specifications-heading">
       <SectionHeader
         title="Technical Specifications"
         subtitle="Built for power, flexibility, and seamless integration."
       />
 
-      <div className="space-y-4">
+      <div
+        className="space-y-4"
+        aria-label="Expandable technical specifications"
+      >
         {techSpecList.map((spec, index) => (
           <ExpandableSpecCard
             key={index}

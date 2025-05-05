@@ -13,22 +13,24 @@ const PricingSection = () => {
 
   return (
     <div className="bg-gray-50">
-      <PageLayout id="pricing" animate>
+      <PageLayout id="pricing" aria-label="Pricing Section">
         <SectionHeader
           title="Pricing Options"
           subtitle="Simple and scalable plans to fit your business needs"
-          align="center"
-          animate
         />
 
         {/* Toggle Billing Option */}
-        <div className="flex justify-center gap-4 mb-10">
+        <div
+          className="flex justify-center gap-4 mb-10"
+          role="radiogroup"
+          aria-label="Billing duration options"
+        >
           {["monthly", "yearly"].map((option) => (
             <button
               key={option}
               onClick={() => setDuration(option as "monthly" | "yearly")}
-              role="button"
-              aria-pressed={duration === option}
+              role="radio"
+              aria-checked={duration === option}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                 duration === option
                   ? "bg-electric text-white shadow"

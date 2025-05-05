@@ -25,6 +25,23 @@ import {
   ctaSection,
 } from "@/app/ui/libs/constants/productPage/ai-marketplace";
 
+export const metadata = {
+  title: "AI Marketplace Platform | Enterprise Strategic AI Sourcing",
+  description:
+    "Discover verified AI tools, providers, and integration services for your business. TruBot AI Marketplace connects SMEs and enterprises with scalable AI solutions.",
+  keywords: [
+    "AI Marketplace for Enterprises",
+    "Strategic AI Sourcing",
+    "AI Tools Directory",
+    "Enterprise AI Solutions",
+    "AI Procurement Platform",
+    "AI Integration Services",
+    "AI Tools for Businesses",
+    "AI Marketplace Platform",
+    "AI Solutions for SMEs",
+  ],
+};
+
 const Page = () => {
   return (
     <>
@@ -33,10 +50,10 @@ const Page = () => {
 
       {/* Key Features */}
       <div className="bg-gray-soft">
-        <PageLayout id="features">
+        <PageLayout id="features" ariaLabelledby="sfeatures-heading">
           <SectionHeader
             title="Key Features"
-            subtitle="Explore what makes our AI Marketplace the preferred platform for enterprises"
+            subtitle="Explore what makes our Strategic AI Sourcing ideal for SMEs and enterprises"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {featureList.map((feature, index) => (
@@ -51,20 +68,21 @@ const Page = () => {
 
       {/* How It Works */}
       <div className="bg-gray-soft">
-        <PageLayout id="how-it-works">
+        <PageLayout id="how-it-works" ariaLabelledby="how-it-works-heading">
           <SectionHeader
-            title="How It Works"
-            subtitle="A seamless experience for buyers and solution providers alike."
+            title="How the AI Marketplace Works"
+            subtitle="A seamless experience for solution buyers and providers"
           />
-
           <div className="mt-16 flex flex-col md:flex-row items-start gap-12">
             <VerticalTimeline title="For Buyers" steps={buyStepList} />
-
             {/* Icon Separator */}
             <div className="hidden md:flex flex-col justify-center items-center self-stretch px-4">
               <div className="flex flex-col justify-center items-center h-full text-electric">
                 <div className="w-px flex-1 bg-electric mb-2" />
-                <FaExchangeAlt className="w-6 h-6 float my-2" />
+                <FaExchangeAlt
+                  className="w-6 h-6 float my-2"
+                  aria-hidden="true"
+                />
                 <div className="w-px flex-1 bg-electric mt-2" />
               </div>
             </div>
@@ -79,12 +97,14 @@ const Page = () => {
       </div>
 
       {/* Featured Solutions */}
-      <PageLayout id="featured-solutions">
+      <PageLayout
+        id="featured-solutions"
+        aria-labelledby="featured-solutions-heading"
+      >
         <SectionHeader
-          title="Featured Solutions"
-          subtitle="Explore top AI tools curated for your business needs."
+          title="Featured AI Solutions"
+          subtitle="Discover top-rated tools from leading AI solution providers"
         />
-
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {solutionList.map((solution, index) => (
             <SolutionCard
@@ -106,18 +126,18 @@ const Page = () => {
             label="View All Solutions"
             variant="primary"
             animate
+            aria-label="View all available AI solutions on the platform"
           />
         </div>
       </PageLayout>
 
       {/* Benefits Section */}
       <div className="bg-gray-soft">
-        <PageLayout id="benefits-section">
+        <PageLayout id="benefits-section" ariaLabelledby="benefits-heading">
           <SectionHeader
-            title="Benefits"
-            subtitle="Discover the advantages tailored for each audience"
+            title="AI Marketplace Benefits for Businesses and Providers"
+            subtitle="Tailored advantages for every stakeholder in your AI adoption journey"
           />
-
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefitList.map((group, index) => (
               <BenefitCard
@@ -136,16 +156,18 @@ const Page = () => {
 
       {/* FAQ */}
       <div className="bg-gray-soft">
-        <FAQSection {...faqSection} />
+        <FAQSection {...faqSection} id="faq-heading" />
       </div>
 
       {/* Related Products */}
-      <PageLayout id="related-products">
+      <PageLayout
+        id="related-products"
+        ariaLabelledby="related-products-heading"
+      >
         <SectionHeader
-          title="Related Products"
-          subtitle="Explore additional offerings to enhance your AI journey"
+          title="Related AI Products for Your Business"
+          subtitle="Explore complementary tools to enhance your AI transformation"
         />
-
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10">
           {relatedProductList.map((product, index) => (
             <ProductCard

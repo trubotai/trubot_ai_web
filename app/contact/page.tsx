@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   FaArrowRight,
@@ -20,10 +21,25 @@ import {
   faqSection,
 } from "../ui/libs/constants/contact";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contact – TruBot AI",
   description:
     "Get in touch with our team for demo requests, business inquiries, or support.",
+  keywords: [
+    "Contact TruBot AI",
+    "AI Consultation",
+    "TruBot AI Support",
+    "TruBot AI Offices",
+    "Book AI Demo",
+    "AI Business Inquiries",
+    "AI Founder's Contact",
+    "Schedule AI Consultation",
+    "AI Emergency Support",
+    "Connect with TruBot AI",
+    "AI Company Contact",
+    "TruBot AI Helpdesk",
+    "TruBot AI LinkedIn",
+  ],
 };
 
 const Page = () => {
@@ -32,12 +48,11 @@ const Page = () => {
       {/* Hero */}
       <HeroSection {...heroSection} />
 
-      {/* Email list */}
+      {/* Connect with Right Team */}
       <PageLayout id="connect-team">
         <SectionHeader
           title="Connect With the Right Team"
           subtitle="Reach out directly to the appropriate contact for your needs."
-          align="center"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 fade-in slide-in-up">
           {emailList.map((item, index) => (
@@ -46,7 +61,7 @@ const Page = () => {
         </div>
       </PageLayout>
 
-      {/* Office Location */}
+      {/* Global Offices */}
       <div className="bg-gray-soft">
         <PageLayout id="global-offices">
           <SectionHeader
@@ -72,7 +87,10 @@ const Page = () => {
                 />
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-2">
-                    <FaMapMarkerAlt className="text-electric" />
+                    <FaMapMarkerAlt
+                      className="text-electric"
+                      aria-hidden="true"
+                    />
                     <h3 className="text-xl sm:text-2xl font-heading font-semibold text-navy">
                       {location.title}
                     </h3>
@@ -96,7 +114,7 @@ const Page = () => {
         </PageLayout>
       </div>
 
-      {/* Contact Info */}
+      {/* Book Consultation */}
       <PageLayout id="book-consultation">
         <SectionHeader
           title="Book a Personalized Consultation"
@@ -107,10 +125,8 @@ const Page = () => {
         <div className="text-center mt-12 sm:mt-16 fade-in slide-in-up">
           <p className="text-navy/70 text-sm sm:text-base font-body max-w-2xl mx-auto mb-6">
             Whether you&apos;re exploring how AI can transform your operations
-            or have specific goals in mind, we&apos;re here to help you take the
-            next step confidently. Connect directly with our founder for
-            personalized advice or schedule a free consultation to discover the
-            right solutions for your business.
+            or have specific goals in mind, we’re here to help you take the next
+            step confidently.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
@@ -133,16 +149,15 @@ const Page = () => {
       </PageLayout>
 
       {/* FAQ */}
-      <div className="bg-gray-soft">
+      <div role="region" className="bg-gray-soft">
         <FAQSection {...faqSection} />
       </div>
 
-      {/* Connect with Us */}
+      {/* Connect With Us */}
       <PageLayout id="connect">
         <SectionHeader
           title="Connect With Us"
           subtitle="Stay updated with the latest AI trends, best practices, and company news."
-          align="center"
         />
 
         {/* Social Media */}
@@ -175,7 +190,7 @@ const Page = () => {
           </div>
         </div>
 
-        {/* Blog and Newsletter */}
+        {/* Blog & Newsletter */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 text-center fade-in slide-in-up">
           <div>
             <h4 className="text-lg font-heading font-semibold text-navy mb-2">
@@ -210,8 +225,15 @@ const Page = () => {
         </div>
 
         {/* Emergency Support */}
-        <div className="mt-16 text-center bg-red-50 p-6 sm:p-8 rounded-2xl fade-in slide-in-up max-w-3xl mx-auto">
-          <h3 className="text-2xl font-heading font-bold mb-4 text-red-600">
+        <div
+          role="region"
+          aria-labelledby="emergency-heading"
+          className="mt-16 text-center bg-red-50 p-6 sm:p-8 rounded-2xl fade-in slide-in-up max-w-3xl mx-auto"
+        >
+          <h3
+            id="emergency-heading"
+            className="text-2xl font-heading font-bold mb-4 text-red-600"
+          >
             Emergency Support
           </h3>
           <p className="text-navy font-body mb-4">

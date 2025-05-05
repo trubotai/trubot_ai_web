@@ -6,6 +6,8 @@ interface AccordionItemProps {
   answer: string;
   onToggle: () => void;
   index: number;
+  ariaControlsId?: string;
+  ariaLabelledById?: string;
 }
 
 const AccordionItem = ({
@@ -14,14 +16,13 @@ const AccordionItem = ({
   answer,
   onToggle,
   index,
+  ariaControlsId = `faq-answer-${index}`,
+  ariaLabelledById = `faq-question-${index}`,
 }: AccordionItemProps) => {
-  const contentId = `accordion-content-${index}`;
-  const buttonId = `accordion-button-${index}`;
-
   return (
     <div className="bg-light rounded-lg shadow-md overflow-hidden transition-all duration-300">
       <button
-        id={buttonId}
+        id={ariaLabelledById}
         onClick={onToggle}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
@@ -30,10 +31,10 @@ const AccordionItem = ({
           }
         }}
         aria-expanded={isOpen}
-        aria-controls={contentId}
+        aria-controls={ariaControlsId}
         className="w-full flex justify-between items-center px-6 py-4 text-left text-navy font-heading font-medium focus:outline-none"
       >
-        <span>{question}</span>
+        <h3 className="text-base font-heading font-semibold">{question}</h3>
         <FaChevronDown
           className={`w-5 h-5 transform transition-transform duration-300 ${
             isOpen ? "rotate-180 text-electric" : "rotate-0"
@@ -42,12 +43,12 @@ const AccordionItem = ({
       </button>
 
       <div
-        id={contentId}
+        id={ariaControlsId}
         role="region"
-        aria-labelledby={buttonId}
+        aria-labelledby={ariaLabelledById}
+        aria-hidden={!isOpen}
         className={`
-          text-navy/80 font-body text-sm
-          transition-all duration-300 ease-in-out px-6 pb-4
+          text-navy/80 font-body text-sm transition-all duration-300 ease-in-out px-6 pb-4
           ${isOpen ? "accordion-open" : "accordion-close"}
         `}
       >

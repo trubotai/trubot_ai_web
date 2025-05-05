@@ -11,7 +11,19 @@ import {
 export const metadata = {
   title: "Products – TruBot AI",
   description:
-    "Explore TruBot AI’s suite of chat, voice, and agent automation tools.",
+    "Explore TruBot AI’s suite of AI chatbot solutions, no-code builders, and automation tools for customer engagement.",
+  keywords: [
+    "AI Chatbot Solutions",
+    "No-Code Chatbot Builder",
+    "Multilingual Chatbots",
+    "Omnichannel Customer Support",
+    "AI-Powered Customer Engagement",
+    "Chatbot for SMEs",
+    "WhatsApp Business Chatbot",
+    "Facebook Messenger Automation",
+    "Lead Generation Chatbot",
+    "Customer Support Automation",
+  ],
 };
 
 const Page = () => {
@@ -24,12 +36,19 @@ const Page = () => {
       <PageLayout id="products">
         <div className="space-y-20">
           {productList.map((group) => (
-            <section key={group.id}>
-              <h3 className="text-2xl font-bold text-navy mb-6 text-center">
+            <div
+              key={group.id}
+              className="fade-in slide-in-up"
+              aria-labelledby={`group-${group.id}`}
+            >
+              <h3
+                id={`group-${group.id}`}
+                className="text-2xl font-bold text-navy mb-6 text-center"
+              >
                 {group.title}
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in slide-in-up">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {group.items.map((product) => (
                   <ProductCard
                     key={product.name}
@@ -40,7 +59,7 @@ const Page = () => {
                   />
                 ))}
               </div>
-            </section>
+            </div>
           ))}
         </div>
       </PageLayout>

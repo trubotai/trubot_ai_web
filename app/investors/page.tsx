@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { FaQuoteLeft } from "react-icons/fa";
 
 import PageLayout from "@/app/ui/components/shared/PageLayout";
@@ -12,10 +13,27 @@ import {
   ctaSection,
 } from "@/app/ui/libs/constants/investors";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Investors – TruBot AI",
   description:
     "Discover TruBot AI’s vision for the future. Partner with us to drive AI-powered business transformation and unlock new growth opportunities.",
+  keywords: [
+    "AI Investment Opportunities",
+    "AI Startup Investment",
+    "Invest in AI Companies",
+    "AI Market Growth",
+    "AI Business Expansion",
+    "AI Company ROI",
+    "AI Venture Capital",
+    "AI M&A Strategy",
+    "AI Product Portfolio",
+    "AI Investor Relations",
+    "AI Market Trends",
+    "AI Funding Opportunities",
+    "AI Business Valuation",
+    "AI Exit Strategy",
+    "AI Growth Potential",
+  ],
 };
 
 const Page = () => {
@@ -70,10 +88,16 @@ const Page = () => {
 
       {/* Quote */}
       <div className="bg-gray-soft">
-        <PageLayout id="investor-quote">
+        <PageLayout id="investor-quote" ariaLabelledby="investor-quote-heading">
           <div className="text-center max-w-2xl mx-auto fade-in slide-in-up">
-            <FaQuoteLeft className="text-electric text-2xl mb-4 mx-auto opacity-60 float" />
-            <blockquote className="text-2xl sm:text-3xl font-heading text-navy italic leading-relaxed">
+            <FaQuoteLeft
+              className="text-electric text-2xl mb-4 mx-auto opacity-60 float"
+              aria-hidden="true"
+            />
+            <blockquote
+              className="text-2xl sm:text-3xl font-heading text-navy italic leading-relaxed"
+              id="investor-quote-heading"
+            >
               “Your capital. Our innovation. Exponential returns.”
             </blockquote>
           </div>
