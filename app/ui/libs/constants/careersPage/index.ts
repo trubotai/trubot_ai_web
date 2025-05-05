@@ -1,6 +1,9 @@
 import { CareerPageDataType } from "../../types/careerPage";
 
 import { executiveAssistantPageData } from "./assistant-operations-founder";
+import { financeAdvisorPageData } from "./board-advisor-finance";
+import { salesGrowthAdvisorPageData } from "./board-advisor-sales-growth";
+import { technologyAdvisorPageData } from "./board-advisor-technology";
 import { COOPageData } from "./chief-operations-officer";
 import { CSOPageData } from "./chief-sales-officer";
 import { CTOPageData } from "./chief-technology-officer";
@@ -14,6 +17,7 @@ import { productMarketingInternPageData } from "./intern-product-marketing";
 import { salesMarketingInternPageData } from "./intern-sales-marketing";
 import { fullStackDeveloperInternPageData } from "./intern-technology-fullstack-developer";
 import { leadProductDesignerPageData } from "./lead-product-designer";
+import { accountsPayrollManagerPageData } from "./manager-accounts-payroll";
 import { fundraisingManagerPageData } from "./manager-fundraising";
 import { humanResourcesManagerPageData } from "./manager-human-resources";
 import { MASpecialistManagerPageData } from "./manager-mergers-acquisitions-specialis";
@@ -24,6 +28,9 @@ import { fullStackEngineeringManagerPageData } from "./manager-technology-fullst
 
 export const careerPagesMap: Record<string, CareerPageDataType> = {
   "assistant-operations-founder": executiveAssistantPageData,
+  "board-advisor-technology": technologyAdvisorPageData,
+  "board-advisor-finance": financeAdvisorPageData,
+  "board-advisor-sales-growth": salesGrowthAdvisorPageData,
   "chief-operations-officer": COOPageData,
   "chief-sales-officer": CSOPageData,
   "chief-technology-officer": CTOPageData,
@@ -37,6 +44,7 @@ export const careerPagesMap: Record<string, CareerPageDataType> = {
   "intern-sales-marketing": salesMarketingInternPageData,
   "intern-technology-fullstack-developer": fullStackDeveloperInternPageData,
   "lead-product-designer": leadProductDesignerPageData,
+  "manager-accounts-payroll": accountsPayrollManagerPageData,
   "manager-fundraising": fundraisingManagerPageData,
   "manager-human-resources": humanResourcesManagerPageData,
   "manager-mergers-acquisitions-specialist": MASpecialistManagerPageData,

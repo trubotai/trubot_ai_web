@@ -8,7 +8,7 @@ const headProductsPageData: CareerPageDataType = {
   shortDescription:
     "Define product vision and lead execution of TruBot AI’s next-gen customer engagement solutions powered by AI and automation.",
   about:
-    "We’re a stealth-mode AI startup transforming customer support and business communication through cutting-edge AI solutions. Our mission is to enhance efficiency, drive growth, and enable businesses to deliver intelligent, human-like interactions across multiple platforms.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We are seeking a Head of Products to lead the roadmap and execution of our AI-driven solutions. You'll collaborate across engineering, design, and business teams to deliver innovative, user-centric products that drive impact and scale.",
   responsibilities: [

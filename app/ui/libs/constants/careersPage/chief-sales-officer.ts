@@ -8,7 +8,7 @@ const CSOPageData: CareerPageDataType = {
   shortDescription:
     "Lead global sales at TruBot AI. Drive growth, close strategic deals, and transform engagement through AI-powered solutions.",
   about:
-    "We’re a stealth-mode AI startup transforming customer support and business communication through cutting-edge AI solutions. Our mission is to enhance efficiency, drive growth, and enable businesses to provide intelligent, human-like interactions across platforms.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We are looking for a dynamic, results-driven Chief Sales Officer to lead our sales strategy, drive client acquisition, and spearhead revenue growth. Your ability to build strong relationships, generate awareness, and close high-impact deals will be crucial to our success.",
   responsibilities: [

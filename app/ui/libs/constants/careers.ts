@@ -1,5 +1,26 @@
 const jobList = [
   {
+    id: "board-advisor-technology",
+    title: "Board Advisor – Technology",
+    location: "Remote",
+    type: "Part-Time/Advisory",
+    href: "careers/board-advisor-technology",
+  },
+  {
+    id: "board-advisor-finance",
+    title: "Board Advisor – Finance",
+    location: "Remote",
+    type: "Part-Time/Advisory",
+    href: "careers/board-advisor-finance",
+  },
+  {
+    id: "board-advisor-sales-growth",
+    title: "Board Advisor – Sales & Growth",
+    location: "Remote",
+    type: "Part-Time/Advisory",
+    href: "careers/board-advisor-sales-growth",
+  },
+  {
     id: "chief-sales-officer",
     title: "Chief Sales Officer",
     location: "Remote",
@@ -54,6 +75,13 @@ const jobList = [
     location: "Remote",
     type: "Full-time/Part-time",
     href: "/careers/head-fundraising",
+  },
+  {
+    id: "manager-accounts-payroll",
+    title: "Accounts and Payroll Manager",
+    location: "Remote",
+    type: "Full-time/Part-time",
+    href: "careers/manager-accounts-payroll",
   },
   {
     id: "manager-operations-customer-success",
