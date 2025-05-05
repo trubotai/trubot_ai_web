@@ -36,7 +36,7 @@ const headSalesCountryPageData: CareerPageDataType = {
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Head of Sales - Country'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Head of Sales - Country'.",
   applyEmail: "careers@trubotai.com",
 };
 

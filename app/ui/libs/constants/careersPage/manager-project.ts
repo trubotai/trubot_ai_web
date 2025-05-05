@@ -37,7 +37,7 @@ const projectManagerPageData: CareerPageDataType = {
   workingHours:
     "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Project Manager'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Project Manager'.",
   applyEmail: "careers@trubotai.com",
 };
 

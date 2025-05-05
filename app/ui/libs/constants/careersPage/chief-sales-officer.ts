@@ -36,7 +36,7 @@ const CSOPageData: CareerPageDataType = {
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Chief Sales Officer'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Chief Sales Officer'.",
   applyEmail: "careers@trubotai.com",
 };
 

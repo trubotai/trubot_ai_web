@@ -36,7 +36,7 @@ const executiveAssistantPageData: CareerPageDataType = {
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
   applyInstructions:
-    "Email us with your resume and a short cover note answering: 1) Why you're excited about early-stage startups, 2) Your preferred work schedule, and 3) An example of how you improved an executive's productivity. Use the subject line – 'Application for Executive Assistant to Founder'.",
+    "To apply, please email your resume and a short cover note answering: 1) Why you're excited about early-stage startups, 2) Your preferred work schedule, and 3) An example of how you improved an executive's productivity. Send it to careers@trubotai.com with the subject line: 'Application for Executive Assistant to Founder'.",
   applyEmail: "careers@trubotai.com",
 };
 
