@@ -37,7 +37,7 @@ const fullStackEngineeringManagerPageData: CareerPageDataType = {
     "💡 High-Impact Role – Shape technical innovation in the future of AI-powered automation.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
     "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
   applyInstructions:

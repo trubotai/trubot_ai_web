@@ -34,7 +34,7 @@ const headSalesCountryPageData: CareerPageDataType = {
     "💡 High-Impact Role – Help build a category-defining AI solution from the ground up.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   applyInstructions:
     "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Head of Sales - Country'.",
   applyEmail: "careers@trubotai.com",
