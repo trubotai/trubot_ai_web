@@ -30,6 +30,7 @@ const productLinkList = [
   },
   { href: "/products/partner-program-sme", label: "Partner Program for SMEs" },
   { href: "/products/social-media-tools", label: "Social Media Tools" },
+  { href: "/products/sme-product-aggregator", label: "SME Product Aggregator" },
 ];
 
 export { navLinkList, footerLinkList, productLinkList };

@@ -24,12 +24,9 @@ const CTASection = ({
 }: CallToActionProps) => {
   return (
     <div className="bg-navy">
-      <PageLayout id="cta" ariaLabelledby="cta-heading">
+      <PageLayout id="cta" animate>
         <div className="text-center max-w-3xl mx-auto">
-          <h2
-            id="cta-heading"
-            className="text-3xl md:text-4xl text-light font-heading font-semibold mb-4"
-          >
+          <h2 className="text-3xl md:text-4xl text-light font-heading font-semibold mb-4">
             {title}
           </h2>
           {subtitle && (

@@ -33,7 +33,7 @@ const technologyAdvisorPageData: CareerPageDataType = {
   compensation: "Equity-based",
   workingHours: "Flexible",
   applyInstructions:
-    "To apply, please email your resume and LinkedIn profile to careers@trubotai.com with the subject line: 'Application for Board Advisor – Sales'.",
+    "To apply, please email your resume and LinkedIn profile to careers@trubotai.com with the subject line: 'Application for Board Advisor – Technology'.",
   applyEmail: "careers@trubotai.com",
 };
 
