@@ -19,12 +19,12 @@ const JobCard: FC<JobCardProps> = ({
   href,
   index = 0,
 }) => {
-  const typeColor =
-    {
-      "Full-time": "bg-electric/10 text-electric",
-      "Part-time": "bg-teal/10 text-teal",
-      Internship: "bg-coral/10 text-coral",
-    }[type] || "bg-navy/10 text-navy";
+  const typeColor = {
+    "Full-Time / Part-Time": "bg-teal/10 text-teal",
+    "Part-Time": "bg-electric/10 text-electric",
+    Internship: "bg-coral/10 text-coral",
+    "Part-Time / Advisory": "bg-navy/10 text-navy",
+  }[type];
 
   const headingId = `job-${id}`;
 

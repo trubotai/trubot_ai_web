@@ -10,7 +10,7 @@ const HRInternPageData: CareerPageDataType = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform integrates AI-powered chatbots, voice bots, customer support automation, social media management, and invoice processing to help SMEs drive efficiency and scale operations.",
   roleIntro:
-    "We’re looking for a motivated HR Intern to support our recruitment, employee engagement, and organizational development initiatives. This role offers hands-on exposure to key HR functions, empowering you to grow your skills in a dynamic AI tech environment.",
+    "We’re looking for a motivated HR Intern to support our recruitment, engagement, and organizational development efforts. This internship offers hands-on exposure to key HR functions and an opportunity to grow your skills within a dynamic AI startup environment.",
   responsibilities: [
     "Assist in the recruitment process, including sourcing candidates and scheduling interviews.",
     "Support onboarding processes and employee development programs.",
@@ -36,9 +36,9 @@ const HRInternPageData: CareerPageDataType = {
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for HR Intern' to start your HR journey with TruBot AI.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for HR Intern' and begin your HR journey with TruBot AI.",
   applyEmail: "careers@trubotai.com",
 };
 

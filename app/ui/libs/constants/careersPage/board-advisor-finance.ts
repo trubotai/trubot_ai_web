@@ -4,17 +4,17 @@ const financeAdvisorPageData: CareerPageDataType = {
   id: "board-advisor-finance",
   title: "Board Advisor – Finance",
   location: "Remote (Global)",
-  type: "Part-Time/Advisory",
+  type: "Part-Time / Advisory",
   shortDescription:
     "Guide financial planning, capital strategies, and investor readiness to support sustainable growth.",
   about:
-    "At TruBot AI, we’re redefining how businesses communicate and scale operations with our all-in-one AI platform. From automation to engagement, we empower SMEs globally.",
+    "At TruBot AI, we’re redefining how businesses communicate and scale operations through our all-in-one AI platform. From automation to engagement, we empower SMEs globally.",
   roleIntro:
-    "We’re seeking a Finance Advisor to guide us on financial planning, capital strategies and investor readiness. Your insights will be instrumental in shaping our path to sustainable growth and funding success.",
+    "We’re seeking a Finance Advisor to help steer our financial planning, capital strategy, and investor readiness. Your insights will be instrumental in shaping our path toward sustainable growth and funding success.",
   responsibilities: [
-    "Advise on financial strategy, modelling and metrics.",
+    "Advise on financial strategy, modelling, and metrics.",
     "Guide investor engagement and capital structuring.",
-    "Support compliance, governance and risk management.",
+    "Support compliance, governance, and risk management.",
     "Evaluate fundraising opportunities and growth scenarios.",
     "Help ensure readiness for future M&A or exit events.",
   ],

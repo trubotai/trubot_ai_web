@@ -29,7 +29,7 @@ const Page = () => {
       <div className="bg-gray-soft">
         <PageLayout id="buyers">
           <SectionHeader
-            title="FOR ENTERPRISE BUYERS"
+            title="For Enterprise Buyers"
             subtitle="Slash Your SaaS Costs by 20–50%"
             align="left"
           />
@@ -59,7 +59,7 @@ const Page = () => {
       {/* Software Vendors */}
       <PageLayout id="vendors">
         <SectionHeader
-          title="FOR SOFTWARE VENDORS"
+          title="For Software Vendors"
           subtitle="10x Your Enterprise Pipeline—Without Extra Sales Overhead"
           align="right"
         />
@@ -79,7 +79,7 @@ const Page = () => {
       <div className="bg-gray-soft">
         <PageLayout id="engine">
           <SectionHeader
-            title="THE AGGREGATION ENGINE"
+            title="The Aggregation Engine"
             subtitle="AI-Powered, Demand-Driven, Deal-Matching System"
           />
 
@@ -97,7 +97,7 @@ const Page = () => {
       {/* Elite */}
       <PageLayout id="elite">
         <SectionHeader
-          title="BUILT EXCLUSIVELY FOR THE TOP 0.1%"
+          title="Built Exclusively for the Top 0.1%"
           subtitle="We serve the high-stakes, high-volume segment:"
           align="left"
         />
@@ -148,7 +148,7 @@ const Page = () => {
       <div className="bg-gray-soft">
         <PageLayout id="why">
           <SectionHeader
-            title="WHY TRUBOT AI?"
+            title="Why TruBot AI?"
             subtitle="Built to unlock deep value for modern enterprises."
           />
 
