@@ -4,13 +4,13 @@ const salesGrowthAdvisorPageData: CareerPageDataType = {
   id: "board-advisor-sales-growth",
   title: "Board Advisor – Sales & Growth",
   location: "Remote (Global)",
-  type: "Part-Time/Advisory",
+  type: "Part-Time / Advisory",
   shortDescription:
     "Define GTM strategy, enhance customer acquisition, and drive global revenue growth.",
   about:
-    "TruBot AI is a fast-growing AI startup powering intelligent automation for SMEs. Our platform blends AI chat, voice, and workflow tools into a single, scalable solution.",
+    "TruBot AI is a fast-growing AI startup powering intelligent automation for SMEs. Our platform combines AI chat, voice, and workflow tools into a single, scalable solution.",
   roleIntro:
-    "We’re looking for a Sales & Growth Advisor to define our GTM strategy, improve customer acquisition, and drive revenue growth across global markets.",
+    "We’re looking for a Sales & Growth Advisor to help define our GTM strategy, improve customer acquisition, and drive revenue growth across global markets.",
   responsibilities: [
     "Design and advise on GTM and sales strategies.",
     "Support channel development and partner expansion.",

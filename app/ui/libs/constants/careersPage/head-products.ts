@@ -27,13 +27,13 @@ const headProductsPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Sales commissions transitioning to competitive salary.",
+    "💰 Performance-Based Compensation – Sales commissions transitioning to a competitive salary.",
     "💡 High-Impact Role – Shape the product direction of a category-defining AI solution.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
     "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Head of Products'.",
   applyEmail: "careers@trubotai.com",

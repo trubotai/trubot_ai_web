@@ -10,7 +10,7 @@ const headMAPageData: CareerPageDataType = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media automation, and invoice tools — transforming how businesses scale and automate operations.",
   roleIntro:
-    "As the Head of M&A, you will play a key leadership role in identifying strategic opportunities for mergers, acquisitions, and partnerships that support our long-term growth. You'll work closely with the co-founders to integrate acquisitions and unlock synergy across the business.",
+    "As the Head of M&A, you will play a key leadership role in identifying strategic opportunities for mergers, acquisitions, and partnerships that support our long-term growth. You’ll work closely with the co-founders to integrate acquisitions and unlock synergies across the business.",
   responsibilities: [
     "M&A Strategy & Vision – Develop and execute an M&A strategy aligned with company growth goals. Identify acquisition targets and strategic partners.",
     "Due Diligence – Lead due diligence efforts across financial, legal, and operational domains for potential deals.",
@@ -32,13 +32,13 @@ const headMAPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Commissions transitioning to competitive salary.",
+    "💰 Performance-Based Compensation – Commissions transitioning to a competitive salary.",
     "💡 High-Impact Role – Shape TruBot AI’s growth trajectory through strategic initiatives.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
     "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Head of M&A'.",
   applyEmail: "careers@trubotai.com",

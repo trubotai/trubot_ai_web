@@ -8,20 +8,20 @@ const executiveAssistantPageData: CareerPageDataType = {
   shortDescription:
     "Become a trusted strategic partner to the Founder at TruBot AI. Drive executive productivity and operational excellence at a transformative AI startup.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through intelligent automation solutions. Our unified platform features AI-powered chatbots, voice agents, customer support tools, social media management, and invoice automation, helping SMEs cut operational costs by 40% while boosting customer satisfaction.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through intelligent automation solutions. Our unified platform features AI-powered chatbots, voice agents, customer support tools, social media management, and invoice automation—helping SMEs cut operational costs by 40% while boosting customer satisfaction.",
   roleIntro:
-    "As Executive Assistant to our Founder, you’ll act as a crucial extension of leadership, ensuring seamless communication, time management, and execution of strategic initiatives. You'll be integral in scaling operations and shaping the foundation of TruBot AI’s growth.",
+    "As Executive Assistant to our Founder, you'll act as an essential extension of leadership—ensuring seamless communication, time management, and execution of strategic initiatives. You'll play a vital role in scaling operations and shaping the foundation of TruBot AI’s growth.",
   responsibilities: [
     "Provide strategic support by prioritizing tasks, preparing materials for investor meetings, and tracking key initiatives.",
     "Manage complex calendar scheduling, coordinate meetings across time zones, and handle confidential documentation.",
-    "Serve as a communication bridge between the CEO and internal teams, investors, and partners, maintaining CRM and key contact databases.",
+    "Act as a communication bridge between the CEO and internal teams, investors, and partners; maintain CRM and key contact databases.",
     "Draft and proofread executive communications and strategic documents.",
-    "Assist with investor pitch deck preparation, event planning logistics, and ad-hoc research tasks.",
+    "Assist with investor pitch deck preparation, event logistics, and ad-hoc research tasks.",
   ],
   qualifications: [
     "2+ years of experience supporting C-level executives, preferably in startups or high-growth environments.",
     "Expert-level proficiency in GSuite, Slack, Zoom, and CRM tools.",
-    "Exceptional organizational skills with an obsessive attention to detail and proactive problem-solving ability.",
+    "Exceptional organizational skills with obsessive attention to detail and proactive problem-solving ability.",
     "High emotional intelligence, discretion, and impeccable professional judgment.",
     "Ability to thrive in a fast-paced, ambiguous, and dynamic startup environment.",
     "Entrepreneurial mindset, eager to contribute across multiple functions.",

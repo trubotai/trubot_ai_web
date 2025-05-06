@@ -10,7 +10,7 @@ const salesMarketingInternPageData: CareerPageDataType = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform integrates AI-powered chatbots, voice bots, customer support tools, social media management, and invoice automation, helping SMEs automate operations and boost customer satisfaction.",
   roleIntro:
-    "We’re seeking a motivated Sales and Marketing Intern who is passionate about learning and making an impact. You’ll support the marketing and sales team to amplify brand awareness, engage leads, and contribute to our growth initiatives in the AI technology space.",
+    "We’re seeking a driven Sales and Marketing Intern with a passion for learning and impact. You'll work closely with our marketing and sales teams to amplify brand visibility, engage prospects, and contribute to growth initiatives in the AI tech space.",
   responsibilities: [
     "Conduct market research to analyze trends, audience preferences, and competitor strategies.",
     "Assist in developing and executing digital marketing campaigns across social media, email, and other channels.",
@@ -34,7 +34,7 @@ const salesMarketingInternPageData: CareerPageDataType = {
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   applyInstructions:
-    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Sales and Marketing Intern' to start your journey with TruBot AI.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Sales and Marketing Intern' and start your journey with TruBot AI.",
   applyEmail: "careers@trubotai.com",
 };
 

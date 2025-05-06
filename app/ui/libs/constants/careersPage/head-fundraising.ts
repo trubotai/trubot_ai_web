@@ -10,7 +10,7 @@ const headFundraisingPageData: CareerPageDataType = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media automation, and invoice tools — transforming how businesses scale and automate operations.",
   roleIntro:
-    "We are seeking a dynamic and strategic Head of Fundraising to spearhead investment efforts and fuel TruBot AI’s financial growth. You will lead fundraising campaigns, strengthen investor relations, and guide the company through capital raises and strategic funding initiatives.",
+    "We are seeking a dynamic and strategic Head of Fundraising to lead investment efforts and fuel TruBot AI’s financial growth. You will manage fundraising campaigns, strengthen investor relations, and guide the company through capital raises and strategic funding initiatives.",
   responsibilities: [
     "Fundraising Strategy & Execution – Develop and implement a comprehensive fundraising roadmap.",
     "Investor Relations & Networking – Build and maintain strong relationships with VCs, angel investors, and financial institutions.",
@@ -22,7 +22,7 @@ const headFundraisingPageData: CareerPageDataType = {
   ],
   qualifications: [
     "3 to 15+ years of experience in fundraising, ideally in AI, SaaS, or tech startups.",
-    "Proven success in raising capital from seed to Series A or beyond.",
+    "Proven success in raising capital from Seed to Series A or beyond.",
     "Strong investor network and ability to initiate high-value conversations.",
     "Exceptional pitch crafting, communication, and negotiation skills.",
     "Entrepreneurial, hands-on approach with the agility to lead in early-stage environments.",
@@ -32,13 +32,13 @@ const headFundraisingPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Commissions transitioning to competitive salary.",
+    "💰 Performance-Based Compensation – Commissions transitioning to a competitive salary.",
     "💡 High-Impact Role – Build a category-defining AI solution from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
     "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Head of Fundraising'.",
   applyEmail: "careers@trubotai.com",
