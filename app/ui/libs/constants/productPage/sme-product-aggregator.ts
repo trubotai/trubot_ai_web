@@ -13,7 +13,7 @@ import {
 import SplitScreenChart from "@/app/ui/components/IconComponents/SplitScreenChart";
 
 const heroSection = {
-  title: "TRUBOT AI: ENTERPRISE SOFTWARE AGGREGATOR",
+  title: "Enterprise Software Aggregator",
   subtitle: "Bulk Pricing. Unmatched Value. Elite Access.",
   primaryCTA: { label: "Start Saving Now", href: "/contact" },
   secondaryCTA: { label: "10X Your Sales", href: "/contact" },
@@ -85,28 +85,28 @@ const categoryList = [
 const benefitList = [
   {
     icon: FaBrain,
-    title: "COST SMASHER",
+    title: "Cost Smasher",
     description: "AI negotiates at scale. You save instantly.",
   },
   {
     icon: FaRocket,
-    title: "GROWTH ACCELERATOR",
+    title: "Growth Accelerator",
     description: "Pre-qualified volume. No cold leads.",
   },
   {
     icon: FaShieldAlt,
-    title: "ZERO RISK",
+    title: "Zero Risk",
     description: "No contracts. Cancel anytime.",
   },
   {
     icon: FaMoneyBillWave,
-    title: "FLAT 10% FEE",
+    title: "Flat 10% Fee",
     description: "No hidden fees. Full transparency.",
   },
 ];
 
 const ctaSection = {
-  title: "READY TO OPTIMIZE YOUR ENTERPRISE SPEND OR SALES PIPELINE?",
+  title: "Ready to Optimize your Enterprise spend or Sales Pipeline?",
   subtitle: "Join our network of elite buyers and top vendors today.",
   primaryCTA: { label: "BUYERS: Start Saving Now", href: "/contact" },
   secondaryCTA: { label: "VENDORS: 10X Your Sales", href: "/contact" },
