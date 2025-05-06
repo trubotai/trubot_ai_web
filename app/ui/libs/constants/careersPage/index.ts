@@ -2,6 +2,7 @@ import { CareerPageDataType } from "../../types/careerPage";
 
 import { executiveAssistantPageData } from "./assistant-operations-founder";
 import { financeAdvisorPageData } from "./board-advisor-finance";
+import { legalAdvisorPageData } from "./board-advisor-legal";
 import { salesGrowthAdvisorPageData } from "./board-advisor-sales-growth";
 import { technologyAdvisorPageData } from "./board-advisor-technology";
 import { COOPageData } from "./chief-operations-officer";
@@ -31,6 +32,7 @@ export const careerPagesMap: Record<string, CareerPageDataType> = {
   "board-advisor-technology": technologyAdvisorPageData,
   "board-advisor-finance": financeAdvisorPageData,
   "board-advisor-sales-growth": salesGrowthAdvisorPageData,
+  "board-advisor-legal": legalAdvisorPageData,
   "chief-operations-officer": COOPageData,
   "chief-sales-officer": CSOPageData,
   "chief-technology-officer": CTOPageData,

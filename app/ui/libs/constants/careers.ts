@@ -21,6 +21,13 @@ const jobList = [
     href: "careers/board-advisor-sales-growth",
   },
   {
+    id: "board-advisor-legal",
+    title: "Board Advisor – Legal",
+    location: "Remote",
+    type: "Part-Time/Advisory",
+    href: "careers/board-advisor-legal",
+  },
+  {
     id: "chief-sales-officer",
     title: "Chief Sales Officer",
     location: "Remote",
