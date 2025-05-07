@@ -140,6 +140,13 @@ const jobList = [
     href: "/careers/manager-accounts-payroll",
   },
   {
+    id: "engineer-machine-learning",
+    title: "ML Engineer",
+    location: "Remote",
+    type: "Full-Time / Part-Time",
+    href: "/careers/engineer-machine-learning",
+  },
+  {
     id: "lead-product-designer",
     title: "Lead Product Designer",
     location: "Remote",
