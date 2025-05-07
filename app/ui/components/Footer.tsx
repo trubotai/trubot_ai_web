@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa6";
 
-import { footerLinkList, productLinkList } from "../libs/constants/site";
+import {
+  footerLinkList,
+  productLinkList,
+  partnerLinkList,
+  companyLinkList,
+} from "../libs/constants/site";
 
 const Footer = () => {
   const linkClass =
@@ -10,66 +16,22 @@ const Footer = () => {
     "before:h-[2px] before:bg-electric before:w-0 hover:before:w-full " +
     "before:transition-all before:duration-300";
 
-  const renderLinks = (links: typeof productLinkList) =>
-    links.map(({ href, label }) => (
-      <li key={href}>
+  const renderLinks = (links: { href: string; label: string }[]) =>
+    links.map(({ href, label }: { href: string; label: string }) => (
+      <li key={href} className="text-left">
         <Link href={href} className={linkClass}>
           {label}
         </Link>
       </li>
     ));
 
-  const renderContact = () => (
-    <ul className="space-y-2">
-      <li>
-        <Link href="mailto:support@trubotai.com" className={linkClass}>
-          support@trubotai.com
-        </Link>
-      </li>
-      <li>
-        <Link href="mailto:careers@trubotai.com" className={linkClass}>
-          careers@trubotai.com
-        </Link>
-      </li>
-      <li className="flex gap-4 pt-2" aria-label="Social Media">
-        <Link
-          href="https://www.linkedin.com/company/trubotai/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          className="text-navy hover:text-electric text-xl"
-        >
-          <FaLinkedin />
-        </Link>
-        <Link
-          href="https://twitter.com/trubotai"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
-          className="text-navy hover:text-electric text-xl"
-        >
-          <FaTwitter />
-        </Link>
-        <Link
-          href="https://www.youtube.com/channel/UCykytJyGUvapijemVYYp62w"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="YouTube"
-          className="text-navy hover:text-electric text-xl"
-        >
-          <FaYoutube />
-        </Link>
-      </li>
-    </ul>
-  );
-
   return (
     <footer role="contentinfo" id="footer">
-      <div className="bg-gray-soft text-sm font-body text-navy py-10 border-t">
+      <div className="bg-gray-soft text-sm font-body text-navy py-12 border-t">
         <div className="max-w-7xl mx-auto px-4">
-          {/* Desktop Layout */}
-          <div className="hidden md:grid grid-cols-3 gap-10 fade-in">
-            <div>
+          {/* Grid Layout */}
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-6 gap-10 text-left fade-in">
+            <div className="col-span-2">
               <p className="font-heading font-bold text-lg">TruBot AI</p>
               <p className="mt-2 text-sm leading-relaxed">
                 Building AI that works for real businesses. Automating the
@@ -87,29 +49,35 @@ const Footer = () => {
               <ul className="space-y-2">{renderLinks(productLinkList)}</ul>
             </nav>
 
-            <div>
-              <nav aria-labelledby="footer-links-heading">
-                <h4
-                  id="footer-links-heading"
-                  className="font-bold font-heading mb-2"
-                >
-                  Links
-                </h4>
-                <ul className="space-y-2 mb-4">
-                  {renderLinks(footerLinkList)}
-                </ul>
-              </nav>
+            <nav aria-labelledby="footer-solutions-heading">
+              <h4
+                id="footer-solutions-heading"
+                className="font-bold font-heading mb-2"
+              >
+                Solutions
+              </h4>
+              <ul className="space-y-2">{renderLinks(footerLinkList)}</ul>
+            </nav>
 
-              <address className="not-italic">
-                <h4
-                  id="footer-contact-heading"
-                  className="font-bold font-heading mb-2"
-                >
-                  Contact
-                </h4>
-                {renderContact()}
-              </address>
-            </div>
+            <nav aria-labelledby="footer-partners-heading">
+              <h4
+                id="footer-partners-heading"
+                className="font-bold font-heading mb-2"
+              >
+                Partners
+              </h4>
+              <ul className="space-y-2">{renderLinks(partnerLinkList)}</ul>
+            </nav>
+
+            <nav aria-labelledby="footer-company-heading">
+              <h4
+                id="footer-company-heading"
+                className="font-bold font-heading mb-2"
+              >
+                Company
+              </h4>
+              <ul className="space-y-2">{renderLinks(companyLinkList)}</ul>
+            </nav>
           </div>
 
           {/* Mobile Accordion */}
@@ -121,14 +89,19 @@ const Footer = () => {
                 content: renderLinks(productLinkList),
               },
               {
-                title: "Links",
+                title: "Solutions",
                 id: "mobile-links",
                 content: renderLinks(footerLinkList),
               },
               {
-                title: "Contact",
-                id: "mobile-contact",
-                content: renderContact(),
+                title: "Partners",
+                id: "mobile-partners",
+                content: renderLinks(partnerLinkList),
+              },
+              {
+                title: "Company",
+                id: "mobile-company",
+                content: renderLinks(companyLinkList),
               },
             ].map(({ title, content, id }, idx) => (
               <details key={idx}>
@@ -138,13 +111,63 @@ const Footer = () => {
                 >
                   {title}
                 </summary>
-                <ul className="mt-2 space-y-2 pl-4">{content}</ul>
+                <div className="mt-2 space-y-2 pl-4">{content}</div>
               </details>
             ))}
           </div>
 
+          {/* Contact Row */}
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-10">
+            <div className="space-x-6 text-sm text-navy text-center md:text-left">
+              <Link
+                href="mailto:support@trubotai.com"
+                className="inline-flex items-center gap-2 text-navy hover:text-electric text-sm font-medium"
+              >
+                <FaEnvelope className="text-base" /> support@trubotai.com
+              </Link>
+              <Link
+                href="mailto:careers@trubotai.com"
+                className="inline-flex items-center gap-2 text-navy hover:text-electric text-sm font-medium"
+              >
+                <FaEnvelope className="text-base" /> careers@trubotai.com
+              </Link>
+            </div>
+            <div
+              className="flex gap-4 text-xl text-navy"
+              aria-label="Social Media"
+            >
+              <Link
+                href="https://www.linkedin.com/company/trubotai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="hover:text-electric"
+              >
+                <FaLinkedin />
+              </Link>
+              <Link
+                href="https://twitter.com/trubotai"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="hover:text-electric"
+              >
+                <FaTwitter />
+              </Link>
+              <Link
+                href="https://www.youtube.com/channel/UCykytJyGUvapijemVYYp62w"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="hover:text-electric"
+              >
+                <FaYoutube />
+              </Link>
+            </div>
+          </div>
+
           {/* Legal */}
-          <div className="text-center mt-10 text-xs space-x-4">
+          <div className="text-center mt-6 text-xs space-x-4">
             <Link href="/privacy" className={linkClass}>
               Privacy Policy
             </Link>

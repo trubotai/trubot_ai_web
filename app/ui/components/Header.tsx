@@ -4,14 +4,46 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { FaChevronDown } from "react-icons/fa6";
 
-import { navLinkList, productLinkList } from "../libs/constants/site";
 import Button from "./shared/Button";
+import {
+  productLinkList,
+  solutionLinkList,
+  partnerLinkList,
+  companyLinkList,
+} from "../libs/constants/site";
 
 const Header = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [productDropdownOpen, setProductDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState({
+    products: false,
+    partners: false,
+    company: false,
+  });
+  const [mobileDropdown, setMobileDropdown] = useState({
+    products: false,
+    partners: false,
+    company: false,
+  });
+
+  const toggleDropdown = (key: string) => {
+    setMobileDropdown({
+      products: key === "products",
+      partners: key === "partners",
+      company: key === "Company",
+    });
+  };
+
+  const dropdownStyles =
+    "absolute top-full left-0 w-64 bg-light shadow-xl border border-gray-100 rounded-xl p-3 z-50 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 scale-95 group-hover:scale-100";
+
+  const dropdownItemStyles =
+    "block px-4 py-2 text-sm text-navy rounded-md hover:bg-gray-50 hover:text-electric transition-all";
+
+  const navLabelStyles =
+    "relative font-medium tracking-wide transition-all hover:text-electric text-navy before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:bg-electric before:w-0 group-hover:before:w-full before:transition-all before:duration-300";
 
   return (
     <header
@@ -40,58 +72,143 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav
-          className="hidden xl:flex items-center gap-6"
+          className="hidden lg:flex items-center gap-6"
           role="navigation"
           aria-label="Main navigation"
         >
           {/* Products Dropdown */}
-          <div className="relative group hidden xl:block">
-            <button
+          <div
+            className="relative group"
+            onMouseEnter={() =>
+              setDropdownOpen({
+                products: true,
+                partners: false,
+                company: false,
+              })
+            }
+            onMouseLeave={() =>
+              setDropdownOpen({ ...dropdownOpen, products: false })
+            }
+          >
+            <span
+              className={`${navLabelStyles} flex items-center gap-1`}
               aria-haspopup="true"
-              aria-expanded={productDropdownOpen}
-              className="text-sm font-medium text-navy hover:text-electric transition-colors relative
-                before:content-[''] before:absolute before:bottom-0 before:left-0
-                before:h-[2px] before:bg-electric before:w-0 group-hover:before:w-full
-                before:transition-all before:duration-300"
+              aria-expanded={dropdownOpen.products}
             >
-              <Link href="/products">Products</Link>
-            </button>
-
-            <ul
-              className="absolute top-full left-0 w-48 bg-white shadow-lg border border-gray-100 rounded-md p-2 z-50
-              opacity-0 invisible group-hover:opacity-100 group-hover:visible
-              transition-opacity duration-200"
-              aria-label="Product links"
-            >
-              {productLinkList.map(({ href, label }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="block px-4 py-2 text-sm text-navy hover:text-electric transition-colors"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+              Products
+              <FaChevronDown
+                className={`text-xs transition-transform duration-300 ${
+                  dropdownOpen.products ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </span>
+            {dropdownOpen.products && (
+              <ul className={dropdownStyles} aria-label="Product links">
+                {productLinkList.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className={dropdownItemStyles}>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
-          {/* Other Nav Links */}
-          {navLinkList.map(({ href, label }) => (
+          {/* Solution Link */}
+          {solutionLinkList.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`relative text-sm font-medium transition-all hover:text-electric text-navy
-                before:content-[''] before:absolute before:bottom-0 before:left-0
-                before:h-[2px] before:bg-electric before:w-0 hover:before:w-full
-                before:transition-all before:duration-300
-                ${pathname === href ? "text-electric before:w-full" : ""}`}
+              className={`${navLabelStyles} transition-all hover:text-electric text-navy before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:bg-electric before:w-0 hover:before:w-full before:transition-all before:duration-300 ${
+                pathname === href ? "text-electric before:w-full" : ""
+              }`}
             >
               {label}
             </Link>
           ))}
 
-          {/* Desktop CTA */}
+          {/* Partners Dropdown */}
+          <div
+            className="relative group"
+            onMouseEnter={() =>
+              setDropdownOpen({
+                products: false,
+                partners: true,
+                company: false,
+              })
+            }
+            onMouseLeave={() =>
+              setDropdownOpen({ ...dropdownOpen, partners: false })
+            }
+          >
+            <span
+              className={`${navLabelStyles} flex items-center gap-1`}
+              aria-haspopup="true"
+              aria-expanded={dropdownOpen.partners}
+            >
+              Partners
+              <FaChevronDown
+                className={`text-xs transition-transform duration-300 ${
+                  dropdownOpen.partners ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </span>
+            {dropdownOpen.partners && (
+              <ul className={dropdownStyles} aria-label="Partner links">
+                {partnerLinkList.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className={dropdownItemStyles}>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* Company Dropdown */}
+          <div
+            className="relative group"
+            onMouseEnter={() =>
+              setDropdownOpen({
+                products: false,
+                partners: false,
+                company: true,
+              })
+            }
+            onMouseLeave={() =>
+              setDropdownOpen({ ...dropdownOpen, company: false })
+            }
+          >
+            <span
+              className={`${navLabelStyles} flex items-center gap-1`}
+              aria-haspopup="true"
+              aria-expanded={dropdownOpen.company}
+            >
+              Company
+              <FaChevronDown
+                className={`text-xs transition-transform duration-300 ${
+                  dropdownOpen.company ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </span>
+            {dropdownOpen.company && (
+              <ul className={dropdownStyles} aria-label="Company links">
+                {companyLinkList.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className={dropdownItemStyles}>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </nav>
+
+        {/* CTA */}
+        <div className="hidden lg:flex">
           <Button
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
             target="_blank"
@@ -100,18 +217,21 @@ const Header = () => {
             ariaLabel="Schedule a TruBot AI demo"
             variant="primary"
             animate
-            className="ml-4"
           />
-        </nav>
+        </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Toggle */}
         <button
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="xl:hidden text-2xl text-navy focus:outline-none"
+          className="lg:hidden text-2xl text-navy focus:outline-none transition-transform duration-300"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
-          <span className="transition-all duration-300">
+          <span
+            className={`inline-block transition-transform duration-300 ${
+              menuOpen ? "rotate-90" : "rotate-0"
+            }`}
+          >
             {menuOpen ? "✕" : "☰"}
           </span>
         </button>
@@ -120,41 +240,32 @@ const Header = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <nav
-          className="xl:hidden w-full bg-white px-6 py-6 flex flex-col gap-3 items-center fade-in slide-in-up"
+          className="lg:hidden w-full bg-white px-4 py-6 flex flex-col gap-3 items-center text-center fade-in slide-in-up"
           aria-label="Mobile navigation"
         >
-          {/* Products Dropdown */}
-          <div className="w-full">
+          {/* Accordion Group: Product */}
+          <div className="w-full border border-gray-100 rounded-md overflow-hidden">
             <button
-              onClick={() => setProductDropdownOpen((prev) => !prev)}
-              className="w-full flex items-center justify-center gap-2 text-sm font-medium text-navy hover:text-electric transition-all py-2 rounded-md bg-gray-50 hover:bg-gray-soft border border-gray-100"
+              onClick={() => toggleDropdown("products")}
+              className="w-full flex justify-center gap-2 items-center py-3 px-4 text-center font-semibold text-navy"
               aria-haspopup="true"
-              aria-expanded={productDropdownOpen}
+              aria-expanded={mobileDropdown.products}
             >
-              Products
-              <span
-                className={`transform transition-transform duration-200 ${
-                  productDropdownOpen ? "rotate-180" : ""
+              Product
+              <FaChevronDown
+                className={`text-xs transition-transform duration-300 ${
+                  mobileDropdown.products ? "rotate-180" : "rotate-0"
                 }`}
-              >
-                ▼
-              </span>
+              />
             </button>
-
-            {productDropdownOpen && (
-              <ul
-                className="mt-3 bg-white w-full rounded-lg shadow-md border border-gray-100 px-4 py-2 space-y-1"
-                aria-label="Mobile product links"
-              >
+            {mobileDropdown.products && (
+              <ul className="px-4 pb-4 space-y-2">
                 {productLinkList.map(({ href, label }) => (
-                  <li key={href} className="text-center">
+                  <li key={href}>
                     <Link
                       href={href}
-                      className="block py-2 text-sm text-navy hover:text-electric transition-colors rounded-md hover:bg-gray-50"
-                      onClick={() => {
-                        setMenuOpen(false);
-                        setProductDropdownOpen(false);
-                      }}
+                      onClick={() => setMenuOpen(false)}
+                      className="block text-sm text-navy hover:text-electric"
                     >
                       {label}
                     </Link>
@@ -164,40 +275,102 @@ const Header = () => {
             )}
           </div>
 
-          {/* Other Nav Links */}
-          {navLinkList.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`block py-2 text-sm font-medium text-navy hover:text-electric w-full text-center
-                ${pathname === href ? "text-electric" : ""}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {label}
-            </Link>
-          ))}
+          {/* Accordion Group: Solutions */}
+          <Link
+            href="/solutions"
+            className="w-full py-3 px-4 border border-gray-100 rounded-md font-semibold text-navy hover:text-electric text-center"
+            onClick={() => setMenuOpen(false)}
+          >
+            Solutions
+          </Link>
 
-          {/* Mobile CTAs */}
-          <Button
-            href="/contact"
-            label="Request Demo"
-            ariaLabel="Contact TruBot AI"
-            variant="primary"
-            animate
-            fullWidth
-            onClick={() => setMenuOpen(false)}
-          />
-          <Button
-            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
-            label="Book an Appointment"
-            ariaLabel="Book an appointment with TruBot AI"
-            variant="secondary"
-            animate
-            fullWidth
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMenuOpen(false)}
-          />
+          {/* Accordion Group: Partners */}
+          <div className="w-full border border-gray-100 rounded-md overflow-hidden">
+            <button
+              onClick={() => toggleDropdown("partners")}
+              className="w-full flex justify-center gap-2 items-center py-3 px-4 text-center font-semibold text-navy"
+              aria-haspopup="true"
+              aria-expanded={mobileDropdown.partners}
+            >
+              Partners
+              <FaChevronDown
+                className={`text-xs transition-transform duration-300 ${
+                  mobileDropdown.partners ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            {mobileDropdown.partners && (
+              <ul className="px-4 pb-4 space-y-2">
+                {partnerLinkList.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      onClick={() => setMenuOpen(false)}
+                      className="block text-sm text-navy hover:text-electric"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* Accordion Group: Company */}
+          <div className="w-full border border-gray-100 rounded-md overflow-hidden">
+            <button
+              onClick={() => toggleDropdown("Company")}
+              className="w-full flex justify-center gap-2 items-center py-3 px-4 text-center font-semibold text-navy"
+              aria-haspopup="true"
+              aria-expanded={mobileDropdown.company}
+            >
+              Company
+              <FaChevronDown
+                className={`text-xs transition-transform duration-300 ${
+                  mobileDropdown.company ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            {mobileDropdown.company && (
+              <ul className="px-4 pb-4 space-y-2">
+                {companyLinkList.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      onClick={() => setMenuOpen(false)}
+                      className="block text-sm text-navy hover:text-electric"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="mt-6 w-full space-y-3">
+            <Button
+              href="/contact"
+              label="Request Demo"
+              ariaLabel="Contact TruBot AI"
+              variant="primary"
+              animate
+              fullWidth
+              onClick={() => setMenuOpen(false)}
+            />
+            <Button
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
+              label="Book an Appointment"
+              ariaLabel="Book an appointment with TruBot AI"
+              variant="secondary"
+              animate
+              fullWidth
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+            />
+          </div>
         </nav>
       )}
     </header>
