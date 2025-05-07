@@ -1,28 +1,28 @@
 const productLinkList = [
   { href: "/products/ai-agents", label: "AI Agents" },
   { href: "/products/ai-chatbots", label: "AI Chatbots" },
+  { href: "/products/ai-voicebots", label: "AI Voicebots" },
   { href: "/products/ai-marketplace", label: "AI Marketplace" },
+  { href: "/products/ai-surveillance", label: "AI Surveillance" },
+  {
+    href: "/products/invoice-management-solutions",
+    label: "AI Invoice Management",
+  },
   {
     href: "/products/ai-solutions-buying-aggregator",
     label: "Strategic AI Sourcing",
   },
-  { href: "/products/ai-voicebots", label: "AI Voicebots" },
-  {
-    href: "/products/invoice-management-solutions",
-    label: "Invoice Management",
-  },
-  { href: "/products/partner-program-sme", label: "Partner Program for SMEs" },
   { href: "/products/social-media-tools", label: "Social Media Tools" },
   { href: "/products/sme-product-aggregator", label: "SME Product Aggregator" },
-  { href: "/products/ai-surveillance", label: "AI Surveillance" },
 ];
 
 const solutionLinkList = [{ href: "/solutions", label: "Solutions" }];
 
 const partnerLinkList = [
-  { href: "/white-label-partner", label: "White Label Program" },
-  { href: "/sme-empowerment", label: "SME Empowerment" },
-  { href: "/mna", label: "M&A Opportunities" },
+  { href: "/partners/partner-program-sme", label: "Partner Program for SMEs" },
+  { href: "/partners/white-label-partner", label: "White Label Program" },
+  { href: "/partners/sme-empower", label: "SME Empower" },
+  { href: "/partners/mna", label: "M&A Opportunities" },
 ];
 
 const companyLinkList = [
