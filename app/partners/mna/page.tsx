@@ -14,7 +14,7 @@ import {
   dealList,
   successStoryList,
   ctaSection,
-} from "../../ui/libs/constants/mna";
+} from "../../ui/libs/constants/partnerPage/mna";
 
 export const metadata: Metadata = {
   title: "Mergers & Acquisitions – TruBot AI",
