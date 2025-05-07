@@ -1,20 +1,3 @@
-const navLinkList = [
-  { href: "/solutions", label: "Solutions" },
-  { href: "/mna", label: "M&A" },
-  { href: "/sme-empowerment", label: "SME Empower" },
-  { href: "/investors", label: "Investors" },
-  { href: "/about", label: "About" },
-  { href: "/work-culture", label: "Work Culture" },
-  { href: "/careers", label: "Careers" },
-  { href: "/contact", label: "Contact" },
-];
-
-const footerLinkList = [
-  { href: "/products", label: "Products" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/careers", label: "Careers" },
-];
-
 const productLinkList = [
   { href: "/products/ai-agents", label: "AI Agents" },
   { href: "/products/ai-chatbots", label: "AI Chatbots" },
@@ -34,4 +17,40 @@ const productLinkList = [
   { href: "/products/ai-surveillance", label: "AI Surveillance" },
 ];
 
-export { navLinkList, footerLinkList, productLinkList };
+const solutionLinkList = [{ href: "/solutions", label: "Solutions" }];
+
+const partnerLinkList = [
+  { href: "/white-label-partner", label: "White Label Program" },
+  { href: "/sme-empowerment", label: "SME Empowerment" },
+  { href: "/mna", label: "M&A Opportunities" },
+];
+
+const companyLinkList = [
+  { href: "/about", label: "About Us" },
+  { href: "/investors", label: "Investors" },
+  { href: "/work-culture", label: "Work Culture" },
+  { href: "/careers", label: "Careers" },
+  { href: "/contact", label: "Contact" },
+];
+
+const footerLinkList = [
+  { href: "/products", label: "Products" },
+  { href: "/solutions", label: "Solutions" },
+  { href: "/careers", label: "Careers" },
+];
+
+const footerLinkSection = {
+  Products: productLinkList,
+  Solutions: solutionLinkList,
+  Partners: partnerLinkList,
+  Company: companyLinkList,
+};
+
+export {
+  productLinkList,
+  solutionLinkList,
+  partnerLinkList,
+  companyLinkList,
+  footerLinkList,
+  footerLinkSection,
+};
