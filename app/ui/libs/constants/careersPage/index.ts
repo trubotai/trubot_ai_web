@@ -20,11 +20,13 @@ import { humanResourcesManagerPageData } from "./manager-human-resources";
 import { leadProductDesignerPageData } from "./lead-product-designer";
 import { legalAdvisorPageData } from "./board-advisor-legal";
 import { MASpecialistManagerPageData } from "./manager-mergers-acquisitions-specialis";
+import { MLEngineerPageData } from "./engineer-machine-learning";
 import { productManagerPageData } from "./manager-product";
 import { productMarketingInternPageData } from "./intern-product-marketing";
 import { projectManagerPageData } from "./manager-project";
 import { salesGrowthAdvisorPageData } from "./board-advisor-sales-growth";
 import { salesMarketingInternPageData } from "./intern-sales-marketing";
+import { softwareEngineerPageData } from "./engineer-software";
 import { technologyAdvisorPageData } from "./board-advisor-technology";
 
 export const careerPagesMap: Record<string, CareerPageDataType> = {
@@ -54,4 +56,6 @@ export const careerPagesMap: Record<string, CareerPageDataType> = {
   "manager-product": productManagerPageData,
   "manager-project": projectManagerPageData,
   "manager-technology-fullstack-engineer": fullStackEngineeringManagerPageData,
+  "engineer-machine-learning": MLEngineerPageData,
+  "engineer-software": softwareEngineerPageData,
 };
