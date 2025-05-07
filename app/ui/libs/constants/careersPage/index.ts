@@ -26,6 +26,7 @@ import { productMarketingInternPageData } from "./intern-product-marketing";
 import { projectManagerPageData } from "./manager-project";
 import { salesGrowthAdvisorPageData } from "./board-advisor-sales-growth";
 import { salesMarketingInternPageData } from "./intern-sales-marketing";
+import { softwareEngineerPageData } from "./engineer-software";
 import { technologyAdvisorPageData } from "./board-advisor-technology";
 
 export const careerPagesMap: Record<string, CareerPageDataType> = {
@@ -56,4 +57,5 @@ export const careerPagesMap: Record<string, CareerPageDataType> = {
   "manager-project": projectManagerPageData,
   "manager-technology-fullstack-engineer": fullStackEngineeringManagerPageData,
   "engineer-machine-learning": MLEngineerPageData,
+  "engineer-software": softwareEngineerPageData,
 };

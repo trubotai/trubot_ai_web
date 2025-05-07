@@ -147,6 +147,13 @@ const jobList = [
     href: "/careers/engineer-machine-learning",
   },
   {
+    id: "engineer-software",
+    title: "Software Engineer",
+    location: "Remote",
+    type: "Full-Time / Part-Time",
+    href: "/careers/engineer-software",
+  },
+  {
     id: "lead-product-designer",
     title: "Lead Product Designer",
     location: "Remote",
