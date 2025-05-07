@@ -36,15 +36,7 @@ const companyLinkList = [
 const footerLinkList = [
   { href: "/products", label: "Products" },
   { href: "/solutions", label: "Solutions" },
-  { href: "/careers", label: "Careers" },
 ];
-
-const footerLinkSection = {
-  Products: productLinkList,
-  Solutions: solutionLinkList,
-  Partners: partnerLinkList,
-  Company: companyLinkList,
-};
 
 export {
   productLinkList,
@@ -52,5 +44,4 @@ export {
   partnerLinkList,
   companyLinkList,
   footerLinkList,
-  footerLinkSection,
 };
