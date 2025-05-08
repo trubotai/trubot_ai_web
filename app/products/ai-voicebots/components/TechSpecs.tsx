@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import ExpandableSpecCard from "@/app/ui/components/shared/ExpandableSpecCard";
-import { techSpecList } from "@/app/ui/libs/constants/products/ai-voicebots";
+import { techSpecList } from "@/app/ui/libs/constants/productPage/ai-voicebots";
 
 const TechSpecs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -15,14 +15,17 @@ const TechSpecs = () => {
   };
 
   return (
-    <PageLayout id="tech-specs" animate>
+    <PageLayout id="tech-specs" aria-label="Technical Specifications Section">
       <SectionHeader
         title="Technical Specifications"
         subtitle="Built for performance, security, and flexibility"
-        animate
       />
 
-      <div className="space-y-4">
+      <div
+        className="space-y-4"
+        role="list"
+        aria-label="Expandable Technical Specifications"
+      >
         {techSpecList.map((spec, index) => (
           <ExpandableSpecCard
             key={index}

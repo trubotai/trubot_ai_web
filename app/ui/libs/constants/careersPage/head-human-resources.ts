@@ -10,7 +10,7 @@ const headHumanResourcesPageData: CareerPageDataType = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media automation, and invoice tools — transforming how businesses engage customers and scale operations.",
   roleIntro:
-    "As Head HR, you will be responsible for designing and executing our end-to-end HR strategy. From talent acquisition to employee well-being and organizational culture, you'll shape the foundation for an empowered, high-performing team.",
+    "As Head of Human Resources, you will be responsible for designing and executing our end-to-end HR strategy. From talent acquisition to employee well-being and organizational culture, you'll shape the foundation for an empowered, high-performing team.",
   responsibilities: [
     "Talent Acquisition & Recruitment – Lead hiring strategies, define needs, and recruit top talent globally.",
     "Employee Engagement & Culture – Foster a positive, inclusive work environment through team-building and well-being initiatives.",
@@ -33,15 +33,15 @@ const headHumanResourcesPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your schedule.",
-    "💰 Performance-Based Compensation – Commissions transitioning to competitive salary.",
+    "💰 Performance-Based Compensation – Commissions transitioning to a competitive salary.",
     "💡 High-Impact Role – Shape the people strategy of a category-defining AI startup.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Head of Human Resources'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Head of Human Resources'.",
   applyEmail: "careers@trubotai.com",
 };
 

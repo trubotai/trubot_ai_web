@@ -31,11 +31,11 @@ const productManagerPageData: CareerPageDataType = {
     "💡 High-Impact Role – Build the foundation of a category-defining AI solution.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
     "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Product Manager'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Product Manager'.",
   applyEmail: "careers@trubotai.com",
 };
 

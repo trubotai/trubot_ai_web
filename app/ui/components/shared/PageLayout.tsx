@@ -9,6 +9,7 @@ interface PageLayoutProps {
   padding?: "default" | "none" | "lg";
   as?: keyof JSX.IntrinsicElements;
   animate?: boolean;
+  ariaLabelledby?: string;
 }
 
 const PageLayout = ({
@@ -19,7 +20,9 @@ const PageLayout = ({
   id,
   padding = "default",
   as: Component = "section",
-  animate = false,
+  animate = true,
+  ariaLabelledby,
+  ...rest
 }: PageLayoutProps) => {
   const maxWidthClass = {
     default: "max-w-7xl",
@@ -43,6 +46,8 @@ const PageLayout = ({
   return (
     <Component
       id={id}
+      role={id ? "region" : undefined}
+      aria-labelledby={ariaLabelledby}
       className={`
         ${maxWidthClass} mx-auto
         ${paddingClass}
@@ -51,6 +56,7 @@ const PageLayout = ({
         ${animate ? "fade-in" : ""}
         ${className}
       `}
+      {...rest}
     >
       {children}
     </Component>

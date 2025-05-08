@@ -5,23 +5,25 @@ import { useState } from "react";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import PricingCard from "@/app/ui/components/shared/PricingCard";
-import { pricingSection } from "@/app/ui/libs/constants/products/invoice-management-solutions";
+import { pricingSection } from "@/app/ui/libs/constants/productPage/invoice-management-solutions";
 
 const PricingSection = () => {
   const [duration, setDuration] = useState<"monthly" | "yearly">("monthly");
   const plans = pricingSection[duration];
 
   return (
-    <PageLayout id="pricing" animate>
+    <PageLayout id="pricing">
       <SectionHeader
         title="Pricing Options"
         subtitle="Simple and scalable plans to fit your business needs"
-        align="center"
-        animate
       />
 
       {/* Toggle Billing Option */}
-      <div className="flex justify-center gap-4 mb-10">
+      <div
+        className="flex justify-center gap-4 mb-10"
+        role="group"
+        aria-label="Billing options"
+      >
         {["monthly", "yearly"].map((option) => (
           <button
             key={option}
@@ -40,7 +42,7 @@ const PricingSection = () => {
       </div>
 
       {/* Plan Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8" aria-live="polite">
         {plans.map((plan, index) => (
           <PricingCard
             key={plan.name}

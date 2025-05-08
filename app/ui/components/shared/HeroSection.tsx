@@ -30,12 +30,13 @@ const HeroSection: FC<HeroSectionProps> = ({
 
   const contentAlignment = textAlignMap[alignment];
   const hasIcon = Boolean(Icon);
+  const titleId = "hero-title";
 
   return (
     <div className={`relative py-28 sm:py-36 ${className}`}>
       <PageLayout
         id="hero"
-        aria-label="Hero Section"
+        aria-labelledby={titleId}
         className={`relative z-10 ${
           hasIcon
             ? "grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
@@ -44,7 +45,10 @@ const HeroSection: FC<HeroSectionProps> = ({
       >
         {/* Content */}
         <div className={`${contentAlignment} fade-in slide-in-up`}>
-          <h1 className="text-5xl sm:text-6xl font-heading font-extrabold text-navy leading-tight mb-6">
+          <h1
+            id={titleId}
+            className="text-5xl sm:text-6xl font-heading font-extrabold text-navy leading-tight mb-6"
+          >
             <span className="bg-gradient-to-r from-electric to-navy bg-clip-text text-transparent">
               {title}
             </span>
@@ -78,7 +82,10 @@ const HeroSection: FC<HeroSectionProps> = ({
 
         {/* Optional Icon */}
         {hasIcon && (
-          <div className="hidden md:flex justify-center float">
+          <div
+            className="hidden md:flex justify-center float"
+            aria-hidden="true"
+          >
             {Icon && <Icon size={120} className="text-electric opacity-80" />}
           </div>
         )}

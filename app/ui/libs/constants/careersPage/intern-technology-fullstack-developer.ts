@@ -10,7 +10,7 @@ const fullStackDeveloperInternPageData: CareerPageDataType = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified AI platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation — helping businesses automate processes and scale operations effectively.",
   roleIntro:
-    "We are looking for passionate Full Stack Developer Interns eager to tackle real-world challenges. You’ll collaborate with senior engineers to develop mobile and web applications while gaining exposure to AI-powered tools and frameworks.",
+    "We’re looking for passionate Full Stack Developer Interns eager to take on real-world development challenges. You’ll collaborate with senior engineers to build scalable web and mobile applications while gaining exposure to modern AI-powered frameworks and tooling.",
   responsibilities: [
     "Independently develop web applications using both front-end and back-end technologies for mobile and desktop platforms.",
     "Collaborate with senior developers in software design, implementation, and testing.",
@@ -32,11 +32,11 @@ const fullStackDeveloperInternPageData: CareerPageDataType = {
     "🌟 Career Opportunity – High-performing interns may be considered for full-time roles.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "Email us your resume with the subject line – 'Application for Full Stack Developer Intern' and join TruBot AI’s innovation journey!",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Full Stack Developer Intern' and become part of TruBot AI’s innovation journey.",
   applyEmail: "careers@trubotai.com",
 };
 
