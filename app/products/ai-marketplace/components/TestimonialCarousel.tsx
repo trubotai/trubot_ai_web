@@ -11,7 +11,7 @@ import {
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import TestimonialCard from "@/app/ui/components/shared/TestimonialCard";
-import { testimonialList } from "@/app/ui/libs/constants/products/ai-marketplace";
+import { testimonialList } from "@/app/ui/libs/constants/productPage/ai-marketplace";
 
 const TestimonialCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -35,12 +35,10 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <PageLayout id="testimonialList" animate>
+    <PageLayout id="testimonials">
       <SectionHeader
         title="What Our Customers Say"
         subtitle="Real feedback from enterprises, SMEs, and solution providers"
-        align="center"
-        animate
       />
 
       <div className="mt-12 relative max-w-3xl mx-auto">
@@ -66,22 +64,34 @@ const TestimonialCarousel = () => {
         </div>
 
         {/* Pagination Dots */}
-        <div className="flex justify-center mt-6 space-x-2">
-          {testimonialList.map((_, idx) =>
-            idx === activeIndex ? (
-              <FaCircle
-                key={idx}
-                className="text-electric w-3 h-3 cursor-pointer transition"
+        <div
+          className="flex justify-center mt-6 space-x-2"
+          role="tablist"
+          aria-label="Testimonial navigation"
+        >
+          {testimonialList.map((_, idx) => {
+            const isActive = idx === activeIndex;
+            const Icon = isActive ? FaCircle : FaRegCircle;
+
+            return (
+              <button
+                key={`dot-${idx}`}
+                className="p-1"
+                aria-label={`Go to testimonial ${idx + 1}`}
+                role="tab"
+                aria-selected={isActive}
                 onClick={() => setActiveIndex(idx)}
-              />
-            ) : (
-              <FaRegCircle
-                key={idx}
-                className="text-navy/40 w-3 h-3 cursor-pointer hover:text-electric transition"
-                onClick={() => setActiveIndex(idx)}
-              />
-            )
-          )}
+              >
+                <Icon
+                  className={`${
+                    isActive
+                      ? "text-electric"
+                      : "text-navy/40 hover:text-electric"
+                  } w-3 h-3 transition`}
+                />
+              </button>
+            );
+          })}
         </div>
       </div>
     </PageLayout>

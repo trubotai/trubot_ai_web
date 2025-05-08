@@ -18,14 +18,13 @@ const UseCaseCard = ({
   index = 0,
 }: UseCaseCardProps) => {
   return (
-    <div
+    <article
       className={`p-8 rounded-xl shadow-md transition-all duration-300 transform bg-light fade-in slide-in-up hover-scale hover-glow`}
       style={{ animationDelay: `${index * 100}ms` }}
-      role="region"
       aria-labelledby={`use-case-${index}`}
     >
       <div className="flex items-center gap-4 mb-4">
-        <Icon className="w-6 h-6 text-electric shrink-0" />
+        <Icon className="w-6 h-6 text-electric shrink-0" aria-hidden="true" />
         <h3
           id={`use-case-${index}`}
           className="text-2xl font-heading font-semibold text-navy"
@@ -42,13 +41,18 @@ const UseCaseCard = ({
           <li
             key={i}
             className="flex items-start gap-2 text-sm text-navy/70 font-body"
+            role="listitem"
           >
-            <CheckCircle size={16} className="text-teal mt-0.5 shrink-0" />
+            <CheckCircle
+              size={16}
+              className="text-teal mt-0.5 shrink-0"
+              aria-hidden="true"
+            />
             {point}
           </li>
         ))}
       </ul>
-    </div>
+    </article>
   );
 };
 

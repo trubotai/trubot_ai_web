@@ -107,4 +107,15 @@ const solutionList = [
   },
 ];
 
-export { solutionList };
+const ctaSection = {
+  title: "Let’s Explore Your Solutions",
+  subtitle:
+    "Tell us about your industry and goals — we’ll show how TruBot AI can help you scale.",
+  primaryCTA: { label: "Contact Us", href: "/contact" },
+  secondaryCTA: {
+    label: "Email Team",
+    href: "contact@trubotai.com",
+  },
+};
+
+export { solutionList, ctaSection };

@@ -5,7 +5,7 @@ import { useState } from "react";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import ExpandableSpecCard from "@/app/ui/components/shared/ExpandableSpecCard";
-import { techSpecList } from "@/app/ui/libs/constants/products/invoice-management-solutions";
+import { techSpecList } from "@/app/ui/libs/constants/productPage/invoice-management-solutions";
 
 const TechSpecs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -15,15 +15,17 @@ const TechSpecs = () => {
   };
 
   return (
-    <PageLayout id="technical-specs" animate>
+    <PageLayout id="technical-specs">
       <SectionHeader
         title="Technical Specifications"
         subtitle="Explore the robust technologies and capabilities behind our invoice management solution."
-        align="center"
-        animate
       />
 
-      <div className="space-y-4">
+      <div
+        className="space-y-4"
+        aria-labelledby="technical-specs-heading"
+        role="region"
+      >
         {techSpecList.map((card, index) => (
           <ExpandableSpecCard
             key={index}

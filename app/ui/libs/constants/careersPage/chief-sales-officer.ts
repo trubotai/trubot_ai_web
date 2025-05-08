@@ -8,9 +8,9 @@ const CSOPageData: CareerPageDataType = {
   shortDescription:
     "Lead global sales at TruBot AI. Drive growth, close strategic deals, and transform engagement through AI-powered solutions.",
   about:
-    "We’re a stealth-mode AI startup transforming customer support and business communication through cutting-edge AI solutions. Our mission is to enhance efficiency, drive growth, and enable businesses to provide intelligent, human-like interactions across platforms.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
-    "We are looking for a dynamic, results-driven Chief Sales Officer to lead our sales strategy, drive client acquisition, and spearhead revenue growth. Your ability to build strong relationships, generate awareness, and close high-impact deals will be crucial to our success.",
+    "We are looking for a dynamic, results-driven Chief Sales Officer to lead our sales strategy, drive client acquisition, and spearhead revenue growth. Your ability to build strong relationships, generate awareness, and close high-impact deals will be key to our success.",
   responsibilities: [
     "Sales Strategy & Execution – Develop and implement go-to-market plans aligned with company goals.",
     "Client Acquisition & Partnerships – Build and nurture relationships with key decision-makers and partners.",
@@ -30,13 +30,13 @@ const CSOPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Sales commissions transitioning to competitive salary.",
+    "💰 Performance-Based Compensation – Sales commissions transitioning to a competitive salary.",
     "💡 High-Impact Role – Build a category-defining AI solution from the ground up.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Chief Sales Officer'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Chief Sales Officer'.",
   applyEmail: "careers@trubotai.com",
 };
 

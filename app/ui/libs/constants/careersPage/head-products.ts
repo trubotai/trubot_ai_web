@@ -8,7 +8,7 @@ const headProductsPageData: CareerPageDataType = {
   shortDescription:
     "Define product vision and lead execution of TruBot AI’s next-gen customer engagement solutions powered by AI and automation.",
   about:
-    "We’re a stealth-mode AI startup transforming customer support and business communication through cutting-edge AI solutions. Our mission is to enhance efficiency, drive growth, and enable businesses to deliver intelligent, human-like interactions across multiple platforms.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We are seeking a Head of Products to lead the roadmap and execution of our AI-driven solutions. You'll collaborate across engineering, design, and business teams to deliver innovative, user-centric products that drive impact and scale.",
   responsibilities: [
@@ -27,15 +27,15 @@ const headProductsPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Sales commissions transitioning to competitive salary.",
+    "💰 Performance-Based Compensation – Sales commissions transitioning to a competitive salary.",
     "💡 High-Impact Role – Shape the product direction of a category-defining AI solution.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Head of Products'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Head of Products'.",
   applyEmail: "careers@trubotai.com",
 };
 

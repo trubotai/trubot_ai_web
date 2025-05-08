@@ -2,7 +2,7 @@ import { CareerPageDataType } from "../../types/careerPage";
 
 const headSalesCountryPageData: CareerPageDataType = {
   id: "head-sales-country",
-  title: "Head of Sales - Country",
+  title: "Head of Sales – Country",
   location: "Remote (Global)",
   type: "Full-Time / Part-Time",
   shortDescription:
@@ -10,7 +10,7 @@ const headSalesCountryPageData: CareerPageDataType = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and invoice automation. We’re transforming how businesses engage with customers and scale their operations.",
   roleIntro:
-    "We are looking for a dynamic, results-driven Country Head - Sales to lead our sales strategy, drive client acquisition, and spearhead regional revenue growth. Your ability to create market awareness, build strategic partnerships, and close high-value deals will play a vital role in our expansion.",
+    "We are looking for a dynamic, results-driven Head of Sales – Country to lead our regional sales strategy, drive client acquisition, and accelerate revenue growth. Your ability to build strategic partnerships, generate market awareness, and close high-value deals will be key to our expansion in your country.",
   responsibilities: [
     "Sales Strategy & Execution – Develop and implement regional go-to-market plans.",
     "Client Acquisition & Partnerships – Build and nurture relationships with decision-makers in your target market.",
@@ -30,13 +30,13 @@ const headSalesCountryPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Sales commissions transitioning to competitive salary.",
+    "💰 Performance-Based Compensation – Sales commissions transitioning to a competitive salary.",
     "💡 High-Impact Role – Help build a category-defining AI solution from the ground up.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   applyInstructions:
-    "Email us with your resume with the subject line – 'Application for Head of Sales - Country'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Head of Sales – Country'.",
   applyEmail: "careers@trubotai.com",
 };
 

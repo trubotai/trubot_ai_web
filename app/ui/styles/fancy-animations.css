@@ -106,4 +106,84 @@
   .pulse-slow {
     animation: pulse-slow 3s ease-in-out infinite;
   }
+
+  /* === Landing Page animation === */
+  @keyframes wave-shift {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50px);
+    }
+  }
+
+  @keyframes gradient-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes node-pulse {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 0.6;
+    }
+  }
+
+  .animate-gradient-flow {
+    background: linear-gradient(90deg, #3b82f6, #1f2937);
+    background-size: 200% 200%;
+    animation: gradient-flow 20s linear infinite;
+    background-image: url("/svg/background-pattern.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .node-pulse {
+    animation: node-pulse 6s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes micro-jitter {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(-1px, 1px);
+    }
+    50% {
+      transform: translate(1px, -1px);
+    }
+    75% {
+      transform: translate(-0.5px, 0.5px);
+    }
+  }
+  .jitter {
+    animation: micro-jitter 3s infinite ease-in-out;
+  }
 }

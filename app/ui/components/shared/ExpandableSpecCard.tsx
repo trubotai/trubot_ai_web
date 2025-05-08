@@ -19,14 +19,26 @@ const ExpandableSpecCard = ({
   onToggle,
   index = 0,
 }: ExpandableSpecCardProps) => {
+  const headingId = `spec-title-${index}`;
+  const contentId = `spec-content-${index}`;
+
   return (
     <div
       className={`rounded-xl overflow-hidden shadow transition-all fade-in slide-in-up ${bgClass}`}
       style={{ animationDelay: `${index * 120}ms` }}
     >
       <button
+        id={headingId}
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-6 py-4 text-left group"
+        aria-expanded={isOpen}
+        aria-controls={contentId}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onToggle();
+          }
+        }}
+        className="w-full flex items-center justify-between px-6 py-4 text-left group focus:outline-none"
       >
         <div className="flex items-center gap-4">
           <div className="bg-electric/10 text-electric p-2 rounded-full">
@@ -45,6 +57,10 @@ const ExpandableSpecCard = ({
       </button>
 
       <div
+        id={contentId}
+        role="region"
+        aria-labelledby={headingId}
+        aria-hidden={!isOpen}
         className={`transition-all px-6 ${
           isOpen ? "max-h-96 py-4" : "max-h-0 py-0"
         } overflow-hidden`}

@@ -19,20 +19,27 @@ const PricingCard = ({
   popular = false,
   index = 0,
 }: PricingCardProps) => {
+  const headingId = `pricing-plan-${name.toLowerCase().replace(/\s+/g, "-")}`;
+
   return (
-    <div
+    <article
       className={`relative rounded-xl p-6 transition-all transform fade-in slide-in-up hover-scale hover-glow ${
         popular ? "bg-electric text-white" : "bg-light border border-gray-200"
       }`}
       style={{ animationDelay: `${index * 120}ms` }}
+      aria-labelledby={headingId}
     >
       {popular && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-light text-electric text-xs font-bold px-3 py-1 rounded-full shadow">
+        <div
+          className="absolute -top-3 left-1/2 -translate-x-1/2 bg-light text-electric text-xs font-bold px-3 py-1 rounded-full shadow"
+          aria-hidden="true"
+        >
           Most Popular
         </div>
       )}
 
       <h3
+        id={headingId}
         className={`text-2xl font-heading font-bold mb-2 ${
           popular ? "text-white" : "text-navy"
         }`}
@@ -65,9 +72,10 @@ const PricingCard = ({
           fullWidth
           animate
           label={cta}
+          aria-label={`Select the ${name} plan for ${price}`}
         />
       </div>
-    </div>
+    </article>
   );
 };
 

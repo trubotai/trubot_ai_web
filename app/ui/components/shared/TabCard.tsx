@@ -17,9 +17,18 @@ const TabCard = ({
   linkLabel,
   linkHref,
 }: TabCardProps) => {
+  const headingId = `tabcard-heading-${title
+    .toLowerCase()
+    .replace(/\s+/g, "-")}`;
+
   return (
-    <div className="bg-light rounded-2xl p-8 shadow-md transition-all duration-500 fade-in slide-in-up">
-      <h3 className="text-2xl font-heading text-navy mb-4">{title}</h3>
+    <article
+      className="bg-light rounded-2xl p-8 shadow-md transition-all duration-500 fade-in slide-in-up"
+      aria-labelledby={headingId}
+    >
+      <h3 id={headingId} className="text-2xl font-heading text-navy mb-4">
+        {title}
+      </h3>
 
       <p className="text-navy/70 font-body mb-6">{description}</p>
 
@@ -37,7 +46,7 @@ const TabCard = ({
         iconRight={ArrowRight}
         iconAnimate
       />
-    </div>
+    </article>
   );
 };
 

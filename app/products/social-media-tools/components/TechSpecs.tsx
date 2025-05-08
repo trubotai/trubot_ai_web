@@ -5,7 +5,7 @@ import { useState } from "react";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import ExpandableSpecCard from "@/app/ui/components/shared/ExpandableSpecCard";
-import { techSpecList } from "@/app/ui/libs/constants/products/social-media-tools";
+import { techSpecList } from "@/app/ui/libs/constants/productPage/social-media-tools";
 
 const TechSpecs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -15,15 +15,16 @@ const TechSpecs = () => {
   };
 
   return (
-    <PageLayout id="specifications" animate>
+    <PageLayout id="specifications" ariaLabelledby="specifications-heading">
       <SectionHeader
         title="Technical Specifications"
         subtitle="Built for power, flexibility, and seamless integration."
-        align="center"
-        animate
       />
 
-      <div className="space-y-4">
+      <div
+        className="space-y-4"
+        aria-label="Expandable technical specifications"
+      >
         {techSpecList.map((spec, index) => (
           <ExpandableSpecCard
             key={index}
