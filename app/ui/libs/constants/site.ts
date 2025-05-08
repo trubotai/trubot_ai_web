@@ -3,34 +3,37 @@ const productLinkList = [
   { href: "/products/ai-chatbots", label: "AI Chatbots" },
   { href: "/products/ai-voicebots", label: "AI Voicebots" },
   { href: "/products/ai-marketplace", label: "AI Marketplace" },
-  { href: "/products/ai-surveillance", label: "AI Surveillance" },
+  { href: "/products/ai-social-media-suite", label: "AI Social Media Suite" },
   {
-    href: "/products/invoice-management-solutions",
-    label: "AI Invoice Management",
+    href: "/products/ai-powered-surveillance",
+    label: "AI-Powered Surveillance",
   },
   {
-    href: "/products/ai-solutions-buying-aggregator",
-    label: "Strategic AI Sourcing",
+    href: "/products/smart-invoice-processing",
+    label: "Smart Invoice Processing",
   },
-  { href: "/products/social-media-tools", label: "Social Media Tools" },
-  { href: "/products/sme-product-aggregator", label: "SME Product Aggregator" },
+  { href: "/products/sme-solutions-hub", label: "SME Solutions Hub" },
+  {
+    href: "/products/intelligent-sourcing-platform",
+    label: "Intelligent Sourcing Platform",
+  },
 ];
 
 const solutionLinkList = [{ href: "/solutions", label: "Solutions" }];
 
 const partnerLinkList = [
-  { href: "/partners/partner-program-sme", label: "Partner Program for SMEs" },
-  { href: "/partners/white-label-partner", label: "White Label Program" },
-  { href: "/partners/sme-empower", label: "SME Empower" },
-  { href: "/partners/mna", label: "M&A Opportunities" },
+  { href: "/partners/sme-partner-network", label: "SME Partner Network" },
+  { href: "/partners/white-label-solutions", label: "White Label Solutions" },
+  { href: "/partners/sme-empowerment-hub", label: "SME Empowerment Hub" },
+  { href: "/partners/strategic-alliances", label: "Strategic Alliances" },
 ];
 
 const companyLinkList = [
-  { href: "/about", label: "About Us" },
-  { href: "/investors", label: "Investors" },
-  { href: "/work-culture", label: "Work Culture" },
-  { href: "/careers", label: "Careers" },
-  { href: "/contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/investor-relations", label: "Investor Relations" },
+  { href: "/our-culture", label: "Our Culture" },
+  { href: "/careers", label: "Join Our Team" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 const footerLinkList = [
