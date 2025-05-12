@@ -213,7 +213,7 @@ const Header = () => {
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
             target="_blank"
             rel="noopener noreferrer"
-            label="Request Demo"
+            label="Book a Demo"
             ariaLabel="Schedule a TruBot AI demo"
             variant="primary"
             animate
@@ -265,7 +265,7 @@ const Header = () => {
                     <Link
                       href={href}
                       onClick={() => setMenuOpen(false)}
-                      className="block text-sm text-navy hover:text-electric"
+                      className="block py-1 text-sm text-navy hover:text-electric"
                     >
                       {label}
                     </Link>
@@ -306,7 +306,7 @@ const Header = () => {
                     <Link
                       href={href}
                       onClick={() => setMenuOpen(false)}
-                      className="block text-sm text-navy hover:text-electric"
+                      className="block py-1 text-sm text-navy hover:text-electric"
                     >
                       {label}
                     </Link>
@@ -338,7 +338,7 @@ const Header = () => {
                     <Link
                       href={href}
                       onClick={() => setMenuOpen(false)}
-                      className="block text-sm text-navy hover:text-electric"
+                      className="block py-1 text-sm text-navy hover:text-electric"
                     >
                       {label}
                     </Link>
@@ -351,23 +351,23 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="mt-6 w-full space-y-3">
             <Button
-              href="/contact"
-              label="Request Demo"
-              ariaLabel="Contact TruBot AI"
-              variant="primary"
-              animate
-              fullWidth
-              onClick={() => setMenuOpen(false)}
-            />
-            <Button
               href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
-              label="Book an Appointment"
+              label="Book a Demo"
               ariaLabel="Book an appointment with TruBot AI"
-              variant="secondary"
+              variant="primary"
               animate
               fullWidth
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+            />
+            <Button
+              href="/sales"
+              label="Contact Sales"
+              ariaLabel="Sales TruBot AI"
+              variant="outline"
+              animate
+              fullWidth
               onClick={() => setMenuOpen(false)}
             />
           </div>
