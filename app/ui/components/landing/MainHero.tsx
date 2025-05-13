@@ -115,17 +115,17 @@ const MainHero: FC = () => {
         {/* 🔘 CTAs */}
         <div className="flex flex-wrap justify-center gap-4 fade-in scale-up animation-delay-500">
           <Button
-            href="/contact"
+            href="/demo"
             variant="primary"
             animate
-            label="Request a Demo"
+            label="Try TruBot Now"
             ariaLabel="Request a demo from TruBot AI"
           />
           <Button
-            href="/solutions"
+            href="/sales"
             variant="teal"
             animate
-            label="Explore Our Solutions"
+            label="Talk to Our Team"
             ariaLabel="Explore TruBot AI solutions"
           />
         </div>

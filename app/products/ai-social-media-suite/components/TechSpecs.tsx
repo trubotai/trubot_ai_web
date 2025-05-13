@@ -5,31 +5,33 @@ import { useState } from "react";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import ExpandableSpecCard from "@/app/ui/components/shared/ExpandableSpecCard";
-import { techSpecList } from "@/app/ui/libs/constants/productPage/ai-chatbots";
+import { techSpecList } from "@/app/ui/libs/constants/productPage/ai-social-media-suite";
 
 const TechSpecs = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const handleToggle = (index: number) => {
+  const toggleCard = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
-    <PageLayout id="technical-specs" ariaLabelledby="technical-specs-heading">
+    <PageLayout id="specifications" ariaLabelledby="specifications-heading">
       <SectionHeader
         title="Technical Specifications"
-        subtitle="Robust and scalable features to meet your business needs."
-        align="center"
+        subtitle="Built for power, flexibility, and seamless integration."
       />
 
-      <div className="space-y-4">
-        {techSpecList.map((card, index) => (
+      <div
+        className="space-y-4"
+        aria-label="Expandable technical specifications"
+      >
+        {techSpecList.map((spec, index) => (
           <ExpandableSpecCard
             key={index}
+            {...spec}
             index={index}
             isOpen={openIndex === index}
-            onToggle={() => handleToggle(index)}
-            {...card}
+            onToggle={() => toggleCard(index)}
           />
         ))}
       </div>

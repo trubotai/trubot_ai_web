@@ -1,19 +1,19 @@
 import MainHero from "./ui/components/landing/MainHero";
-import SectionHeader from "./ui/components/shared/SectionHeader";
-import FeatureCard from "./ui/components/shared/FeatureCard";
 import PageLayout from "./ui/components/shared/PageLayout";
-import ProductCard from "./ui/components/shared/ProductCard";
+import SectionHeader from "./ui/components/shared/SectionHeader";
 import Button from "./ui/components/shared/Button";
-import SolutionCard from "./ui/components/shared/SolutionCard";
-import TabCard from "./ui/components/shared/TabCard";
-import TestimonialCard from "./ui/components/shared/TestimonialCard";
+import FeatureCard from "./ui/components/shared/FeatureCard";
+import ProductCard from "./ui/components/shared/ProductCard";
+import UseCaseCard from "./ui/components/shared/UseCaseCard";
+import VerticalTimeline from "./ui/components/shared/VerticalTimeline";
 import CTASection from "./ui/components/shared/CTASection";
 import {
   benefitList,
-  marketplaceList,
   productList,
-  smeFocusList,
-  testimonialList,
+  useCaseList,
+  stepList,
+  reasonList,
+  ctaSection,
 } from "./ui/libs/constants";
 
 export const metadata = {
@@ -44,8 +44,8 @@ const Page = () => {
       <div className="bg-gray-soft">
         <PageLayout id="key-benefits">
           <SectionHeader
-            title="Key Benefits of Our AI Solutions"
-            subtitle="From automation to innovation, discover how TruBot AI transforms business."
+            title="Why Choose TruBot AI?"
+            subtitle="Empower your business with intelligent automation tailored for SMEs."
           />
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefitList.map((benefit, idx) => (
@@ -65,8 +65,8 @@ const Page = () => {
       {/* Products */}
       <PageLayout id="products">
         <SectionHeader
-          title="Comprehensive AI Solutions for Every Business Need"
-          subtitle="Explore how each product tackles a specific business challenge, with seamless integration and enterprise-ready reliability."
+          title="Meet the Bots That Run Your Business"
+          subtitle="Each product is designed to solve a specific pain point — whether it's handling chats, calls, or complex business processes."
         />
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -81,81 +81,86 @@ const Page = () => {
             />
           ))}
         </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center fade-in slide-in-up animation-delay-500">
+          <p className="text-lg text-navy font-body mb-4">
+            Not sure which product fits your workflow?
+          </p>
+
+          <Button
+            href="/contact"
+            label="Get a Personalized Demo"
+            variant="primary"
+            animate
+          />
+        </div>
       </PageLayout>
 
-      {/* Marketplace */}
+      {/* Use Cases */}
       <div className="bg-gray-soft">
-        <PageLayout id="marketplace">
+        <PageLayout id="use-cases">
           <SectionHeader
-            title="Discover the AI Marketplace: Your One-Stop Solution Hub"
-            subtitle="Access a curated ecosystem of specialized AI solutions from trusted partners — all with seamless integration and enterprise-grade security."
+            title="Smart Use Cases for Every Industry"
+            subtitle="Whether you're running a local clinic or scaling a global SaaS business, TruBot AI adapts to your industry and unlocks instant automation results."
           />
 
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-            {marketplaceList.map((solution, index) => (
-              <SolutionCard
-                key={index}
-                name={solution.name}
-                provider={solution.provider}
-                description={solution.description}
-                icon={solution.icon}
-                tags={solution.tags}
-                link={solution.link}
-              />
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {useCaseList.map((props, index) => (
+              <UseCaseCard key={index} index={index} {...props} />
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="mt-16 text-center">
+          <div className="text-center mt-12">
             <Button
-              href="/solutions"
-              label="Explore the Full Marketplace"
-              variant="outline"
+              href="/sales"
+              variant="primary"
               animate
-              ariaLabel="Explore the full AI marketplace"
+              label="Get a Personalized Demo"
             />
           </div>
         </PageLayout>
       </div>
 
-      {/* SME Focus */}
-      <PageLayout id="sme-focus">
+      {/* Steps */}
+      <PageLayout id="how-it-works">
         <SectionHeader
-          title="Tailored AI Solutions for Small and Medium Enterprises"
-          subtitle="We believe in democratizing AI technology. Our solutions are designed to be accessible and impactful for businesses of all sizes, with flexible pricing and implementation options specifically for SMEs."
+          title="How TruBot AI Works"
+          subtitle="From setup to success — here’s how you go from zero to automated in just a few minutes."
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {smeFocusList.map((sme, index) => (
-            <TabCard
-              key={index}
-              title={sme.title}
-              description={sme.description}
-              solutions={sme.solutions}
-              linkLabel={sme.linkLabel}
-              linkHref={sme.linkHref}
-            />
-          ))}
+        <div className="mt-12 max-w-3xl mx-auto">
+          <VerticalTimeline title="" steps={stepList} animationOffset={100} />
+        </div>
+
+        <div className="text-center mt-12 flex flex-col md:flex-row justify-center gap-4">
+          <Button href="/demo" variant="primary" animate label="Try TruBot" />
+          <Button
+            href="/sales"
+            variant="outline"
+            animate
+            label="Talk to Our Team"
+          />
         </div>
       </PageLayout>
 
-      {/* Testimonial */}
+      {/* Trust Section */}
       <div className="bg-gray-soft">
-        <PageLayout id="social-proof">
+        <PageLayout id="why-trubot">
           <SectionHeader
-            title="Real Results from Real Companies"
-            subtitle="Here's how TruBot AI is driving success for businesses of all sizes"
+            title="Why Businesses Choose TruBot AI"
+            subtitle="At TruBot AI, we're committed to delivering reliable and efficient automation solutions tailored for growing businesses."
           />
 
-          {/* Testimonials */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {testimonialList.map((testimonial, index) => (
-              <TestimonialCard
+          {/* Feature Grid using FeatureCard */}
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {reasonList.map((reason, index) => (
+              <FeatureCard
                 key={index}
-                quote={testimonial.quote}
-                name={testimonial.name}
-                title={testimonial.title}
-                company={testimonial.company}
+                icon={reason.icon}
+                title={reason.title}
+                description={reason.description}
+                index={index}
               />
             ))}
           </div>
@@ -163,14 +168,7 @@ const Page = () => {
       </div>
 
       {/* CTA */}
-      <CTASection
-        title="Ready to Transform Your Business with AI?"
-        subtitle="Join hundreds of forward-thinking companies leveraging our AI solutions to drive efficiency, innovation, and growth."
-        primaryCTA={{
-          label: "Request a Demo",
-          href: "/contact",
-        }}
-      />
+      <CTASection {...ctaSection} />
     </>
   );
 };
