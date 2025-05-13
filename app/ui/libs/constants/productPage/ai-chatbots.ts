@@ -1,127 +1,306 @@
 import {
-  UserCheck,
-  Globe,
   Brain,
-  Handshake,
-  TrendingUp,
-  Headset,
-  MonitorSmartphone,
-  ShoppingCart,
-  Users,
   MessageSquare,
   PlugZap,
   ShieldCheck,
   Sliders,
-  Mic,
-  Zap,
+  Bot,
+  BarChart2,
+  Settings2,
 } from "lucide-react";
+import {
+  FaShoppingBag,
+  FaBalanceScale,
+  FaTools,
+  FaFacebookMessenger,
+  FaGoogle,
+  FaHubspot,
+  FaSalesforce,
+  FaSlack,
+  FaWhatsapp,
+  FaPhoneAlt,
+  FaRobot,
+} from "react-icons/fa";
+import {
+  FaBriefcase,
+  FaChartBar,
+  FaChartLine,
+  FaClock,
+  FaCode,
+  FaComments,
+  FaFilter,
+  FaGlobe,
+  FaStethoscope,
+} from "react-icons/fa6";
+import { MdSchedule } from "react-icons/md";
+import { SiZoho, SiCalendly } from "react-icons/si";
 
 const heroSection = {
-  title: "AI Chatbots: Intelligent Conversations That Drive Results",
+  title: "Engage Customers Instantly with AI Chatbots Tailored for SMEs",
   subtitle:
-    "Transform customer engagement with AI chatbots that deliver personalized, human-like interactions across all your digital channels.",
+    "Automate responses, qualify leads, and provide support around the clock—without writing a single line of code.",
   primaryCTA: {
     label: "Start Free Trial",
-    href: "/contact",
+    href: "/demo",
   },
   secondaryCTA: {
-    label: "See Live Demo",
-    href: "/contact",
+    label: "Talk to Sales",
+    href: "/sales",
   },
+  icon: Bot,
 };
+
+const stepList = [
+  {
+    icon: MessageSquare,
+    title: "Customer Message Received",
+    description:
+      "A visitor asks a question on your website, WhatsApp, or social media platform.",
+  },
+  {
+    icon: Brain,
+    title: "TruBot Understands Intent",
+    description:
+      "Our AI chatbot interprets the query using smart logic, not fixed rules or keywords.",
+  },
+  {
+    icon: Settings2,
+    title: "Executes the Right Flow",
+    description:
+      "Whether it's answering a question, booking an appointment, or capturing a lead — TruBot takes action instantly.",
+  },
+  {
+    icon: BarChart2,
+    title: "Response Logged & Tracked",
+    description:
+      "All interactions are recorded with timestamps and insights available in your dashboard.",
+  },
+];
 
 const featureList = [
   {
-    title: "Advanced Natural Language Understanding",
-    subtitle: "Comprehend Intent, Not Just Keywords",
+    icon: FaCode,
+    title: "No-Code Bot Builder",
+    subtitle: "Launch instantly without developers",
     description:
-      "Our AI chatbots understand the nuances of human language, recognizing intent, context, and sentiment to provide relevant responses that address the true meaning behind customer queries.",
-    icon: Brain,
+      "Launch a chatbot without writing a single line of code — perfect for fast-moving teams that need rapid deployment.",
   },
   {
-    title: "Hyper-Personalization",
-    subtitle: "Tailored Interactions for Every Customer",
+    icon: FaGlobe,
+    title: "Multilingual Support",
+    subtitle: "Speak your customer’s language",
     description:
-      "Leverage customer data and interaction history to deliver personalized experiences that make customers feel understood and valued, increasing satisfaction and conversion rates.",
-    icon: UserCheck,
+      "Engage customers in English, Hindi, or any preferred language with built-in translation support for broader reach.",
   },
   {
-    title: "Omnichannel Deployment",
-    subtitle: "Consistent Experience Everywhere",
+    icon: FaClock,
+    title: "Instant Responses, 24/7",
+    subtitle: "Always-on support, no breaks",
     description:
-      "Deploy the same intelligent chatbot across your website, mobile app, social media platforms, messaging apps, and more—providing a seamless experience regardless of channel.",
-    icon: Globe,
+      "Reduces wait times and never misses a message — even after office hours or on weekends.",
   },
   {
-    title: "Seamless Human Handoff",
-    subtitle: "Perfect Balance of Automation and Human Touch",
+    icon: FaComments,
+    title: "Omnichannel Ready",
+    subtitle: "WhatsApp, Instagram, Web & more",
     description:
-      "Intelligent escalation protocols ensure complex issues are transferred to human agents at the right moment, with full conversation context for a smooth transition.",
-    icon: Handshake,
+      "Deploy chatbots across your website, WhatsApp, Instagram, and Facebook — all from one dashboard.",
   },
   {
-    title: "Continuous Improvement",
-    subtitle: "Gets Smarter with Every Interaction",
+    icon: FaFilter,
+    title: "Lead Qualification Flows",
+    subtitle: "Prioritize hot leads instantly",
     description:
-      "Our chatbots employ machine learning to continuously improve from customer interactions, feedback, and outcomes, becoming more effective over time.",
-    icon: TrendingUp,
+      "Automatically qualify prospects based on responses and route high-intent leads directly to your sales team.",
+  },
+  {
+    icon: FaChartBar,
+    title: "Conversation Analytics",
+    subtitle: "Improve with real insights",
+    description:
+      "Track engagement, spot drop-off points, and optimize flows using built-in analytics.",
   },
 ];
 
-const useCaseList = [
+const smeUseCaseList = [
   {
-    icon: Headset,
-    title: "Customer Support",
-    subtitle: "24/7 Intelligent Assistance",
+    icon: FaShoppingBag,
+    title: "E-commerce",
+    subtitle: "Streamlining online retail operations.",
     description:
-      "Provide instant, accurate responses to customer inquiries around the clock, resolving common issues without human intervention while ensuring complex cases are properly escalated.",
+      "TruBot AI Chatbots assist e-commerce businesses by handling customer inquiries, processing orders, and providing product recommendations.",
     results: [
-      "80% of routine inquiries resolved without human assistance",
-      "Average response time reduced from hours to seconds",
-      "45% reduction in support costs",
-      "35% improvement in customer satisfaction scores",
+      "30% increase in customer engagement",
+      "25% reduction in cart abandonment",
+      "20% boost in sales conversions",
     ],
   },
   {
-    icon: Users,
-    title: "Lead Generation and Qualification",
-    subtitle: "Convert More Visitors into Qualified Leads",
+    icon: FaStethoscope,
+    title: "Healthcare",
+    subtitle: "Enhancing patient communication and appointment scheduling.",
     description:
-      "Engage website visitors proactively, answer product questions, qualify prospects, and schedule meetings with sales representatives—all through natural conversation.",
+      "Healthcare providers utilize TruBot AI Chatbots to schedule appointments, send reminders, and answer common patient queries.",
     results: [
-      "60% increase in lead capture rate",
-      "40% improvement in lead quality",
-      "300% reduction in cost per qualified lead",
-      "25% higher conversion rates from lead to opportunity",
+      "40% decrease in no-show appointments",
+      "50% improvement in patient satisfaction",
+      "35% reduction in administrative workload",
     ],
   },
   {
-    icon: ShoppingCart,
-    title: "E-commerce Sales",
-    subtitle: "Guide Customers to Purchase",
+    icon: FaBalanceScale,
+    title: "Legal Services",
+    subtitle: "Automating client intake and case updates.",
     description:
-      "Help customers find products, answer questions, provide recommendations, and facilitate checkout, creating a personalized shopping assistant that drives revenue.",
+      "Law firms employ TruBot AI Chatbots to collect client information, schedule consultations, and provide case status updates.",
     results: [
-      "35% increase in conversion rates",
-      "28% higher average order value",
-      "45% reduction in cart abandonment",
-      "50% increase in repeat purchases",
+      "60% faster client onboarding",
+      "45% increase in lead conversion",
+      "30% reduction in administrative tasks",
     ],
   },
   {
-    icon: MonitorSmartphone,
-    title: "Internal Employee Support",
-    subtitle: "Streamline Internal Operations",
+    icon: FaTools,
+    title: "Home Services",
+    subtitle: "Managing service requests and customer support.",
     description:
-      "Provide employees with instant access to information, automate HR processes, and support IT troubleshooting, improving productivity and reducing operational costs.",
+      "Home service providers use TruBot AI Chatbots to handle booking requests, provide service information, and gather customer feedback.",
     results: [
-      "70% reduction in time spent searching for information",
-      "500% decrease in routine HR inquiries to staff",
-      "40% faster resolution of common IT issues",
-      "30% improvement in employee satisfaction with internal services",
+      "50% increase in booking efficiency",
+      "40% improvement in customer satisfaction",
+      "35% reduction in response time",
+    ],
+  },
+  {
+    icon: FaBriefcase,
+    title: "Professional Services",
+    subtitle: "Streamlining client communication and support.",
+    description:
+      "Consultants and agencies leverage TruBot AI Chatbots to manage client inquiries, schedule meetings, and deliver timely updates.",
+    results: [
+      "45% increase in client engagement",
+      "30% reduction in response time",
+      "25% improvement in client retention",
+    ],
+  },
+  {
+    icon: FaChartLine,
+    title: "Financial Services",
+    subtitle: "Automating client onboarding and transaction alerts.",
+    description:
+      "Banks, insurers, and finance firms use AI chatbots to streamline KYC, deliver policy reminders, and provide account updates in real time.",
+    results: [
+      "35% faster customer onboarding",
+      "50% drop in support workload",
+      "Improved SLA compliance with instant updates",
     ],
   },
 ];
+
+const reflectionList = [
+  {
+    quote:
+      "TruBot AI Chatbots have revolutionized our customer service. We've seen a significant drop in response times and an increase in customer satisfaction.",
+    name: "Priya Sharma",
+    title: "Customer Service Manager",
+    company: "ShopEase",
+  },
+  {
+    quote:
+      "Implementing TruBot AI Chatbots was a game-changer for our appointment scheduling. Our no-show rates have decreased dramatically.",
+    name: "Dr. Arjun Mehta",
+    title: "Clinic Director",
+    company: "HealthFirst Clinic",
+  },
+  {
+    quote:
+      "The efficiency and accuracy of TruBot AI Chatbots in handling client inquiries have allowed our team to focus on more complex tasks.",
+    name: "Anjali Desai",
+    title: "Operations Head",
+    company: "LegalEdge",
+  },
+];
+
+const integrationList = [
+  {
+    title: "CRM Systems",
+    description:
+      "Manage customer relationships effectively by integrating with leading CRM platforms.",
+    tools: [
+      { name: "Salesforce", icon: FaSalesforce, tooltip: "Connect in 1 click" },
+      { name: "HubSpot", icon: FaHubspot },
+      { name: "Zoho CRM", icon: SiZoho },
+    ],
+  },
+  {
+    title: "Communication Platforms",
+    description:
+      "Engage with customers across various channels through seamless integrations.",
+    tools: [
+      { name: "WhatsApp", icon: FaWhatsapp },
+      { name: "Facebook Messenger", icon: FaFacebookMessenger },
+      { name: "Slack", icon: FaSlack },
+    ],
+  },
+  {
+    title: "Scheduling Tools",
+    description: "Simplify appointment booking and calendar management.",
+    tools: [
+      { name: "Google Calendar", icon: FaGoogle },
+      { name: "Calendly", icon: SiCalendly },
+      { name: "Acuity Scheduling", icon: MdSchedule },
+    ],
+  },
+];
+
+const relatedProductList = [
+  {
+    icon: FaRobot,
+    title: "TruBot AI Agents",
+    description:
+      "Automate complex tasks and workflows with intelligent AI agents.",
+    link: "/products/ai-agents",
+  },
+  {
+    icon: FaPhoneAlt,
+    title: "TruBot Voice Assistants",
+    description:
+      "Engage customers through natural voice interactions across various platforms.",
+    link: "/products/ai-voicebots",
+  },
+];
+
+const faqSection = {
+  title: "Frequently Asked Questions",
+  subtitle: "Answers to common queries about TruBot AI Chatbots.",
+  faqList: [
+    {
+      question: "How easy is it to set up TruBot AI Chatbots?",
+      answer:
+        "Setting up TruBot AI Chatbots is straightforward with our no-code platform. You can have your chatbot up and running in minutes.",
+    },
+    {
+      question: "Can TruBot AI Chatbots handle multiple languages?",
+      answer:
+        "Yes, our chatbots support multiple languages, allowing you to engage with a diverse customer base.",
+    },
+    {
+      question: "Do I need technical expertise to use TruBot AI Chatbots?",
+      answer:
+        "No technical expertise is required. Our intuitive interface makes it easy for anyone to create and manage chatbots.",
+    },
+    {
+      question: "Can I integrate TruBot AI Chatbots with my existing tools?",
+      answer:
+        "Absolutely. TruBot AI Chatbots offer seamless integrations with various CRM systems, communication platforms, and scheduling tools.",
+    },
+    {
+      question: "Is there customer support available?",
+      answer:
+        "Yes, our support team is available 24/7 to assist you with any questions or issues.",
+    },
+  ],
+};
 
 const techSpecList = [
   {
@@ -261,116 +440,29 @@ const pricingSection = {
   ],
 };
 
-const caseStudyList = [
-  {
-    title: "Global Retail Brand",
-    challenge:
-      "High volume of repetitive customer service inquiries causing long wait times and increasing support costs.",
-    solution:
-      "Implemented AI chatbots across website, mobile app, and Facebook Messenger to handle product questions, order tracking, and returns processing.",
-    results: [
-      "75% of customer inquiries resolved without human intervention",
-      "Customer satisfaction increased by 40%",
-      "$2.1M annual support cost savings",
-      "24/7 support coverage without additional staffing",
-    ],
-    linkLabel: "Read Full Case Study",
-    linkHref: "/contact",
-  },
-  {
-    title: "B2B Software Company",
-    challenge:
-      "Long sales cycles and inefficient lead qualification process limiting growth.",
-    solution:
-      "Deployed AI chatbots to engage website visitors, qualify leads, answer product questions, and schedule demos with sales representatives.",
-    results: [
-      "55% increase in qualified leads",
-      "Sales cycle reduced by 35%",
-      "45% of demos automatically scheduled through chatbot",
-      "Marketing team refocused on strategic initiatives",
-    ],
-    linkLabel: "Read Full Case Study",
-    linkHref: "/contact",
-  },
-];
-
-const faqSection = {
-  title: "Frequently Asked Questions",
-  subtitle: "Everything you need to know about our chatbot platform.",
-  faqList: [
-    {
-      question: "How quickly can we implement your chatbot solution?",
-      answer:
-        "Basic implementation can be completed in as little as one week, with more complex integrations taking 2–4 weeks. Our implementation team works closely with you to ensure a smooth deployment and quick time-to-value.",
-    },
-    {
-      question: "Can the chatbot integrate with our existing systems?",
-      answer:
-        "Yes, our chatbots integrate seamlessly with most CRM systems, e-commerce platforms, knowledge bases, and ticketing systems through our extensive library of pre-built connectors. For specialized systems, our professional services team can develop custom integrations.",
-    },
-    {
-      question: "How do you handle chatbot training and improvement?",
-      answer:
-        "Initial training is based on your existing knowledge base, FAQs, and conversation logs. After deployment, the chatbot continuously learns from interactions and feedback. Our platform includes tools for monitoring performance and making improvements based on actual customer conversations.",
-    },
-    {
-      question: "What languages do your chatbots support?",
-      answer:
-        "Our platform currently supports over 30 languages with native-level understanding, including English, Spanish, French, German, Chinese, Japanese, Arabic, and more. We regularly add new languages based on customer demand.",
-    },
-    {
-      question: "How do you measure chatbot performance and ROI?",
-      answer:
-        "Our analytics dashboard provides comprehensive metrics on conversation volume, resolution rates, customer satisfaction, and business outcomes. We work with you to establish KPIs aligned with your business goals and provide regular performance reviews to ensure you're achieving maximum ROI.",
-    },
-  ],
-};
-
-const relatedProductList = [
-  {
-    icon: Zap,
-    title: "AI Agents",
-    description:
-      "Extend your chatbot capabilities with autonomous AI agents that can perform complex tasks and make decisions across your business systems.",
-    link: "/products/ai-agents",
-  },
-  {
-    icon: Mic,
-    title: "AI Voice Bots",
-    description:
-      "Complement your chatbot strategy with intelligent voice assistants for a consistent experience across voice channels.",
-    link: "/products/ai-voicebots",
-  },
-  {
-    icon: MessageSquare,
-    title: "Social Media Tools",
-    description:
-      "Integrate chatbots into your social media strategy for enhanced customer engagement and support.",
-    link: "/products/social-media-tools",
-  },
-];
-
 const ctaSection = {
   title: "Ready to Transform Customer Engagement with Intelligent Chatbots?",
   subtitle:
     "Join thousands of forward-thinking companies using our AI chatbots to deliver exceptional customer experiences, generate qualified leads, and drive business growth.",
   primaryCTA: {
     label: "Start Your Free Trial",
-    href: "/contact",
+    href: "/demo",
   },
   secondaryCTA: {
-    label: "Schedule a Personalized Demo",
-    href: "/contact",
+    label: "Contact Sales",
+    href: "/sales",
   },
 };
 
 export {
   heroSection,
+  stepList,
   featureList,
-  useCaseList,
+  smeUseCaseList,
+  reflectionList,
+  integrationList,
   techSpecList,
   pricingSection,
-  caseStudyList,
   faqSection,
   relatedProductList,
   ctaSection,

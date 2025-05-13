@@ -17,8 +17,8 @@ const TechSpecs = () => {
   return (
     <PageLayout id="technical-specs" ariaLabelledby="technical-specs-heading">
       <SectionHeader
-        title="AI Chatbot Technical Specifications"
-        subtitle="Explore the robust capabilities and integration standards that power our AI platform."
+        title="Technical Specifications"
+        subtitle="Robust and scalable features to meet your business needs."
         align="center"
       />
 

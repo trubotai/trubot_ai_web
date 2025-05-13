@@ -17,9 +17,8 @@ const TechSpecs = () => {
   return (
     <PageLayout id="technical-specs">
       <SectionHeader
-        title="Technical Specifications"
-        subtitle="Built for performance, security, and flexibility"
-        align="center"
+        title="Under the Hood: Technical Capabilities"
+        subtitle="Looking for the technical breakdown? Here’s what’s under the hood."
       />
 
       <div className="space-y-4">
