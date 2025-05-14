@@ -17,7 +17,7 @@ import {
   enterpriseSection,
   softwareSection,
   ctaSection,
-} from "@/app/ui/libs/constants/productPage/sme-solutions-hub";
+} from "@/app/ui/libs/constants/productPage/software-aggregator";
 
 const Page = () => {
   return (

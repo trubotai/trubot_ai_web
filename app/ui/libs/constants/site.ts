@@ -6,13 +6,13 @@ const productLinkList = [
   { href: "/products/ai-social-media-suite", label: "AI Social Media Suite" },
   {
     href: "/products/ai-powered-surveillance",
-    label: "AI-Powered Surveillance",
+    label: "AI Powered Surveillance",
   },
   {
     href: "/products/smart-invoice-processing",
     label: "Smart Invoice Processing",
   },
-  { href: "/products/sme-solutions-hub", label: "SME Solutions Hub" },
+  { href: "/products/software-aggregator", label: "Software Aggregator" },
   {
     href: "/products/intelligent-sourcing-platform",
     label: "Intelligent Sourcing Platform",
@@ -22,10 +22,10 @@ const productLinkList = [
 const solutionLinkList = [{ href: "/solutions", label: "Solutions" }];
 
 const partnerLinkList = [
-  { href: "/partners/sme-partner-network", label: "SME Partner Network" },
-  { href: "/partners/white-label-solutions", label: "White Label Solutions" },
-  { href: "/partners/sme-empowerment-hub", label: "SME Empowerment Hub" },
-  { href: "/partners/strategic-alliances", label: "Strategic Alliances" },
+  { href: "/partners/partner-program", label: "Partner Program" },
+  { href: "/partners/white-label-partners", label: "White Label Partners" },
+  { href: "/partners/sme-empowerment", label: "SME Empowerment" },
+  { href: "/partners/mna", label: "M&A Opportunities" },
 ];
 
 const companyLinkList = [
