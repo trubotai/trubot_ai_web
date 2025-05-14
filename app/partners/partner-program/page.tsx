@@ -19,7 +19,7 @@ import {
   resourceList,
   stepList,
   storyList,
-} from "@/app/ui/libs/constants/partnerPage/sme-partner-network";
+} from "@/app/ui/libs/constants/partnerPage/partner-program";
 
 export const metadata = {
   title: "Partner Program for SMEs – Expand Your AI Market Reach | TruBot AI",

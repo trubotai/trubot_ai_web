@@ -18,7 +18,7 @@ import {
   personaList,
   stepList,
   testinomialList,
-} from "@/app/ui/libs/constants/partnerPage/white-label-partner";
+} from "@/app/ui/libs/constants/partnerPage/white-label-partners";
 
 const Page = () => {
   return (
