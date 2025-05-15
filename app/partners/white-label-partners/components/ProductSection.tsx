@@ -6,7 +6,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import ProductCard from "@/app/ui/components/shared/ProductCard";
-import { productList } from "@/app/ui/libs/constants/partnerPage/white-label-partners";
+import { productList } from "@/app/ui/libs/constants/partners/white-label-partners";
 
 const ProductSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);

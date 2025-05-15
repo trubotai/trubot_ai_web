@@ -16,7 +16,7 @@ import {
   relatedProductList,
   useCaseList,
   ctaSection,
-} from "@/app/ui/libs/constants/productPage/ai-voicebots";
+} from "@/app/ui/libs/constants/individual-product/ai-voicebots";
 
 export const metadata = {
   title: "AI Voicebot Solutions – TruBot AI",

@@ -16,7 +16,7 @@ import {
   heroSection,
   relatedProductList,
   useCaseList,
-} from "@/app/ui/libs/constants/productPage/ai-social-media-suite";
+} from "@/app/ui/libs/constants/individual-product/ai-social-media-suite";
 
 export const metadata = {
   title: "Social Media Tools – TruBot AI",

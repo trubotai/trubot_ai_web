@@ -13,7 +13,7 @@ import {
   stepList,
   caseStudyList,
   ctaSection,
-} from "../../ui/libs/constants/partnerPage/sme-empowerment";
+} from "../../ui/libs/constants/partners/sme-empowerment";
 
 export const metadata = {
   title: "SME Empower Program – TruBot AI",

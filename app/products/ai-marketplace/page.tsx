@@ -23,7 +23,7 @@ import {
   faqSection,
   relatedProductList,
   ctaSection,
-} from "@/app/ui/libs/constants/productPage/ai-marketplace";
+} from "@/app/ui/libs/constants/individual-product/ai-marketplace";
 
 export const metadata = {
   title: "AI Marketplace Platform | Enterprise Strategic AI Sourcing",

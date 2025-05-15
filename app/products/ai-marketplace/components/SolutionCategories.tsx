@@ -5,7 +5,7 @@ import { useState } from "react";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import TabCard from "@/app/ui/components/shared/TabCard";
-import { solutionCategoryList } from "@/app/ui/libs/constants/productPage/ai-marketplace";
+import { solutionCategoryList } from "@/app/ui/libs/constants/individual-product/ai-marketplace";
 
 const SolutionCategoriesTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
