@@ -5,7 +5,7 @@ import { useState } from "react";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import TabCard from "@/app/ui/components/shared/TabCard";
-import { solutionList } from "@/app/ui/libs/constants/productPage/intelligent-sourcing-platform";
+import { solutionList } from "@/app/ui/libs/constants/individual-product/intelligent-sourcing-platform";
 
 const SolutionCategoriesTabs = () => {
   const [activeTab, setActiveTab] = useState(0);

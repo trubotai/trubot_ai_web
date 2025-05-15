@@ -24,7 +24,7 @@ import {
   faqSection,
   relatedProductList,
   ctaSection,
-} from "@/app/ui/libs/constants/productPage/ai-agents";
+} from "@/app/ui/libs/constants/individual-product/ai-agents";
 
 export const metadata = {
   title: "AI Agents for Businesses | Intelligent Process Automation",

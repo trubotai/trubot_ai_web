@@ -19,7 +19,7 @@ import {
   stepList,
   storyList,
   ctaSection,
-} from "@/app/ui/libs/constants/productPage/intelligent-sourcing-platform";
+} from "@/app/ui/libs/constants/individual-product/intelligent-sourcing-platform";
 
 export const metadata = {
   title: "Strategic AI Sourcing for SMEs | TruBot AI",

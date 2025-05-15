@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import CTASection from "@/app/ui/components/shared/CTASection";
-import { productPagesMap } from "@/app/ui/libs/constants/productPage";
+import { productPagesMap } from "@/app/ui/libs/constants/individual-product";
 import { ProductPageDataType } from "@/app/ui/libs/types/productPage";
 
 export async function generateStaticParams() {

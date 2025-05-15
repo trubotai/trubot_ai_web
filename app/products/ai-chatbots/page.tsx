@@ -18,7 +18,7 @@ import {
   faqSection,
   relatedProductList,
   ctaSection,
-} from "@/app/ui/libs/constants/productPage/ai-chatbots";
+} from "@/app/ui/libs/constants/individual-product/ai-chatbots";
 import HorizontalTimeline from "@/app/ui/components/shared/HorizontalTimeline";
 import { FaQuoteLeft } from "react-icons/fa6";
 import TestimonialCard from "@/app/ui/components/shared/TestimonialCard";

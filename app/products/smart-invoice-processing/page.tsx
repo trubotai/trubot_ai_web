@@ -18,7 +18,7 @@ import {
   relatedProductList,
   roiSection,
   useCaseList,
-} from "@/app/ui/libs/constants/productPage/smart-invoice-processing";
+} from "@/app/ui/libs/constants/individual-product/smart-invoice-processing";
 
 export const metadata = {
   title:
