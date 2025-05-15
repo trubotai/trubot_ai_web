@@ -26,6 +26,8 @@ const partnerLinkList = [
   { href: "/partners/white-label-partners", label: "White Label Partners" },
   { href: "/partners/sme-empowerment", label: "SME Empowerment" },
   { href: "/partners/mna", label: "M&A Opportunities" },
+  { href: "/partners/royalty-program", label: "Royalty Program" },
+  { href: "/partners/startup-program", label: "Startup Program" },
 ];
 
 const companyLinkList = [
