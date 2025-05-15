@@ -5,7 +5,7 @@ import { useState } from "react";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import PricingCard from "@/app/ui/components/shared/PricingCard";
-import { pricingSection } from "@/app/ui/libs/constants/productPage/ai-voicebots";
+import { pricingSection } from "@/app/ui/libs/constants/individual-product/ai-voicebots";
 
 const PricingSection = () => {
   const [duration, setDuration] = useState<"monthly" | "yearly">("monthly");

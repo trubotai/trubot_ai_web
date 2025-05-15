@@ -5,7 +5,7 @@ import { useState } from "react";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import ExpandableSpecCard from "@/app/ui/components/shared/ExpandableSpecCard";
-import { techSpecList } from "@/app/ui/libs/constants/productPage/smart-invoice-processing";
+import { techSpecList } from "@/app/ui/libs/constants/individual-product/smart-invoice-processing";
 
 const TechSpecs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

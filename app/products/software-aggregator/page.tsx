@@ -17,7 +17,7 @@ import {
   enterpriseSection,
   softwareSection,
   ctaSection,
-} from "@/app/ui/libs/constants/productPage/software-aggregator";
+} from "@/app/ui/libs/constants/individual-product/software-aggregator";
 
 const Page = () => {
   return (

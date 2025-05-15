@@ -12,7 +12,7 @@ import {
   foundationList,
   heroSection,
   stepList,
-} from "@/app/ui/libs/constants/productPage/ai-powered-surveillance";
+} from "@/app/ui/libs/constants/individual-product/ai-powered-surveillance";
 
 const Page = () => {
   return (
