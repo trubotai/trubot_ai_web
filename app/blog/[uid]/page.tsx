@@ -10,9 +10,8 @@ export async function generateStaticParams() {
   const posts = await client.getAllByType("blog_post");
   return posts.map((post) => ({ uid: post.uid }));
 }
-
-const Page = async ({ params }: { params: { uid: string } }) => {
-  const { uid } = params;
+const Page = async ({ params }: { params: Promise<{ uid: string }> }) => {
+  const { uid } = await params;
   const client = createClient();
   const post = await client.getByUID("blog_post", uid);
 
