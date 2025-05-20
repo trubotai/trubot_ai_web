@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { FaChevronDown } from "react-icons/fa6";
 
 import Button from "./shared/Button";
@@ -14,26 +13,33 @@ import {
   companyLinkList,
 } from "../libs/constants/site";
 
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+interface NavSection {
+  key: string;
+  label: string;
+  links: NavLink[] | { label: string }[];
+}
+
+const navSections: NavSection[] = [
+  { key: "products", label: "Products", links: productLinkList },
+  { key: "solutions", label: "Solutions", links: solutionLinkList },
+  { key: "partners", label: "Partners", links: partnerLinkList },
+  { key: "company", label: "Company", links: companyLinkList },
+];
+
 const Header = () => {
-  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState({
-    products: false,
-    partners: false,
-    company: false,
-  });
-  const [mobileDropdown, setMobileDropdown] = useState({
-    products: false,
-    partners: false,
-    company: false,
-  });
+  const [dropdownOpen, setDropdownOpen] = useState<Record<string, boolean>>({});
+  const [mobileDropdown, setMobileDropdown] = useState<Record<string, boolean>>(
+    {}
+  );
 
   const toggleDropdown = (key: string) => {
-    setMobileDropdown({
-      products: key === "products",
-      partners: key === "partners",
-      company: key === "Company",
-    });
+    setMobileDropdown((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
   const dropdownStyles =
@@ -76,135 +82,46 @@ const Header = () => {
           role="navigation"
           aria-label="Main navigation"
         >
-          {/* Products Dropdown */}
-          <div
-            className="relative group"
-            onMouseEnter={() =>
-              setDropdownOpen({
-                products: true,
-                partners: false,
-                company: false,
-              })
-            }
-            onMouseLeave={() =>
-              setDropdownOpen({ ...dropdownOpen, products: false })
-            }
-          >
-            <span
-              className={`${navLabelStyles} flex items-center gap-1`}
-              aria-haspopup="true"
-              aria-expanded={dropdownOpen.products}
+          {navSections.map(({ key, label, links }) => (
+            <div
+              key={key}
+              className="relative group"
+              onMouseEnter={() => setDropdownOpen({ [key]: true })}
+              onMouseLeave={() =>
+                setDropdownOpen((prev) => ({ ...prev, [key]: false }))
+              }
             >
-              Products
-              <FaChevronDown
-                className={`text-xs transition-transform duration-300 ${
-                  dropdownOpen.products ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </span>
-            {dropdownOpen.products && (
-              <ul className={dropdownStyles} aria-label="Product links">
-                {productLinkList.map(({ href, label }) => (
-                  <li key={href}>
-                    <Link href={href} className={dropdownItemStyles}>
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          {/* Solution Link */}
-          {solutionLinkList.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`${navLabelStyles} transition-all hover:text-electric text-navy before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:bg-electric before:w-0 hover:before:w-full before:transition-all before:duration-300 ${
-                pathname === href ? "text-electric before:w-full" : ""
-              }`}
-            >
-              {label}
-            </Link>
+              <span
+                className={`${navLabelStyles} flex items-center gap-1`}
+                aria-haspopup="true"
+                aria-expanded={dropdownOpen[key]}
+              >
+                {label}
+                <FaChevronDown
+                  className={`text-xs transition-transform duration-300 ${
+                    dropdownOpen[key] ? "rotate-180" : "rotate-0"
+                  }`}
+                />
+              </span>
+              {dropdownOpen[key] && (
+                <ul className={dropdownStyles} aria-label={`${label} links`}>
+                  {key === "solutions"
+                    ? (links as { label: string }[]).map(({ label }) => (
+                        <li key={label} className={dropdownItemStyles}>
+                          {label}
+                        </li>
+                      ))
+                    : (links as NavLink[]).map(({ href, label }) => (
+                        <li key={href}>
+                          <Link href={href} className={dropdownItemStyles}>
+                            {label}
+                          </Link>
+                        </li>
+                      ))}
+                </ul>
+              )}
+            </div>
           ))}
-
-          {/* Partners Dropdown */}
-          <div
-            className="relative group"
-            onMouseEnter={() =>
-              setDropdownOpen({
-                products: false,
-                partners: true,
-                company: false,
-              })
-            }
-            onMouseLeave={() =>
-              setDropdownOpen({ ...dropdownOpen, partners: false })
-            }
-          >
-            <span
-              className={`${navLabelStyles} flex items-center gap-1`}
-              aria-haspopup="true"
-              aria-expanded={dropdownOpen.partners}
-            >
-              Partners
-              <FaChevronDown
-                className={`text-xs transition-transform duration-300 ${
-                  dropdownOpen.partners ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </span>
-            {dropdownOpen.partners && (
-              <ul className={dropdownStyles} aria-label="Partner links">
-                {partnerLinkList.map(({ href, label }) => (
-                  <li key={href}>
-                    <Link href={href} className={dropdownItemStyles}>
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          {/* Company Dropdown */}
-          <div
-            className="relative group"
-            onMouseEnter={() =>
-              setDropdownOpen({
-                products: false,
-                partners: false,
-                company: true,
-              })
-            }
-            onMouseLeave={() =>
-              setDropdownOpen({ ...dropdownOpen, company: false })
-            }
-          >
-            <span
-              className={`${navLabelStyles} flex items-center gap-1`}
-              aria-haspopup="true"
-              aria-expanded={dropdownOpen.company}
-            >
-              Company
-              <FaChevronDown
-                className={`text-xs transition-transform duration-300 ${
-                  dropdownOpen.company ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </span>
-            {dropdownOpen.company && (
-              <ul className={dropdownStyles} aria-label="Company links">
-                {companyLinkList.map(({ href, label }) => (
-                  <li key={href}>
-                    <Link href={href} className={dropdownItemStyles}>
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
         </nav>
 
         {/* CTA */}
@@ -243,110 +160,52 @@ const Header = () => {
           className="lg:hidden w-full bg-white px-4 py-6 flex flex-col gap-3 items-center text-center fade-in slide-in-up"
           aria-label="Mobile navigation"
         >
-          {/* Accordion Group: Product */}
-          <div className="w-full border border-gray-100 rounded-md overflow-hidden">
-            <button
-              onClick={() => toggleDropdown("products")}
-              className="w-full flex justify-center gap-2 items-center py-3 px-4 text-center font-semibold text-navy"
-              aria-haspopup="true"
-              aria-expanded={mobileDropdown.products}
-            >
-              Product
-              <FaChevronDown
-                className={`text-xs transition-transform duration-300 ${
-                  mobileDropdown.products ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </button>
-            {mobileDropdown.products && (
-              <ul className="px-4 pb-4 space-y-2">
-                {productLinkList.map(({ href, label }) => (
-                  <li key={href}>
-                    <Link
-                      href={href}
-                      onClick={() => setMenuOpen(false)}
-                      className="block py-1 text-sm text-navy hover:text-electric"
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          {/* Accordion Group: Solutions */}
-          <Link
-            href="/solutions"
-            className="w-full py-3 px-4 border border-gray-100 rounded-md font-semibold text-navy hover:text-electric text-center"
-            onClick={() => setMenuOpen(false)}
-          >
-            Solutions
-          </Link>
-
-          {/* Accordion Group: Partners */}
-          <div className="w-full border border-gray-100 rounded-md overflow-hidden">
-            <button
-              onClick={() => toggleDropdown("partners")}
-              className="w-full flex justify-center gap-2 items-center py-3 px-4 text-center font-semibold text-navy"
-              aria-haspopup="true"
-              aria-expanded={mobileDropdown.partners}
-            >
-              Partners
-              <FaChevronDown
-                className={`text-xs transition-transform duration-300 ${
-                  mobileDropdown.partners ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </button>
-            {mobileDropdown.partners && (
-              <ul className="px-4 pb-4 space-y-2">
-                {partnerLinkList.map(({ href, label }) => (
-                  <li key={href}>
-                    <Link
-                      href={href}
-                      onClick={() => setMenuOpen(false)}
-                      className="block py-1 text-sm text-navy hover:text-electric"
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          {/* Accordion Group: Company */}
-          <div className="w-full border border-gray-100 rounded-md overflow-hidden">
-            <button
-              onClick={() => toggleDropdown("Company")}
-              className="w-full flex justify-center gap-2 items-center py-3 px-4 text-center font-semibold text-navy"
-              aria-haspopup="true"
-              aria-expanded={mobileDropdown.company}
-            >
-              Company
-              <FaChevronDown
-                className={`text-xs transition-transform duration-300 ${
-                  mobileDropdown.company ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </button>
-            {mobileDropdown.company && (
-              <ul className="px-4 pb-4 space-y-2">
-                {companyLinkList.map(({ href, label }) => (
-                  <li key={href}>
-                    <Link
-                      href={href}
-                      onClick={() => setMenuOpen(false)}
-                      className="block py-1 text-sm text-navy hover:text-electric"
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+          {navSections.map(({ key, label, links }) =>
+            key === "solutions" ? (
+              <Link
+                key={key}
+                href="/solutions"
+                className="w-full py-3 px-4 border border-gray-100 rounded-md font-semibold text-navy hover:text-electric text-center"
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </Link>
+            ) : (
+              <div
+                key={key}
+                className="w-full border border-gray-100 rounded-md overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleDropdown(key)}
+                  className="w-full flex justify-center gap-2 items-center py-3 px-4 text-center font-semibold text-navy"
+                  aria-haspopup="true"
+                  aria-expanded={mobileDropdown[key]}
+                >
+                  {label}
+                  <FaChevronDown
+                    className={`text-xs transition-transform duration-300 ${
+                      mobileDropdown[key] ? "rotate-180" : "rotate-0"
+                    }`}
+                  />
+                </button>
+                {mobileDropdown[key] && (
+                  <ul className="px-4 pb-4 space-y-2">
+                    {(links as NavLink[]).map(({ href, label }) => (
+                      <li key={href}>
+                        <Link
+                          href={href}
+                          onClick={() => setMenuOpen(false)}
+                          className="block py-1 text-sm text-navy hover:text-electric"
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )
+          )}
 
           {/* CTA Buttons */}
           <div className="mt-6 w-full space-y-3">
