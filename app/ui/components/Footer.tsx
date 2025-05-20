@@ -3,10 +3,10 @@ import { FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa6";
 
 import {
-  footerLinkList,
   productLinkList,
   partnerLinkList,
   companyLinkList,
+  solutionLinkList,
 } from "../libs/constants/site";
 
 const Footer = () => {
@@ -17,11 +17,21 @@ const Footer = () => {
     "before:transition-all before:duration-300";
 
   const renderLinks = (links: { href: string; label: string }[]) =>
-    links.map(({ href, label }: { href: string; label: string }) => (
-      <li key={href} className="text-left">
+    links.map(({ href, label }) => (
+      <li key={href} className="text-left list-none">
         <Link href={href} className={linkClass}>
           {label}
         </Link>
+      </li>
+    ));
+
+  const renderIndustries = (items: { label: string }[]) =>
+    items.map(({ label }) => (
+      <li
+        key={label}
+        className="text-left text-sm text-navy font-medium list-none"
+      >
+        {label}
       </li>
     ));
 
@@ -56,7 +66,9 @@ const Footer = () => {
               >
                 Solutions
               </h4>
-              <ul className="space-y-2">{renderLinks(footerLinkList)}</ul>
+              <ul className="space-y-2">
+                {renderIndustries(solutionLinkList)}
+              </ul>
             </nav>
 
             <nav aria-labelledby="footer-partners-heading">
@@ -91,7 +103,7 @@ const Footer = () => {
               {
                 title: "Solutions",
                 id: "mobile-links",
-                content: renderLinks(footerLinkList),
+                content: renderIndustries(solutionLinkList),
               },
               {
                 title: "Partners",
