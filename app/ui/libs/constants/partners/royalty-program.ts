@@ -47,7 +47,7 @@ const stepList = [
   },
   {
     title: "You Earn as We Deliver",
-    description: "We only take a small royalty from what we help you make",
+    description: "We will pay you royalty for your product",
     icon: FaDollarSign,
   },
   {
