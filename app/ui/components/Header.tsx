@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { FaChevronDown } from "react-icons/fa6";
 
 import Button from "./shared/Button";
@@ -15,12 +14,12 @@ import {
 } from "../libs/constants/site";
 
 const Header = () => {
-  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState({
     products: false,
     partners: false,
     company: false,
+    solutions: false,
   });
   const [mobileDropdown, setMobileDropdown] = useState({
     products: false,
@@ -32,7 +31,7 @@ const Header = () => {
     setMobileDropdown({
       products: key === "products",
       partners: key === "partners",
-      company: key === "Company",
+      company: key === "company",
     });
   };
 
@@ -84,6 +83,7 @@ const Header = () => {
                 products: true,
                 partners: false,
                 company: false,
+                solutions: false,
               })
             }
             onMouseLeave={() =>
@@ -115,18 +115,46 @@ const Header = () => {
             )}
           </div>
 
-          {/* Solution Link */}
-          {solutionLinkList.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`${navLabelStyles} transition-all hover:text-electric text-navy before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:bg-electric before:w-0 hover:before:w-full before:transition-all before:duration-300 ${
-                pathname === href ? "text-electric before:w-full" : ""
-              }`}
+          {/* Solutions Dropdown */}
+          <div
+            className="relative group"
+            onMouseEnter={() =>
+              setDropdownOpen({
+                products: false,
+                partners: false,
+                company: false,
+                solutions: true,
+              })
+            }
+            onMouseLeave={() =>
+              setDropdownOpen({ ...dropdownOpen, solutions: false })
+            }
+          >
+            <span
+              className={`${navLabelStyles} flex items-center gap-1`}
+              aria-haspopup="true"
+              aria-expanded={dropdownOpen.solutions}
             >
-              {label}
-            </Link>
-          ))}
+              Solutions
+              <FaChevronDown
+                className={`text-xs transition-transform duration-300 ${
+                  dropdownOpen.solutions ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </span>
+            {dropdownOpen.solutions && (
+              <ul className={dropdownStyles} aria-label="Solution names">
+                {solutionLinkList.map(({ label }) => (
+                  <li
+                    key={label}
+                    className="px-4 py-2 text-sm text-navy rounded-md hover:bg-gray-50 transition-all"
+                  >
+                    {label}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
 
           {/* Partners Dropdown */}
           <div
@@ -136,6 +164,7 @@ const Header = () => {
                 products: false,
                 partners: true,
                 company: false,
+                solutions: false,
               })
             }
             onMouseLeave={() =>
@@ -175,6 +204,7 @@ const Header = () => {
                 products: false,
                 partners: false,
                 company: true,
+                solutions: false,
               })
             }
             onMouseLeave={() =>

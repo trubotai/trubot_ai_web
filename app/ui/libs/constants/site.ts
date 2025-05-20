@@ -19,7 +19,13 @@ const productLinkList = [
   },
 ];
 
-const solutionLinkList = [{ href: "/solutions", label: "Solutions" }];
+const solutionLinkList = [
+  { label: "Retail & E-commerce" },
+  { label: "Financial Services" },
+  { label: "Healthcare" },
+  { label: "Manufacturing" },
+  { label: "Professional Services" },
+];
 
 const partnerLinkList = [
   { href: "/partners/partner-program", label: "Partner Program" },
