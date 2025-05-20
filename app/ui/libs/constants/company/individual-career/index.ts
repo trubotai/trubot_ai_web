@@ -28,16 +28,28 @@ import { salesGrowthAdvisorPageData } from "./board-advisor-sales-growth";
 import { salesMarketingInternPageData } from "./intern-sales-marketing";
 import { softwareEngineerPageData } from "./engineer-software";
 import { technologyAdvisorPageData } from "./board-advisor-technology";
+import { performanceMarketerPageData } from "./marketer-performance";
+import { socialMediaStrategyLeadPageData } from "./lead-social-media-strategy";
+import { vpTechnologyPageData } from "./vp-technology";
+import { svpTechnologyAIPageData } from "./svp-technology-ai";
+import { graphicDesignerPageData } from "./designer-graphic";
+import { uiuxDesignerPageData } from "./designer-uiux";
+import { cfoPageData } from "./chief-financial-officer";
+import { aiSolutionArchitectPageData } from "./architect-ai-solutions";
 
 export const careerPagesMap: Record<string, CareerPageDataType> = {
   "assistant-operations-founder": executiveAssistantPageData,
+  "architect-ai-solutions": aiSolutionArchitectPageData,
   "board-advisor-finance": financeAdvisorPageData,
   "board-advisor-legal": legalAdvisorPageData,
   "board-advisor-sales-growth": salesGrowthAdvisorPageData,
   "board-advisor-technology": technologyAdvisorPageData,
+  "chief-financial-officer": cfoPageData,
   "chief-operations-officer": COOPageData,
   "chief-sales-officer": CSOPageData,
   "chief-technology-officer": CTOPageData,
+  "designer-graphic": graphicDesignerPageData,
+  "designer-uiux": uiuxDesignerPageData,
   "head-fundraising": headFundraisingPageData,
   "head-human-resources": headHumanResourcesPageData,
   "head-mergers-acquisitions": headMAPageData,
@@ -48,6 +60,7 @@ export const careerPagesMap: Record<string, CareerPageDataType> = {
   "intern-sales-marketing": salesMarketingInternPageData,
   "intern-technology-fullstack-developer": fullStackDeveloperInternPageData,
   "lead-product-designer": leadProductDesignerPageData,
+  "lead-social-media-strategy": socialMediaStrategyLeadPageData,
   "manager-accounts-payroll": accountsPayrollManagerPageData,
   "manager-fundraising": fundraisingManagerPageData,
   "manager-human-resources": humanResourcesManagerPageData,
@@ -56,6 +69,9 @@ export const careerPagesMap: Record<string, CareerPageDataType> = {
   "manager-product": productManagerPageData,
   "manager-project": projectManagerPageData,
   "manager-technology-fullstack-engineer": fullStackEngineeringManagerPageData,
+  "marketer-performance": performanceMarketerPageData,
   "engineer-machine-learning": MLEngineerPageData,
   "engineer-software": softwareEngineerPageData,
+  "svp-technology-ai": svpTechnologyAIPageData,
+  "vp-technology": vpTechnologyPageData,
 };
