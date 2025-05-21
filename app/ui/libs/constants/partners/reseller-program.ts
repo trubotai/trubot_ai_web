@@ -14,7 +14,6 @@ import {
   FaHeartbeat,
   FaMapMarkerAlt,
   FaMoneyCheckAlt,
-  FaPalette,
   FaPhoneAlt,
   FaRobot,
   FaRocket,
@@ -38,11 +37,6 @@ const featureList = [
     icon: FaTools,
     title: "Market-Validated Products",
     description: "Leverage AI tools with proven demand and results.",
-  },
-  {
-    icon: FaPalette,
-    title: "White-Label Solutions",
-    description: "Sell our tech under your own brand with custom pricing.",
   },
   {
     icon: FaUserShield,

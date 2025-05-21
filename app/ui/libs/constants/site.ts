@@ -35,6 +35,7 @@ const partnerLinkList = [
   { href: "/partners/royalty-program", label: "Royalty Program" },
   { href: "/partners/startup-program", label: "Startup Program" },
   { href: "/partners/reseller-program", label: "Reseller Program" },
+  { href: "/partners/implementation-partner", label: "Implementation Partner" },
 ];
 
 const companyLinkList = [
