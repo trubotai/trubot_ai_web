@@ -18,7 +18,7 @@ export async function generateMetadata() {
       type: "website",
       images: [
         {
-          url: "https://trubotai.com/og/blog-listing.png", // Change
+          url: "/images/blog-listing.png",
           width: 1200,
           height: 630,
           alt: "TruBot AI Blog Overview",
