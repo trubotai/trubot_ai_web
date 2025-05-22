@@ -34,6 +34,11 @@ const partnerLinkList = [
   { href: "/partners/mna", label: "M&A Opportunities" },
   { href: "/partners/royalty-program", label: "Royalty Program" },
   { href: "/partners/startup-program", label: "Startup Program" },
+  { href: "/partners/reseller-program", label: "Reseller Program" },
+  { href: "/partners/implementation-partner", label: "Implementation Partner" },
+  { href: "/partners/technology-partner", label: "Technology Partner" },
+  { href: "/partners/sales-partner", label: "Sales Partner" },
+  { href: "/partners/strategic-partner", label: "Strategic Partner" },
 ];
 
 const companyLinkList = [
