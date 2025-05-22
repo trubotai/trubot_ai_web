@@ -4,6 +4,36 @@ import Link from "next/link";
 
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 
+export async function generateMetadata() {
+  return {
+    title: "Blog Articles | TruBot AI",
+    description:
+      "Explore insights, tutorials, and updates from TruBot AI. Stay ahead with our latest articles on AI, automation, and technology.",
+    openGraph: {
+      title: "Blog Articles | TruBot AI",
+      description:
+        "Explore insights, tutorials, and updates from TruBot AI. Stay ahead with our latest articles on AI, automation, and technology.",
+      url: "https://trubotai.com/blog",
+      siteName: "TruBot AI",
+      type: "website",
+      images: [
+        {
+          url: "https://trubotai.com/og/blog-listing.png", // Change
+          width: 1200,
+          height: 630,
+          alt: "TruBot AI Blog Overview",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Blog Articles | TruBot AI",
+      description:
+        "Explore insights, tutorials, and updates from TruBot AI. Stay ahead with our latest articles on AI, automation, and technology.",
+    },
+  };
+}
+
 export default async function BlogPage() {
   const client = createClient();
   const posts = await client.getAllByType("blog_post", {

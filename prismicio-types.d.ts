@@ -4,6 +4,8 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type BlogPostDocumentDataSlicesSlice = never;
+
 /**
  * Content for Blog Post documents
  */
@@ -86,28 +88,6 @@ interface BlogPostDocumentData {
   tags: prismic.SelectField<"chatbots" | "voicebots" | "AI Machine" | "Nature">;
 
   /**
-   * SEO Title field in *Blog Post*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Custom title for SEO purposes
-   * - **API ID Path**: blog_post.seo_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  seo_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Blog Post*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Custom meta description for SEO purposes
-   * - **API ID Path**: blog_post.meta_description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
    * Estimated Read Time field in *Blog Post*
    *
    * - **Field Type**: Number
@@ -117,6 +97,48 @@ interface BlogPostDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   estimated_read_time: prismic.NumberField;
+
+  /**
+   * Slice Zone field in *Blog Post*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<BlogPostDocumentDataSlicesSlice> /**
+   * Meta Title field in *Blog Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: blog_post.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Blog Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: blog_post.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Blog Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
 }
 
 /**
@@ -135,79 +157,7 @@ export type BlogPostDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = never;
-
-/**
- * Content for Page documents
- */
-interface PageDocumentData {
-  /**
-   * Title field in *Page*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.TitleField;
-
-  /**
-   * Slice Zone field in *Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * Page document from Prismic
- *
- * - **API ID**: `page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type PageDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-
-export type AllDocumentTypes = BlogPostDocument | PageDocument;
+export type AllDocumentTypes = BlogPostDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -232,9 +182,7 @@ declare module "@prismicio/client" {
     export type {
       BlogPostDocument,
       BlogPostDocumentData,
-      PageDocument,
-      PageDocumentData,
-      PageDocumentDataSlicesSlice,
+      BlogPostDocumentDataSlicesSlice,
       AllDocumentTypes,
     };
   }

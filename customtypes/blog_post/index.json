@@ -3,7 +3,7 @@
   "label": "Blog Post",
   "repeatable": true,
   "status": true,
-  "format": "custom",
+  "format": "page",
   "json": {
     "Main": {
       "uid": {
@@ -66,25 +66,42 @@
           "options": ["chatbots", "voicebots", "AI Machine", "Nature"]
         }
       },
-      "seo_title": {
+      "estimated_read_time": {
+        "type": "Number",
+        "config": {
+          "label": "Estimated Read Time",
+          "placeholder": "Approximate time to read the blog post, enhancing user experience"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
         "type": "Text",
         "config": {
-          "label": "SEO Title",
-          "placeholder": "Custom title for SEO purposes"
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
         }
       },
       "meta_description": {
         "type": "Text",
         "config": {
           "label": "Meta Description",
-          "placeholder": "Custom meta description for SEO purposes"
+          "placeholder": "A brief summary of the page"
         }
       },
-      "estimated_read_time": {
-        "type": "Number",
+      "meta_image": {
+        "type": "Image",
         "config": {
-          "label": "Estimated Read Time",
-          "placeholder": "Approximate time to read the blog post, enhancing user experience"
+          "label": "Meta Image",
+          "constraint": {},
+          "thumbnails": []
         }
       }
     }
