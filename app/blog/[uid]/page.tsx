@@ -30,7 +30,7 @@ export async function generateMetadata({
   const imageUrl =
     post.data.meta_image?.url ||
     post.data.cover_image?.url ||
-    "/default-og.png";
+    "/images/default-og.png";
   const imageAlt =
     post.data.meta_image?.alt ||
     post.data.cover_image?.alt ||
