@@ -10,6 +10,55 @@ export async function generateStaticParams() {
   const posts = await client.getAllByType("blog_post");
   return posts.map((post) => ({ uid: post.uid }));
 }
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ uid: string }>;
+}) {
+  const { uid } = await params;
+  const client = createClient();
+  const post = await client.getByUID("blog_post", uid);
+
+  if (!post) return {};
+
+  const title = post.data.meta_title || post.data.title || "Blog Post";
+  const description =
+    post.data.meta_description ||
+    post.data.excerpt ||
+    "Explore this blog post.";
+  const imageUrl =
+    post.data.meta_image?.url ||
+    post.data.cover_image?.url ||
+    "/default-og.png";
+  const imageAlt =
+    post.data.meta_image?.alt ||
+    post.data.cover_image?.alt ||
+    "Blog Post Image";
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: imageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
+
 const Page = async ({ params }: { params: Promise<{ uid: string }> }) => {
   const { uid } = await params;
   const client = createClient();
@@ -32,13 +81,15 @@ const Page = async ({ params }: { params: Promise<{ uid: string }> }) => {
       </h1>
 
       <p className="text-navy/60 text-sm mb-8 font-body fade-in animation-delay-200">
-        {post.data.author}{" "}
+        {post.data.author}
         {post.data.publish_date &&
           ` | ${new Date(post.data.publish_date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
             day: "numeric",
           })}`}
+        {post.data.estimated_read_time &&
+          ` | ${post.data.estimated_read_time} min read`}
       </p>
 
       <div className="prose prose-lg text-navy font-body fade-in slide-in-up animation-delay-300">
