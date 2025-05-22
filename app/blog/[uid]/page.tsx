@@ -14,41 +14,47 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { uid: string };
+  params: Promise<{ uid: string }>;
 }) {
+  const { uid } = await params;
   const client = createClient();
-  const post = await client.getByUID("blog_post", params.uid);
+  const post = await client.getByUID("blog_post", uid);
 
   if (!post) return {};
 
+  const title = post.data.meta_title || post.data.title || "Blog Post";
+  const description =
+    post.data.meta_description ||
+    post.data.excerpt ||
+    "Explore this blog post.";
+  const imageUrl =
+    post.data.meta_image?.url ||
+    post.data.cover_image?.url ||
+    "/default-og.png";
+  const imageAlt =
+    post.data.meta_image?.alt ||
+    post.data.cover_image?.alt ||
+    "Blog Post Image";
+
   return {
-    title: post.data.meta_title || post.data.title || "Blog Post",
-    description:
-      post.data.meta_description ||
-      post.data.excerpt ||
-      "Explore this blog post from TruBot AI.",
+    title,
+    description,
     openGraph: {
-      title: post.data.meta_title || post.data.title,
-      description: post.data.meta_description || post.data.excerpt || "",
+      title,
+      description,
       images: [
         {
-          url:
-            post.data.meta_image?.url ||
-            post.data.cover_image?.url ||
-            "/default-og.png",
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt:
-            post.data.meta_image?.alt ||
-            post.data.cover_image?.alt ||
-            "Blog Post Image",
+          alt: imageAlt,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.data.meta_title || post.data.title,
-      description: post.data.meta_description || post.data.excerpt || "",
+      title,
+      description,
     },
   };
 }
