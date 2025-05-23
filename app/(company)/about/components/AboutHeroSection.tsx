@@ -1,66 +1,71 @@
-import { ArrowRight, ChevronDown } from "lucide-react";
-
-import PageLayout from "@/app/ui/components/shared/PageLayout";
 import Button from "@/app/ui/components/shared/Button";
+import PageLayout from "@/app/ui/components/shared/PageLayout";
 
-const AboutHeroSection = () => {
+interface CTA {
+  label: string;
+  href: string;
+}
+
+interface AboutHeroSectionProps {
+  tagline: string;
+  heading: string;
+  subheading: string;
+  primaryCTA: CTA;
+  secondaryCTA?: CTA;
+}
+
+const AboutHeroSection = ({
+  tagline,
+  heading,
+  subheading,
+  primaryCTA,
+  secondaryCTA,
+}: AboutHeroSectionProps) => {
   return (
-    <div className="relative bg-dark py-32 text-light overflow-hidden">
+    <div className="relative bg-light text-navy overflow-hidden">
+      {/* Radial Glow Behind Headline */}
+      <div className="absolute top-1/3 left-1/2 w-[900px] h-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-electric/10 blur-[120px] z-0 pointer-events-none" />
+
       <PageLayout
         id="about-hero"
-        className="relative z-10 text-center flex flex-col items-center"
+        className="relative z-10 min-h-[80vh] flex flex-col items-center justify-center"
+        padding="lg"
       >
         {/* Tagline with typing effect */}
         <p
           className="text-electric max-w-md font-body text-md mb-4 typing-effect overflow-hidden"
-          aria-label="Empowering organizations with ethical, scalable AI"
+          aria-label={tagline}
         >
-          Empowering organizations with ethical, scalable AI
+          {tagline}
         </p>
 
-        {/* Main Headline */}
-        <h1 className="text-5xl sm:text-6xl font-heading font-extrabold leading-tight mb-6 bg-gradient-to-r from-electric via-teal to-navy bg-clip-text text-transparent fade-in slide-in-up">
-          Pioneering the Future of AI for Business
-        </h1>
+        <div className="max-w-4xl text-center">
+          <h1 className="text-5xl sm:text-6xl font-heading font-extrabold leading-tight tracking-tight mb-6 bg-gradient-to-r from-electric via-teal to-navy bg-clip-text text-transparent drop-shadow-md fade-in slide-in-up">
+            {heading}
+          </h1>
 
-        {/* Subheadline */}
-        <p className="text-lg sm:text-xl text-light/80 max-w-2xl mb-10 fade-in slide-in-up animation-delay-300">
-          We&apos;re on a mission to make powerful AI solutions accessible,
-          practical, and transformative for organizations of all sizes.
-        </p>
+          <p className="text-lg sm:text-xl text-navy/70 font-body max-w-2xl mx-auto mb-10 px-4 py-4 fade-in slide-in-up animation-delay-200">
+            {subheading}
+          </p>
 
-        {/* CTA */}
-        <Button
-          href="/contact"
-          variant="coral"
-          animate
-          label="Talk to Us"
-          iconRight={ArrowRight}
-          iconAnimate
-        />
+          <div className="flex flex-wrap justify-center gap-4 fade-in scale-up animation-delay-300">
+            <Button
+              href={primaryCTA.href}
+              variant="primary"
+              animate
+              label={primaryCTA.label}
+            />
+            {secondaryCTA && (
+              <Button
+                href={secondaryCTA.href}
+                variant="outline"
+                animate
+                label={secondaryCTA.label}
+              />
+            )}
+          </div>
+        </div>
       </PageLayout>
-
-      {/* Background Decoration Blobs */}
-      <div
-        className="absolute -top-32 -left-32 w-96 h-96 bg-electric opacity-20 rounded-full blur-3xl"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute -bottom-24 -right-24 w-96 h-96 bg-coral opacity-20 rounded-full blur-3xl"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute top-1/2 left-1/2 w-80 h-80 bg-teal opacity-10 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"
-        aria-hidden="true"
-      />
-
-      {/* Scroll Cue */}
-      <div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-electric"
-        aria-hidden="true"
-      >
-        <ChevronDown className="w-6 h-6" />
-      </div>
     </div>
   );
 };
