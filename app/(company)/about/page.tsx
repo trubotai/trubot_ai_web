@@ -324,7 +324,7 @@ const Page = () => {
             return (
               <div
                 key={index}
-                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-in slide-in-up"
+                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center rounded-xl bg-gray-soft p-8 md:p-12 shadow fade-in slide-in-up"
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
                 <div
