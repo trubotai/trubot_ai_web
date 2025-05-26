@@ -54,10 +54,14 @@ const footerLinkList = [
   { href: "/solutions", label: "Solutions" },
 ];
 
+const meetLink =
+  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV";
+
 export {
   productLinkList,
   solutionLinkList,
   partnerLinkList,
   companyLinkList,
   footerLinkList,
+  meetLink,
 };

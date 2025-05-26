@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Metadata } from "next";
 import { FaCheckCircle, FaUserTie } from "react-icons/fa";
 
 import AboutHeroSection from "./components/AboutHeroSection";
@@ -18,10 +19,23 @@ import {
   ctaSection,
 } from "../../ui/libs/constants/company/about";
 
-export const metadata = {
-  title: "About – TruBot AI",
+export const metadata: Metadata = {
+  title: "About TruBot AI | Empowering SMEs with Accessible AI Solutions",
   description:
-    "Discover how TruBot AI is making AI solutions accessible and transformative for businesses worldwide.",
+    "Learn about TruBot AI's mission to simplify AI for small and mid-sized businesses. Discover our journey, core values, and commitment to making intelligent automation accessible to all.",
+  keywords: [
+    "TruBot AI",
+    "About TruBot AI",
+    "AI for SMEs",
+    "Accessible AI solutions",
+    "AI automation for small businesses",
+    "TruBot mission",
+    "TruBot values",
+    "AI tools for SMEs",
+  ],
+  authors: [{ name: "TruBot AI", url: "https://trubot.ai/about" }],
+  creator: "TruBot AI",
+  publisher: "TruBot AI",
 };
 
 const Page = () => {
@@ -310,7 +324,7 @@ const Page = () => {
             return (
               <div
                 key={index}
-                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-in slide-in-up"
+                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center rounded-xl bg-gray-soft p-8 md:p-12 shadow fade-in slide-in-up"
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
                 <div
