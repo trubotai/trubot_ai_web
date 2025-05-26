@@ -1,86 +1,179 @@
 import {
-  FaClock,
-  FaPiggyBank,
-  FaMedal,
-  FaLightbulb,
-  FaPlane,
-  FaSitemap,
-} from "react-icons/fa";
+  LuBadgeDollarSign,
+  LuBrainCircuit,
+  LuCalendarClock,
+  LuClock,
+  LuGlobe,
+  LuHeartHandshake,
+  LuLaptop,
+  LuLightbulb,
+  LuNetwork,
+  LuPercent,
+  LuPuzzle,
+  LuRocket,
+  LuShieldCheck,
+  LuTarget,
+  LuUser,
+  LuUserCheck,
+  LuWand,
+  LuZap,
+} from "react-icons/lu";
+import { FaRocket } from "react-icons/fa";
+import { FiTool } from "react-icons/fi";
 
 const heroSection = {
-  title:
-    "Redefine Your Career at TruBot AI — 4-Day Work Weeks & Equity Freedom",
+  title: "Work That Matters. People Who Care.",
   subtitle:
-    "Build AI’s future while owning your own—reach financial freedom in 5 years, and leave a legacy of financial freedom for generations.",
+    "At TruBot AI, we’re building more than just products we’re creating the infrastructure for small businesses to grow faster, smarter, and stronger. And we’re doing it together.",
   primaryCTA: {
-    label: "Join Our Team",
-    href: "mailto:careers@trubotai.com?subject=TruBot%20AI%20Career%20Interest",
+    label: "Explore Open Roles",
+    href: "/careers",
+    iconLeft: FaRocket,
   },
   secondaryCTA: {
-    label: "Email Us",
-    href: "mailto:careers@trubotai.com?subject=TruBot%20AI%20Career%20Interest",
+    label: "Just say Hello",
+    href: "/contact",
+    iconLeft: LuUser,
+  },
+  text: " Not sure where you fit in yet? That’s okay. We’re always open to meeting curious minds.",
+  image: {
+    src: "/images/our-culture/teamwork-illustration.png",
+    alt: "Team collaboration illustration",
   },
 };
+
+const culturePillarList = [
+  {
+    icon: LuZap,
+    title: "Fast & Focused",
+    description:
+      "We build what solves real problems, move quickly, and iterate even faster.",
+  },
+  {
+    icon: LuWand,
+    title: "Idea-First, Ego-Free",
+    description: "The best idea wins regardless of who says it.",
+  },
+  {
+    icon: LuHeartHandshake,
+    title: "Respect & Transparency",
+    description:
+      "We speak honestly and trust each other to do the right thing.",
+  },
+  {
+    icon: LuLightbulb,
+    title: "Innovation Every Day",
+    description: "We always ask: 'What can we do better?'",
+  },
+  {
+    icon: FiTool,
+    title: "Real Ownership",
+    description: "If you’re here, we trust you to own your work.",
+  },
+  {
+    icon: LuTarget,
+    title: "Impact-Driven",
+    description: "Your work directly helps SMEs grow smarter.",
+  },
+];
+
+const highlightList = [
+  {
+    icon: LuLaptop,
+    title: "Remote-First, Always",
+    description: "Work from anywhere, collaborate in real-time or async.",
+  },
+  {
+    icon: LuCalendarClock,
+    title: "Weekly Demos",
+    description: "We share wins, test builds, and celebrate experiments.",
+  },
+  {
+    icon: LuClock,
+    title: "Goal-Oriented, Not Clock-Oriented",
+    description: "We care about outcomes, not hours.",
+  },
+  {
+    icon: LuUserCheck,
+    title: "AI Builders at Heart",
+    description:
+      "Every team member contributes to products like AI Agents and Voicebots.",
+  },
+];
+
+const roadmapList = [
+  {
+    icon: LuNetwork,
+    title: "Interconnected Ecosystem",
+    description:
+      "Our vision is a unified AI suite where chat, voice, agents, and automation work seamlessly together.",
+  },
+  {
+    icon: LuGlobe,
+    title: "Global Reach, Local Impact",
+    description:
+      "From around the globe, we’re designing solutions that scale globally but feel personalized locally.",
+  },
+  {
+    icon: LuPuzzle,
+    title: "Built with Partnerships",
+    description:
+      "Our growth is fueled by partners—see our work with SME Empowerment and White-Label Partners.",
+  },
+  {
+    icon: LuBrainCircuit,
+    title: "Always Evolving",
+    description:
+      "We don’t settle. Every iteration, every release is a step toward smarter, faster, and more human-centered AI.",
+  },
+];
 
 const perkList = [
   {
     audience: "4-Day Work Week",
-    subtitle: "Because burnout doesn’t build billion-dollar products.",
+    subtitle: "Because burnout doesn’t build billion dollar products.",
     benefits: [
-      { icon: FaClock, text: "Every Friday off — seriously" },
-      { icon: FaClock, text: "Maximize output, minimize burnout" },
+      { icon: LuCalendarClock, text: "Every Friday off — seriously" },
+      { icon: LuZap, text: "Maximize output, minimize burnout" },
     ],
   },
   {
     audience: "Base Equity for Everyone",
     subtitle: "Be an owner, not just an employee.",
     benefits: [
-      { icon: FaPiggyBank, text: "Equity from day one" },
-      { icon: FaPiggyBank, text: "Transparent comp & vesting" },
+      { icon: LuBadgeDollarSign, text: "Equity from day one" },
+      { icon: LuPercent, text: "Transparent comp & vesting" },
     ],
   },
   {
     audience: "Top 1% Employer",
     subtitle: "Culture of innovation, not bureaucracy.",
     benefits: [
-      { icon: FaMedal, text: "Zero micro-management" },
-      { icon: FaMedal, text: "Mission-driven teams" },
+      { icon: LuShieldCheck, text: "Zero micro-management" },
+      { icon: LuRocket, text: "Mission-driven teams" },
     ],
   },
 ];
 
-const howWeWorkList = [
-  {
-    title: "Innovation Labs",
-    description:
-      "20% of your time is dedicated to passion projects and moonshot ideas.",
-    icon: FaLightbulb,
-  },
-  {
-    title: "Global Retreats",
-    description:
-      "Annual team offsites to reflect, recharge, and celebrate big wins.",
-    icon: FaPlane,
-  },
-  {
-    title: "Zero Hierarchy",
-    description: "Best ideas win—no job title politics, just impact.",
-    icon: FaSitemap,
-  },
-];
-
 const ctaSection = {
-  title: "Join a Culture Where You Build and Belong",
+  title: "Let’s Build the Future of Work — Together",
   subtitle:
-    "Be part of a team that values freedom, ownership, and impact. We're hiring across tech, product, and growth.",
+    "At TruBot AI, we're rethinking what it means to work, build, and grow in a world powered by AI. Whether you're an engineer, designer, operator, or just someone who loves solving problems, we'd love to connect.",
   primaryCTA: {
-    label: "Join Our Team",
-    href: "mailto:careers@trubotai.com?subject=TruBot%20AI%20Career%20Interest",
+    label: "Explore Careers",
+    href: "/careers",
   },
   secondaryCTA: {
     label: "Email Us",
-    href: "mailto:careers@trubotai.com?subject=TruBot%20AI%20Career%20Interest",
+    href: "mailto:careers@trubotai.com",
   },
 };
 
-export { heroSection, perkList, howWeWorkList, ctaSection };
+export {
+  heroSection,
+  culturePillarList,
+  highlightList,
+  roadmapList,
+  perkList,
+  ctaSection,
+};
