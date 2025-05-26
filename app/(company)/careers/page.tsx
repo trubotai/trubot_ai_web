@@ -18,24 +18,27 @@ import {
 } from "../../ui/libs/constants/company/careers";
 
 export const metadata: Metadata = {
-  title: "Careers – TruBot AI",
+  title: "Join TruBot AI – Build the Future of AI with Us",
   description:
-    "Join our growing team and help shape the future of AI-powered business automation.",
+    "Discover exciting career opportunities at TruBot AI. We're seeking passionate individuals to join our mission in transforming AI solutions. Explore our open roles and be part of our innovative team.",
   keywords: [
-    "TruBot AI Careers",
-    "Jobs at TruBot AI",
-    "Work at AI Startup",
-    "AI Developer Jobs",
-    "AI Product Manager Careers",
-    "AI Design Jobs",
-    "Tech Startup Hiring",
-    "Remote AI Jobs",
-    "AI Automation Careers",
-    "AI Internship Opportunities",
-    "Join AI Team",
-    "Apply AI Company",
-    "TruBot AI Hiring",
+    "TruBot AI careers",
+    "AI job opportunities",
+    "join TruBot AI",
+    "TruBot AI hiring",
+    "AI careers",
+    "TruBot AI open positions",
+    "TruBot AI jobs",
+    "TruBot AI team",
   ],
+  authors: [
+    {
+      name: "TruBot AI",
+      url: "https://trubot.ai/careers",
+    },
+  ],
+  creator: "TruBot AI",
+  publisher: "TruBot AI",
 };
 
 const Page = () => {
