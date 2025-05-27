@@ -1,256 +1,154 @@
-const jobList = [
+import {
+  FaArrowRight,
+  FaBrain,
+  FaCalendarAlt,
+  FaChartLine,
+  FaClipboardCheck,
+  FaCoins,
+  FaEnvelope,
+  FaFlask,
+  FaGlobe,
+  FaRocket,
+  FaStopwatch,
+} from "react-icons/fa";
+
+import jobListData from "./jobListData";
+
+const heroSection = {
+  tagline: "Equity-first. Remote-ready. Real-world problems.",
+  title: "Build the Future of AI With Us.",
+  subtitle:
+    "At TruBot AI, we’re not just building tools, we’re building the infrastructure for a smarter, faster world of work. Join a team that’s redefining business communication through AI-powered automation, and make a real impact from day one.",
+  primaryCTA: {
+    label: "View Open Roles",
+    href: "#job-listing",
+    iconRight: FaArrowRight,
+  },
+  secondaryCTA: {
+    label: "Reach Out",
+    href: "mailto:careers@trubotai.com",
+    iconLeft: FaEnvelope,
+  },
+  image: {
+    src: "/images/careers/ai-team-illustration.png",
+    alt: "AI Team Illustration",
+  },
+};
+
+const principleList = [
   {
-    id: "board-advisor-sales-growth",
-    title: "Board Advisor – Sales & Growth",
-    location: "Remote",
-    type: "Part-Time / Advisory",
-    href: "/careers/board-advisor-sales-growth",
+    icon: FaFlask,
+    title: "Real Work, Real Tasks",
+    description:
+      "We don't do abstract puzzles or panel interviews. Every candidate completes a role-specific challenge. The kind of work you'd be doing here day to day.",
   },
   {
-    id: "board-advisor-technology",
-    title: "Board Advisor – Technology",
-    location: "Remote",
-    type: "Part-Time / Advisory",
-    href: "/careers/board-advisor-technology",
+    icon: FaChartLine,
+    title: "Trial First, Titles Later",
+    description:
+      "We begin with a 3–6 month trial: paid and fully integrated with the team. It’s your time to explore the role, make real impact, and decide if we’re the right fit for you.",
   },
   {
-    id: "board-advisor-finance",
-    title: "Board Advisor – Finance",
-    location: "Remote",
-    type: "Part-Time / Advisory",
-    href: "/careers/board-advisor-finance",
+    icon: FaCoins,
+    title: "Equity from Day One",
+    description:
+      "We don’t wait to 'see how you do' before offering equity. From Day 1 of your trial, you're earning a stake in the company.",
   },
   {
-    id: "board-advisor-legal",
-    title: "Board Advisor – Legal",
-    location: "Remote",
-    type: "Part-Time / Advisory",
-    href: "/careers/board-advisor-legal",
-  },
-  {
-    id: "svp-technology-ai",
-    title: "SVP of Technology – Artificial Intelligence",
-    location: "Remote",
-    type: "Full-Time",
-    href: "/careers/svp-technology-ai",
-  },
-  {
-    id: "chief-financial-officer",
-    title: "Chief Financial Officer",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/chief-financial-officer",
-  },
-  {
-    id: "chief-sales-officer",
-    title: "Chief Sales Officer",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/chief-sales-officer",
-  },
-  {
-    id: "chief-operations-officer",
-    title: "Chief Operating Officer",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/chief-operations-officer",
-  },
-  {
-    id: "chief-technology-officer",
-    title: "Chief Technology Officer",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/chief-technology-officer",
-  },
-  {
-    id: "vp-technology",
-    title: "Vice President of Technology",
-    location: "Remote",
-    type: "Full-Time",
-    href: "/careers/vp-technology",
-  },
-  {
-    id: "architect-ai-solutions",
-    title: "AI Solution Architect",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/architect-ai-solutions",
-  },
-  {
-    id: "head-sales-country",
-    title: "Head of Sales - Country",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/head-sales-country",
-  },
-  {
-    id: "head-human-resources",
-    title: "Head of Human Resources",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/head-human-resources",
-  },
-  {
-    id: "head-products",
-    title: "Head of Products",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/head-products",
-  },
-  {
-    id: "head-mergers-acquisitions",
-    title: "Head of M&A",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/head-mergers-acquisitions",
-  },
-  {
-    id: "head-fundraising",
-    title: "Head of Fundraising",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/head-fundraising",
-  },
-  {
-    id: "manager-human-resources",
-    title: "Human Resources Manager",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/manager-human-resources",
-  },
-  {
-    id: "manager-product",
-    title: "Product Manager",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/manager-product",
-  },
-  {
-    id: "manager-mergers-acquisitions-specialist",
-    title: "M&A Specialist Manager",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/manager-mergers-acquisitions-specialist",
-  },
-  {
-    id: "manager-fundraising",
-    title: "Fundraising Manager",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/manager-fundraising",
-  },
-  {
-    id: "manager-operations-customer-success",
-    title: "Customer Success Manager",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/manager-operations-customer-success",
-  },
-  {
-    id: "manager-technology-fullstack-engineer",
-    title: "Full Stack Engineering Manager",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/manager-technology-fullstack-engineer",
-  },
-  {
-    id: "manager-project",
-    title: "Project Manager",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/manager-project",
-  },
-  {
-    id: "manager-accounts-payroll",
-    title: "Accounts and Payroll Manager",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/manager-accounts-payroll",
-  },
-  {
-    id: "engineer-machine-learning",
-    title: "ML Engineer",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/engineer-machine-learning",
-  },
-  {
-    id: "engineer-software",
-    title: "Software Engineer",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/engineer-software",
-  },
-  {
-    id: "marketer-performance",
-    title: "Performance Marketer",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/marketer-performance",
-  },
-  {
-    id: "designer-graphic",
-    title: "Graphic Designer",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/designer-graphic",
-  },
-  {
-    id: "designer-uiux",
-    title: "UI/UX Designer",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/designer-uiux",
-  },
-  {
-    id: "lead-product-designer",
-    title: "Lead Product Designer",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/lead-product-designer",
-  },
-  {
-    id: "lead-social-media-strategy",
-    title: "Lead Social Media Strategy",
-    location: "Remote",
-    type: "Full-Time / Part-Time",
-    href: "/careers/lead-social-media-strategy",
-  },
-  {
-    id: "intern-sales-marketing",
-    title: "Sales and Marketing Intern",
-    location: "Remote",
-    type: "Internship",
-    href: "/careers/intern-sales-marketing",
-  },
-  {
-    id: "intern-human-resources",
-    title: "HR Intern",
-    location: "Remote",
-    type: "Internship",
-    href: "/careers/intern-human-resources",
-  },
-  {
-    id: "intern-product-marketing",
-    title: "Product Marketing Intern",
-    location: "Remote",
-    type: "Internship",
-    href: "/careers/intern-product-marketing",
-  },
-  {
-    id: "intern-technology-fullstack-developer",
-    title: "Full Stack Developer Intern",
-    location: "Remote",
-    type: "Internship",
-    href: "/careers/intern-technology-fullstack-developer",
-  },
-  {
-    id: "assistant-operations-founder",
-    title: "Executive Assistant – Founder",
-    location: "Tampa, FL",
-    type: "Part-Time",
-    href: "/careers/assistant-operations-founder",
+    icon: FaGlobe,
+    title: "Remote, Flexible, Transparent",
+    description:
+      "We operate async and remote-first. No micromanagement, no rigid hours. We share KPIs, salary bands, and performance feedback every 30 days.",
   },
 ];
 
-export { jobList };
+const stepList = [
+  {
+    icon: FaFlask,
+    title: "Role-Specific Challenge",
+    description:
+      "Forget multiple-choice tests or whiteboards. We’ll send you a challenge that reflects the actual problems we’re solving — and what you’ll be doing if you join. Each challenge is tailored to the role and your experience level.",
+  },
+  {
+    icon: FaChartLine,
+    title: "Trial Phase (3–6 Months)",
+    description:
+      "You’ll join the team on a trial basis — paid, with equity from day one. You'll work on real tasks, contribute to team outcomes, and get a sense of our work culture, speed, and expectations. It’s the ultimate mutual test drive.",
+  },
+  {
+    icon: FaRocket,
+    title: "Full-Time Offer + Scale with Us",
+    description:
+      "Once you prove your fit — by delivering value and aligning with our pace — we’ll extend a full-time offer. You’ll get clarity on role expectations, salary bands, and equity expansion options.",
+  },
+];
+
+const afterStepList = [
+  {
+    icon: FaClipboardCheck,
+    title: "We Review & Respond (Fast)",
+    description:
+      "We go through every application manually. If it’s a fit, you’ll hear from us within 3–5 business days with next steps. If not, we’ll still let you know.",
+  },
+  {
+    icon: FaBrain,
+    title: "You Get a Role-Specific Challenge",
+    description:
+      "You’ll receive a task that reflects what you’d actually be working on: build, strategize, pitch, or plan. We respect your time. Challenges are scoped for 3–5 hours max.",
+  },
+  {
+    icon: FaRocket,
+    title: "Trial → Feedback → Offer",
+    description:
+      "If the task goes well, we’ll invite you to join on a paid trial. You’ll ship with the team, get feedback every 30 days, and receive a full-time offer if we align.",
+  },
+];
+
+const summaryList = [
+  {
+    icon: FaCalendarAlt,
+    label: "Response Time",
+    value: "3–5 business days",
+  },
+  {
+    icon: FaStopwatch,
+    label: "Challenge Time Commitment",
+    value: "3–5 hours",
+  },
+  {
+    icon: FaCoins,
+    label: "Trial",
+    value: "Paid with equity from Day 1",
+  },
+  {
+    icon: FaChartLine,
+    label: "Offer",
+    value: "Includes salary + equity + growth path",
+  },
+];
+
+const jobList = [...jobListData];
+
+const ctaSection = {
+  title: "Let’s Build the Future of Work. Together.",
+  subtitle:
+    "Whether you’re an engineer who ships fast, a strategist who sees around corners, or a generalist who just gets stuff done, there’s space for you at TruBot AI. We’re solving meaningful problems with AI, and we’re doing it with speed, transparency, and shared ownership. If that sounds like your kind of place, we’d love to meet you.",
+  primaryCTA: {
+    label: "Apply for a Role",
+    href: "#job-listing",
+  },
+  secondaryCTA: {
+    label: "Learn How We Work",
+    href: "#how-we-hire",
+  },
+};
+
+export {
+  heroSection,
+  principleList,
+  stepList,
+  afterStepList,
+  summaryList,
+  jobList,
+  ctaSection,
+};

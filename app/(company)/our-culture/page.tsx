@@ -199,11 +199,7 @@ const Page = () => {
 
             {/* Optional CTA */}
             <div className="flex justify-end mt-5">
-              <Button
-                href="/careers"
-                label="See Open Roles"
-                variant="outline"
-              />
+              <Button href="/about" label="About TruBot AI" variant="outline" />
             </div>
           </div>
 
