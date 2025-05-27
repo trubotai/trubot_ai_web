@@ -32,7 +32,7 @@ const JobHeroSection: FC<JobHeroSectionProps> = ({
         <div className="max-w-4xl mx-auto fade-in text-light slide-in-up">
           <h1
             id="job-hero-heading"
-            className="text-4xl md:text-5xl font-heading font-extrabold mb-6"
+            className="text-5xl md:text-6xl font-heading font-extrabold mb-6"
           >
             {title}
           </h1>
@@ -58,12 +58,12 @@ const JobHeroSection: FC<JobHeroSectionProps> = ({
 
           <Button
             href={applyHref}
+            iconLeft={Send}
             label="Apply Now"
             aria-label={`Apply now for ${title} position`}
             variant="teal"
+            target="_blank"
             animate
-            iconLeft={Send}
-            rounded="full"
           />
         </div>
       </PageLayout>

@@ -60,7 +60,12 @@ const Page = () => {
 
             <div className="flex flex-wrap gap-4">
               <Button {...heroSection.primaryCTA} variant="primary" animate />
-              <Button {...heroSection.secondaryCTA} variant="outline" animate />
+              <Button
+                {...heroSection.secondaryCTA}
+                variant="outline"
+                target="_blank"
+                animate
+              />
             </div>
           </div>
 
@@ -69,9 +74,9 @@ const Page = () => {
             <Image
               src={heroSection.image.src}
               alt={heroSection.image.alt}
-              className="w-full h-auto"
               width={400}
               height={400}
+              className="w-full rounded-lg shadow-md"
             />
           </div>
         </PageLayout>
@@ -113,9 +118,6 @@ const Page = () => {
 
       {/* How We Hire */}
       <PageLayout id="hiring-process" className="relative">
-        {/* Background Glow */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-electric opacity-10 rounded-full blur-3xl z-0" />
-
         <SectionHeader
           title="Our Hiring Process, Step by Step"
           subtitle="Our process is designed to be fast, fair, and focused on what matters: how you think, what you can build, and whether we can grow together."
@@ -172,9 +174,12 @@ const Page = () => {
             href="mailto:careers@trubotai.com"
             label="Contact Careers"
             variant="link"
-            animate
+            target="_blank"
           />
         </div>
+
+        {/* Background Glow */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-electric opacity-10 rounded-full blur-3xl z-0" />
       </PageLayout>
 
       {/* Open Roles */}
@@ -220,12 +225,10 @@ const Page = () => {
             <div key={i} className="flex items-start gap-4">
               <item.icon className="w-6 h-6 text-electric mt-1" />
               <div>
-                <div className="text-sm font-semibold text-navy">
+                <h4 className="text-sm font-semibold text-navy">
                   {item.label}
-                </div>
-                <div className="text-sm text-navy/70 font-body">
-                  {item.value}
-                </div>
+                </h4>
+                <p className="text-sm text-navy/70 font-body">{item.value}</p>
               </div>
             </div>
           ))}
@@ -238,6 +241,7 @@ const Page = () => {
             href="mailto:careers@trubotai.com"
             label="Contact Our Team"
             variant="outline"
+            target="_blank"
             animate
           />
         </div>

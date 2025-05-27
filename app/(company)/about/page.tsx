@@ -102,8 +102,8 @@ const Page = () => {
           <div className="mt-16 max-w-3xl mx-auto text-center bg-light/80 border border-light/30 rounded-xl px-6 py-5 backdrop-blur-sm shadow fade-in scale-up animation-delay-400">
             <p className="text-navy font-medium text-lg font-body">
               You shouldn’t need a 50 person team to compete. That’s why we
-              built{" "}
-              <span className="text-electric font-semibold">TruBot AI</span> to
+              built
+              <span className="text-electric font-semibold"> TruBot AI </span>to
               help small businesses run smarter, faster, and lighter.
             </p>
           </div>
@@ -131,10 +131,10 @@ const Page = () => {
             <div className="flex justify-center md:justify-end">
               <Image
                 src={storySection.beginning.imgURL}
-                alt="Founding team illustration"
+                alt={storySection.beginning.imgAlt}
+                className="w-full rounded-lg shadow-md"
                 width={400}
-                height={300}
-                className="rounded-lg shadow-md"
+                height={400}
               />
             </div>
           </div>
@@ -145,10 +145,10 @@ const Page = () => {
             <div className="flex justify-center md:justify-start order-2 md:order-1">
               <Image
                 src={storySection.problem.imgURL}
-                alt="Challenges faced by small businesses"
+                alt={storySection.problem.imgAlt}
+                className="w-full rounded-lg shadow-md"
                 width={400}
-                height={300}
-                className="rounded-lg shadow-md"
+                height={400}
               />
             </div>
             <div className="order-1 md:order-2">
@@ -172,10 +172,10 @@ const Page = () => {
           <div className="mt-8 flex justify-center">
             <Image
               src={storySection.solution.imgURL}
-              alt="TruBot AI platform visual"
+              alt={storySection.solution.imgAlt}
+              className="h-full rounded-lg shadow-md"
               width={600}
-              height={400}
-              className="rounded-lg shadow-md"
+              height={600}
             />
           </div>
         </div>
@@ -196,13 +196,10 @@ const Page = () => {
 
           {/* Mission Subheading */}
           <div className="mt-20 text-center fade-in slide-in-up animation-delay-200">
-            <h2 className="text-xl font-heading font-semibold text-navy mb-2">
-              {visionNMissionSection.mission.title}
-            </h2>
-            <p className="text-navy/70 text-base font-body max-w-xl mx-auto">
-              {visionNMissionSection.mission.text}
-            </p>
-            <div className="w-12 h-1 bg-electric mt-4 mx-auto rounded-full" />
+            <SectionHeader
+              title={visionNMissionSection.mission.title}
+              subtitle={visionNMissionSection.mission.text}
+            />
           </div>
 
           {/* Mission Principles Grid */}
@@ -234,14 +231,14 @@ const Page = () => {
             )}
           </div>
 
-          <div className="mt-20 text-center fade-in slide-in-up animation-delay-400">
+          <div className="mt-20 text-center">
             <p className="text-navy/70 font-body text-base mb-3">
               {visionNMissionSection.cta.text}
             </p>
             <Button
               href={visionNMissionSection.cta.buttonHref}
-              variant="link"
               label={visionNMissionSection.cta.buttonLabel}
+              variant="link"
               animate
             />
           </div>
@@ -335,9 +332,9 @@ const Page = () => {
                   <Image
                     src={item.image}
                     alt={item.title}
-                    width={500}
-                    height={300}
-                    className="rounded-lg shadow-md object-contain"
+                    className="w-full rounded-lg shadow-md"
+                    width={400}
+                    height={400}
                   />
                 </div>
 
@@ -349,12 +346,7 @@ const Page = () => {
                     {item.content}
                   </p>
                   {item.cta && (
-                    <Button
-                      href={item.cta.href}
-                      variant="outline"
-                      label={item.cta.label}
-                      animate
-                    />
+                    <Button {...item.cta} variant="outline" animate />
                   )}
                 </div>
               </div>
@@ -370,8 +362,8 @@ const Page = () => {
           <div className="mt-6">
             <Button
               href="/investor-relations"
-              variant="secondary"
               label="Learn about our vision"
+              variant="secondary"
               animate
             />
           </div>

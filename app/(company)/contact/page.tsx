@@ -20,43 +20,46 @@ import {
 } from "../../ui/libs/constants/company/contact";
 
 export const metadata: Metadata = {
-  title: "Contact – TruBot AI",
+  title: "Contact TruBot AI | Reach Out to Our Team",
   description:
-    "Get in touch with our team for demo requests, business inquiries, or support.",
+    "Get in touch with TruBot AI for inquiries, support, partnerships, or career opportunities. We're here to assist you.",
   keywords: [
-    "Contact TruBot AI",
-    "AI Consultation",
-    "TruBot AI Support",
-    "TruBot AI Offices",
-    "Book AI Demo",
-    "AI Business Inquiries",
-    "AI Founder's Contact",
-    "Schedule AI Consultation",
-    "AI Emergency Support",
-    "Connect with TruBot AI",
-    "AI Company Contact",
-    "TruBot AI Helpdesk",
-    "TruBot AI LinkedIn",
+    "TruBot AI contact",
+    "contact TruBot AI",
+    "TruBot AI support",
+    "TruBot AI partnerships",
+    "TruBot AI careers",
+    "TruBot AI inquiries",
+    "TruBot AI Pune",
+    "TruBot AI email",
+    "TruBot AI phone",
+    "TruBot AI customer service",
   ],
+  authors: [
+    {
+      name: "TruBot AI",
+      url: "https://trubot.ai/contact",
+    },
+  ],
+  creator: "TruBot AI",
+  publisher: "TruBot AI",
 };
 
 const Page = () => {
   return (
     <>
       {/* Hero */}
-      <div className="relative bg-gradient-to-br from-navy via-dark to-black text-light min-h-screen justify-center items-center flex overflow-hidden">
-        {/* Starry Background */}
-        <div className="absolute inset-0 z-0 pointer-events-none bg-cover opacity-10 animate-fade-in" />
-
+      <div className="relative bg-gradient-to-br from-navy via-dark to-black text-light min-h-screen flex items-center overflow-hidden">
         <PageLayout
           id="contact-hero"
           className="relative z-10 text-center max-w-4xl mx-auto fade-in slide-in-up"
+          padding="lg"
         >
           <div className="flex justify-center mb-6">
             <FaRobot size={64} className="text-electric float" />
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-heading font-extrabold leading-tight mb-6 bg-gradient-to-r from-electric to-teal bg-clip-text text-transparent">
+          <h1 className="text-5xl sm:text-6xl font-heading font-extrabold leading-tight mb-6 bg-gradient-to-r from-electric to-teal bg-clip-text text-transparent">
             {heroSection.title}
           </h1>
 
@@ -67,13 +70,16 @@ const Page = () => {
           <div className="flex flex-wrap justify-center gap-4 fade-in scale-up animation-delay-300">
             <Button
               {...heroSection.primaryCTA}
-              variant="primary"
-              rounded="full"
-              animate
               ariaLabel="Send an email to contact@trubotai.com"
+              variant="primary"
+              target="_blank"
+              animate
             />
           </div>
         </PageLayout>
+
+        {/* Starry Background */}
+        <div className="absolute inset-0 z-0 pointer-events-none bg-cover opacity-10 animate-fade-in" />
       </div>
 
       {/* Need a faster Reply? Book A Call */}
@@ -85,9 +91,9 @@ const Page = () => {
               <Image
                 src={bookCallSection.image.src}
                 alt={bookCallSection.image.alt}
-                width={480}
-                height={320}
-                className="w-full h-auto max-w-md md:max-w-full"
+                width={400}
+                height={400}
+                className="w-full rounded-lg shadow-md"
               />
             </div>
 
@@ -102,11 +108,10 @@ const Page = () => {
 
               <Button
                 {...bookCallSection.primaryCTA}
-                variant="primary"
-                rounded="full"
-                animate
-                target="_blank"
                 ariaLabel="Schedule a call with TruBot AI"
+                variant="primary"
+                target="_blank"
+                animate
               />
             </div>
           </div>
@@ -152,8 +157,8 @@ const Page = () => {
               ) : (
                 <Button
                   href={`mailto:${contact.email}`}
-                  label={contact.email}
                   iconLeft={Mail}
+                  label={contact.email}
                   variant="link"
                   target="_blank"
                   className="pl-0"
@@ -169,14 +174,14 @@ const Page = () => {
             href="/sales"
             variant="link"
             label="Sales"
-            className="inline"
+            className="inline pl-1 pr-1"
           />
           or
           <Button
             href="/investor-relations"
             variant="link"
             label="Investor Relations"
-            className="inline"
+            className="inline pl-1 pr-1"
           />
           page.
         </p>
@@ -196,7 +201,7 @@ const Page = () => {
               <Link
                 key={index}
                 href={item.href}
-                className="group block p-6 rounded-3xl bg-light/80 border border-transparent backdrop-blur-md shadow transition-all hover:shadow-xl hover:scale-[1.02] hover:border-electric focus:outline-none fade-in slide-in-up"
+                className="group block p-6 rounded-3xl bg-light/90 border border-transparent backdrop-blur-md shadow transition-all hover:shadow-xl hover:scale-[1.02] hover:border-electric focus:outline-none fade-in slide-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center mb-4">
@@ -220,7 +225,6 @@ const Page = () => {
               href="/demo"
               label="See Our Demo"
               variant="outline"
-              rounded="full"
               animate
             />
           </div>
@@ -243,10 +247,10 @@ const Page = () => {
             >
               <iframe
                 src={location.iframeSrc}
-                loading="lazy"
                 title={`Map of ${location.title}`}
-                aria-label={`Map showing location of ${location.title}`}
+                loading="lazy"
                 className="w-full h-64 md:h-80 border-0"
+                aria-label={`Map showing location of ${location.title}`}
                 allowFullScreen
               />
               <div className="p-6">
@@ -267,9 +271,9 @@ const Page = () => {
                     location.title
                   )}`}
                   label="Open in Google Maps"
+                  iconRight={FaArrowRight}
                   variant="link"
                   target="_blank"
-                  iconRight={FaArrowRight}
                   className="pl-0"
                 />
               </div>
@@ -304,9 +308,9 @@ const Page = () => {
               <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-electric/10 flex items-center justify-center text-electric text-2xl">
                 <social.icon />
               </div>
-              <div className="text-navy font-heading text-md font-semibold group-hover:text-electric">
+              <h3 className="text-navy font-heading text-md font-semibold group-hover:text-electric">
                 {social.label}
-              </div>
+              </h3>
               <p className="text-sm text-navy/60 font-body mt-1">Follow us</p>
             </Link>
           ))}
@@ -314,14 +318,20 @@ const Page = () => {
 
         {/* CTA Line */}
         <p className="text-sm text-navy/60 text-center mt-10 font-body fade-in animation-delay-400">
-          Curious about our mission?{" "}
-          <Link href="/about" className="text-electric">
-            Explore About Us
-          </Link>{" "}
-          or{" "}
-          <Link href="/our-culture" className="text-electric">
-            get to know Our Culture
-          </Link>
+          Curious about our mission? Explore
+          <Button
+            href="/about"
+            label="About Us"
+            variant="link"
+            className="inline pl-1 pr-1"
+          />
+          or get to know
+          <Button
+            href="/our-culture"
+            label="Our Culture"
+            variant="link"
+            className="inline pl-1 pr-1"
+          />
           .
         </p>
       </PageLayout>
@@ -347,19 +357,18 @@ const Page = () => {
                 key={index}
                 className="group bg-white/5 border border-electric/30 rounded-2xl p-6 text-left max-w-xs hover:shadow-xl hover:-translate-y-1 transition-all"
               >
-                <p className="text-electric text-sm mb-2 uppercase font-semibold tracking-wide">
+                <h3 className="text-electric text-sm mb-2 uppercase font-semibold tracking-wide">
                   {cta.title}
-                </p>
+                </h3>
                 <p className="text-light/90 mb-4 text-sm">{cta.subtitle}</p>
                 <Button
                   href={cta.btn.href}
-                  target={cta.btn.target as "_blank"}
-                  label={cta.btn.label}
                   iconLeft={cta.btn.iconLeft}
+                  label={cta.btn.label}
                   variant={cta.btn.variant as "primary" | "outline"}
-                  rounded="full"
-                  animate
+                  target={cta.btn.target as "_blank"}
                   className="w-full"
+                  animate
                 />
               </div>
             ))}
@@ -367,7 +376,7 @@ const Page = () => {
 
           {/* Optional CTA */}
           <p className="text-sm text-light/60 font-body mt-10">
-            Or take a tour through our{" "}
+            Or take a tour through our
             <Button
               href="/products"
               label="products"
