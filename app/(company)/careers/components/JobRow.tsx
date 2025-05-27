@@ -17,7 +17,7 @@ const JobRow: React.FC<JobRowProps> = ({ job }) => {
     <div className="px-4 py-3 border-t grid grid-cols-2 sm:grid-cols-4 items-center hover:bg-light/50 text-sm sm:text-base font-body transition-colors duration-200">
       {/* Title + Featured + Mobile Badges */}
       <div className="col-span-1">
-        <div className="flex items-center gap-2 font-semibold text-navy">
+        <div className="flex items-center gap-2 font-semibold text-navy text-left">
           {job.title}
           {job.featured && (
             <span className="text-xs bg-coral text-black px-2 py-0.5 rounded font-semibold">

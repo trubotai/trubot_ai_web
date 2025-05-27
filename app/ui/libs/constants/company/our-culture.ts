@@ -24,7 +24,7 @@ import { FiTool } from "react-icons/fi";
 const heroSection = {
   title: "Work That Matters. People Who Care.",
   subtitle:
-    "At TruBot AI, we’re building more than just products we’re creating the infrastructure for small businesses to grow faster, smarter, and stronger. And we’re doing it together.",
+    "At TruBot AI, we’re building more than just products, we’re creating the infrastructure for small and medium businesses to grow faster, smarter, and stronger. Together, we’re paving the path to financial freedom within five years and setting the foundation for generational wealth.",
   primaryCTA: {
     label: "Explore Open Roles",
     href: "/careers",

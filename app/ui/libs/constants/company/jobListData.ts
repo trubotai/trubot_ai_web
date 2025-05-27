@@ -87,7 +87,7 @@ const jobListData = [
   {
     id: "head-human-resources",
     title: "Head of Human Resources",
-    department: "People Ops",
+    department: "HR",
     level: "Head",
     href: "/careers/head-human-resources",
   },
@@ -115,7 +115,7 @@ const jobListData = [
   {
     id: "manager-human-resources",
     title: "Human Resources Manager",
-    department: "People Ops",
+    department: "HR",
     level: "Manager",
     href: "/careers/manager-human-resources",
   },
@@ -227,14 +227,14 @@ const jobListData = [
   {
     id: "intern-human-resources",
     title: "HR Intern",
-    department: "People Ops",
+    department: "HR",
     level: "Intern",
     href: "/careers/intern-human-resources",
   },
   {
     id: "intern-product-marketing",
     title: "Product Marketing Intern",
-    department: "Sales & Marketing",
+    department: "Product & Design",
     level: "Intern",
     href: "/careers/intern-product-marketing",
   },
