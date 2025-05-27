@@ -46,7 +46,7 @@ const principleList = [
     icon: FaChartLine,
     title: "Trial First, Titles Later",
     description:
-      "We begin with a 3–6 month trial: paid and fully integrated with the team. It’s your time to explore the role, make real impact, and decide if we’re the right fit for you.",
+      "We begin with a 3–6 month trial: unpaid and fully integrated with the team. It’s your time to explore the role, make real impact, and decide if we’re the right fit for you.",
   },
   {
     icon: FaCoins,
@@ -73,7 +73,7 @@ const stepList = [
     icon: FaChartLine,
     title: "Trial Phase (3–6 Months)",
     description:
-      "You’ll join the team on a trial basis — paid, with equity from day one. You'll work on real tasks, contribute to team outcomes, and get a sense of our work culture, speed, and expectations. It’s the ultimate mutual test drive.",
+      "You’ll join the team on a trial basis — unpaid, with equity from day one. You'll work on real tasks, contribute to team outcomes, and get a sense of our work culture, speed, and expectations. It’s the ultimate mutual test drive.",
   },
   {
     icon: FaRocket,
@@ -100,7 +100,7 @@ const afterStepList = [
     icon: FaRocket,
     title: "Trial → Feedback → Offer",
     description:
-      "If the task goes well, we’ll invite you to join on a paid trial. You’ll ship with the team, get feedback every 30 days, and receive a full-time offer if we align.",
+      "If the task goes well, we’ll invite you to join on a unpaid trial. You’ll ship with the team, get feedback every 30 days, and receive a full-time offer if we align.",
   },
 ];
 
@@ -118,7 +118,7 @@ const summaryList = [
   {
     icon: FaCoins,
     label: "Trial",
-    value: "Paid with equity from Day 1",
+    value: "Unpaid with equity from Day 1",
   },
   {
     icon: FaChartLine,
