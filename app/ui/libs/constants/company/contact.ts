@@ -1,46 +1,132 @@
-import { HiMail } from "react-icons/hi";
+import {
+  Activity,
+  Bot,
+  Briefcase,
+  Calendar,
+  FolderKanban,
+  HandHelping,
+  Headset,
+  Heart,
+  Info,
+  Mail,
+  Megaphone,
+  Users,
+} from "lucide-react";
+import { meetLink } from "../site";
+import { FaLinkedin, FaFacebookF, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const heroSection = {
-  title: "Let's Start Your AI Journey Together",
+  title: "Let’s Build Something with AI",
   subtitle:
-    "Our team of AI experts is ready to help you discover the right solutions for your business needs.",
+    "Have a question, proposal, or looking to explore TruBot AI? Whether you’re a startup founder, enterprise team, or curious explorer — let’s connect and start a conversation.",
   primaryCTA: {
-    label: "Contact Us",
-    href: "#email-section",
+    label: "Email Us",
+    href: "mailto:contact@trubotai.com",
+    iconLeft: Mail,
   },
 };
 
-const emailList = [
+const bookCallSection = {
+  title: "Need a Faster Reply?",
+  subtitle:
+    "Skip the email queue — book a quick discovery call with our team and get the answers you need, faster.",
+  primaryCTA: {
+    label: "Book a Call",
+    href: meetLink,
+    iconLeft: Calendar,
+  },
+  image: {
+    src: "/images/contact/book-call-illustration.png",
+    alt: "Schedule a call",
+  },
+};
+
+const contactDirectoryList = [
   {
-    audience: "Sales Inquiries",
-    subtitle: "Discuss AI solutions tailored to your business needs.",
-    benefits: [
-      {
-        icon: HiMail,
-        text: "sales@trubotai.com",
-      },
-    ],
+    icon: Mail,
+    title: "General Enquiries",
+    description:
+      "Not sure where to start? We’ll route your message to the right person.",
+    email: "contact@trubotai.com",
   },
   {
-    audience: "Technical Support",
-    subtitle: "Need help? Get fast and reliable technical assistance.",
-    benefits: [
-      {
-        icon: HiMail,
-        text: "support@trubotai.com",
-      },
-    ],
+    icon: Headset,
+    title: "Support Team",
+    description:
+      "For help with our products or services, our support team is here to assist.",
+    email: "support@trubotai.com",
   },
   {
-    audience: "Partnership Opportunities",
-    subtitle:
-      "Collaborate with TruBot AI to create future-ready AI ecosystems.",
-    benefits: [
-      {
-        icon: HiMail,
-        text: "gopal@trubotai.com",
-      },
-    ],
+    icon: Briefcase,
+    title: "Careers",
+    description: "Explore opportunities to build the future of AI with us.",
+    email: "careers@trubotai.com",
+    link: "/careers",
+  },
+  {
+    icon: Users,
+    title: "Partnerships & M&A",
+    description: "Interested in partnering or exploring M&A opportunities?",
+    email: "acquisition@trubotai.com",
+    link: "/partners/mna",
+  },
+  {
+    icon: Info,
+    title: "Company Information",
+    description: "For background info, press inquiries, or media kits.",
+    email: "info@trubotai.com",
+  },
+  {
+    icon: Megaphone,
+    title: "Press & Media",
+    description:
+      "For media inquiries, speaker invites, or social collaborations.",
+    email: "socials@trubotai.com",
+  },
+];
+
+const exploreLinks = [
+  {
+    icon: Users,
+    label: "About Us",
+    href: "/about",
+    description:
+      "Learn about our mission, values, and the people behind TruBot AI.",
+  },
+  {
+    icon: Bot,
+    label: "Our Products",
+    href: "/products",
+    description:
+      "Explore powerful AI tools designed to transform your workflows.",
+  },
+  {
+    icon: Activity,
+    label: "Solutions",
+    href: "/solutions",
+    description:
+      "Discover how TruBot AI solves real-world business challenges.",
+  },
+  {
+    icon: HandHelping,
+    label: "Partners",
+    href: "/partners",
+    description: "Learn how we collaborate with teams and scale together.",
+  },
+  {
+    icon: Heart,
+    label: "Our Culture",
+    href: "/our-culture",
+    description:
+      "Inside TruBot AI — what we value, how we work, and why it matters.",
+  },
+  {
+    icon: FolderKanban,
+    label: "Careers",
+    href: "/careers",
+    description:
+      "Join the team building the next era of AI. Explore open roles.",
   },
 ];
 
@@ -64,23 +150,32 @@ const locationList = [
 const faqSection = {
   title: "Frequently Asked Questions",
   subtitle:
-    "Find answers to common questions about our AI solutions and services.",
+    "Here are some of the most common things people ask before reaching out.",
   faqList: [
     {
-      question: "What happens after I submit the contact form?",
+      question: "How soon can I expect a reply after reaching out?",
       answer:
-        "You'll receive an immediate confirmation email, and one of our team members will respond to your inquiry within one business day.",
+        "We usually respond within 24 hours on weekdays. For urgent inquiries, you can book a call with us directly.",
     },
     {
-      question:
-        "I'm not sure which solution is right for my business. Who should I contact?",
+      question: "Do I need technical knowledge to use TruBot AI?",
       answer:
-        'Start with our general inquiries contact or use the contact form and select "Not sure" in the interest field. Our team will help guide you to the right solution based on your business needs.',
+        "Not at all. Our solutions are built to be intuitive and easy to use, even for non-technical teams. We also offer onboarding support.",
     },
     {
       question: "Do you offer implementation services?",
       answer:
         "Yes, we provide implementation support for all our solutions. The level of support varies by product and plan. Contact our sales team for specific details related to your needs.",
+    },
+    {
+      question: "Can I request a product demo?",
+      answer:
+        "Yes! You can book a live demo via our 'Book a Call' section to schedule one.",
+    },
+    {
+      question: "Do you offer partnerships or reseller options?",
+      answer:
+        "Yes, we’re open to both white-label and co-branded partnerships. Reach out to acquisition@trubotai.com or visit the Partners page.",
     },
     {
       question: "How quickly can we implement your solutions?",
@@ -95,4 +190,67 @@ const faqSection = {
   ],
 };
 
-export { heroSection, emailList, locationList, faqSection };
+const socialList = [
+  {
+    icon: FaYoutube,
+    label: "YouTube",
+    href: "https://www.youtube.com/channel/UCykytJyGUvapijemVYYp62w",
+    platform: "youtube",
+  },
+  {
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/trubotai",
+  },
+  {
+    icon: FaXTwitter,
+    label: "X (formerly Twitter)",
+    href: "https://x.com/TruBot_AI_",
+  },
+  {
+    icon: FaFacebookF,
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61576272191046",
+  },
+];
+
+const ctaSection = {
+  title: "Still Thinking? Let’s Keep in Touch",
+  subtitle:
+    "Whether you're ready to dive in or just browsing — we’d love to hear from you. Pick your pace, and let’s connect.",
+  boxList: [
+    {
+      title: "Stay in Touch",
+      subtitle: "Reach out anytime. We’re just an email away.",
+      btn: {
+        href: "mailto:contact@trubotai.com",
+        target: "_blank",
+        label: "Email Us",
+        iconLeft: Mail,
+        variant: "primary",
+      },
+    },
+    {
+      title: "Let’s Talk",
+      subtitle: "Book a quick discovery call and chat with our team.",
+      btn: {
+        href: meetLink,
+        target: "_blank",
+        label: "Book a Call",
+        iconLeft: Calendar,
+        variant: "outline",
+      },
+    },
+  ],
+};
+
+export {
+  heroSection,
+  bookCallSection,
+  contactDirectoryList,
+  exploreLinks,
+  locationList,
+  faqSection,
+  socialList,
+  ctaSection,
+};

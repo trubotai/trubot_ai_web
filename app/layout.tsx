@@ -3,7 +3,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
 import Header from "./ui/components/Header";
-import StickyBanner from "./ui/components/StickyBanner";
 import Footer from "./ui/components/Footer";
 
 import "./globals.css";
@@ -81,7 +80,6 @@ export default function RootLayout({
         className={`${sora.className} ${montserrat.className} bg-light text-navy font-body`}
       >
         <Header />
-        <StickyBanner />
         <main aria-label="Main content area">{children}</main>
         <SpeedInsights />
         <Analytics />
