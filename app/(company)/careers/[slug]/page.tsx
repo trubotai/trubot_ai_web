@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FaClock } from "react-icons/fa";
-import { ArrowBigRight, Send } from "lucide-react";
+import { Send } from "lucide-react";
 
 import { careerPagesMap } from "@/app/ui/libs/constants/company/individual-career";
 import { CareerPageDataType } from "@/app/ui/libs/types/careerPage";
@@ -92,7 +92,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         id="about-trubot-ai"
         maxWidth="narrow"
         padding="none"
-        className="mb-12 fade-in slide-in-up animation-delay-300 pt-16 md:pt-20 px-4 md:px-0"
+        className="mb-12 pt-16 md:pt-20 px-4 md:px-0 fade-in slide-in-up animation-delay-300"
       >
         <SectionHeader title="Who are we?" subtitle={about} align="left" />
       </PageLayout>
@@ -102,7 +102,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         id="role-intro"
         maxWidth="narrow"
         padding="none"
-        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+        className="mb-12 px-4 md:px-0 fade-in slide-in-up animation-delay-300"
       >
         <SectionHeader
           title="Who are we looking for?"
@@ -116,13 +116,14 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         </blockquote>
 
         <p className="mt-4 text-sm text-navy/60 font-body">
-          Curious about how we work?
+          Curious about how we work? Learn more about
           <Button
             href="/our-culture"
-            label="Learn more about our culture"
+            label="our culture"
             variant="link"
-            iconRight={ArrowBigRight}
+            className="inline pl-1 pr-1"
           />
+          .
         </p>
       </PageLayout>
 
@@ -131,7 +132,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         id="responsibilities"
         maxWidth="narrow"
         padding="none"
-        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+        className="mb-12 px-4 md:px-0 fade-in slide-in-up animation-delay-300"
       >
         <SectionHeader title="Responsibilities" align="left" />
         <CheckList items={responsibilities} />
@@ -142,7 +143,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         id="qualifications"
         maxWidth="narrow"
         padding="none"
-        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+        className="mb-12 px-4 md:px-0 fade-in slide-in-up animation-delay-300"
       >
         <SectionHeader title="Qualifications & Attributes" align="left" />
         <CheckList items={qualifications} />
@@ -153,7 +154,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         id="benefits"
         maxWidth="narrow"
         padding="none"
-        className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+        className="mb-12 px-4 md:px-0 fade-in slide-in-up animation-delay-300"
       >
         <SectionHeader title="Why Join Us?" align="left" />
         <CheckList items={benefits} />
@@ -165,7 +166,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           id="working-hours"
           maxWidth="narrow"
           padding="none"
-          className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+          className="mb-12 px-4 md:px-0 fade-in slide-in-up animation-delay-300"
         >
           <div className="bg-white p-8 rounded-xl shadow-md border border-gray-200">
             <div className="flex items-center mb-4">
@@ -189,7 +190,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           id="compensation"
           maxWidth="narrow"
           padding="none"
-          className="mb-12 fade-in slide-in-up animation-delay-300 px-4 md:px-0"
+          className="mb-12 px-4 md:px-0 fade-in slide-in-up animation-delay-300"
         >
           <SectionHeader
             title="Compensation"
@@ -201,10 +202,11 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             Have questions about our compensation structure?
             <Button
               href="/contact"
-              label="Contact Us - We are happy to chat."
+              label="Contact Us"
               variant="link"
-              iconRight={ArrowBigRight}
+              className="inline pl-1 pr-1"
             />
+            - We are happy to chat.
           </p>
         </PageLayout>
       )}
@@ -221,11 +223,11 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         <div className="mt-8 text-center">
           <Button
             href={mailtoLink}
-            aria-label={`Apply for ${title} role via email`}
-            label="Apply via Email"
             iconLeft={Send}
+            label="Apply via Email"
+            aria-label={`Apply for ${title} role via email`}
             variant="teal"
-            rounded="full"
+            target="_blank"
             animate
           />
         </div>
@@ -235,12 +237,14 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             href="/careers#job-listing"
             label="Browse all openings"
             variant="link"
+            className="inline pl-1 pr-1"
           />
 
           <Button
             href="/contact"
             label="Have questions? Contact us"
             variant="link"
+            className="inline pl-1 pr-1"
           />
         </div>
       </PageLayout>

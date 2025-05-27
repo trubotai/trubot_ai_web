@@ -48,20 +48,10 @@ const AboutHeroSection = ({
           </p>
 
           {/* CTA */}
-          <div className="flex flex-wrap justify-center gap-4 fade-in scale-up animation-delay-300">
-            <Button
-              href={primaryCTA.href}
-              variant="primary"
-              animate
-              label={primaryCTA.label}
-            />
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button {...primaryCTA} variant="primary" animate />
             {secondaryCTA && (
-              <Button
-                href={secondaryCTA.href}
-                variant="outline"
-                animate
-                label={secondaryCTA.label}
-              />
+              <Button {...secondaryCTA} variant="outline" animate />
             )}
           </div>
         </div>

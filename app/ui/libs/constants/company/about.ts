@@ -55,16 +55,19 @@ const storySection = {
     title: "The Beginning",
     text: "Our journey began in 2023 when a group of AI researchers, product thinkers, and startup veterans came together with a shared belief: AI should be simple and accessible to everyone. We had seen small businesses struggle with tools built for enterprises. We knew there had to be a better way.",
     imgURL: "/images/about/our-story-beginning.png",
+    imgAlt: "Founding team illustration",
   },
   problem: {
     title: "The Problem We Solved",
     text: "Small and mid-sized teams were juggling everything on their own. Missed leads, long response times, scattered tools, and constant firefighting had become the norm. They didn’t need more dashboards. They needed support that actually worked in the background. That’s where we stepped in.",
     imgURL: "/images/about/our-story-problem.png",
+    imgAlt: "Challenges faced by small businesses",
   },
   solution: {
     title: "Our Solution",
     text: "We built TruBot AI to give businesses practical tools that work out of the box. By integrating trusted AI products into a single platform, we make automation simple and useful. No learning curve. No wasted time. Just real help for the people building real businesses.",
     imgURL: "/images/about/our-story-solution.png",
+    imgAlt: "TruBot AI platform visual",
   },
 };
 

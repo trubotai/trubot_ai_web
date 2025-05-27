@@ -47,7 +47,7 @@ const Page = () => {
       {/* Hero */}
       <PageLayout
         id="culture-hero"
-        className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-light py-24 sm:py-32"
+        className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-light"
       >
         {/* Text Content */}
         <div className="fade-in slide-in-up">
@@ -75,9 +75,9 @@ const Page = () => {
           <Image
             src={heroSection.image.src}
             alt={heroSection.image.alt}
-            className="w-full h-auto"
             width={400}
             height={400}
+            className="w-full rounded-lg shadow-md"
           />
         </div>
       </PageLayout>
@@ -100,12 +100,6 @@ const Page = () => {
               Our Culture
             </div>
 
-            {/* Optional background glow */}
-            <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] md:w-[520px] md:h-[520px] bg-electric/10 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2 z-0" />
-
-            {/* Orbit lines */}
-            <div className="absolute inset-0 rounded-full border border-dashed border-electric/20 z-0" />
-
             {/* Floating Orbit Items */}
             {culturePillarList.map((pillar, idx) => {
               const Icon = pillar.icon;
@@ -123,9 +117,9 @@ const Page = () => {
                 >
                   <div className="w-44 p-4 bg-light rounded-xl text-center shadow-md hover:shadow-lg hover-glow hover-scale fade-in slide-in-up float">
                     <Icon className="mx-auto mb-2 text-electric w-7 h-7" />
-                    <h4 className="text-md font-heading font-semibold text-navy mb-1">
+                    <h3 className="text-md font-heading font-semibold text-navy mb-1">
                       {pillar.title}
-                    </h4>
+                    </h3>
                     <p className="text-xs text-navy/70 font-body">
                       {pillar.description}
                     </p>
@@ -133,6 +127,12 @@ const Page = () => {
                 </div>
               );
             })}
+
+            {/* Optional background glow */}
+            <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] md:w-[520px] md:h-[520px] bg-electric/10 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2 z-0" />
+
+            {/* Orbit lines */}
+            <div className="absolute inset-0 rounded-full border border-dashed border-electric/20 z-0" />
           </div>
 
           {/* Mobile Fallback */}
@@ -147,9 +147,9 @@ const Page = () => {
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <Icon className="text-electric w-6 h-6" />
-                    <h4 className="text-base font-heading font-semibold text-navy">
+                    <h3 className="text-base font-heading font-semibold text-navy">
                       {pillar.title}
-                    </h4>
+                    </h3>
                   </div>
                   <p className="text-sm text-navy/70 font-body">
                     {pillar.description}
@@ -185,9 +185,9 @@ const Page = () => {
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-base font-heading font-semibold text-navy mb-1">
+                      <h3 className="text-base font-heading font-semibold text-navy mb-1">
                         {item.title}
-                      </h4>
+                      </h3>
                       <p className="text-sm text-navy/70 font-body">
                         {item.description}
                       </p>
@@ -199,7 +199,12 @@ const Page = () => {
 
             {/* Optional CTA */}
             <div className="flex justify-end mt-5">
-              <Button href="/about" label="About TruBot AI" variant="outline" />
+              <Button
+                href="/about"
+                label="About TruBot AI"
+                variant="outline"
+                animate
+              />
             </div>
           </div>
 
@@ -209,9 +214,9 @@ const Page = () => {
               <Image
                 src="/images/our-culture/life-at-trubot-illustration.png"
                 alt="Life at TruBot AI"
-                width={560}
-                height={420}
-                className="w-full h-auto object-cover"
+                width={400}
+                height={400}
+                className="w-full rounded-lg shadow-md"
               />
             </div>
           </div>
@@ -256,9 +261,9 @@ const Page = () => {
                   </div>
 
                   {/* Text Content */}
-                  <h4 className="text-xl font-heading text-navy font-semibold mb-2">
+                  <h3 className="text-xl font-heading text-navy font-semibold mb-2">
                     {step.title}
-                  </h4>
+                  </h3>
                   <p className="text-sm text-navy/70 font-body">
                     {step.description}
                   </p>
@@ -271,8 +276,8 @@ const Page = () => {
           <div className="text-center fade-in slide-in-up animation-delay-300">
             <Button
               href="/careers"
-              variant="link"
               label="Want to help shape the future?"
+              variant="link"
             />
           </div>
         </PageLayout>

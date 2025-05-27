@@ -40,13 +40,11 @@ const Page = () => {
   return (
     <>
       {/* Hero */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-navy to-dark text-light">
-        {/* Soft Glow */}
-        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] bg-electric/10 rounded-full blur-3xl z-0" />
-
+      <div className="relative bg-gradient-to-br from-navy to-dark overflow-hidden">
         <PageLayout
           id="investment-hero"
-          className="relative z-10 min-h-[80vh] flex flex-col items-center justify-center text-center"
+          className="relative z-10 min-h-[80vh] flex flex-col items-center"
+          padding="lg"
         >
           <div className="max-w-4xl text-center">
             <h1 className="text-5xl sm:text-6xl font-heading font-extrabold text-white leading-tight mb-6 fade-in slide-in-up">
@@ -57,21 +55,29 @@ const Page = () => {
               {heroSection.subtitle}
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 fade-in scale-up animation-delay-250">
+            <div className="flex flex-wrap justify-center gap-4">
               <Button
-                variant="primary"
                 {...heroSection.primaryCTA}
-                animate
+                variant="primary"
                 target="_blank"
+                animate
               />
-              <Button variant="outline" {...heroSection.secondaryCTA} animate />
+              <Button
+                {...heroSection.secondaryCTA}
+                variant="outline"
+                target="_blank"
+                animate
+              />
             </div>
 
-            <p className="text-sm text-white/60 font-body mt-8 fade-in slide-in-up animation-delay-300 max-w-md mx-auto">
+            <p className="text-sm text-light/60 font-body mt-8 fade-in slide-in-up animation-delay-300 max-w-md mx-auto">
               {heroSection.text}
             </p>
           </div>
         </PageLayout>
+
+        {/* Soft Glow */}
+        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] bg-electric/10 rounded-full blur-3xl z-0" />
       </div>
 
       {/* Why Invest */}
@@ -98,8 +104,8 @@ const Page = () => {
                       src={item.image}
                       alt={item.alt}
                       width={400}
-                      height={300}
-                      className="rounded-lg shadow-md mx-auto"
+                      height={400}
+                      className="w-full rounded-lg shadow-md"
                     />
                   </div>
                   {/* Text */}
@@ -236,16 +242,29 @@ const Page = () => {
 
         {/* CTA Block */}
         <div className="mt-14 text-center space-y-4">
-          <Button {...snapshotSection.primaryCTA} variant="outline" animate />
+          <Button
+            {...snapshotSection.primaryCTA}
+            variant="outline"
+            target="_blank"
+            animate
+          />
           <p className="text-sm text-navy/70 font-body">
             Prefer email?
             <Button
-              variant="link"
               href="mailto:investors@trubotai.com"
               label="investors@trubotai.com"
+              variant="link"
+              target="_blank"
+              className="inline pl-1 pr-1"
             />
             or
-            <Button variant="link" href="/contact" label="contact us" />.
+            <Button
+              href="/contact"
+              label="contact us"
+              variant="link"
+              className="inline pl-1 pr-1"
+            />
+            .
           </p>
         </div>
       </PageLayout>
