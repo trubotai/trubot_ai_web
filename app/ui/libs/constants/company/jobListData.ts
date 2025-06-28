@@ -5,7 +5,6 @@ const jobListData = [
     department: "Sales & Marketing",
     level: "Board",
     href: "/careers/board-advisor-sales-growth",
-    featured: true,
   },
   {
     id: "board-advisor-technology",
@@ -167,6 +166,15 @@ const jobListData = [
     department: "Finance",
     level: "Manager",
     href: "/careers/manager-accounts-payroll",
+  },
+  {
+    id: "senior-full-stack-developer",
+    title:
+      "Senior Full-Stack Developer (React, Next.js, Node.js, .NET Core, Azure AI)",
+    department: "Technology",
+    level: "Engineer",
+    href: "/careers/senior-full-stack-developer",
+    featured: true,
   },
   {
     id: "engineer-machine-learning",
