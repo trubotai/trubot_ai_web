@@ -30,8 +30,6 @@ const solutionLinkList = [
 const partnerLinkList = [
   { href: "/partners/partner-program", label: "Partner Program" },
   { href: "/partners/white-label-partners", label: "White Label Partners" },
-  { href: "/partners/sme-empowerment", label: "SME Empowerment" },
-  { href: "/partners/mna", label: "M&A Opportunities" },
   { href: "/partners/royalty-program", label: "Royalty Program" },
   { href: "/partners/startup-program", label: "Startup Program" },
   { href: "/partners/reseller-program", label: "Reseller Program" },
@@ -44,6 +42,8 @@ const partnerLinkList = [
 const companyLinkList = [
   { href: "/about", label: "About" },
   { href: "/investor-relations", label: "Investor Relations" },
+  { href: "/sme-empowerment", label: "SME Empowerment" },
+  { href: "/mna", label: "M&A Opportunities" },
   { href: "/our-culture", label: "Our Culture" },
   { href: "/careers", label: "Join Our Team" },
   { href: "/contact", label: "Contact Us" },
