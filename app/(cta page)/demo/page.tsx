@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Metadata } from "next";
 import { Mail } from "lucide-react";
 import { AiOutlineShake } from "react-icons/ai";
 
@@ -12,6 +13,28 @@ import {
   heroSection,
   ctaSection,
 } from "@/app/ui/libs/constants/cta/demo";
+
+export const metadata: Metadata = {
+  title: "TruBot AI Demo – Chat｜Voice｜Automation",
+  description:
+    "Book your personalized TruBot AI demo — experience chat, voice & intelligent automation tailored to your business. No fluff, just real results.",
+  keywords: [
+    "TruBot AI demo",
+    "AI chatbot demo",
+    "AI voicebot demo",
+    "business automation demo",
+    "conversational AI demo",
+    "live demo appointment",
+  ],
+  authors: [
+    {
+      name: "TruBot AI",
+      url: "https://trubot.ai/demo",
+    },
+  ],
+  creator: "TruBot AI",
+  publisher: "TruBot AI",
+};
 
 const Page = () => {
   return (
