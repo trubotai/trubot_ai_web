@@ -56,18 +56,18 @@ export default function SubscribePage() {
   return (
     <PageLayout className="flex flex-col items-center justify-center">
       <SectionHeader
-        title="Join the TruBot AI Community"
-        subtitle="Subscribe to get the latest updates, product launches, and exclusive insights."
+        title="Join the TruSocial Waitlist"
+        subtitle="Be the first to experience AI-powered social media management. Get early access, exclusive perks, and help shape the future of TruSocial."
       />
 
       {subscribed ? (
         <div className="w-full max-w-md bg-white border rounded-xl shadow-lg p-8 text-center fade-in scale-up">
           <h3 className="text-2xl font-heading text-electric mb-4">
-            Thank you for subscribing!
+            You&rsquo;re on the waitlist!
           </h3>
           <p className="text-navy/80 font-body mb-6">
-            You&rsquo;re now part of the TruBot AI community. Stay tuned for
-            updates in your inbox.
+            We&rsquo;ll notify you as soon as TruSocial launches. Thank you for
+            your interest!
           </p>
           <Button href="/" label="Back to Home" variant="primary" animate />
         </div>
@@ -112,7 +112,7 @@ export default function SubscribePage() {
           <Button
             as="button"
             type="submit"
-            label={form.formState.isSubmitting ? "" : "Join Us"}
+            label={form.formState.isSubmitting ? "" : "Join Waitlist"}
             className="w-full"
             disabled={form.formState.isSubmitting}
             animate
