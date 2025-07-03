@@ -126,7 +126,6 @@ const Header = () => {
 
         {/* CTA */}
         <div className="hidden lg:flex gap-2">
-          <Button href="/subscribe" label="Join Us" variant="outline" animate />
           <Button
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
             target="_blank"
@@ -161,14 +160,6 @@ const Header = () => {
           className="lg:hidden w-full bg-white px-4 py-6 flex flex-col gap-3 items-center text-center fade-in slide-in-up"
           aria-label="Mobile navigation"
         >
-          <Button
-            href="/subscribe"
-            label="Join Us"
-            variant="outline"
-            animate
-            className="w-full mt-2"
-            onClick={() => setMenuOpen(false)}
-          />
           {navSections.map(({ key, label, links }) =>
             key === "solutions" ? (
               <Link
@@ -236,14 +227,6 @@ const Header = () => {
               variant="outline"
               animate
               fullWidth
-              onClick={() => setMenuOpen(false)}
-            />
-            <Button
-              href="/subscribe"
-              label="Join Us"
-              variant="outline"
-              animate
-              className="w-full mt-2"
               onClick={() => setMenuOpen(false)}
             />
           </div>
