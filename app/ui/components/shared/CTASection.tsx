@@ -16,6 +16,12 @@ interface CallToActionProps {
   };
 }
 
+const isExternalLink = (href: string) => {
+  return (
+    href.startsWith("mailto:") || href.startsWith("https://calendar.google.com")
+  );
+};
+
 const CTASection = ({
   title,
   subtitle,
@@ -37,12 +43,13 @@ const CTASection = ({
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
+              href={primaryCTA.href}
               label={primaryCTA.label}
               variant="primary"
               size="lg"
-              href={primaryCTA.href}
-              animate
               iconRight={ArrowRight}
+              target={isExternalLink(primaryCTA.href) ? "_blank" : "_self"}
+              animate
             />
             {secondaryCTA && (
               <Button
@@ -52,6 +59,7 @@ const CTASection = ({
                 href={secondaryCTA.href}
                 animate
                 iconRight={ArrowRight}
+                target={isExternalLink(secondaryCTA.href) ? "_blank" : "_self"}
               />
             )}
           </div>

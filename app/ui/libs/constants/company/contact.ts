@@ -69,7 +69,7 @@ const contactDirectoryList = [
     title: "Partnerships & M&A",
     description: "Interested in partnering or exploring M&A opportunities?",
     email: "acquisition@trubotai.com",
-    link: "/partners/mna",
+    link: "/mna",
   },
   {
     icon: Info,

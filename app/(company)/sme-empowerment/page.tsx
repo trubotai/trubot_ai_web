@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa6";
-import { ArrowDown, ArrowRight, Link } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 import Button from "@/app/ui/components/shared/Button";
 import ProductCard from "@/app/ui/components/shared/ProductCard";
@@ -165,12 +165,12 @@ const Page = () => {
             We tailor every solution based on your business goals.
           </p>
 
-          <Link
+          <Button
+            label="Browse all AI products"
             href="/products"
-            className="inline-flex items-center gap-1 text-electric font-medium text-sm mt-2 hover:text-teal transition-colors"
-          >
-            Browse all AI products <ArrowRight size={14} />
-          </Link>
+            variant="link"
+            iconRight={ArrowRight}
+          />
         </div>
       </PageLayout>
 
