@@ -65,10 +65,12 @@ export default function SubscribePage() {
           <h3 className="text-2xl font-heading text-electric mb-4">
             You&rsquo;re on the waitlist!
           </h3>
+
           <p className="text-navy/80 font-body mb-6">
             We&rsquo;ll notify you as soon as TruSocial launches. Thank you for
             your interest!
           </p>
+
           <Button href="/" label="Back to Home" variant="primary" animate />
         </div>
       ) : (
@@ -86,12 +88,14 @@ export default function SubscribePage() {
               placeholder="John Doe"
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-electric"
             />
+
             {form.formState.errors.name && (
               <p className="text-coral text-xs mt-1">
                 {form.formState.errors.name.message}
               </p>
             )}
           </div>
+
           <div className="space-y-2">
             <label htmlFor="email" className="text-sm font-medium text-navy">
               Email Address
@@ -103,12 +107,14 @@ export default function SubscribePage() {
               placeholder="you@example.com"
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-electric"
             />
+
             {form.formState.errors.email && (
               <p className="text-coral text-xs mt-1">
                 {form.formState.errors.email.message}
               </p>
             )}
           </div>
+
           <Button
             as="button"
             type="submit"
