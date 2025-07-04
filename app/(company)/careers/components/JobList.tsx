@@ -82,7 +82,7 @@ const JobList = ({ jobList }: { jobList: Job[] }) => {
         </div>
 
         {/* Department Tabs */}
-        <div className="flex overflow-x-auto gap-2 pb-2 no-scrollbar justify-center">
+        <div className="flex overflow-x-auto gap-2 pb-2 no-scrollbar px-2 lg:justify-center">
           {departments.map((dep, index) => (
             <button
               key={index}

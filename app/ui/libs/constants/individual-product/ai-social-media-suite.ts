@@ -22,12 +22,12 @@ const heroSection = {
   subtitle:
     "Leverage the power of artificial intelligence to create engaging content, analyze trends, optimize engagement, and drive measurable results across all your social media channels.",
   primaryCTA: {
-    label: "Start Free Trial",
-    href: "/contact",
+    label: "Join Waitlist",
+    href: "/waitlist",
   },
   secondaryCTA: {
-    label: "View Demo",
-    href: "/contact",
+    label: "Demo",
+    href: "/demo",
   },
   icon: Sparkles,
 };
@@ -346,12 +346,12 @@ const ctaSection = {
   subtitle:
     "Join forward-thinking brands that are using AI to create more engaging content, identify emerging trends, and drive measurable business results from their social media efforts.",
   primaryCTA: {
-    label: "Start Your Free Trial",
-    href: "/products",
+    label: "Join Waitlist",
+    href: "/waitlist",
   },
   secondaryCTA: {
-    label: "Schedule a Personalized Demo",
-    href: "/contact",
+    label: "Demo",
+    href: "/demo",
   },
 };
 

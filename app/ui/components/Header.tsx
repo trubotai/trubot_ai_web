@@ -125,7 +125,7 @@ const Header = () => {
         </nav>
 
         {/* CTA */}
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex gap-2">
           <Button
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
             target="_blank"
