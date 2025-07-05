@@ -1,16 +1,9 @@
+import Link from "next/link";
+import { FaCalendar, FaUser, FaClock, FaTag } from "react-icons/fa";
 import type * as prismic from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
-import Link from "next/link";
-import {
-  FaCalendar,
-  FaUser,
-  FaClock,
-  FaTag,
-  FaTwitter,
-  FaLinkedin,
-  FaFacebook,
-  FaWhatsapp,
-} from "react-icons/fa";
+
+import ShareLinks from "@/app/ui/components/blog/ShareLinks";
 
 interface BlogPostHeaderProps {
   title: string;
@@ -33,44 +26,6 @@ const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({
   coverImage,
   url,
 }) => {
-  const shareUrl = typeof window !== "undefined" ? window.location.href : url;
-  const shareText = `${title} - TruBot AI`;
-
-  const shareLinks = [
-    {
-      name: "Twitter",
-      icon: FaTwitter,
-      url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-        shareText
-      )}&url=${encodeURIComponent(shareUrl)}`,
-      color: "hover:text-blue-400",
-    },
-    {
-      name: "LinkedIn",
-      icon: FaLinkedin,
-      url: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-        shareUrl
-      )}`,
-      color: "hover:text-blue-600",
-    },
-    {
-      name: "Facebook",
-      icon: FaFacebook,
-      url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-        shareUrl
-      )}`,
-      color: "hover:text-blue-500",
-    },
-    {
-      name: "WhatsApp",
-      icon: FaWhatsapp,
-      url: `https://wa.me/?text=${encodeURIComponent(
-        shareText + " " + shareUrl
-      )}`,
-      color: "hover:text-green-500",
-    },
-  ];
-
   return (
     <header className="mb-12">
       {/* Breadcrumb */}
@@ -144,25 +99,7 @@ const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({
         </div>
 
         {/* Social Sharing */}
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-500 mr-2">Share:</span>
-          {shareLinks.map((link) => {
-            const Icon = link.icon;
-            return (
-              <a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors ${link.color}`}
-                aria-label={`Share on ${link.name}`}
-                title={`Share on ${link.name}`}
-              >
-                <Icon className="text-lg" />
-              </a>
-            );
-          })}
-        </div>
+        <ShareLinks url={url} title={title} />
       </div>
     </header>
   );

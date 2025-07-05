@@ -21,7 +21,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
 
   useEffect(() => {
     // Generate table of contents from headings
-    const headings = document.querySelectorAll("h2, h3, h4");
+    const headings = document.querySelectorAll("#blog-post h2");
     const items: TocItem[] = Array.from(headings).map((heading, index) => {
       const id = heading.id || `heading-${index}`;
       if (!heading.id) {
@@ -63,9 +63,9 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
 
   return (
     <div className={`bg-gray-50 rounded-lg p-6 ${className}`}>
-      <div className="flex items-center gap-2 mb-4">
+      <div className="flex items-center justify-center gap-2 mb-4">
         <FaList className="text-electric" />
-        <h3 className="font-semibold text-navy">Table of Contents</h3>
+        <h3 className="font-semibold text-navy pl-1">Table of Contents</h3>
       </div>
 
       <nav>
