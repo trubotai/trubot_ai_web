@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { MdMail } from "react-icons/md";
 
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import Button from "@/app/ui/components/shared/Button";
@@ -15,7 +16,7 @@ import {
   summaryList,
   jobList,
   ctaSection,
-} from "../../ui/libs/constants/company/careers";
+} from "@/app/ui/libs/constants/company/careers";
 
 export const metadata: Metadata = {
   title: "Join TruBot AI – Build the Future of AI with Us",
@@ -46,7 +47,10 @@ const Page = () => {
     <>
       {/* Hero */}
       <div className="relative bg-dark text-light overflow-hidden">
-        <PageLayout className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <PageLayout
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+          padding="lg"
+        >
           <div className="fade-in slide-in-up">
             <span className="inline-block bg-electric/10 text-electric px-3 py-1 rounded-full text-sm font-medium mb-4">
               {heroSection.tagline}
@@ -173,6 +177,7 @@ const Page = () => {
           <Button
             href="mailto:careers@trubotai.com"
             label="Contact Careers"
+            iconLeft={MdMail}
             variant="link"
             target="_blank"
           />
@@ -240,6 +245,7 @@ const Page = () => {
           <Button
             href="mailto:careers@trubotai.com"
             label="Contact Our Team"
+            iconLeft={MdMail}
             variant="outline"
             target="_blank"
             animate

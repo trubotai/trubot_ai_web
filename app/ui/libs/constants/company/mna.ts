@@ -1,4 +1,4 @@
-import { FaCalendarAlt, FaEnvelope } from "react-icons/fa";
+import { MdMail } from "react-icons/md";
 import { BsCash } from "react-icons/bs";
 import {
   BrainCog,
@@ -24,6 +24,7 @@ import {
   Users,
   UsersRound,
   Wallet,
+  Calendar,
 } from "lucide-react";
 
 import { meetLink } from "../site";
@@ -38,14 +39,14 @@ const heroSection = {
     "Continued product growth",
   ],
   primaryCTA: {
-    label: "Email Us",
-    href: "mailto:acquisitions@trubotai.com",
-    iconLeft: FaEnvelope,
+    label: "Schedule a Call",
+    href: meetLink,
+    iconLeft: Calendar,
   },
   secondaryCTA: {
-    label: "Book a Call",
-    href: meetLink,
-    iconLeft: FaCalendarAlt,
+    label: "Email Us",
+    href: "mailto:acquisitions@trubotai.com",
+    iconLeft: MdMail,
   },
   img: {
     src: "/images/mna/mna-hero.png",
@@ -109,7 +110,7 @@ const stepList = [
       "We hop on a quick call to understand your business, your goals, and whether we’re a fit. No pitch decks. No pressure.",
     icon: MessageSquare,
     cta: {
-      label: "Book a Call",
+      label: "Schedule a Call",
       href: meetLink,
     },
   },
@@ -227,7 +228,7 @@ const ctaSection = {
     label: "Submit Your Company",
     href: "mailto:acquisitions@trubotai.com?subject=M&A%20Interest",
   },
-  secondaryCTA: { label: "Book A Meet", href: meetLink },
+  secondaryCTA: { label: "Schedule a Call", href: meetLink },
 };
 
 export {

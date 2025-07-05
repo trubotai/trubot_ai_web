@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { Mail } from "lucide-react";
+import { MdMail } from "react-icons/md";
 import { AiOutlineShake } from "react-icons/ai";
 
 import Button from "@/app/ui/components/shared/Button";
@@ -173,7 +173,7 @@ const Page = () => {
                 alt={ct.title}
                 width={200}
                 height={200}
-                className="rounded-lg shadow-md mb-4"
+                className="w-full rounded-lg shadow-md mb-4"
               />
               <h3 className="text-xl font-heading text-navy mb-2">
                 {ct.title}
@@ -190,7 +190,7 @@ const Page = () => {
                   <Button
                     href={ct.secondaryHref}
                     label={ct.secondaryLabel}
-                    iconLeft={Mail}
+                    iconLeft={MdMail}
                     target="_blank"
                     variant="ghost"
                     animate
@@ -202,9 +202,9 @@ const Page = () => {
         </div>
 
         <p className="mt-12 max-w-2xl mx-auto text-sm text-center text-navy/60 font-body italic fade-in slide-in-up animation-delay-400">
-          ✨ And More... From financial services to healthcare, legal to
-          logistics — TruBot AI is already helping teams reduce costs, respond
-          faster, and work smarter. Let’s explore how it can work for you.
+          And More... From financial services to healthcare, legal to logistics
+          — TruBot AI is already helping teams reduce costs, respond faster, and
+          work smarter. Let’s explore how it can work for you.
         </p>
       </PageLayout>
 
@@ -227,7 +227,7 @@ const Page = () => {
             <Button
               href="/partners"
               label="Explore our programs"
-              variant="primary"
+              variant="secondary"
               animate
             />
 

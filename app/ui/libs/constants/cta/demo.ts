@@ -1,7 +1,7 @@
+import { MdMail } from "react-icons/md";
 import {
   Briefcase,
   Calendar,
-  Mail,
   MessageCircleQuestion,
   MonitorPlay,
   UserRoundCheck,
@@ -18,13 +18,13 @@ const heroSection = {
     "Whether you're a SaaS company, eCommerce brand, or a fast-growing service provider — we tailor every demo to your unique goals and challenges.",
   primaryCTA: {
     href: "mailto:info@trubotai.com",
-    iconLeft: Mail,
-    label: "Send Email",
+    iconLeft: MdMail,
+    label: "Email Us",
   },
   secondaryCTA: {
     href: meetLink,
     iconLeft: Calendar,
-    label: "Book a 1:1 Call",
+    label: "Schedule a Call",
   },
 };
 

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Send } from "lucide-react";
+import { MdMail } from "react-icons/md";
 import { FaMapMarkerAlt, FaClock } from "react-icons/fa";
 
 import PageLayout from "@/app/ui/components/shared/PageLayout";
@@ -58,7 +58,7 @@ const JobHeroSection: FC<JobHeroSectionProps> = ({
 
           <Button
             href={applyHref}
-            iconLeft={Send}
+            iconLeft={MdMail}
             label="Apply Now"
             aria-label={`Apply now for ${title} position`}
             variant="teal"

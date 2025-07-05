@@ -13,28 +13,30 @@ import {
   checkList,
   ctaSection,
 } from "@/app/ui/libs/constants/company/mna";
+import { MdMail } from "react-icons/md";
+import { ArrowRight, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Mergers & Acquisitions – TruBot AI",
+  title: "Sell Your B2B SaaS or Hosting Business | TruBot AI M&A",
   description:
-    "Sell your B2B SaaS or Hosting company for 100X returns. Explore our AI-led acquisition strategy, deal automation tools, and M&A integration success stories.",
+    "Explore founder‑friendly M&A opportunities with TruBot AI. Get a smooth exit, flexible deal structures, and continued product legacy. Book a call today.",
   keywords: [
-    "AI M&A Solutions",
-    "AI for Mergers and Acquisitions",
-    "Intelligent M&A Automation",
-    "AI-Powered Due Diligence",
-    "AI Risk Assessment M&A",
-    "AI Tools for M&A Strategy",
-    "AI in Business Acquisitions",
-    "M&A Data Analysis with AI",
-    "Deal Flow Automation AI",
-    "TruBot AI M&A Platform",
-    "AI for Financial Modeling",
-    "Predictive Analytics for M&A",
-    "Machine Learning in M&A",
-    "AI M&A Deal Insights",
-    "Automated M&A Process Tools",
+    "B2B SaaS acquisition",
+    "selling SaaS business",
+    "hosting company M&A",
+    "business exit",
+    "founder exit",
+    "acquire SaaS",
+    "TruBot AI acquisition",
   ],
+  authors: [
+    {
+      name: "TruBot AI",
+      url: "https://trubot.ai/mna",
+    },
+  ],
+  creator: "TruBot AI",
+  publisher: "TruBot AI",
 };
 
 const Page = () => {
@@ -43,7 +45,6 @@ const Page = () => {
       {/* Hero */}
       <PageLayout
         id="hero-acquisition"
-        background="white"
         className="flex flex-col md:flex-row items-center justify-between gap-12"
       >
         {/* Left Content */}
@@ -86,7 +87,7 @@ const Page = () => {
         </div>
 
         {/* Right Image */}
-        <div className="w-full md:w-[480px] h-[320px] bg-gray-soft rounded-xl shadow-md fade-in slide-in-right flex items-center justify-center">
+        <div className="bg-gray-soft rounded-xl fade-in slide-in-right">
           <Image
             src={heroSection.img.src}
             alt={heroSection.img.alt}
@@ -237,6 +238,7 @@ const Page = () => {
           <Button
             href="mailto:acquisitions@trubotai.com"
             label="Email Us"
+            iconLeft={MdMail}
             variant="outline"
             target="_blank"
             animate
@@ -285,6 +287,7 @@ const Page = () => {
                           href={step.cta.href}
                           label={step.cta.label}
                           target="_blank"
+                          iconLeft={Calendar}
                           variant="link"
                           animate
                         />
@@ -294,7 +297,7 @@ const Page = () => {
                     {/* Arrow */}
                     {!isLast && (
                       <div className="text-electric/70 text-xl opacity-80">
-                        ➡️
+                        <ArrowRight />
                       </div>
                     )}
                   </div>
@@ -311,6 +314,7 @@ const Page = () => {
             <Button
               href="mailto:acquisitions@trubotai.com"
               label="Email Us"
+              iconLeft={MdMail}
               variant="outline"
               target="_blank"
               animate
@@ -352,7 +356,7 @@ const Page = () => {
             })}
           </div>
 
-          <div className="bg-light rounded-xl shadow-inner flex items-center justify-center text-navy/40 font-body text-sm italic fade-in slide-in-right">
+          <div className="rounded-xl flex items-center fade-in slide-in-right">
             <Image
               src="/images/mna/due-diligence.png"
               alt="Due Diligence"
@@ -365,8 +369,8 @@ const Page = () => {
 
         {/* Copy Tip */}
         <div className="mt-10 text-center text-navy/70 text-sm font-body max-w-xl mx-auto fade-in slide-in-up animation-delay-300">
-          “You don’t need to have everything perfect. We’ll guide you through
-          exactly what’s needed and we keep it all confidential.”
+          You don’t need to have everything perfect. We’ll guide you through
+          exactly what’s needed and we keep it all confidential.
         </div>
 
         {/* CTA */}
@@ -374,7 +378,7 @@ const Page = () => {
           <Button
             href="/contact"
             label="Contact Us"
-            variant="outline"
+            variant="secondary"
             animate
           />
         </div>

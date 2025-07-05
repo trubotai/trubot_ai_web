@@ -1,3 +1,6 @@
+import { MdMail } from "react-icons/md";
+import { FaTrophy } from "react-icons/fa6";
+import { FaExchangeAlt, FaHandshake, FaMoneyBillAlt } from "react-icons/fa";
 import {
   MessageSquareOff,
   Clock10,
@@ -9,15 +12,8 @@ import {
   ClipboardCheck,
   Handshake,
   Wallet,
+  Calendar,
 } from "lucide-react";
-import {
-  FaCalendarAlt,
-  FaEnvelope,
-  FaExchangeAlt,
-  FaHandshake,
-  FaMoneyBillAlt,
-} from "react-icons/fa";
-import { FaTrophy } from "react-icons/fa6";
 
 import { meetLink } from "../site";
 
@@ -30,12 +26,12 @@ const heroSection = {
   primaryCTA: {
     href: "mailto:info@trubotai.com",
     label: "Email Us",
-    iconLeft: FaEnvelope,
+    iconLeft: MdMail,
   },
   secondaryCTA: {
     href: "/demo",
     label: "Book a Demo",
-    iconLeft: FaCalendarAlt,
+    iconLeft: Calendar,
   },
   thirdCTA: {
     href: "/contact",
