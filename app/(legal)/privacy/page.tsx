@@ -359,7 +359,7 @@ const Page = () => {
                 href="mailto:contact@trubotai.com"
                 variant="link"
                 target="_blank"
-                className="pr-0 pl-0"
+                className="pr-0 pl-1"
               />
             </p>
             <p className="mb-2">
@@ -369,7 +369,7 @@ const Page = () => {
                 href="mailto:support@trubotai.com"
                 variant="link"
                 target="_blank"
-                className="pr-0 pl-0"
+                className="pr-0 pl-1"
               />
             </p>
           </div>
