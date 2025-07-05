@@ -3,8 +3,8 @@ import Link from "next/link";
 import { FaRocket, FaUsers, FaChartLine } from "react-icons/fa";
 
 import PageLayout from "@/app/ui/components/shared/PageLayout";
-import BlogCard from "@/app/ui/components/shared/BlogCard";
-import SectionHeader from "../ui/components/shared/SectionHeader";
+import SectionHeader from "@/app/ui/components/shared/SectionHeader";
+import BlogCard from "@/app/ui/components/blog/BlogCard";
 
 export async function generateMetadata() {
   return {
