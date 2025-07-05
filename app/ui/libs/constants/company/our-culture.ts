@@ -1,3 +1,5 @@
+import { FaRocket } from "react-icons/fa";
+import { FiTool } from "react-icons/fi";
 import {
   LuBadgeDollarSign,
   LuBrainCircuit,
@@ -18,8 +20,6 @@ import {
   LuWand,
   LuZap,
 } from "react-icons/lu";
-import { FaRocket } from "react-icons/fa";
-import { FiTool } from "react-icons/fi";
 
 const heroSection = {
   title: "Work That Matters. People Who Care.",

@@ -1,10 +1,10 @@
+import { MdMail } from "react-icons/md";
 import {
   Box,
   Calendar,
   Clock,
   Handshake,
   Lightbulb,
-  Mail,
   MailOpen,
   Rocket,
   ShieldCheck,
@@ -21,13 +21,13 @@ const heroSection = {
     "Thanks for exploring TruBot AI. Whether you're ready to get started or have a few final questions, our sales team is here to help you make the best decision for your business. We’ll guide you through solutions that fit your exact needs.",
   primaryCTA: {
     href: "mailto:sales@trubotai.com",
-    iconLeft: Mail,
-    label: "Send Email",
+    iconLeft: MdMail,
+    label: "Email Us",
   },
   secondaryCTA: {
     href: meetLink,
     iconLeft: Calendar,
-    label: "Book a 1:1 Call",
+    label: "Schedule a Call",
   },
   image: {
     src: "/images/sales/conversation.png",
@@ -92,8 +92,8 @@ const promiseSection = {
   },
   btn: {
     href: "mailto:sales@trubotai.com",
-    iconLeft: Mail,
-    label: "Send Email",
+    iconLeft: MdMail,
+    label: "Email Us",
   },
 };
 
@@ -133,7 +133,7 @@ const exploreLinks = [
     title: "Contact Us",
     description: "Have a question that's not sales related? Get in touch.",
     href: "/contact",
-    icon: Mail,
+    icon: MdMail,
   },
 ];
 
@@ -146,7 +146,7 @@ const ctaSection = {
     href: "mailto:sales@trubotai.com",
   },
   secondaryCTA: {
-    label: "Book a Call",
+    label: "Schedule a Call",
     href: meetLink,
   },
 };

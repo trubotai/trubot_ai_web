@@ -17,7 +17,7 @@ import {
   valueList,
   roadmapList,
   ctaSection,
-} from "../../ui/libs/constants/company/about";
+} from "@/app/ui/libs/constants/company/about";
 
 export const metadata: Metadata = {
   title: "About TruBot AI | Empowering SMEs with Accessible AI Solutions",

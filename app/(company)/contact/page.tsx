@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { MdMail } from "react-icons/md";
 import { FaArrowRight, FaMapMarkerAlt, FaRobot } from "react-icons/fa";
 
 import PageLayout from "@/app/ui/components/shared/PageLayout";
@@ -17,7 +18,7 @@ import {
   faqSection,
   socialList,
   ctaSection,
-} from "../../ui/libs/constants/company/contact";
+} from "@/app/ui/libs/constants/company/contact";
 
 export const metadata: Metadata = {
   title: "Contact TruBot AI | Reach Out to Our Team",
@@ -157,7 +158,7 @@ const Page = () => {
               ) : (
                 <Button
                   href={`mailto:${contact.email}`}
-                  iconLeft={Mail}
+                  iconLeft={MdMail}
                   label={contact.email}
                   variant="link"
                   target="_blank"
@@ -223,7 +224,7 @@ const Page = () => {
           <div className="text-center">
             <Button
               href="/demo"
-              label="See Our Demo"
+              label="Book a Demo"
               variant="outline"
               animate
             />

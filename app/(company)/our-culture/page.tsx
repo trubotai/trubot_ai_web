@@ -15,7 +15,7 @@ import {
   roadmapList,
   perkList,
   ctaSection,
-} from "../../ui/libs/constants/company/our-culture";
+} from "@/app/ui/libs/constants/company/our-culture";
 
 export const metadata: Metadata = {
   title: "TruBot AI Culture | Empowering Innovation & Collaboration",
