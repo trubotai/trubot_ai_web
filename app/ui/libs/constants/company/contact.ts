@@ -1,3 +1,6 @@
+import { MdMail } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaFacebookF, FaYoutube } from "react-icons/fa";
 import {
   Activity,
   Bot,
@@ -8,13 +11,11 @@ import {
   Headset,
   Heart,
   Info,
-  Mail,
   Megaphone,
   Users,
 } from "lucide-react";
+
 import { meetLink } from "../site";
-import { FaLinkedin, FaFacebookF, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 
 const heroSection = {
   title: "Let’s Build Something with AI",
@@ -23,7 +24,7 @@ const heroSection = {
   primaryCTA: {
     label: "Email Us",
     href: "mailto:contact@trubotai.com",
-    iconLeft: Mail,
+    iconLeft: MdMail,
   },
 };
 
@@ -32,7 +33,7 @@ const bookCallSection = {
   subtitle:
     "Skip the email queue — book a quick discovery call with our team and get the answers you need, faster.",
   primaryCTA: {
-    label: "Book a Call",
+    label: "Schedule a Call",
     href: meetLink,
     iconLeft: Calendar,
   },
@@ -44,7 +45,7 @@ const bookCallSection = {
 
 const contactDirectoryList = [
   {
-    icon: Mail,
+    icon: MdMail,
     title: "General Enquiries",
     description:
       "Not sure where to start? We’ll route your message to the right person.",
@@ -226,7 +227,7 @@ const ctaSection = {
         href: "mailto:contact@trubotai.com",
         target: "_blank",
         label: "Email Us",
-        iconLeft: Mail,
+        iconLeft: MdMail,
         variant: "primary",
       },
     },
@@ -236,7 +237,7 @@ const ctaSection = {
       btn: {
         href: meetLink,
         target: "_blank",
-        label: "Book a Call",
+        label: "Schedule a Call",
         iconLeft: Calendar,
         variant: "outline",
       },

@@ -1,7 +1,7 @@
+import { MdEmail } from "react-icons/md";
 import {
   Brain,
   Calendar,
-  Calendar1,
   DoorOpen,
   Handshake,
   Layers3,
@@ -9,7 +9,6 @@ import {
   Target,
   TrendingUp,
 } from "lucide-react";
-import { MdEmail } from "react-icons/md";
 
 import { meetLink } from "../site";
 
@@ -158,7 +157,7 @@ const snapshotSection = {
   primaryCTA: {
     label: "Schedule a Call",
     href: meetLink,
-    iconLeft: Calendar1,
+    iconLeft: Calendar,
   },
 };
 

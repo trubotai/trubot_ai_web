@@ -30,7 +30,7 @@ const heroSection = {
 const problemWeSolveSection = {
   title: "You’re Doing It All. And It’s Getting Harder.",
   subtitle:
-    "Running a business today means juggling everything—sales, support, operations, growth. Customers want instant replies. Tasks pile up. Your tools feel more like clutter than help. It’s exhausting. And it’s not sustainable.",
+    "Running a business today means juggling everything: sales, support, operations, growth. Customers want instant replies. Tasks pile up. Your tools feel more like clutter than help. It’s exhausting. And it’s not sustainable.",
   problemList: [
     { icon: FaClock, text: "Missed leads from slow replies or late nights" },
     { icon: FaDollarSign, text: "Support costs rising faster than revenue" },

@@ -3,12 +3,12 @@ import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa6";
 import { ArrowDown, ArrowRight } from "lucide-react";
 
+import BenefitCard from "@/app/ui/components/shared/BenefitCard";
 import Button from "@/app/ui/components/shared/Button";
-import ProductCard from "@/app/ui/components/shared/ProductCard";
+import CTASection from "@/app/ui/components/shared/CTASection";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
+import ProductCard from "@/app/ui/components/shared/ProductCard";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
-import BenefitCard from "../../ui/components/shared/BenefitCard";
-import CTASection from "../../ui/components/shared/CTASection";
 import {
   heroSection,
   painPointList,
@@ -17,7 +17,7 @@ import {
   industryList,
   benefitList,
   ctaSection,
-} from "../../ui/libs/constants/company/sme-empowerment";
+} from "@/app/ui/libs/constants/company/sme-empowerment";
 
 export const metadata: Metadata = {
   title: "Empower Your SME with AI | TruBot AI – Plug & Play Automation",
@@ -46,7 +46,7 @@ const Page = () => {
       {/* Hero */}
       <PageLayout
         id="culture-hero"
-        className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-light"
+        className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-light min-h-[80vh]"
       >
         {/* Text Content */}
         <div className="fade-in slide-in-up">
@@ -220,7 +220,7 @@ const Page = () => {
           <div className="flex justify-center mt-14 fade-in slide-in-up animation-delay-500">
             <Button
               href="/demo"
-              label="Book a Free Demo"
+              label="Book a Demo"
               variant="outline"
               iconRight={ArrowRight}
               animate

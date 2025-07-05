@@ -1,11 +1,11 @@
+import { MdMail } from "react-icons/md";
+import { ArrowRight } from "lucide-react";
 import {
-  FaArrowRight,
   FaBrain,
   FaCalendarAlt,
   FaChartLine,
   FaClipboardCheck,
   FaCoins,
-  FaEnvelope,
   FaFlask,
   FaGlobe,
   FaRocket,
@@ -22,12 +22,12 @@ const heroSection = {
   primaryCTA: {
     label: "View Open Roles",
     href: "#job-listing",
-    iconRight: FaArrowRight,
+    iconRight: ArrowRight,
   },
   secondaryCTA: {
     label: "Reach Out",
     href: "mailto:careers@trubotai.com",
-    iconLeft: FaEnvelope,
+    iconLeft: MdMail,
   },
   image: {
     src: "/images/careers/ai-team-illustration.png",

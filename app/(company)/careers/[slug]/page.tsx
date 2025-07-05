@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FaClock } from "react-icons/fa";
-import { Send } from "lucide-react";
+import { MdMail } from "react-icons/md";
 
 import { careerPagesMap } from "@/app/ui/libs/constants/company/individual-career";
 import { CareerPageDataType } from "@/app/ui/libs/types/careerPage";
@@ -223,7 +223,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         <div className="mt-8 text-center">
           <Button
             href={mailtoLink}
-            iconLeft={Send}
+            iconLeft={MdMail}
             label="Apply via Email"
             aria-label={`Apply for ${title} role via email`}
             variant="teal"

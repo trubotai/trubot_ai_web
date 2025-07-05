@@ -46,7 +46,8 @@ const Page = () => {
       {/* Hero */}
       <PageLayout
         id="sales-hero"
-        className="min-h-[85vh] flex items-center relative overflow-hidden"
+        padding="lg"
+        className="min-h-[80vh] flex items-center relative overflow-hidden"
         aria-label="Sales Contact Hero"
       >
         {/* Content Grid */}
