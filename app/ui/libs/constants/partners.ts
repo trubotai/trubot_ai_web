@@ -1,5 +1,4 @@
 import {
-  FaBook,
   FaBullhorn,
   FaChalkboardTeacher,
   FaChartLine,
@@ -7,162 +6,320 @@ import {
   FaFileAlt,
   FaGraduationCap,
   FaHandshake,
-  FaLightbulb,
-  FaProjectDiagram,
-  FaRobot,
   FaSearch,
-  FaStore,
   FaTools,
 } from "react-icons/fa";
-import { FaNetworkWired, FaRocket } from "react-icons/fa6";
+
+import { meetLink } from "./site";
+import {
+  Cog,
+  Crown,
+  Handshake,
+  Lightbulb,
+  Network,
+  Rocket,
+  Search,
+  Shield,
+  Star,
+  Store,
+  Users,
+} from "lucide-react";
 
 const heroSection = {
-  title: "Partner Program: Accelerate Your Growth in the AI Ecosystem",
+  title: "Partner with TruBot AI: Accelerate Your Growth in the AI Ecosystem",
   subtitle:
-    "Join our thriving partner network to expand your market reach, access new customers, and collaborate on innovative AI solutions for small and medium enterprises.",
-  primaryCTA: { label: "Apply to Partner Program", href: "/contact" },
-  secondaryCTA: { label: "Download Partner Guide", href: "/contact" },
-  icson: FaProjectDiagram,
+    "Join our thriving partner network to expand your market reach, access new SME customers, and collaborate on innovative AI solutions. Whether you're a technology provider, service consultant, or growth-focused business, discover how our partnership programs can drive mutual success.",
+  primaryCTA: { label: "Apply to Partner Program", href: "/partners/apply" },
+  secondaryCTA: {
+    label: "Book a Consultation",
+    href: meetLink,
+  },
+  icon: FaHandshake,
 };
 
 const benefitList = [
   {
-    icon: FaBullhorn,
+    icon: Search,
     title: "Expanded Market Reach",
     description:
-      "Gain immediate exposure to thousands of SMEs through our marketplace and sourcing platform, reducing your acquisition costs.",
+      "Gain immediate access to thousands of SMEs through our marketplace and strategic sourcing platform, reducing customer acquisition costs by up to 60%.",
   },
   {
-    icon: FaHandshake,
+    icon: Handshake,
     title: "Co-Marketing Opportunities",
     description:
-      "Leverage joint campaigns, success stories, and events to amplify your brand and increase visibility.",
+      "Leverage joint campaigns, success stories, and events to amplify your brand visibility and increase market presence.",
   },
   {
-    icon: FaCogs,
+    icon: Cog,
     title: "Technical Integration Support",
     description:
-      "Get dedicated help integrating your solution for a seamless customer experience and lower implementation barriers.",
+      "Get dedicated help integrating your solution for seamless customer experiences and lower implementation barriers.",
   },
   {
-    icon: FaChartLine,
+    icon: Users,
     title: "Business Development Resources",
     description:
-      "Access sales tools, lead generation programs, and support built for AI vendors targeting SMEs.",
+      "Access sales tools, lead generation programs, and support built specifically for AI vendors targeting SMEs.",
   },
   {
-    icon: FaLightbulb,
+    icon: Lightbulb,
     title: "Product Development Insights",
     description:
-      "Leverage market intelligence and feedback to refine your product roadmap and meet real SME needs.",
+      "Leverage market intelligence and customer feedback to refine your product roadmap and meet real SME needs.",
+  },
+  {
+    icon: Shield,
+    title: "Trusted Partnership Network",
+    description:
+      "Join a curated network of innovative AI companies committed to empowering SMEs with cutting-edge solutions.",
   },
 ];
 
 const partnerList = [
   {
-    title: "Solution Partners",
-    subtitle: "For AI Product and Service Providers",
+    title: "White Label Partners",
+    subtitle: "For Technology Providers & Agencies",
     detail:
-      "Ideal for companies offering AI-powered products or services that solve specific business challenges for SMEs.",
+      "Perfect for companies wanting to offer AI solutions under their own brand. Ideal for agencies, MSPs, and technology providers.",
     requirements: [
-      "Proven AI solution with demonstrated customer success",
-      "SME-friendly pricing and implementation approach",
+      "Established customer base and market presence",
+      "Technical capability to integrate and customize solutions",
       "Commitment to customer support excellence",
-      "Technical capability to integrate with our platform",
+      "Minimum annual revenue requirements",
     ],
     benefits: [
-      "Listing in our AI Marketplace and Strategic Sourcing platform",
-      "Lead generation and qualified referrals",
-      "Co-marketing opportunities",
-      "Technical integration support",
-      "Partner portal access",
+      "Full white-label solution with your branding",
+      "Customizable pricing and packaging",
+      "Dedicated technical support team",
+      "Marketing and sales enablement resources",
+      "Revenue sharing model",
     ],
-    ctaLabel: "Apply as Solution Partner",
-    ctaHref: "/contact",
-    icon: FaHandshake,
+    ctaLabel: "Learn More",
+    ctaHref: "/partners/white-label-partners",
+    icon: Crown,
   },
   {
     title: "Implementation Partners",
-    subtitle: "For Service Providers and Consultants",
+    subtitle: "For Service Providers & Consultants",
     detail:
-      "Perfect for consulting firms, system integrators, and service providers who help SMEs implement and optimize AI solutions.",
+      "Designed for consulting firms, system integrators, and service providers who help SMEs implement and optimize AI solutions.",
     requirements: [
       "Proven expertise in AI implementation for SMEs",
-      "Certified technical staff",
+      "Certified technical staff and delivery capabilities",
       "Documented customer success stories",
       "Commitment to our implementation standards",
     ],
     benefits: [
       "Access to implementation opportunities",
-      "Technical training and certification",
-      "Joint proposal development",
+      "Technical training and certification programs",
+      "Joint proposal development support",
       "Marketing support and co-branding",
       "Preferred pricing on our solutions",
     ],
-    ctaLabel: "Apply as Implementation Partner",
-    ctaHref: "/contact",
-    icon: FaCogs,
+    ctaLabel: "Learn More",
+    ctaHref: "/partners/implementation-partner",
+    icon: Cog,
   },
   {
     title: "Technology Partners",
-    subtitle: "For Infrastructure and Platform Providers",
+    subtitle: "For Infrastructure & Platform Providers",
     detail:
-      "Designed for companies providing the underlying technology, infrastructure, or platforms that support AI solution development and deployment.",
+      "For companies providing underlying technology, infrastructure, or platforms that support AI solution development and deployment.",
     requirements: [
       "Enterprise-grade technology with SME adaptability",
       "Scalable infrastructure or platform capabilities",
-      "Commitment to security and reliability",
+      "Commitment to security and reliability standards",
       "Technical documentation and support resources",
     ],
     benefits: [
       "Technical integration certification",
-      "Joint solution development",
+      "Joint solution development opportunities",
       "Reference architecture publication",
-      "Co-marketing opportunities",
-      "Innovation collaboration",
+      "Co-marketing and innovation collaboration",
+      "Early access to new features",
     ],
-    ctaLabel: "Apply as Technology Partner",
-    ctaHref: "/contact",
-    icon: FaNetworkWired,
+    ctaLabel: "Learn More",
+    ctaHref: "/partners/technology-partner",
+    icon: Network,
+  },
+  {
+    title: "Strategic Partners",
+    subtitle: "For Industry Leaders & Innovators",
+    detail:
+      "For established companies looking to expand their AI capabilities and market presence through strategic collaboration.",
+    requirements: [
+      "Strong market position and brand recognition",
+      "Complementary technology or service offerings",
+      "Commitment to long-term partnership",
+      "Executive sponsorship and dedicated resources",
+    ],
+    benefits: [
+      "Strategic co-development opportunities",
+      "Exclusive market access and joint ventures",
+      "Executive-level relationship management",
+      "Custom partnership agreements",
+      "Priority access to new technologies",
+    ],
+    ctaLabel: "Learn More",
+    ctaHref: "/partners/strategic-partner",
+    icon: Star,
+  },
+  {
+    title: "Sales Partners",
+    subtitle: "For Sales Organizations & Resellers",
+    detail:
+      "For sales organizations, resellers, and channel partners who want to add AI solutions to their portfolio.",
+    requirements: [
+      "Established sales channels and customer relationships",
+      "Proven track record in technology sales",
+      "Dedicated sales and support resources",
+      "Commitment to customer success",
+    ],
+    benefits: [
+      "Competitive commission structures",
+      "Sales training and enablement programs",
+      "Marketing and lead generation support",
+      "Technical pre-sales assistance",
+      "Customer success partnership",
+    ],
+    ctaLabel: "Learn More",
+    ctaHref: "/partners/sales-partner",
+    icon: Users,
   },
 ];
 
 const programList = [
   {
+    title: "Startup Program",
+    subtitle: "For Early-Stage AI Companies",
+    detail:
+      "Designed for innovative AI startups looking to establish market presence and accelerate growth.",
+    requirements: [
+      "Innovative AI solution with market potential",
+      "Minimum viable product (MVP) ready",
+      "Founding team with relevant expertise",
+      "Commitment to SME market focus",
+    ],
+    benefits: [
+      "Free marketplace listing and promotion",
+      "Technical integration support",
+      "Mentorship and business guidance",
+      "Access to SME customer base",
+      "Reduced partnership fees",
+    ],
+    ctaLabel: "Learn More",
+    ctaHref: "/partners/startup-program",
+    icon: Rocket,
+  },
+  {
+    title: "Royalty Program",
+    subtitle: "For Revenue-Sharing Partnerships",
+    detail:
+      "For partners who want to earn ongoing revenue through customer success and retention.",
+    requirements: [
+      "Proven solution with customer success",
+      "Strong customer support capabilities",
+      "Regular customer engagement",
+      "Performance-based partnership model",
+    ],
+    benefits: [
+      "Ongoing revenue sharing model",
+      "Customer success partnership",
+      "Joint account management",
+      "Performance-based incentives",
+      "Long-term relationship focus",
+    ],
+    ctaLabel: "Learn More",
+    ctaHref: "/partners/royalty-program",
+    icon: Crown,
+    highlight: true,
+    badge: "Most Popular",
+  },
+  {
+    title: "Reseller Program",
+    subtitle: "For Channel Partners & Distributors",
+    detail:
+      "For organizations that want to resell our AI solutions as part of their service portfolio.",
+    requirements: [
+      "Established reseller or distribution network",
+      "Technical sales and support capabilities",
+      "Customer relationship management",
+      "Commitment to solution expertise",
+    ],
+    benefits: [
+      "Competitive reseller margins",
+      "Comprehensive sales training",
+      "Marketing and lead generation support",
+      "Technical pre-sales assistance",
+      "Dedicated partner manager",
+    ],
+    ctaLabel: "Learn More",
+    ctaHref: "/partners/reseller-program",
+    icon: Store,
+  },
+];
+
+const programTiersList = [
+  {
     title: "Registered Partner",
     subtitle: "Getting Started",
+    detail:
+      "Perfect for new partners looking to establish their relationship with TruBot AI and access basic partnership benefits.",
+    requirements: [
+      "Completed partner application",
+      "Signed partner agreement",
+      "Basic solution verification",
+      "Initial training completion",
+    ],
     benefits: [
       "Basic marketplace listing",
       "Partner portal access",
       "Self-service resources",
       "Standard commission structure",
+      "Email support",
     ],
-    requirements: [
-      "Completed partner application",
-      "Signed partner agreement",
-      "Basic solution verification",
-    ],
+    ctaLabel: "Apply Now",
+    ctaHref: "/partners/apply",
+    icon: Handshake,
   },
   {
     title: "Silver Partner",
     subtitle: "Building Momentum",
+    detail:
+      "For partners who have demonstrated commitment and are ready to scale their partnership with enhanced benefits.",
+    requirements: [
+      "5+ successful customer implementations",
+      "Completed technical integration",
+      "Partner certification",
+      "Quarterly business reviews",
+      "Customer satisfaction score >80%",
+    ],
     benefits: [
       "Enhanced marketplace visibility",
       "Lead sharing program access",
       "Co-marketing opportunities",
       "Increased commission structure",
       "Technical integration support",
+      "Dedicated partner manager",
     ],
-    requirements: [
-      "5+ successful customer implementations",
-      "Completed technical integration",
-      "Partner certification",
-      "Quarterly business reviews",
-    ],
+    ctaLabel: "Apply Now",
+    ctaHref: "/partners/apply",
+    icon: Star,
   },
   {
     title: "Gold Partner",
     subtitle: "Strategic Collaboration",
+    detail:
+      "Our highest tier for partners who have proven their value and are ready for strategic collaboration and maximum benefits.",
+    requirements: [
+      "15+ successful customer implementations",
+      "Customer satisfaction score >90%",
+      "Joint business plan",
+      "Executive sponsorship",
+      "Annual business reviews",
+      "Proven revenue growth",
+    ],
     benefits: [
       "Premium marketplace placement",
       "Dedicated partner manager",
@@ -170,51 +327,13 @@ const programList = [
       "Advanced lead generation",
       "Highest commission structure",
       "Early access to new features",
-    ],
-    requirements: [
-      "15+ successful customer implementations",
-      "Customer satisfaction score >90%",
-      "Joint business plan",
-      "Executive sponsorship",
-      "Annual business reviews",
+      "Executive relationship management",
     ],
     highlight: true,
     badge: "Most Popular",
-  },
-];
-
-const storyList = [
-  {
-    title: "AI Analytics Provider",
-    challenge:
-      "Struggled to reach SME customers due to limited marketing resources and perception that their solution was only for enterprises.",
-    solution:
-      "Joined our partner program to access the SME market, received technical integration support, and participated in co-marketing activities.",
-    results: [
-      "200% increase in SME customer acquisition",
-      "40% reduction in sales cycle length",
-      "5 successful joint marketing campaigns",
-      "New product features developed based on SME feedback",
-    ],
-    linkLabel: "Read Full Story",
-    linkHref: "/contact",
-    delay: 0,
-  },
-  {
-    title: "Industry-Specific AI Solution",
-    challenge:
-      "Had excellent AI tech for manufacturing but lacked channels to reach small and medium manufacturers.",
-    solution:
-      "Used the partner program to connect with targeted SMEs, adapted their solution for easier implementation, and ran industry-specific marketing.",
-    results: [
-      "Expanded to 3 new geographic markets",
-      "150+ new SME customers in 12 months",
-      "35% revenue growth",
-      "Developed SME-specific offering based on platform insights",
-    ],
-    linkLabel: "Read Full Story",
-    linkHref: "/contact",
-    delay: 150,
+    ctaLabel: "Apply Now",
+    ctaHref: "/partners/apply",
+    icon: Crown,
   },
 ];
 
@@ -223,71 +342,90 @@ const stepList = [
     stepNumber: 1,
     title: "Apply",
     description:
-      "Complete our partner application form. Our team reviews applications within 5 business days.",
+      "Complete our partner application form with your business details and partnership goals. Our team reviews applications within 5 business days.",
     icon: FaFileAlt,
   },
   {
     stepNumber: 2,
-    title: "Onboard",
+    title: "Evaluate",
     description:
-      "Access our portal, complete training, and collaborate on integration planning.",
-    icon: FaChalkboardTeacher,
+      "We assess your fit for our partnership programs and discuss mutual opportunities for growth and collaboration.",
+    icon: FaSearch,
   },
   {
     stepNumber: 3,
-    title: "Integrate",
+    title: "Onboard",
     description:
-      "Implement technical integrations for a seamless customer experience.",
-    icon: FaCogs,
+      "Access our partner portal, complete training modules, and collaborate on integration and go-to-market planning.",
+    icon: FaChalkboardTeacher,
   },
   {
     stepNumber: 4,
     title: "Launch",
     description:
-      "Create your listing, prep joint marketing, and activate your GTM strategy.",
-    icon: FaRocket,
+      "Create your marketplace listing, prepare joint marketing materials, and activate your go-to-market strategy.",
+    icon: Rocket,
   },
   {
     stepNumber: 5,
     title: "Grow",
     description:
-      "Leverage program benefits, expand your reach, and move up tiers.",
+      "Leverage program benefits, expand your market reach, and progress through partnership tiers for increased rewards.",
     icon: FaChartLine,
   },
 ];
 
-const resourceList = [
+const successFrameworkList = [
   {
     icon: FaTools,
     title: "Partner Portal",
     description:
-      "Access sales tools, marketing materials, technical documentation, training resources, and lead management—all in one place.",
-    link: "/contact",
-    animationDelay: 0,
-  },
-  {
-    icon: FaBook,
-    title: "Technical Documentation",
-    description:
-      "Comprehensive guides, API documentation, sample code, and best practices to streamline your technical integration.",
-    link: "/contact",
-    animationDelay: 150,
-  },
-  {
-    icon: FaBullhorn,
-    title: "Marketing Toolkit",
-    description:
-      "Access co-branded templates, campaign materials, customer success frameworks, and social content.",
-    link: "/contact",
-    animationDelay: 300,
+      "Access comprehensive sales tools, marketing materials, technical documentation, training resources, and lead management—all in one centralized platform.",
   },
   {
     icon: FaGraduationCap,
     title: "Training & Certification",
     description:
-      "Certification paths for sales, technical, and implementation teams to validate your expertise.",
-    link: "/contact",
-    animationDelay: 450,
+      "Complete certification paths for sales, technical, and implementation teams to validate your expertise and unlock additional benefits.",
+  },
+  {
+    icon: FaBullhorn,
+    title: "Marketing Support",
+    description:
+      "Access co-branded templates, campaign materials, customer success frameworks, and social content to amplify your marketing efforts.",
+  },
+  {
+    icon: FaCogs,
+    title: "Technical Integration",
+    description:
+      "Get dedicated technical support for seamless integration, API documentation, sample code, and best practices to streamline implementation.",
+  },
+];
+
+const applicationProcessList = [
+  {
+    icon: FaFileAlt,
+    title: "Submit Application",
+    description:
+      "Complete our comprehensive partner application form with your business details and partnership objectives.",
+  },
+  {
+    icon: FaSearch,
+    title: "Evaluation Process",
+    description:
+      "Our partnership team reviews your application and conducts initial discussions within 5 business days.",
+  },
+  {
+    icon: FaHandshake,
+    title: "Partnership Agreement",
+    description:
+      "Sign our partnership agreement and complete the onboarding process to access our partner ecosystem.",
+  },
+  {
+    icon: Rocket,
+    title: "Launch & Grow",
+    description:
+      "Access partner resources, complete training, and begin your partnership journey with ongoing support.",
   },
 ];
 
@@ -299,70 +437,75 @@ const faqSection = {
       question:
         "What are the costs associated with joining the partner program?",
       answer:
-        "There are no upfront fees. We operate on a shared success model with commission structures based on customer acquisition and retention, which vary by tier and solution category.",
+        "There are no upfront fees for most partnership types. We operate on a shared success model with commission structures based on customer acquisition and retention, which vary by tier and solution category. Some programs may have minimum requirements or performance expectations.",
     },
     {
       question: "How long does the application and onboarding process take?",
       answer:
-        "Typically 4–6 weeks, including application review, agreement signing, technical integration, and listing setup. This may be faster for simple integrations.",
+        "The complete process typically takes 4–6 weeks, including application review, agreement signing, technical integration, and marketplace listing setup. This timeline may be faster for simple integrations or existing partners.",
     },
     {
       question: "What technical requirements must my solution meet?",
       answer:
-        "API-based integration, SSO support, data exchange standards, SOC 2 compliance, and performance metrics. Full specs are shared during onboarding.",
+        "Requirements vary by partnership type, but generally include API-based integration capabilities, SSO support, data exchange standards, security compliance, and performance metrics. Full technical specifications are shared during the onboarding process.",
     },
     {
       question: "How do you generate leads for partners?",
       answer:
-        "Through our marketplace, strategic sourcing engine, marketing campaigns, industry events, and direct sales activities—distributed based on tier and performance.",
+        "We generate leads through our AI marketplace, strategic sourcing platform, marketing campaigns, industry events, and direct sales activities. Leads are distributed based on partnership tier, solution category, and performance metrics.",
     },
     {
       question:
         "Can we maintain our direct sales channels while participating in your program?",
       answer:
-        "Absolutely. Our partner program is designed to complement your sales strategy, not replace it. There are no exclusivity requirements.",
+        "Absolutely. Our partner program is designed to complement your existing sales strategy, not replace it. There are no exclusivity requirements, and we encourage partners to maintain their direct customer relationships.",
+    },
+    {
+      question: "What support do you provide to partners?",
+      answer:
+        "We provide comprehensive support including technical integration assistance, marketing materials, sales training, lead generation, customer success support, and dedicated partner management. Support levels vary by partnership tier.",
     },
   ],
 };
 
 const relatedProductList = [
   {
-    icon: FaStore,
-    title: "AI Marketplace",
+    icon: Store,
+    title: "Our Products",
     description:
-      "Showcase your solutions in our comprehensive catalog of enterprise-grade AI tools and services.",
-    link: "/products/ai-marketplace",
+      "Explore our comprehensive suite of AI solutions designed specifically for SMEs and their unique business challenges.",
+    link: "/products",
     animationDelay: 0,
   },
   {
-    icon: FaSearch,
-    title: "Strategic Sourcing for SMEs",
+    icon: Search,
+    title: "Solutions",
     description:
-      "Connect with SME customers actively seeking solutions through our AI-powered recommendation engine.",
-    link: "/products",
+      "Discover how our AI solutions address specific industry challenges and business needs across different sectors.",
+    link: "/solutions",
     animationDelay: 150,
   },
   {
-    icon: FaRobot,
-    title: "AI Agents",
+    icon: Handshake,
+    title: "About TruBot AI",
     description:
-      "Integrate your solutions with our autonomous AI agents to extend functionality and value.",
-    link: "/products/ai-agents",
+      "Learn about our mission, values, and commitment to empowering SMEs with cutting-edge AI technology.",
+    link: "/about",
     animationDelay: 300,
   },
 ];
 
 const ctaSection = {
-  title: "Join Our Partner Ecosystem and Accelerate Your Growth",
+  title: "Ready to Accelerate Your Growth with TruBot AI?",
   subtitle:
-    "Become part of a thriving network of AI innovators serving the rapidly growing SME market. Apply today to expand your reach, access new customers, and collaborate on the future of AI solutions.",
+    "Join our thriving partner ecosystem and gain access to new markets, customers, and opportunities. Whether you're a technology provider, service consultant, or growth-focused business, discover how our partnership programs can drive mutual success in the AI ecosystem.",
   primaryCTA: {
     label: "Apply to Partner Program",
-    href: "/contact",
+    href: "/partners/apply",
   },
   secondaryCTA: {
-    label: "Schedule a Partner Consultation",
-    href: "/contact",
+    label: "Schedule a Consultation",
+    href: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV",
   },
 };
 
@@ -371,9 +514,10 @@ export {
   benefitList,
   partnerList,
   programList,
-  storyList,
+  programTiersList,
   stepList,
-  resourceList,
+  successFrameworkList,
+  applicationProcessList,
   faqSection,
   relatedProductList,
   ctaSection,

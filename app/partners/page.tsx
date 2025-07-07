@@ -3,22 +3,23 @@ import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import HeroSection from "@/app/ui/components/shared/HeroSection";
 import BenefitCard from "@/app/ui/components/shared/BenefitCard";
 import TierCard from "@/app/ui/components/shared/TierCard";
-import StoryCard from "@/app/ui/components/shared/StoryCard";
+import FeatureCard from "@/app/ui/components/shared/FeatureCard";
 import HorizontalTimeline from "@/app/ui/components/shared/HorizontalTimeline";
 import ProductCard from "@/app/ui/components/shared/ProductCard";
 import FAQSection from "@/app/ui/components/shared/FAQSection";
 import CTASection from "@/app/ui/components/shared/CTASection";
+import Button from "@/app/ui/components/shared/Button";
+import VerticalTimeline from "@/app/ui/components/shared/VerticalTimeline";
 import {
   benefitList,
   ctaSection,
   faqSection,
   heroSection,
-  partnerList,
-  programList,
+  programTiersList,
   relatedProductList,
-  resourceList,
   stepList,
-  storyList,
+  successFrameworkList,
+  applicationProcessList,
 } from "@/app/ui/libs/constants/partners";
 
 export const metadata = {
@@ -49,7 +50,7 @@ const Page = () => {
       <div className="bg-gray-soft">
         <PageLayout id="benefits">
           <SectionHeader
-            title="Program Benefits"
+            title="Why Partner with TruBot AI?"
             subtitle="Here's what you gain when you join our partner ecosystem."
           />
 
@@ -66,94 +67,120 @@ const Page = () => {
         </PageLayout>
       </div>
 
-      {/* Partner Types */}
-      <PageLayout id="partner-types">
+      {/* Partnership Types */}
+      {/*
+      <PageLayout id="partnership-types">
         <SectionHeader
-          title="Partner Types"
-          subtitle="Explore how your organization can collaborate with us."
+          title="Partnership Types"
+          subtitle="Explore how your organization can collaborate with us. Click on each partnership type to learn more."
         />
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
-          {partnerList.map((partner, index) => (
-            <TierCard key={index} {...partner} index={index} />
-          ))}
+        <div className="mt-12">
+          <PartnershipAccordion partnerships={partnerList} />
         </div>
       </PageLayout>
+      */}
 
-      {/* Program Tiers */}
+      {/* Programs */}
+      {/*
       <div className="bg-gray-soft">
-        <PageLayout id="program-tiers">
+        <PageLayout id="programs">
           <SectionHeader
-            title="Program Tiers"
-            subtitle="Grow your partnership and unlock more value as you scale."
+            title="Partnership Programs"
+            subtitle="Choose the partnership program that best fits your business model and growth objectives. Click on each program to learn more."
           />
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
-            {programList.map((tier, idx) => (
-              <TierCard key={idx} {...tier} />
-            ))}
+          <div className="mt-12">
+            <ProgramAccordion programs={programList} />
           </div>
         </PageLayout>
       </div>
+      */}
 
-      {/* Success Story */}
-      <PageLayout id="success-stories">
+      {/* Program Tiers */}
+      <PageLayout id="program-tiers">
         <SectionHeader
-          title="Success Stories"
-          subtitle="See how our partners are growing with us."
+          title="Program Tiers"
+          subtitle="Grow your partnership and unlock more value as you scale with us."
         />
-
-        <div className="grid gap-6 md:grid-cols-2 mt-12">
-          {storyList.map((story, idx) => (
-            <StoryCard key={idx} {...story} />
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
+          {programTiersList.map((tier, idx) => (
+            <TierCard key={idx} {...tier} index={idx} />
           ))}
         </div>
       </PageLayout>
 
-      {/* Partner Journey */}
+      {/* Partner Journey (How It Works) */}
       <div className="bg-gray-soft">
         <PageLayout id="partner-journey" className="relative z-10">
           <SectionHeader
-            title="Partner Journey"
-            subtitle="From application to growth, here’s how we guide you."
+            title="How It Works"
+            subtitle="From application to success, here's how we guide you through the partnership process."
             align="center"
           />
-
-          {/* Timeline Line (only desktop) */}
-          <div className="hidden lg:block absolute top-[50%] left-1/2 transform -translate-x-1/2 w-full max-w-5xl h-1 bg-gray-200" />
-
-          <div className="mt-12 grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center">
-            {stepList.map((step, idx) => (
-              <HorizontalTimeline key={idx} {...step} delay={idx * 100} />
-            ))}
+          <div className="mt-12">
+            <VerticalTimeline title="How It Works" steps={stepList} />
           </div>
         </PageLayout>
       </div>
 
-      {/* Resources */}
-      <PageLayout id="resources">
+      {/* Partner Success Framework */}
+      <PageLayout id="success-framework">
         <SectionHeader
-          title="Resources"
-          subtitle="Everything you need to succeed as a partner."
+          title="Partner Success Framework"
+          subtitle="Everything you need to succeed as a TruBot AI partner."
         />
-
         <div className="grid gap-6 md:grid-cols-2 mt-12">
-          {resourceList.map((res, idx) => (
-            <ProductCard key={idx} {...res} />
+          {successFrameworkList.map((framework, index) => (
+            <FeatureCard
+              key={index}
+              icon={framework.icon}
+              title={framework.title}
+              description={framework.description}
+              index={index}
+            />
           ))}
         </div>
       </PageLayout>
+
+      {/* Application Process */}
+      <div className="bg-gray-soft">
+        <PageLayout id="application-process">
+          <SectionHeader
+            title="Application Process"
+            subtitle="Simple steps to join our partner ecosystem and start growing together."
+          />
+          <div className="mt-12 flex justify-center gap-8 flex-wrap">
+            {applicationProcessList.map((step, idx) => (
+              <HorizontalTimeline
+                key={idx}
+                stepNumber={idx + 1}
+                title={step.title}
+                description={step.description}
+                icon={step.icon}
+                delay={idx * 100}
+              />
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button
+              href="/partners/apply"
+              label="Apply to Partner Program"
+              variant="primary"
+              animate
+            />
+          </div>
+        </PageLayout>
+      </div>
 
       {/* FAQ */}
       <div className="bg-gray-soft">
         <FAQSection {...faqSection} />
       </div>
 
-      {/* Related Product */}
+      {/* Related Products */}
       <PageLayout id="related-products">
         <SectionHeader
-          title="Related Products"
-          subtitle="Explore complementary offerings to maximize your impact."
+          title="Learn More About TruBot AI"
+          subtitle="Explore our company, products, and solutions to better understand our partnership opportunities."
         />
 
         <div className="grid gap-6 md:grid-cols-3 mt-12">

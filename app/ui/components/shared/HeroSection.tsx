@@ -33,7 +33,7 @@ const HeroSection: FC<HeroSectionProps> = ({
   const titleId = "hero-title";
 
   return (
-    <div className={`relative py-28 sm:py-36 ${className}`}>
+    <div className={`relative ${className}`}>
       <PageLayout
         id="hero"
         aria-labelledby={titleId}
