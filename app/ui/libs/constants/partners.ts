@@ -9,14 +9,11 @@ import {
   FaSearch,
   FaTools,
 } from "react-icons/fa";
-
-import { meetLink } from "./site";
 import {
   Cog,
   Crown,
   Handshake,
   Lightbulb,
-  Network,
   Rocket,
   Search,
   Shield,
@@ -24,6 +21,8 @@ import {
   Store,
   Users,
 } from "lucide-react";
+
+import { meetLink } from "./site";
 
 const heroSection = {
   title: "Partner with TruBot AI: Accelerate Your Growth in the AI Ecosystem",
@@ -97,7 +96,6 @@ const partnerList = [
     ],
     ctaLabel: "Learn More",
     ctaHref: "/partners/white-label-partners",
-    icon: Crown,
   },
   {
     title: "Implementation Partners",
@@ -119,7 +117,6 @@ const partnerList = [
     ],
     ctaLabel: "Learn More",
     ctaHref: "/partners/implementation-partner",
-    icon: Cog,
   },
   {
     title: "Technology Partners",
@@ -141,7 +138,6 @@ const partnerList = [
     ],
     ctaLabel: "Learn More",
     ctaHref: "/partners/technology-partner",
-    icon: Network,
   },
   {
     title: "Strategic Partners",
@@ -163,7 +159,6 @@ const partnerList = [
     ],
     ctaLabel: "Learn More",
     ctaHref: "/partners/strategic-partner",
-    icon: Star,
   },
   {
     title: "Sales Partners",
@@ -185,7 +180,6 @@ const partnerList = [
     ],
     ctaLabel: "Learn More",
     ctaHref: "/partners/sales-partner",
-    icon: Users,
   },
 ];
 
@@ -210,7 +204,6 @@ const programList = [
     ],
     ctaLabel: "Learn More",
     ctaHref: "/partners/startup-program",
-    icon: Rocket,
   },
   {
     title: "Royalty Program",
@@ -232,9 +225,6 @@ const programList = [
     ],
     ctaLabel: "Learn More",
     ctaHref: "/partners/royalty-program",
-    icon: Crown,
-    highlight: true,
-    badge: "Most Popular",
   },
   {
     title: "Reseller Program",
@@ -256,7 +246,6 @@ const programList = [
     ],
     ctaLabel: "Learn More",
     ctaHref: "/partners/reseller-program",
-    icon: Store,
   },
 ];
 
@@ -505,7 +494,7 @@ const ctaSection = {
   },
   secondaryCTA: {
     label: "Schedule a Consultation",
-    href: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV",
+    href: meetLink,
   },
 };
 

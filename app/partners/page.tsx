@@ -10,16 +10,19 @@ import FAQSection from "@/app/ui/components/shared/FAQSection";
 import CTASection from "@/app/ui/components/shared/CTASection";
 import Button from "@/app/ui/components/shared/Button";
 import VerticalTimeline from "@/app/ui/components/shared/VerticalTimeline";
+import PartnershipAccordion from "@/app/ui/components/shared/PartnershipAccordion";
 import {
-  benefitList,
-  ctaSection,
-  faqSection,
   heroSection,
+  benefitList,
+  partnerList,
+  programList,
   programTiersList,
-  relatedProductList,
   stepList,
   successFrameworkList,
   applicationProcessList,
+  faqSection,
+  relatedProductList,
+  ctaSection,
 } from "@/app/ui/libs/constants/partners";
 
 export const metadata = {
@@ -46,7 +49,7 @@ const Page = () => {
       {/* Hero */}
       <HeroSection {...heroSection} />
 
-      {/* Benefits */}
+      {/* Why Partner */}
       <div className="bg-gray-soft">
         <PageLayout id="benefits">
           <SectionHeader
@@ -68,32 +71,28 @@ const Page = () => {
       </div>
 
       {/* Partnership Types */}
-      {/*
       <PageLayout id="partnership-types">
         <SectionHeader
           title="Partnership Types"
           subtitle="Explore how your organization can collaborate with us. Click on each partnership type to learn more."
         />
-        <div className="mt-12">
+        <div className="mt-12 max-w-4xl mx-auto">
           <PartnershipAccordion partnerships={partnerList} />
         </div>
       </PageLayout>
-      */}
 
       {/* Programs */}
-      {/*
       <div className="bg-gray-soft">
         <PageLayout id="programs">
           <SectionHeader
             title="Partnership Programs"
             subtitle="Choose the partnership program that best fits your business model and growth objectives. Click on each program to learn more."
           />
-          <div className="mt-12">
-            <ProgramAccordion programs={programList} />
+          <div className="mt-12 max-w-4xl mx-auto">
+            <PartnershipAccordion partnerships={programList} />
           </div>
         </PageLayout>
       </div>
-      */}
 
       {/* Program Tiers */}
       <PageLayout id="program-tiers">
@@ -116,8 +115,9 @@ const Page = () => {
             subtitle="From application to success, here's how we guide you through the partnership process."
             align="center"
           />
-          <div className="mt-12">
-            <VerticalTimeline title="How It Works" steps={stepList} />
+
+          <div className="max-w-4xl mx-auto">
+            <VerticalTimeline title="" steps={stepList} animationOffset={0} />
           </div>
         </PageLayout>
       </div>
@@ -143,12 +143,16 @@ const Page = () => {
 
       {/* Application Process */}
       <div className="bg-gray-soft">
-        <PageLayout id="application-process">
+        <PageLayout id="application-process" className="relative z-10">
           <SectionHeader
             title="Application Process"
             subtitle="Simple steps to join our partner ecosystem and start growing together."
           />
-          <div className="mt-12 flex justify-center gap-8 flex-wrap">
+
+          {/* Timeline Line (only desktop) */}
+          <div className="hidden lg:block absolute top-[43%] left-1/2 transform -translate-x-1/2 w-full max-w-5xl h-1 bg-gray-200" />
+
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-center">
             {applicationProcessList.map((step, idx) => (
               <HorizontalTimeline
                 key={idx}
@@ -160,6 +164,7 @@ const Page = () => {
               />
             ))}
           </div>
+
           <div className="text-center mt-12">
             <Button
               href="/partners/apply"
@@ -172,23 +177,23 @@ const Page = () => {
       </div>
 
       {/* FAQ */}
-      <div className="bg-gray-soft">
-        <FAQSection {...faqSection} />
-      </div>
+      <FAQSection {...faqSection} />
 
       {/* Related Products */}
-      <PageLayout id="related-products">
-        <SectionHeader
-          title="Learn More About TruBot AI"
-          subtitle="Explore our company, products, and solutions to better understand our partnership opportunities."
-        />
+      <div className="bg-gray-soft">
+        <PageLayout id="related-products">
+          <SectionHeader
+            title="Learn More About TruBot AI"
+            subtitle="Explore our company, products, and solutions to better understand our partnership opportunities."
+          />
 
-        <div className="grid gap-6 md:grid-cols-3 mt-12">
-          {relatedProductList.map((product, index) => (
-            <ProductCard key={index} {...product} />
-          ))}
-        </div>
-      </PageLayout>
+          <div className="grid gap-6 md:grid-cols-3 mt-12">
+            {relatedProductList.map((product, index) => (
+              <ProductCard key={index} {...product} />
+            ))}
+          </div>
+        </PageLayout>
+      </div>
 
       {/* CTA */}
       <CTASection {...ctaSection} />

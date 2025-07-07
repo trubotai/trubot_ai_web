@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { ElementType } from "react";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 
 import Button from "./Button";
@@ -14,7 +13,6 @@ interface PartnershipType {
   benefits: string[];
   ctaLabel?: string;
   ctaHref?: string;
-  icon?: ElementType;
   index?: number;
 }
 
@@ -41,7 +39,6 @@ const PartnershipAccordion = ({ partnerships }: PartnershipAccordionProps) => {
             benefits,
             ctaLabel,
             ctaHref,
-            icon: Icon,
             index,
           },
           idx
@@ -56,40 +53,26 @@ const PartnershipAccordion = ({ partnerships }: PartnershipAccordionProps) => {
               {/* Header */}
               <button
                 onClick={() => toggleAccordion(idx)}
-                className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                className="w-full px-4 sm:px-6 py-4 flex flex-row sm:items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
                 aria-expanded={isOpen}
                 aria-controls={`partnership-content-${idx}`}
               >
-                <div className="flex items-center gap-4">
-                  {Icon && (
-                    <div className="w-12 h-12 rounded-full bg-electric/10 flex items-center justify-center">
-                      <Icon
-                        className="w-6 h-6 text-electric"
-                        aria-hidden="true"
-                      />
-                    </div>
-                  )}
-                  <div>
-                    <h3 className="text-xl font-heading font-semibold text-navy mb-1">
+                <div className="flex items-start sm:items-center gap-3 sm:gap-4 mb-3 sm:mb-0">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg sm:text-xl font-heading font-semibold text-navy mb-1 break-words">
                       {title}
                     </h3>
-                    <p className="text-navy/70 font-body text-sm">{subtitle}</p>
+                    <p className="text-navy/70 font-body text-sm break-words">
+                      {subtitle}
+                    </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  {ctaLabel && ctaHref && (
-                    <Button
-                      href={ctaHref}
-                      label={ctaLabel}
-                      variant="ghost"
-                      size="sm"
-                    />
-                  )}
-                  <div className="text-electric">
+                <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                  <div className="flex align-center justify-center text-electric">
                     {isOpen ? (
-                      <FaChevronDown className="w-5 h-5 transition-transform duration-200" />
+                      <FaChevronDown className="pl-2 w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200" />
                     ) : (
-                      <FaChevronRight className="w-5 h-5 transition-transform duration-200" />
+                      <FaChevronRight className="pl-2 w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200" />
                     )}
                   </div>
                 </div>
@@ -99,50 +82,50 @@ const PartnershipAccordion = ({ partnerships }: PartnershipAccordionProps) => {
               <div
                 id={`partnership-content-${index}`}
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  isOpen ? "max-h-[9999px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-6 pb-6 space-y-6">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6 space-y-4 sm:space-y-6">
                   {/* Description */}
                   <div>
-                    <p className="text-navy/80 font-body leading-relaxed">
+                    <p className="text-navy/80 font-body leading-relaxed text-sm sm:text-base">
                       {detail}
                     </p>
                   </div>
 
                   {/* Requirements and Benefits Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                     {/* Requirements */}
-                    <div className="bg-gray-soft rounded-lg p-4">
-                      <h4 className="font-heading text-electric text-lg mb-3 font-semibold">
+                    <div className="bg-gray-soft rounded-lg p-3 sm:p-4">
+                      <h4 className="font-heading text-electric text-base sm:text-lg mb-3 font-semibold">
                         Requirements
                       </h4>
                       <ul className="space-y-2">
                         {requirements.map((requirement, reqIndex) => (
                           <li
                             key={reqIndex}
-                            className="flex items-start gap-2 text-sm text-navy/80 font-body"
+                            className="flex items-start gap-2 text-xs sm:text-sm text-navy/80 font-body"
                           >
                             <span className="w-1.5 h-1.5 bg-electric rounded-full mt-2 flex-shrink-0"></span>
-                            <span>{requirement}</span>
+                            <span className="break-words">{requirement}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     {/* Benefits */}
-                    <div className="bg-gray-soft rounded-lg p-4">
-                      <h4 className="font-heading text-electric text-lg mb-3 font-semibold">
+                    <div className="bg-gray-soft rounded-lg p-3 sm:p-4">
+                      <h4 className="font-heading text-electric text-base sm:text-lg mb-3 font-semibold">
                         Benefits
                       </h4>
                       <ul className="space-y-2">
                         {benefits.map((benefit, benefitIndex) => (
                           <li
                             key={benefitIndex}
-                            className="flex items-start gap-2 text-sm text-navy/80 font-body"
+                            className="flex items-start gap-2 text-xs sm:text-sm text-navy/80 font-body"
                           >
                             <span className="w-1.5 h-1.5 bg-electric rounded-full mt-2 flex-shrink-0"></span>
-                            <span>{benefit}</span>
+                            <span className="break-words">{benefit}</span>
                           </li>
                         ))}
                       </ul>
@@ -157,6 +140,7 @@ const PartnershipAccordion = ({ partnerships }: PartnershipAccordionProps) => {
                         label={ctaLabel}
                         variant="primary"
                         animate
+                        className="w-full sm:w-auto"
                       />
                     </div>
                   )}
