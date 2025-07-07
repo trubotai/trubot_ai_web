@@ -91,18 +91,34 @@ const Header = () => {
                 setDropdownOpen((prev) => ({ ...prev, [key]: false }))
               }
             >
-              <span
-                className={`${navLabelStyles} flex items-center gap-1`}
-                aria-haspopup="true"
-                aria-expanded={dropdownOpen[key]}
-              >
-                {label}
-                <FaChevronDown
-                  className={`text-xs transition-transform duration-300 ${
-                    dropdownOpen[key] ? "rotate-180" : "rotate-0"
-                  }`}
-                />
-              </span>
+              {key === "partners" ? (
+                <Link
+                  href="/partners"
+                  className={`${navLabelStyles} flex items-center gap-1`}
+                  aria-haspopup="true"
+                  aria-expanded={dropdownOpen[key]}
+                >
+                  {label}
+                  <FaChevronDown
+                    className={`text-xs transition-transform duration-300 ${
+                      dropdownOpen[key] ? "rotate-180" : "rotate-0"
+                    }`}
+                  />
+                </Link>
+              ) : (
+                <span
+                  className={`${navLabelStyles} flex items-center gap-1`}
+                  aria-haspopup="true"
+                  aria-expanded={dropdownOpen[key]}
+                >
+                  {label}
+                  <FaChevronDown
+                    className={`text-xs transition-transform duration-300 ${
+                      dropdownOpen[key] ? "rotate-180" : "rotate-0"
+                    }`}
+                  />
+                </span>
+              )}
               {dropdownOpen[key] && (
                 <ul className={dropdownStyles} aria-label={`${label} links`}>
                   {key === "solutions"
