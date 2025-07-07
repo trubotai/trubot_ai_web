@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Metadata } from "next";
 
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
@@ -27,22 +28,61 @@ import {
   ctaSection,
 } from "@/app/ui/libs/constants/partners";
 
-export const metadata = {
-  title: "Partner Program for SMEs – Expand Your AI Market Reach | TruBot AI",
+export const metadata: Metadata = {
+  title:
+    "TruBot AI Partner Program | Partnership Opportunities for SMEs, Agencies & Tech Providers",
   description:
-    "Join our Partner Program and access new SME markets, co-marketing opportunities, technical support, and business development resources. Accelerate your growth in the AI ecosystem.",
+    "Discover TruBot AI's Partner Program: explore partnership types, programs, benefits, and application process. Unlock new revenue streams, co-marketing, technical support, and business growth as a White Label, Implementation, Technology, Strategic, or Sales Partner.",
   keywords: [
-    "AI Partner Program for SMEs",
-    "TruBot AI Partnership Opportunities",
-    "SME AI Solutions Partnership",
-    "AI Implementation Partner Program",
-    "Technology Partner Program for AI",
-    "AI Solution Partner Benefits",
-    "SME AI Integration Support",
-    "AI Co-Marketing Opportunities",
-    "TruBot Partner Portal Access",
-    "AI Business Development Resources",
+    "TruBot AI Partner Program",
+    "AI partnership opportunities",
+    "SME AI partners",
+    "White Label AI partnership",
+    "Implementation partner AI",
+    "Technology partner AI",
+    "Strategic partner AI",
+    "Sales partner AI",
+    "Startup partner program",
+    "Reseller program AI",
+    "Royalty program AI",
+    "AI business development",
+    "AI co-marketing",
+    "AI for agencies",
+    "AI for consultants",
+    "AI for technology providers",
+    "TruBot AI",
+    "AI solutions partnership",
+    "AI partner benefits",
+    "AI application process",
   ],
+  authors: [{ name: "TruBot AI", url: "https://trubot.ai/partners" }],
+  creator: "TruBot AI",
+  publisher: "TruBot AI",
+  openGraph: {
+    title:
+      "TruBot AI Partner Program | Partnership Opportunities for SMEs, Agencies & Tech Providers",
+    description:
+      "Join TruBot AI's Partner Program and access new markets, co-marketing, technical support, and business growth. Explore partnership types, programs, and how to apply.",
+    url: "https://trubot.ai/partners",
+    siteName: "TruBot AI",
+    images: [
+      {
+        url: "https://trubot.ai/images/partners/partnership-type.png",
+        width: 1200,
+        height: 630,
+        alt: "TruBot AI Partner Program",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "TruBot AI Partner Program | Partnership Opportunities for SMEs, Agencies & Tech Providers",
+    description:
+      "Explore TruBot AI's Partner Program for SMEs, agencies, and technology providers. Unlock new revenue, co-marketing, and technical support.",
+    images: ["https://trubot.ai/images/partners/partnership-type.png"],
+  },
 };
 
 const Page = () => {
