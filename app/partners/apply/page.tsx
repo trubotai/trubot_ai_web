@@ -1,67 +1,77 @@
 import { Metadata } from "next";
+
+import HeroSection from "@/app/ui/components/shared/HeroSection";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import Button from "@/app/ui/components/shared/Button";
-import { FaHandshake, FaCheckCircle, FaArrowLeft } from "react-icons/fa";
+import HorizontalTimeline from "@/app/ui/components/shared/HorizontalTimeline";
+import CTASection from "@/app/ui/components/shared/CTASection";
+import {
+  heroSection,
+  formSection,
+  nextStepSection,
+  ctaSection,
+} from "@/app/ui/libs/constants/partners/apply";
 
 export const metadata: Metadata = {
-  title: "Apply to Partner Program – TruBot AI",
+  title: "Apply to TruBot AI Partner Program | Partnership Application",
   description:
-    "Apply to join TruBot AI's partner program. Access new markets, technical support, and business development resources for AI solutions.",
+    "Apply to become a TruBot AI partner. Submit your application to join our partner ecosystem and unlock new business opportunities, technical support, and co-marketing benefits.",
   keywords: [
-    "Partner Program Application",
-    "AI Partnership Application",
-    "TruBot AI Partner Apply",
-    "SME AI Partnership",
-    "AI Solution Partner Application",
+    "TruBot AI Partner Application",
+    "AI partnership application",
+    "Apply for AI partnership",
+    "SME AI partner application",
+    "AI solution partner form",
+    "TruBot AI partner program",
+    "AI business partnership",
+    "AI partner benefits",
+    "AI co-marketing",
+    "AI technical support",
+    "AI for agencies",
+    "AI for consultants",
+    "AI for technology providers",
   ],
+  authors: [{ name: "TruBot AI", url: "https://trubot.ai/partners/apply" }],
+  creator: "TruBot AI",
+  publisher: "TruBot AI",
+  openGraph: {
+    title: "Apply to TruBot AI Partner Program | Partnership Application",
+    description:
+      "Submit your application to join the TruBot AI partner ecosystem. Unlock new business opportunities, technical support, and co-marketing benefits.",
+    url: "https://trubot.ai/partners/apply",
+    siteName: "TruBot AI",
+    images: [
+      {
+        url: "https://trubot.ai/images/partners/partnership-type.png",
+        width: 1200,
+        height: 630,
+        alt: "TruBot AI Partner Application",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Apply to TruBot AI Partner Program | Partnership Application",
+    description:
+      "Apply to become a TruBot AI partner and unlock new business opportunities, technical support, and co-marketing benefits.",
+    images: ["https://trubot.ai/images/partners/partnership-type.png"],
+  },
 };
 
 const Page = () => {
   return (
     <>
       {/* Hero */}
-      <PageLayout id="apply-hero">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-6 flex justify-center">
-            <FaHandshake
-              className="w-16 h-16 text-electric"
-              aria-hidden="true"
-            />
-          </div>
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-navy mb-6">
-            Apply to Partner Program
-          </h1>
-          <p className="text-xl text-navy/70 font-body mb-8">
-            Join our thriving partner ecosystem and accelerate your growth in
-            the AI market. Explore our partnership types and programs on the
-            main partners page, then complete the application below. Our
-            partnership team will review your submission within 5 business days.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              href="/partners"
-              label="Back to Partners"
-              variant="outline"
-              iconLeft={FaArrowLeft}
-            />
-            <Button
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3GU3FqaXzxYUNEFvVUp1AAFUErY1k6klqKYNbU0X2tC7RZ_3AGQSuMjUeIeQ_4yCrjej7YLAEV"
-              label="Schedule a Call"
-              variant="primary"
-              target="_blank"
-            />
-          </div>
-        </div>
-      </PageLayout>
+      <HeroSection {...heroSection} />
 
       {/* Application Form */}
       <div className="bg-gray-soft">
         <PageLayout id="application-form">
           <SectionHeader
-            title="Partner Application"
-            subtitle="Tell us about your organization and partnership goals."
+            title={formSection.title}
+            subtitle={formSection.subtitle}
           />
 
           <div className="max-w-3xl mx-auto">
@@ -174,54 +184,11 @@ const Page = () => {
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-electric focus:border-transparent"
                     >
-                      <option value="">Select partnership type</option>
-                      <option value="white-label">White Label Partners</option>
-                      <option value="implementation">
-                        Implementation Partners
-                      </option>
-                      <option value="technology">Technology Partners</option>
-                      <option value="strategic">Strategic Partners</option>
-                      <option value="sales">Sales Partners</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="partnership-program"
-                      className="block text-sm font-semibold text-navy mb-2"
-                    >
-                      Partnership Program *
-                    </label>
-                    <select
-                      id="partnership-program"
-                      name="partnershipProgram"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-electric focus:border-transparent"
-                    >
-                      <option value="">Select partnership program</option>
-                      <option value="startup">Startup Program</option>
-                      <option value="royalty">Royalty Program</option>
-                      <option value="reseller">Reseller Program</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="program-tier"
-                      className="block text-sm font-semibold text-navy mb-2"
-                    >
-                      Program Tier *
-                    </label>
-                    <select
-                      id="program-tier"
-                      name="programTier"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-electric focus:border-transparent"
-                    >
-                      <option value="">Select program tier</option>
-                      <option value="registered">Registered Partner</option>
-                      <option value="silver">Silver Partner</option>
-                      <option value="gold">Gold Partner</option>
+                      {formSection.partnershipList.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
@@ -405,8 +372,8 @@ const Page = () => {
                   type="submit"
                 />
                 <p className="text-sm text-navy/60 mt-4">
-                  We'll review your application and get back to you within 5
-                  business days.
+                  We&apos;ll review your application and get back to you within
+                  5 business days.
                 </p>
               </div>
             </form>
@@ -415,63 +382,30 @@ const Page = () => {
       </div>
 
       {/* Next Steps */}
-      <PageLayout id="next-steps">
+      <PageLayout id="next-steps" className="relative z-10">
         <SectionHeader
-          title="What Happens Next?"
-          subtitle="Here's what to expect after submitting your application."
-          align="center"
+          title={nextStepSection.title}
+          subtitle={nextStepSection.subtitle}
         />
+        {/* Timeline Line (only desktop) */}
+        <div className="hidden lg:block absolute top-[50%] left-1/2 transform -translate-x-1/2 w-full max-w-4xl h-1 bg-gray-200" />
 
-        <div className="grid gap-6 md:grid-cols-3 mt-12">
-          <div className="text-center fade-in slide-in-up">
-            <div className="mb-4 flex justify-center">
-              <FaCheckCircle
-                className="w-12 h-12 text-electric"
-                aria-hidden="true"
-              />
-            </div>
-            <h4 className="text-lg font-heading font-semibold text-navy mb-2">
-              Application Review
-            </h4>
-            <p className="text-navy/70 font-body text-sm">
-              Our partnership team reviews your application within 5 business
-              days and assesses fit for our programs.
-            </p>
-          </div>
-
-          <div className="text-center fade-in slide-in-up animation-delay-200">
-            <div className="mb-4 flex justify-center">
-              <FaHandshake
-                className="w-12 h-12 text-electric"
-                aria-hidden="true"
-              />
-            </div>
-            <h4 className="text-lg font-heading font-semibold text-navy mb-2">
-              Partnership Discussion
-            </h4>
-            <p className="text-navy/70 font-body text-sm">
-              We schedule a call to discuss mutual opportunities, technical
-              requirements, and partnership structure.
-            </p>
-          </div>
-
-          <div className="text-center fade-in slide-in-up animation-delay-400">
-            <div className="mb-4 flex justify-center">
-              <FaCheckCircle
-                className="w-12 h-12 text-electric"
-                aria-hidden="true"
-              />
-            </div>
-            <h4 className="text-lg font-heading font-semibold text-navy mb-2">
-              Onboarding Process
-            </h4>
-            <p className="text-navy/70 font-body text-sm">
-              Complete partnership agreement, access partner portal, and begin
-              your partnership journey with ongoing support.
-            </p>
-          </div>
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
+          {nextStepSection.stepList.map((step, idx) => (
+            <HorizontalTimeline
+              key={idx}
+              stepNumber={idx + 1}
+              title={step.title}
+              description={step.description}
+              icon={step.icon}
+              delay={idx * 150}
+            />
+          ))}
         </div>
       </PageLayout>
+
+      {/* CTA Section */}
+      <CTASection {...ctaSection} />
     </>
   );
 };

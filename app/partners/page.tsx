@@ -120,7 +120,7 @@ const Page = () => {
         />
         <div className="mt-12 flex flex-col lg:flex-row items-start">
           {/* Content (always visible) */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 my-auto">
             <PartnershipAccordion partnerships={partnerList} />
           </div>
           {/* Image (desktop only) */}
@@ -155,7 +155,7 @@ const Page = () => {
               />
             </div>
             {/* Content (always visible) */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 my-auto">
               <PartnershipAccordion partnerships={programList} />
             </div>
           </div>
@@ -185,7 +185,7 @@ const Page = () => {
           />
           <div className="mt-12 flex flex-col lg:flex-row items-start">
             {/* Content (always visible) */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 my-auto">
               <div className="max-w-4xl mx-auto">
                 <VerticalTimeline
                   title=""
