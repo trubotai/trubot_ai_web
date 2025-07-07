@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import HeroSection from "@/app/ui/components/shared/HeroSection";
@@ -76,8 +78,21 @@ const Page = () => {
           title="Partnership Types"
           subtitle="Explore how your organization can collaborate with us. Click on each partnership type to learn more."
         />
-        <div className="mt-12 max-w-4xl mx-auto">
-          <PartnershipAccordion partnerships={partnerList} />
+        <div className="mt-12 flex flex-col lg:flex-row items-start">
+          {/* Content (always visible) */}
+          <div className="w-full lg:w-1/2">
+            <PartnershipAccordion partnerships={partnerList} />
+          </div>
+          {/* Image (desktop only) */}
+          <div className="hidden lg:flex w-1/2 justify-center items-center m-4 my-auto">
+            <Image
+              src="/images/partners/partnership-type.png"
+              alt="Partnership Types"
+              width={400}
+              height={400}
+              className="w-full rounded-lg shadow-md"
+            />
+          </div>
         </div>
       </PageLayout>
 
@@ -88,8 +103,21 @@ const Page = () => {
             title="Partnership Programs"
             subtitle="Choose the partnership program that best fits your business model and growth objectives. Click on each program to learn more."
           />
-          <div className="mt-12 max-w-4xl mx-auto">
-            <PartnershipAccordion partnerships={programList} />
+          <div className="mt-12 flex flex-col lg:flex-row items-start">
+            {/* Image (desktop only) */}
+            <div className="hidden lg:flex w-1/2 justify-center items-center m-4 my-auto">
+              <Image
+                src="/images/partners/partnership-programs.png"
+                alt="Partnership Programs"
+                width={400}
+                height={400}
+                className="w-full rounded-lg shadow-md"
+              />
+            </div>
+            {/* Content (always visible) */}
+            <div className="w-full lg:w-1/2">
+              <PartnershipAccordion partnerships={programList} />
+            </div>
           </div>
         </PageLayout>
       </div>
@@ -115,9 +143,27 @@ const Page = () => {
             subtitle="From application to success, here's how we guide you through the partnership process."
             align="center"
           />
-
-          <div className="max-w-4xl mx-auto">
-            <VerticalTimeline title="" steps={stepList} animationOffset={0} />
+          <div className="mt-12 flex flex-col lg:flex-row items-start">
+            {/* Content (always visible) */}
+            <div className="w-full lg:w-1/2">
+              <div className="max-w-4xl mx-auto">
+                <VerticalTimeline
+                  title=""
+                  steps={stepList}
+                  animationOffset={0}
+                />
+              </div>
+            </div>
+            {/* Image (desktop only) */}
+            <div className="hidden lg:flex w-1/2 justify-center items-center m-4 my-auto">
+              <Image
+                src="/images/partners/how-it-works.png"
+                alt="How It Works"
+                width={400}
+                height={400}
+                className="w-full rounded-lg shadow-md"
+              />
+            </div>
           </div>
         </PageLayout>
       </div>

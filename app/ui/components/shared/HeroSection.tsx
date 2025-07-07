@@ -13,6 +13,12 @@ interface HeroSectionProps {
   icon?: ElementType;
 }
 
+const isExternalLink = (href: string) => {
+  return (
+    href.startsWith("mailto:") || href.startsWith("https://calendar.google.com")
+  );
+};
+
 const HeroSection: FC<HeroSectionProps> = ({
   title,
   subtitle,
@@ -67,6 +73,7 @@ const HeroSection: FC<HeroSectionProps> = ({
                 variant="primary"
                 animate
                 label={primaryCTA.label}
+                target={isExternalLink(primaryCTA.href) ? "_blank" : "_self"}
               />
             )}
             {secondaryCTA && (
@@ -75,6 +82,7 @@ const HeroSection: FC<HeroSectionProps> = ({
                 variant="outline"
                 animate
                 label={secondaryCTA.label}
+                target={isExternalLink(secondaryCTA.href) ? "_blank" : "_self"}
               />
             )}
           </div>
