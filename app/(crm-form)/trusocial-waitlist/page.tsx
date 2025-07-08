@@ -56,6 +56,20 @@ export default function SubscribePage() {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    console.log(
+      JSON.stringify({
+        firstName: values.firstName,
+        lastName: values.lastName,
+        emailAddress: values.email,
+        mobileNumber: values.mobile || "",
+        location: values.location || "",
+        companyName: values.companyName || "",
+        jobTitle: values.jobTitle || "",
+        socialMediaNeeds: values.socialMediaNeeds,
+        productInterest: "TruSocial",
+        source: "Waitlist Page",
+      })
+    );
     try {
       const response = await fetch(
         "https://crm.trubotai.com/api/v1/LeadCapture/84006ddb862651d0c4c17f07061b0f8b",
@@ -228,6 +242,7 @@ export default function SubscribePage() {
                     <LocationInput
                       onChange={(value) => form.setValue("location", value)}
                       placeholder="City, State"
+                      className=" text-gray-400 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
                     />
                   </div>
 
