@@ -83,7 +83,6 @@ const Page = async ({ params }: { params: Promise<{ uid: string }> }) => {
           <BlogPostHeader
             title={post.data.title || ""}
             excerpt={post.data.excerpt || ""}
-            author={post.data.author || "TruBot AI Team"}
             publishDate={post.data.publish_date || new Date().toISOString()}
             readTime={post.data.estimated_read_time || 5}
             tags={post.data.tags || "AI Automation"}
@@ -208,7 +207,6 @@ const Page = async ({ params }: { params: Promise<{ uid: string }> }) => {
                     day: "numeric",
                   })}
                 </p>
-                <p>By {post.data.author || "TruBot AI Team"}</p>
               </div>
 
               <div className="flex items-center gap-2">
