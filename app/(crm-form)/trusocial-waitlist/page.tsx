@@ -1,9 +1,10 @@
 "use client";
 
 import * as z from "zod";
+import { toast } from "sonner";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { toast } from "sonner";
+import { useState } from "react";
 import {
   Loader2,
   User,
@@ -12,14 +13,14 @@ import {
   Building,
   Briefcase,
   Target,
+  AlertCircle,
 } from "lucide-react";
-import { useState } from "react";
 
 import LocationInput from "@/app/ui/components/form/LocationInput";
+import GoogleMapsLoader from "@/app/ui/components/form/GoogleMapsLoader";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import Button from "@/app/ui/components/shared/Button";
-import GoogleMapsLoader from "@/app/ui/components/form/GoogleMapsLoader";
 
 const formSchema = z.object({
   firstName: z
@@ -57,7 +58,7 @@ const socialMediaNeedsOptions = [
   "Just getting started with social media",
 ];
 
-export default function SubscribePage() {
+const Page = () => {
   const [subscribed, setSubscribed] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -192,12 +193,20 @@ export default function SubscribePage() {
                         id="firstName"
                         {...form.register("firstName")}
                         placeholder="First name"
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
+                        className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
+                          form.formState.errors.firstName ? "border-coral" : ""
+                        }`}
                       />
                       {form.formState.errors.firstName && (
-                        <p className="text-coral text-xs mt-1 ml-1">
-                          {form.formState.errors.firstName.message}
-                        </p>
+                        <div className="absolute inset-y-0 right-3 flex items-center group">
+                          <AlertCircle className="h-5 w-5 text-coral cursor-pointer" />
+                          <div
+                            className="absolute left-1/2 top-full mt-2 z-20 w-max min-w-[180px] max-w-xs px-3 py-2 bg-coral text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200"
+                            style={{ transform: "translateX(-50%)" }}
+                          >
+                            {form.formState.errors.firstName.message}
+                          </div>
+                        </div>
                       )}
                     </div>
 
@@ -209,12 +218,20 @@ export default function SubscribePage() {
                         id="lastName"
                         {...form.register("lastName")}
                         placeholder="Last name"
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
+                        className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
+                          form.formState.errors.lastName ? "border-coral" : ""
+                        }`}
                       />
                       {form.formState.errors.lastName && (
-                        <p className="text-coral text-xs mt-1 ml-1">
-                          {form.formState.errors.lastName.message}
-                        </p>
+                        <div className="absolute inset-y-0 right-3 flex items-center group">
+                          <AlertCircle className="h-5 w-5 text-coral cursor-pointer" />
+                          <div
+                            className="absolute left-1/2 top-full mt-2 z-20 w-max min-w-[180px] max-w-xs px-3 py-2 bg-coral text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200"
+                            style={{ transform: "translateX(-50%)" }}
+                          >
+                            {form.formState.errors.lastName.message}
+                          </div>
+                        </div>
                       )}
                     </div>
                   </div>
@@ -228,12 +245,20 @@ export default function SubscribePage() {
                       type="email"
                       {...form.register("email")}
                       placeholder="your@email.com"
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
+                      className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
+                        form.formState.errors.email ? "border-coral" : ""
+                      }`}
                     />
                     {form.formState.errors.email && (
-                      <p className="text-coral text-xs mt-1 ml-1">
-                        {form.formState.errors.email.message}
-                      </p>
+                      <div className="absolute inset-y-0 right-3 flex items-center group">
+                        <AlertCircle className="h-5 w-5 text-coral cursor-pointer" />
+                        <div
+                          className="absolute left-1/2 top-full mt-2 z-20 w-max min-w-[180px] max-w-xs px-3 py-2 bg-coral text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200"
+                          style={{ transform: "translateX(-50%)" }}
+                        >
+                          {form.formState.errors.email.message}
+                        </div>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -253,7 +278,9 @@ export default function SubscribePage() {
                         id="mobile"
                         {...form.register("mobile")}
                         placeholder="Mobile number"
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
+                        className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
+                          form.formState.errors.mobile ? "border-coral" : ""
+                        }`}
                       />
                     </div>
 
@@ -265,7 +292,11 @@ export default function SubscribePage() {
                           <LocationInput
                             onChange={field.onChange}
                             placeholder="City, State"
-                            className="w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
+                            className={`w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
+                              form.formState.errors.location
+                                ? "border-coral"
+                                : ""
+                            }`}
                             error={form.formState.errors.location?.message}
                           />
                         )}
@@ -282,7 +313,11 @@ export default function SubscribePage() {
                         id="companyName"
                         {...form.register("companyName")}
                         placeholder="Company name"
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
+                        className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
+                          form.formState.errors.companyName
+                            ? "border-coral"
+                            : ""
+                        }`}
                       />
                     </div>
 
@@ -294,7 +329,9 @@ export default function SubscribePage() {
                         id="jobTitle"
                         {...form.register("jobTitle")}
                         placeholder="Job title"
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
+                        className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
+                          form.formState.errors.jobTitle ? "border-coral" : ""
+                        }`}
                       />
                     </div>
                   </div>
@@ -311,7 +348,11 @@ export default function SubscribePage() {
                   <select
                     id="socialMediaNeeds"
                     {...form.register("socialMediaNeeds")}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 bg-white"
+                    className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 bg-white ${
+                      form.formState.errors.socialMediaNeeds
+                        ? "border-coral"
+                        : ""
+                    }`}
                   >
                     <option value="">Select your primary need</option>
                     {socialMediaNeedsOptions.map((option) => (
@@ -321,9 +362,15 @@ export default function SubscribePage() {
                     ))}
                   </select>
                   {form.formState.errors.socialMediaNeeds && (
-                    <p className="text-coral text-xs mt-1">
-                      {form.formState.errors.socialMediaNeeds.message}
-                    </p>
+                    <div className="absolute inset-y-0 right-3 flex items-center group">
+                      <AlertCircle className="h-5 w-5 text-coral cursor-pointer" />
+                      <div
+                        className="absolute left-1/2 top-full mt-2 z-200 w-max min-w-[180px] max-w-xs px-3 py-2 bg-coral text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200"
+                        style={{ transform: "translateX(-50%)" }}
+                      >
+                        {form.formState.errors.socialMediaNeeds.message}
+                      </div>
+                    </div>
                   )}
                 </div>
 
@@ -354,4 +401,6 @@ export default function SubscribePage() {
       </div>
     </PageLayout>
   );
-}
+};
+
+export default Page;
