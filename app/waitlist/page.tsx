@@ -9,13 +9,13 @@ import {
   User,
   Mail,
   Phone,
-  MapPin,
   Building,
   Briefcase,
   Target,
 } from "lucide-react";
 import { useState } from "react";
 
+import LocationInput from "@/app/ui/components/form/LocationInput";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import Button from "@/app/ui/components/shared/Button";
@@ -225,17 +225,10 @@ export default function SubscribePage() {
                       />
                     </div>
 
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <MapPin className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <input
-                        id="location"
-                        {...form.register("location")}
-                        placeholder="City, State"
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
-                      />
-                    </div>
+                    <LocationInput
+                      onChange={(value) => form.setValue("location", value)}
+                      placeholder="City, State"
+                    />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
