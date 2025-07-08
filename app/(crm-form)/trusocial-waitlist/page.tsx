@@ -13,7 +13,6 @@ import {
   Building,
   Briefcase,
   Target,
-  AlertCircle,
 } from "lucide-react";
 
 import LocationInput from "@/app/ui/components/form/LocationInput";
@@ -21,6 +20,9 @@ import GoogleMapsLoader from "@/app/ui/components/form/GoogleMapsLoader";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import Button from "@/app/ui/components/shared/Button";
+import SubscribedBox from "./components/SubscribedBox";
+import TextInput from "@/app/ui/components/form/TextInput";
+import SelectInput from "@/app/ui/components/form/SelectInput";
 
 const formSchema = z.object({
   firstName: z
@@ -132,31 +134,7 @@ const Page = () => {
         />
 
         {subscribed ? (
-          <div className="w-full max-w-lg mx-auto bg-white border border-gray-200 rounded-2xl shadow-xl p-8 text-center fade-in scale-up">
-            <div className="w-16 h-16 bg-electric/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg
-                className="w-8 h-8 text-electric"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-heading text-electric mb-4">
-              You&rsquo;re on the waitlist!
-            </h3>
-            <p className="text-navy/80 font-body mb-6">
-              We&rsquo;ll notify you as soon as TruSocial launches. Thank you
-              for your interest!
-            </p>
-            <Button href="/" label="Back to Home" variant="primary" animate />
-          </div>
+          <SubscribedBox />
         ) : (
           <div className="w-full max-w-lg mx-auto">
             <div className="bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden">
@@ -165,9 +143,9 @@ const Page = () => {
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-6 h-6" />
                 </div>
-                <h2 className="text-xl font-heading font-semibold mb-2">
+                <h3 className="text-xl font-heading font-semibold mb-2">
                   Get Early Access
-                </h2>
+                </h3>
                 <p className="text-white/90 text-sm">
                   Join thousands of businesses waiting for TruSocial
                 </p>
@@ -180,109 +158,55 @@ const Page = () => {
               >
                 {/* Required Fields */}
                 <div className="space-y-4">
-                  <h3 className="text-sm font-semibold text-navy/70 uppercase tracking-wide mb-4">
+                  <h4 className="text-sm font-semibold text-navy/70 uppercase tracking-wide mb-4">
                     Required Information
-                  </h3>
+                  </h4>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <User className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <input
-                        id="firstName"
-                        {...form.register("firstName")}
-                        placeholder="First name"
-                        className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
-                          form.formState.errors.firstName ? "border-coral" : ""
-                        }`}
-                      />
-                      {form.formState.errors.firstName && (
-                        <div className="absolute inset-y-0 right-3 flex items-center group">
-                          <AlertCircle className="h-5 w-5 text-coral cursor-pointer" />
-                          <div
-                            className="absolute left-1/2 top-full mt-2 z-20 w-max min-w-[180px] max-w-xs px-3 py-2 bg-coral text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200"
-                            style={{ transform: "translateX(-50%)" }}
-                          >
-                            {form.formState.errors.firstName.message}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <User className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <input
-                        id="lastName"
-                        {...form.register("lastName")}
-                        placeholder="Last name"
-                        className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
-                          form.formState.errors.lastName ? "border-coral" : ""
-                        }`}
-                      />
-                      {form.formState.errors.lastName && (
-                        <div className="absolute inset-y-0 right-3 flex items-center group">
-                          <AlertCircle className="h-5 w-5 text-coral cursor-pointer" />
-                          <div
-                            className="absolute left-1/2 top-full mt-2 z-20 w-max min-w-[180px] max-w-xs px-3 py-2 bg-coral text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200"
-                            style={{ transform: "translateX(-50%)" }}
-                          >
-                            {form.formState.errors.lastName.message}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Mail className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <input
-                      id="email"
-                      type="email"
-                      {...form.register("email")}
-                      placeholder="your@email.com"
-                      className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
-                        form.formState.errors.email ? "border-coral" : ""
-                      }`}
+                    <TextInput
+                      id="firstName"
+                      label={undefined}
+                      icon={User}
+                      error={form.formState.errors.firstName?.message}
+                      placeholder="First name"
+                      {...form.register("firstName")}
                     />
-                    {form.formState.errors.email && (
-                      <div className="absolute inset-y-0 right-3 flex items-center group">
-                        <AlertCircle className="h-5 w-5 text-coral cursor-pointer" />
-                        <div
-                          className="absolute left-1/2 top-full mt-2 z-20 w-max min-w-[180px] max-w-xs px-3 py-2 bg-coral text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200"
-                          style={{ transform: "translateX(-50%)" }}
-                        >
-                          {form.formState.errors.email.message}
-                        </div>
-                      </div>
-                    )}
+                    <TextInput
+                      id="lastName"
+                      label={undefined}
+                      icon={User}
+                      error={form.formState.errors.lastName?.message}
+                      placeholder="Last name"
+                      {...form.register("lastName")}
+                    />
                   </div>
+
+                  <TextInput
+                    id="email"
+                    label={undefined}
+                    icon={Mail}
+                    error={form.formState.errors.email?.message}
+                    placeholder="your@email.com"
+                    type="email"
+                    {...form.register("email")}
+                  />
                 </div>
 
                 {/* Optional Fields */}
                 <div className="space-y-4">
-                  <h3 className="text-sm font-semibold text-navy/70 uppercase tracking-wide mb-4">
+                  <h4 className="text-sm font-semibold text-navy/70 uppercase tracking-wide mb-4">
                     Additional Information (Optional)
-                  </h3>
+                  </h4>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Phone className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <input
-                        id="mobile"
-                        {...form.register("mobile")}
-                        placeholder="Mobile number"
-                        className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
-                          form.formState.errors.mobile ? "border-coral" : ""
-                        }`}
-                      />
-                    </div>
+                    <TextInput
+                      id="mobile"
+                      label={undefined}
+                      icon={Phone}
+                      error={form.formState.errors.mobile?.message}
+                      placeholder="Mobile number"
+                      {...form.register("mobile")}
+                    />
 
                     <GoogleMapsLoader>
                       <Controller
@@ -305,35 +229,23 @@ const Page = () => {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Building className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <input
-                        id="companyName"
-                        {...form.register("companyName")}
-                        placeholder="Company name"
-                        className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
-                          form.formState.errors.companyName
-                            ? "border-coral"
-                            : ""
-                        }`}
-                      />
-                    </div>
+                    <TextInput
+                      id="companyName"
+                      label={undefined}
+                      icon={Building}
+                      error={form.formState.errors.companyName?.message}
+                      placeholder="Company name"
+                      {...form.register("companyName")}
+                    />
 
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Briefcase className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <input
-                        id="jobTitle"
-                        {...form.register("jobTitle")}
-                        placeholder="Job title"
-                        className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
-                          form.formState.errors.jobTitle ? "border-coral" : ""
-                        }`}
-                      />
-                    </div>
+                    <TextInput
+                      id="jobTitle"
+                      label={undefined}
+                      icon={Briefcase}
+                      error={form.formState.errors.jobTitle?.message}
+                      placeholder="Job title"
+                      {...form.register("jobTitle")}
+                    />
                   </div>
                 </div>
 
@@ -345,33 +257,21 @@ const Page = () => {
                   >
                     What&rsquo;s your primary social media need? *
                   </label>
-                  <select
-                    id="socialMediaNeeds"
-                    {...form.register("socialMediaNeeds")}
-                    className={`w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 bg-white ${
-                      form.formState.errors.socialMediaNeeds
-                        ? "border-coral"
-                        : ""
-                    }`}
-                  >
-                    <option value="">Select your primary need</option>
-                    {socialMediaNeedsOptions.map((option) => (
-                      <option key={option} value={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
-                  {form.formState.errors.socialMediaNeeds && (
-                    <div className="absolute inset-y-0 right-3 flex items-center group">
-                      <AlertCircle className="h-5 w-5 text-coral cursor-pointer" />
-                      <div
-                        className="absolute left-1/2 top-full mt-2 z-200 w-max min-w-[180px] max-w-xs px-3 py-2 bg-coral text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200"
-                        style={{ transform: "translateX(-50%)" }}
-                      >
-                        {form.formState.errors.socialMediaNeeds.message}
-                      </div>
-                    </div>
-                  )}
+                  <div className="relative">
+                    <SelectInput
+                      id="socialMediaNeeds"
+                      label={undefined}
+                      error={form.formState.errors.socialMediaNeeds?.message}
+                      {...form.register("socialMediaNeeds")}
+                    >
+                      <option value="">Select your primary need</option>
+                      {socialMediaNeedsOptions.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </SelectInput>
+                  </div>
                 </div>
 
                 {/* Submit Button */}
