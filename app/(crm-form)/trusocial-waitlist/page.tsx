@@ -1,19 +1,10 @@
 "use client";
 
-import * as z from "zod";
 import { toast } from "sonner";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-import {
-  Loader2,
-  User,
-  Mail,
-  Phone,
-  Building,
-  Briefcase,
-  Target,
-} from "lucide-react";
+import { Loader2, Mail, Target } from "lucide-react";
 
 import LocationInput from "@/app/ui/components/form/LocationInput";
 import GoogleMapsLoader from "@/app/ui/components/form/GoogleMapsLoader";
@@ -23,47 +14,16 @@ import Button from "@/app/ui/components/shared/Button";
 import SubscribedBox from "./components/SubscribedBox";
 import TextInput from "@/app/ui/components/form/TextInput";
 import SelectInput from "@/app/ui/components/form/SelectInput";
-
-const formSchema = z.object({
-  firstName: z
-    .string()
-    .min(2, "First name must be at least 2 characters")
-    .max(50, "First name must be at most 50 characters")
-    .regex(/^[A-Za-z]+$/, "First name can only contain alphabets"),
-  lastName: z
-    .string()
-    .min(2, "Last name must be at least 2 characters")
-    .max(50, "Last name must be at most 50 characters")
-    .regex(/^[A-Za-z]+$/, "Last name can only contain alphabets"),
-  email: z
-    .string()
-    .email("Please enter a valid email address")
-    .max(100, "Email must be at most 100 characters"),
-  mobile: z.string().optional(),
-  location: z.string().optional(),
-  companyName: z
-    .string()
-    .max(50, "Company name must be at most 50 characters")
-    .optional(),
-  jobTitle: z
-    .string()
-    .max(50, "Job title must be at most 50 characters")
-    .optional(),
-  socialMediaNeeds: z.string().min(1, "Please select your primary need"),
-});
-
-const socialMediaNeedsOptions = [
-  "Content creation and scheduling",
-  "Multi-platform posting",
-  "Analytics and reporting",
-  "Engagement management",
-  "Just getting started with social media",
-];
+import {
+  waitlistFormSchema,
+  WaitlistFormData,
+} from "@/app/ui/libs/validation/waitlistSchema";
+import { waitlistFields } from "@/app/ui/libs/constants/waitlistFields";
 
 const Page = () => {
   const [subscribed, setSubscribed] = useState(false);
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<WaitlistFormData>({
+    resolver: zodResolver(waitlistFormSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -76,7 +36,7 @@ const Page = () => {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: WaitlistFormData) => {
     console.log(
       JSON.stringify({
         firstName: values.firstName,
@@ -161,27 +121,28 @@ const Page = () => {
                   <h4 className="text-sm font-semibold text-navy/70 uppercase tracking-wide mb-4">
                     Required Information
                   </h4>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <TextInput
-                      id="firstName"
-                      label={undefined}
-                      icon={User}
-                      error={form.formState.errors.firstName?.message}
-                      placeholder="First name"
-                      {...form.register("firstName")}
-                    />
-                    <TextInput
-                      id="lastName"
-                      label={undefined}
-                      icon={User}
-                      error={form.formState.errors.lastName?.message}
-                      placeholder="Last name"
-                      {...form.register("lastName")}
-                    />
+                    {waitlistFields
+                      .filter((f) => ["firstName", "lastName"].includes(f.id))
+                      .map((field) => (
+                        <TextInput
+                          key={field.id}
+                          id={field.id}
+                          label={undefined}
+                          icon={field.icon}
+                          error={
+                            form.formState.errors[
+                              field.id as keyof WaitlistFormData
+                            ]?.message
+                          }
+                          placeholder={field.placeholder}
+                          type={field.type}
+                          {...form.register(field.id as keyof WaitlistFormData)}
+                        />
+                      ))}
                   </div>
-
                   <TextInput
+                    key="email"
                     id="email"
                     label={undefined}
                     icon={Mail}
@@ -197,17 +158,27 @@ const Page = () => {
                   <h4 className="text-sm font-semibold text-navy/70 uppercase tracking-wide mb-4">
                     Additional Information (Optional)
                   </h4>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <TextInput
-                      id="mobile"
-                      label={undefined}
-                      icon={Phone}
-                      error={form.formState.errors.mobile?.message}
-                      placeholder="Mobile number"
-                      {...form.register("mobile")}
-                    />
-
+                    {waitlistFields
+                      .filter((f) =>
+                        ["mobile", "companyName", "jobTitle"].includes(f.id)
+                      )
+                      .map((field) => (
+                        <TextInput
+                          key={field.id}
+                          id={field.id}
+                          label={undefined}
+                          icon={field.icon}
+                          error={
+                            form.formState.errors[
+                              field.id as keyof WaitlistFormData
+                            ]?.message
+                          }
+                          placeholder={field.placeholder}
+                          type={field.type}
+                          {...form.register(field.id as keyof WaitlistFormData)}
+                        />
+                      ))}
                     <GoogleMapsLoader>
                       <Controller
                         name="location"
@@ -227,26 +198,6 @@ const Page = () => {
                       />
                     </GoogleMapsLoader>
                   </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <TextInput
-                      id="companyName"
-                      label={undefined}
-                      icon={Building}
-                      error={form.formState.errors.companyName?.message}
-                      placeholder="Company name"
-                      {...form.register("companyName")}
-                    />
-
-                    <TextInput
-                      id="jobTitle"
-                      label={undefined}
-                      icon={Briefcase}
-                      error={form.formState.errors.jobTitle?.message}
-                      placeholder="Job title"
-                      {...form.register("jobTitle")}
-                    />
-                  </div>
                 </div>
 
                 {/* Social Media Needs */}
@@ -255,7 +206,10 @@ const Page = () => {
                     htmlFor="socialMediaNeeds"
                     className="text-sm font-medium text-navy"
                   >
-                    What&rsquo;s your primary social media need? *
+                    {
+                      waitlistFields.find((f) => f.id === "socialMediaNeeds")
+                        ?.label
+                    }
                   </label>
                   <div className="relative">
                     <SelectInput
@@ -265,11 +219,13 @@ const Page = () => {
                       {...form.register("socialMediaNeeds")}
                     >
                       <option value="">Select your primary need</option>
-                      {socialMediaNeedsOptions.map((option) => (
-                        <option key={option} value={option}>
-                          {option}
-                        </option>
-                      ))}
+                      {waitlistFields
+                        .find((f) => f.id === "socialMediaNeeds")
+                        ?.options?.map((option: string) => (
+                          <option key={option} value={option}>
+                            {option}
+                          </option>
+                        ))}
                     </SelectInput>
                   </div>
                 </div>
