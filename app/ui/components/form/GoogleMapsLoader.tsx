@@ -1,7 +1,8 @@
 "use client";
 
-import { Loader } from "@googlemaps/js-api-loader";
 import { useEffect, useState } from "react";
+import { Loader2 } from "lucide-react";
+import { Loader } from "@googlemaps/js-api-loader";
 
 export default function GoogleMapsLoader({
   children,
@@ -21,7 +22,9 @@ export default function GoogleMapsLoader({
 
   if (!mapsReady) {
     return (
-      <div className="w-full text-center py-10">Loading map features...</div>
+      <div className="w-full flex items-center justify-center">
+        <Loader2 className="h-8 w-8 text-electric animate-spin" />
+      </div>
     );
   }
 
