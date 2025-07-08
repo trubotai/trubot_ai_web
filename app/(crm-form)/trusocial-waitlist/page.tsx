@@ -1,7 +1,7 @@
 "use client";
 
 import * as z from "zod";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import {
@@ -21,13 +21,30 @@ import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import Button from "@/app/ui/components/shared/Button";
 
 const formSchema = z.object({
-  firstName: z.string().min(1, "Please enter your first name"),
-  lastName: z.string().min(1, "Please enter your last name"),
-  email: z.string().email("Please enter a valid email address"),
+  firstName: z
+    .string()
+    .min(2, "First name must be at least 2 characters")
+    .max(50, "First name must be at most 50 characters")
+    .regex(/^[A-Za-z]+$/, "First name can only contain alphabets"),
+  lastName: z
+    .string()
+    .min(2, "Last name must be at least 2 characters")
+    .max(50, "Last name must be at most 50 characters")
+    .regex(/^[A-Za-z]+$/, "Last name can only contain alphabets"),
+  email: z
+    .string()
+    .email("Please enter a valid email address")
+    .max(100, "Email must be at most 100 characters"),
   mobile: z.string().optional(),
   location: z.string().optional(),
-  companyName: z.string().optional(),
-  jobTitle: z.string().optional(),
+  companyName: z
+    .string()
+    .max(50, "Company name must be at most 50 characters")
+    .optional(),
+  jobTitle: z
+    .string()
+    .max(50, "Job title must be at most 50 characters")
+    .optional(),
   socialMediaNeeds: z.string().min(1, "Please select your primary need"),
 });
 
@@ -239,10 +256,17 @@ export default function SubscribePage() {
                       />
                     </div>
 
-                    <LocationInput
-                      onChange={(value) => form.setValue("location", value)}
-                      placeholder="City, State"
-                      className=" text-gray-400 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
+                    <Controller
+                      name="location"
+                      control={form.control}
+                      render={({ field }) => (
+                        <LocationInput
+                          onChange={field.onChange}
+                          placeholder="City, State"
+                          className="w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200"
+                          error={form.formState.errors.location?.message}
+                        />
+                      )}
                     />
                   </div>
 
