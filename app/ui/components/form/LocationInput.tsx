@@ -53,20 +53,12 @@ const LocationInput: React.FC<LocationInputProps> = ({
             new window.google.maps.places.PlaceAutocompleteElement();
           if (autocompleteRef.current) {
             autocompleteRef.current.setAttribute("placeholder", placeholder);
-            autocompleteRef.current.setAttribute("types", "(cities)");
 
             const handlePlaceSelect = (event: Event) => {
               const customEvent = event as CustomEvent;
               const place: PlaceDetail = customEvent.detail.place;
               if (place && place.formattedAddress) {
-                const addressParts = place.formattedAddress.split(", ");
-                let location = "";
-                if (addressParts.length >= 2) {
-                  location = `${addressParts[0]}, ${addressParts[1]}`;
-                } else {
-                  location = place.formattedAddress;
-                }
-                onChange(location);
+                onChange(place.formattedAddress);
               }
             };
 
