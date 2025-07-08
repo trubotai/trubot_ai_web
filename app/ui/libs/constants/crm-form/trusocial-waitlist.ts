@@ -1,6 +1,6 @@
 import { User, Mail, Phone, Building, Briefcase } from "lucide-react";
 
-export const waitlistFields = [
+const inputList = [
   {
     id: "firstName",
     label: "First name",
@@ -63,3 +63,5 @@ export const waitlistFields = [
     ],
   },
 ];
+
+export { inputList };

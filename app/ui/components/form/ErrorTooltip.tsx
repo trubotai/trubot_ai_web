@@ -1,5 +1,5 @@
-import { AlertCircle } from "lucide-react";
 import React from "react";
+import { AlertCircle } from "lucide-react";
 
 interface ErrorTooltipProps {
   error?: string;

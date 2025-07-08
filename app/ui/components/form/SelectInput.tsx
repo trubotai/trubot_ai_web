@@ -14,14 +14,14 @@ const SelectInput = forwardRef<HTMLSelectElement, SelectInputProps>(
   ({ id, label, error, className = "", children, ...selectProps }, ref) => {
     return (
       <div className="relative">
-        {label && (
-          <label
-            htmlFor={id}
-            className="block text-sm font-medium text-navy mb-1"
-          >
-            {label}
-          </label>
-        )}
+        <label
+          htmlFor={id}
+          className={
+            label ? "block text-sm font-medium text-navy mb-1" : "sr-only"
+          }
+        >
+          {label || id}
+        </label>
         <select
           id={id}
           ref={ref}

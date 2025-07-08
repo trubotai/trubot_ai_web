@@ -1,29 +1,29 @@
 "use client";
 
 import { toast } from "sonner";
-import { useForm, Controller } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
+import { useForm, Controller } from "react-hook-form";
 import { Loader2, Mail, Target } from "lucide-react";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import LocationInput from "@/app/ui/components/form/LocationInput";
 import GoogleMapsLoader from "@/app/ui/components/form/GoogleMapsLoader";
+import TextInput from "@/app/ui/components/form/TextInput";
+import SelectInput from "@/app/ui/components/form/SelectInput";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import Button from "@/app/ui/components/shared/Button";
 import SubscribedBox from "./components/SubscribedBox";
-import TextInput from "@/app/ui/components/form/TextInput";
-import SelectInput from "@/app/ui/components/form/SelectInput";
+import { inputList } from "@/app/ui/libs/constants/crm-form/trusocial-waitlist";
 import {
-  waitlistFormSchema,
-  WaitlistFormData,
-} from "@/app/ui/libs/validation/waitlistSchema";
-import { waitlistFields } from "@/app/ui/libs/constants/waitlistFields";
+  inputFormData,
+  inputFormSchema,
+} from "@/app/ui/libs/validation/trusocialWaitlist.schema";
 
 const Page = () => {
   const [subscribed, setSubscribed] = useState(false);
-  const form = useForm<WaitlistFormData>({
-    resolver: zodResolver(waitlistFormSchema),
+  const form = useForm<inputFormData>({
+    resolver: zodResolver(inputFormSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -36,46 +36,15 @@ const Page = () => {
     },
   });
 
-  const onSubmit = async (values: WaitlistFormData) => {
-    console.log(
-      JSON.stringify({
-        firstName: values.firstName,
-        lastName: values.lastName,
-        emailAddress: values.email,
-        mobileNumber: values.mobile || "",
-        location: values.location || "",
-        companyName: values.companyName || "",
-        jobTitle: values.jobTitle || "",
-        socialMediaNeeds: values.socialMediaNeeds,
-        productInterest: "TruSocial",
-        source: "Waitlist Page",
-      })
-    );
+  const onSubmit = async (values: inputFormData) => {
     try {
-      const response = await fetch(
-        "https://crm.trubotai.com/api/v1/LeadCapture/84006ddb862651d0c4c17f07061b0f8b",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            firstName: values.firstName,
-            lastName: values.lastName,
-            emailAddress: values.email,
-            mobileNumber: values.mobile || "",
-            location: values.location || "",
-            companyName: values.companyName || "",
-            jobTitle: values.jobTitle || "",
-            socialMediaNeeds: values.socialMediaNeeds,
-            productInterest: "TruSocial",
-            source: "Waitlist Page",
-          }),
-        }
-      );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (!response.ok) throw new Error("Network response was not ok");
+
       toast.success("Thank you for joining the TruSocial waitlist!");
       form.reset();
       setSubscribed(true);
@@ -86,7 +55,7 @@ const Page = () => {
   };
 
   return (
-    <PageLayout className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-electric/5 to-teal/5">
+    <PageLayout className="flex flex-col items-center justify-center min-h-screen">
       <div className="w-full max-w-2xl mx-auto px-4">
         <SectionHeader
           title="Join the TruSocial Waitlist"
@@ -97,7 +66,7 @@ const Page = () => {
           <SubscribedBox />
         ) : (
           <div className="w-full max-w-lg mx-auto">
-            <div className="bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden">
+            <div className="bg-light border border-gray-200 rounded-2xl shadow-xl overflow-hidden">
               {/* Header */}
               <div className="bg-gradient-to-r from-electric to-teal p-6 text-white text-center">
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -122,7 +91,7 @@ const Page = () => {
                     Required Information
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {waitlistFields
+                    {inputList
                       .filter((f) => ["firstName", "lastName"].includes(f.id))
                       .map((field) => (
                         <TextInput
@@ -132,12 +101,12 @@ const Page = () => {
                           icon={field.icon}
                           error={
                             form.formState.errors[
-                              field.id as keyof WaitlistFormData
+                              field.id as keyof inputFormData
                             ]?.message
                           }
                           placeholder={field.placeholder}
                           type={field.type}
-                          {...form.register(field.id as keyof WaitlistFormData)}
+                          {...form.register(field.id as keyof inputFormData)}
                         />
                       ))}
                   </div>
@@ -159,7 +128,7 @@ const Page = () => {
                     Additional Information (Optional)
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {waitlistFields
+                    {inputList
                       .filter((f) =>
                         ["mobile", "companyName", "jobTitle"].includes(f.id)
                       )
@@ -171,12 +140,12 @@ const Page = () => {
                           icon={field.icon}
                           error={
                             form.formState.errors[
-                              field.id as keyof WaitlistFormData
+                              field.id as keyof inputFormData
                             ]?.message
                           }
                           placeholder={field.placeholder}
                           type={field.type}
-                          {...form.register(field.id as keyof WaitlistFormData)}
+                          {...form.register(field.id as keyof inputFormData)}
                         />
                       ))}
                     <GoogleMapsLoader>
@@ -204,14 +173,11 @@ const Page = () => {
                 <div className="space-y-3">
                   <label
                     htmlFor="socialMediaNeeds"
-                    className="text-sm font-medium text-navy"
+                    className="text-sm font-semibold text-navy/70 uppercase tracking-wide mb-4"
                   >
-                    {
-                      waitlistFields.find((f) => f.id === "socialMediaNeeds")
-                        ?.label
-                    }
+                    {inputList.find((f) => f.id === "socialMediaNeeds")?.label}
                   </label>
-                  <div className="relative">
+                  <div className="relative mt-4">
                     <SelectInput
                       id="socialMediaNeeds"
                       label={undefined}
@@ -219,7 +185,7 @@ const Page = () => {
                       {...form.register("socialMediaNeeds")}
                     >
                       <option value="">Select your primary need</option>
-                      {waitlistFields
+                      {inputList
                         .find((f) => f.id === "socialMediaNeeds")
                         ?.options?.map((option: string) => (
                           <option key={option} value={option}>

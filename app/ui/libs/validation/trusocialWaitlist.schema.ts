@@ -1,6 +1,6 @@
 import * as z from "zod";
 
-export const waitlistFormSchema = z.object({
+export const inputFormSchema = z.object({
   firstName: z
     .string()
     .min(2, "First name must be at least 2 characters")
@@ -28,4 +28,4 @@ export const waitlistFormSchema = z.object({
   socialMediaNeeds: z.string().min(1, "Please select your primary need"),
 });
 
-export type WaitlistFormData = z.infer<typeof waitlistFormSchema>;
+export type inputFormData = z.infer<typeof inputFormSchema>;

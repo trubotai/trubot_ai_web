@@ -4,11 +4,7 @@ import { useEffect, useState } from "react";
 import { Loader2 } from "lucide-react";
 import { Loader } from "@googlemaps/js-api-loader";
 
-export default function GoogleMapsLoader({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const GoogleMapsLoader = ({ children }: { children: React.ReactNode }) => {
   const [mapsReady, setMapsReady] = useState(false);
 
   useEffect(() => {
@@ -29,4 +25,6 @@ export default function GoogleMapsLoader({
   }
 
   return <>{children}</>;
-}
+};
+
+export default GoogleMapsLoader;
