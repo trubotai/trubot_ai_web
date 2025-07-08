@@ -3,9 +3,7 @@
 import { Loader } from "@googlemaps/js-api-loader";
 import { useEffect, useState } from "react";
 
-import PageLayout from "../ui/components/shared/PageLayout";
-
-export default function WaitlistLayout({
+export default function GoogleMapsLoader({
   children,
 }: {
   children: React.ReactNode;
@@ -23,9 +21,7 @@ export default function WaitlistLayout({
 
   if (!mapsReady) {
     return (
-      <PageLayout className="min-h-screen text-center">
-        Loading Input Form...
-      </PageLayout>
+      <div className="w-full text-center py-10">Loading map features...</div>
     );
   }
 
