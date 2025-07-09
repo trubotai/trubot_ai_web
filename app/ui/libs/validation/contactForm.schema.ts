@@ -15,7 +15,13 @@ export const contactFormSchema = z.object({
     .string()
     .email("Please enter a valid email address")
     .max(100, "Email must be at most 100 characters"),
-  mobile: z.string().optional(),
+  mobile: z
+    .string()
+    .optional()
+    .refine((value) => {
+      if (!value) return true;
+      return /^\+?[1-9]\d{1,14}$/.test(value.replace(/\s/g, ""));
+    }, "Please enter a valid phone number"),
   message: z
     .string()
     .min(10, "Message must be at least 10 characters")

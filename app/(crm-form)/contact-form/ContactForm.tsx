@@ -3,18 +3,22 @@
 import { toast } from "sonner";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Loader2, MessageSquare, Mail, Phone } from "lucide-react";
+import { Loader2, MessageSquare, Mail } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import TextInput from "@/app/ui/components/form/TextInput";
 import TextArea from "@/app/ui/components/form/TextArea";
+import PhoneInput from "@/app/ui/components/form/PhoneInput";
 import Button from "@/app/ui/components/shared/Button";
-import { inputList } from "@/app/ui/libs/constants/crm-form/contact-form";
 import ContactSuccessBox from "./components/ContactSuccessBox";
+import { inputList } from "@/app/ui/libs/constants/crm-form/contact-form";
 import {
   contactFormData,
   contactFormSchema,
 } from "@/app/ui/libs/validation/contactForm.schema";
+
+const contactFormInputClasses =
+  "py-4 px-4 text-base rounded-xl border-2 border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/30 bg-white/80 shadow-sm hover:shadow-md";
 
 interface ContactFormProps {
   className?: string;
@@ -42,9 +46,6 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
       });
       if (!response.ok) throw new Error("Network response was not ok");
 
-      toast.success(
-        "Thank you for your message! We&rsquo;ll get back to you soon."
-      );
       form.reset();
       setSubmitted(true);
     } catch (error) {
@@ -65,6 +66,7 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
         <h4 className="text-sm font-semibold text-navy/70 uppercase tracking-wide mb-2">
           Required Information
         </h4>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {inputList
             .filter((f) => ["firstName", "lastName"].includes(f.id))
@@ -80,7 +82,7 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
                 }
                 placeholder={field.placeholder}
                 type={field.type}
-                className="py-4 px-4 text-base rounded-xl border-2 border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/30 transition-all duration-200 bg-white/80 shadow-sm hover:shadow-md"
+                className={contactFormInputClasses}
                 {...form.register(field.id as keyof contactFormData)}
               />
             ))}
@@ -93,7 +95,7 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
           error={form.formState.errors.email?.message}
           placeholder="your@email.com"
           type="email"
-          className="py-4 px-4 text-base rounded-xl border-2 border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/30 transition-all duration-200 bg-white/80 shadow-sm hover:shadow-md"
+          className={contactFormInputClasses}
           {...form.register("email")}
         />
       </div>
@@ -103,16 +105,15 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
         <h4 className="text-sm font-semibold text-navy/70 uppercase tracking-wide mb-2">
           Additional Information (Optional)
         </h4>
-        <TextInput
+        <PhoneInput
           key="mobile"
           id="mobile"
           label={undefined}
-          icon={Phone}
           error={form.formState.errors.mobile?.message}
           placeholder="Mobile number"
-          type="text"
-          className="py-4 px-4 text-base rounded-xl border-2 border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/30 transition-all duration-200 bg-white/80 shadow-sm hover:shadow-md"
-          {...form.register("mobile")}
+          value={form.watch("mobile")}
+          onChange={(value) => form.setValue("mobile", value || "")}
+          className={contactFormInputClasses}
         />
       </div>
 
@@ -131,7 +132,7 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
             icon={MessageSquare}
             error={form.formState.errors.message?.message}
             placeholder="Tell us how we can help you..."
-            className="py-4 px-4 text-base rounded-xl border-2 border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/30 transition-all duration-200 bg-white/80 shadow-sm hover:shadow-md min-h-[120px]"
+            className={`${contactFormInputClasses} min-h-[120px]`}
             {...form.register("message")}
           />
         </div>
@@ -142,7 +143,10 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
         as="button"
         type="submit"
         label={form.formState.isSubmitting ? "" : "Send Message"}
-        className="w-full py-4 text-lg font-semibold rounded-xl bg-gradient-to-r from-electric to-teal shadow-lg hover:shadow-xl transition-all duration-200"
+        variant="submit"
+        size="lg"
+        fullWidth
+        className="rounded-xl"
         disabled={form.formState.isSubmitting}
         animate
       >

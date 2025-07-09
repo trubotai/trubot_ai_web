@@ -3,16 +3,18 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json();
-
-    // TODO: Replace with actual API endpoint
     const res = await fetch(
       "https://crm.trubotai.com/api/v1/LeadCapture/f641e1ec49fb8bbcd945cf75096ee115",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          ...data,
-          source: "Contact Form",
+          firstName: data.firstName,
+          lastName: data.lastName,
+          emailAddress: data.email,
+          description: data.message,
+          phoneNumber: data.mobile,
+          cSource: "Contact Form",
         }),
       }
     );

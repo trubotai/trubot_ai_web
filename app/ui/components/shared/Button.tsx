@@ -24,7 +24,8 @@ interface ButtonProps {
     | "ghost"
     | "link"
     | "coral"
-    | "teal";
+    | "teal"
+    | "submit";
   disabled?: boolean;
   target?: "_blank" | "_self";
   rel?: string;
@@ -72,6 +73,8 @@ const Button = ({
     link: "text-electric bg-transparent hover:text-teal hover-raise",
     coral: "bg-coral text-light hover:bg-coral/80 hover-glow",
     teal: "bg-teal text-light hover:bg-teal/80 hover-glow",
+    submit:
+      "bg-gradient-to-r from-electric to-teal text-light hover:shadow-xl transition-all duration-200 shadow-lg",
   };
 
   const iconClass = `h-5 w-5 ${iconAnimate ? "float" : ""}`;
