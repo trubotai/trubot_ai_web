@@ -28,15 +28,14 @@ const solutionLinkList = [
 ];
 
 const partnerLinkList = [
-  { href: "/partners/partner-program", label: "Partner Program" },
   { href: "/partners/white-label-partners", label: "White Label Partners" },
-  { href: "/partners/royalty-program", label: "Royalty Program" },
-  { href: "/partners/startup-program", label: "Startup Program" },
-  { href: "/partners/reseller-program", label: "Reseller Program" },
   { href: "/partners/implementation-partner", label: "Implementation Partner" },
   { href: "/partners/technology-partner", label: "Technology Partner" },
-  { href: "/partners/sales-partner", label: "Sales Partner" },
   { href: "/partners/strategic-partner", label: "Strategic Partner" },
+  { href: "/partners/sales-partner", label: "Sales Partner" },
+  { href: "/partners/startup-program", label: "Startup Program" },
+  { href: "/partners/royalty-program", label: "Royalty Program" },
+  { href: "/partners/reseller-program", label: "Reseller Program" },
 ];
 
 const companyLinkList = [

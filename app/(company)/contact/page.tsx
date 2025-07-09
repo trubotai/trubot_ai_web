@@ -9,6 +9,7 @@ import PageLayout from "@/app/ui/components/shared/PageLayout";
 import Button from "@/app/ui/components/shared/Button";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import FAQSection from "@/app/ui/components/shared/FAQSection";
+import ContactForm from "@/app/(crm-form)/contact-form/ContactForm";
 import {
   heroSection,
   bookCallSection,
@@ -51,31 +52,49 @@ const Page = () => {
     <>
       {/* Hero */}
       <div className="relative bg-gradient-to-br from-navy via-dark to-black text-light min-h-screen flex items-center overflow-hidden">
-        <PageLayout
-          id="contact-hero"
-          className="relative z-10 text-center max-w-4xl mx-auto fade-in slide-in-up"
-          padding="lg"
-        >
-          <div className="flex justify-center mb-6">
-            <FaRobot size={64} className="text-electric float" />
-          </div>
+        <PageLayout id="contact-hero" className="relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="text-center flex flex-col items-center justify-center">
+              <div className="flex justify-center mb-8">
+                <div className="relative flex items-center justify-center">
+                  <span className="absolute w-20 h-20 rounded-full bg-electric/20 blur-2xl animate-pulse" />
+                  <span className="absolute w-28 h-28 rounded-full bg-teal/10 blur-3xl animate-pulse" />
+                  <FaRobot
+                    size={64}
+                    className="text-electric relative z-10 drop-shadow-lg"
+                  />
+                </div>
+              </div>
 
-          <h1 className="text-5xl sm:text-6xl font-heading font-extrabold leading-tight mb-6 bg-gradient-to-r from-electric to-teal bg-clip-text text-transparent">
-            {heroSection.title}
-          </h1>
+              <h1 className="text-5xl sm:text-6xl font-heading font-extrabold leading-tight mb-6 bg-gradient-to-r from-electric to-teal bg-clip-text text-transparent drop-shadow-xl">
+                {heroSection.title}
+              </h1>
 
-          <p className="text-lg text-light/80 font-body mb-10">
-            {heroSection.subtitle}
-          </p>
+              <p className="text-xl text-light/80 font-body mb-10 max-w-xl mx-auto lg:mx-0 font-light">
+                {heroSection.subtitle}
+              </p>
 
-          <div className="flex flex-wrap justify-center gap-4 fade-in scale-up animation-delay-300">
-            <Button
-              {...heroSection.primaryCTA}
-              ariaLabel="Send an email to contact@trubotai.com"
-              variant="primary"
-              target="_blank"
-              animate
-            />
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 fade-in scale-up animation-delay-300">
+                <Button
+                  {...heroSection.primaryCTA}
+                  ariaLabel="Send an email to contact@trubotai.com"
+                  variant="outline"
+                  target="_blank"
+                  animate
+                  className="px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+                />
+              </div>
+            </div>
+
+            {/* Right Side - Contact Form */}
+            <div className="flex justify-center w-full">
+              <div className="w-full max-w-xl">
+                <div className="bg-white/90 border border-electric/10 rounded-3xl shadow-2xl p-0 overflow-hidden backdrop-blur-lg">
+                  {/* Form Body */}
+                  <ContactForm className="!bg-transparent !shadow-none !border-none p-12 !m-0" />
+                </div>
+              </div>
+            </div>
           </div>
         </PageLayout>
 
@@ -292,7 +311,7 @@ const Page = () => {
       <PageLayout id="contact-social">
         <SectionHeader
           title="Stay Connected With TruBot AI"
-          subtitle="We’re building in public. Follow us for updates on what we’re building, who we’re building it for, and how we’re shaping the future of AI."
+          subtitle="We're building in public. Follow us for updates on what we're building, who we're building it for, and how we're shaping the future of AI."
         />
 
         {/* Social Icons Grid */}
@@ -391,7 +410,7 @@ const Page = () => {
               variant="link"
               className="inline pl-1 pr-1"
             />
-            to see what we’re building.
+            to see what we&apos;re building.
           </p>
         </PageLayout>
       </div>
