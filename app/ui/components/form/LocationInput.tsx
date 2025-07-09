@@ -115,7 +115,11 @@ const LocationInput: React.FC<LocationInputProps> = ({
 
   return (
     <>
-      <div ref={containerRef} className={className} style={{ width: "100%" }} />
+      <div
+        ref={containerRef}
+        className={className}
+        style={{ width: "100%", height: "100%" }}
+      />
 
       {error && <p className="text-coral text-xs mt-1 ml-1">{error}</p>}
 

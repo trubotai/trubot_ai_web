@@ -9,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import LocationInput from "@/app/ui/components/form/LocationInput";
 import GoogleMapsLoader from "@/app/ui/components/form/GoogleMapsLoader";
 import TextInput from "@/app/ui/components/form/TextInput";
+import PhoneInput from "@/app/ui/components/form/PhoneInput";
 import SelectInput from "@/app/ui/components/form/SelectInput";
 import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
@@ -19,6 +20,9 @@ import {
   inputFormData,
   inputFormSchema,
 } from "@/app/ui/libs/validation/trusocialWaitlist.schema";
+
+const TrusocialWaitlistFormInputClasses =
+  "py-4 px-4 text-base rounded-xl border-2 border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/30 bg-white/80 shadow-sm hover:shadow-md";
 
 const Page = () => {
   const [subscribed, setSubscribed] = useState(false);
@@ -38,14 +42,13 @@ const Page = () => {
 
   const onSubmit = async (values: inputFormData) => {
     try {
-      const response = await fetch("/api/waitlist", {
+      const response = await fetch("/api/trusocial-waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
       if (!response.ok) throw new Error("Network response was not ok");
 
-      toast.success("Thank you for joining the TruSocial waitlist!");
       form.reset();
       setSubscribed(true);
     } catch (error) {
@@ -70,7 +73,7 @@ const Page = () => {
               {/* Header */}
               <div className="bg-gradient-to-r from-electric to-teal p-6 text-white text-center">
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-6 h-6" />
+                  <Target size={6} />
                 </div>
                 <h3 className="text-xl font-heading font-semibold mb-2">
                   Get Early Access
@@ -107,6 +110,7 @@ const Page = () => {
                           placeholder={field.placeholder}
                           type={field.type}
                           {...form.register(field.id as keyof inputFormData)}
+                          className={TrusocialWaitlistFormInputClasses}
                         />
                       ))}
                   </div>
@@ -119,6 +123,7 @@ const Page = () => {
                     placeholder="your@email.com"
                     type="email"
                     {...form.register("email")}
+                    className={TrusocialWaitlistFormInputClasses}
                   />
                 </div>
 
@@ -128,10 +133,9 @@ const Page = () => {
                     Additional Information (Optional)
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Other fields */}
                     {inputList
-                      .filter((f) =>
-                        ["mobile", "companyName", "jobTitle"].includes(f.id)
-                      )
+                      .filter((f) => ["companyName", "jobTitle"].includes(f.id))
                       .map((field) => (
                         <TextInput
                           key={field.id}
@@ -146,8 +150,22 @@ const Page = () => {
                           placeholder={field.placeholder}
                           type={field.type}
                           {...form.register(field.id as keyof inputFormData)}
+                          className={TrusocialWaitlistFormInputClasses}
                         />
                       ))}
+
+                    {/* Mobile field with PhoneInput */}
+                    <PhoneInput
+                      key="mobile"
+                      id="mobile"
+                      label={undefined}
+                      error={form.formState.errors.mobile?.message}
+                      placeholder="Mobile number"
+                      value={form.watch("mobile")}
+                      onChange={(value) => form.setValue("mobile", value || "")}
+                      className={TrusocialWaitlistFormInputClasses}
+                    />
+
                     <GoogleMapsLoader>
                       <Controller
                         name="location"
@@ -156,7 +174,7 @@ const Page = () => {
                           <LocationInput
                             onChange={field.onChange}
                             placeholder="City, State"
-                            className={`w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric focus:border-transparent transition-all duration-200 ${
+                            className={`text-base rounded-xl border-2 border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/30 bg-white/80 shadow-sm hover:shadow-md ${
                               form.formState.errors.location
                                 ? "border-coral"
                                 : ""
@@ -183,6 +201,7 @@ const Page = () => {
                       label={undefined}
                       error={form.formState.errors.socialMediaNeeds?.message}
                       {...form.register("socialMediaNeeds")}
+                      className={TrusocialWaitlistFormInputClasses}
                     >
                       <option value="">Select your primary need</option>
                       {inputList
@@ -203,7 +222,8 @@ const Page = () => {
                   label={
                     form.formState.isSubmitting ? "" : "Join TruSocial Waitlist"
                   }
-                  className="w-full py-3 text-base font-semibold"
+                  variant="submit"
+                  fullWidth
                   disabled={form.formState.isSubmitting}
                   animate
                 >

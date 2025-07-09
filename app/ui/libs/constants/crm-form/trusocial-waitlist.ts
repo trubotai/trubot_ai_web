@@ -1,4 +1,4 @@
-import { User, Mail, Phone, Building, Briefcase } from "lucide-react";
+import { User, Mail, Building, Briefcase } from "lucide-react";
 
 const inputList = [
   {
@@ -28,7 +28,6 @@ const inputList = [
   {
     id: "mobile",
     label: "Mobile number",
-    icon: Phone,
     placeholder: "Mobile number",
     type: "text",
     required: false,
