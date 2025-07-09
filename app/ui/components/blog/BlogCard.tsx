@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { PrismicNextImage } from "@prismicio/next";
 import type { BlogPostDocument } from "@/prismicio-types";
-import { FaClock, FaUser, FaArrowRight } from "react-icons/fa";
+import { FaClock, FaArrowRight } from "react-icons/fa";
 
 interface BlogCardProps {
   post: BlogPostDocument;
@@ -15,7 +15,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
   className = "",
 }) => {
   const readTime = post.data.estimated_read_time || 5;
-  const author = post.data.author || "TruBot AI Team";
   const publishDate = post.data.publish_date
     ? new Date(post.data.publish_date).toLocaleDateString("en-US", {
         year: "numeric",
@@ -55,10 +54,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
               </p>
             )}
             <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-              <div className="flex items-center">
-                <FaUser className="mr-1" />
-                <span>{author}</span>
-              </div>
               <div className="flex items-center">
                 <FaClock className="mr-1" />
                 <span>{readTime} min read</span>
@@ -103,10 +98,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
           )}
 
           <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-            <div className="flex items-center">
-              <FaUser className="mr-1" />
-              <span>{author}</span>
-            </div>
             <div className="flex items-center">
               <FaClock className="mr-1" />
               <span>{readTime} min read</span>

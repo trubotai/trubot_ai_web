@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaCalendar, FaUser, FaClock, FaTag } from "react-icons/fa";
+import { FaCalendar, FaClock, FaTag } from "react-icons/fa";
 import type * as prismic from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 
@@ -8,7 +8,6 @@ import ShareLinks from "@/app/ui/components/blog/ShareLinks";
 interface BlogPostHeaderProps {
   title: string;
   excerpt: string;
-  author: string;
   publishDate: string;
   readTime: number;
   tags: string;
@@ -19,7 +18,6 @@ interface BlogPostHeaderProps {
 const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({
   title,
   excerpt,
-  author,
   publishDate,
   readTime,
   tags,
@@ -72,10 +70,6 @@ const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({
       {/* Meta Information */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
         <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
-          <div className="flex items-center">
-            <FaUser className="mr-2 text-electric" />
-            <span>{author}</span>
-          </div>
           <div className="flex items-center">
             <FaCalendar className="mr-2 text-electric" />
             <span>

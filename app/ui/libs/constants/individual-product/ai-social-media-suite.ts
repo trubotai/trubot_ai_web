@@ -23,7 +23,7 @@ const heroSection = {
     "Leverage the power of artificial intelligence to create engaging content, analyze trends, optimize engagement, and drive measurable results across all your social media channels.",
   primaryCTA: {
     label: "Join Waitlist",
-    href: "/waitlist",
+    href: "/trusocial-waitlist",
   },
   secondaryCTA: {
     label: "Demo",
@@ -347,7 +347,7 @@ const ctaSection = {
     "Join forward-thinking brands that are using AI to create more engaging content, identify emerging trends, and drive measurable business results from their social media efforts.",
   primaryCTA: {
     label: "Join Waitlist",
-    href: "/waitlist",
+    href: "/trusocial-waitlist",
   },
   secondaryCTA: {
     label: "Demo",
