@@ -23,7 +23,11 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
           {label || id}
         </label>
         {Icon && (
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <div
+            className={`absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none${
+              label ? " top-5" : ""
+            }`}
+          >
             <Icon className="h-5 w-5 text-gray-400" />
           </div>
         )}

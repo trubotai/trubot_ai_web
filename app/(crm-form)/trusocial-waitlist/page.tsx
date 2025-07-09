@@ -1,5 +1,6 @@
 "use client";
 
+import { Metadata } from "next";
 import { toast } from "sonner";
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
@@ -20,6 +21,57 @@ import {
   inputFormData,
   inputFormSchema,
 } from "@/app/ui/libs/validation/trusocialWaitlist.schema";
+
+export const metadata: Metadata = {
+  title: "Join TruSocial Waitlist | AI-Powered Social Media Management",
+  description:
+    "Be the first to experience TruSocial - AI-powered social media management platform. Get early access, exclusive perks, and help shape the future of social media automation.",
+  keywords: [
+    "TruSocial Waitlist",
+    "AI social media management",
+    "Social media automation",
+    "AI content creation",
+    "Social media scheduling",
+    "Multi-platform posting",
+    "Social media analytics",
+    "Engagement management",
+    "AI for social media",
+    "Social media tools",
+    "Content creation AI",
+    "Social media platform",
+    "Early access social media",
+    "TruBot AI social media",
+    "Social media management software",
+    "AI-powered posting",
+    "Social media optimization",
+  ],
+  authors: [{ name: "TruBot AI", url: "https://trubot.ai/trusocial-waitlist" }],
+  creator: "TruBot AI",
+  publisher: "TruBot AI",
+  openGraph: {
+    title: "Join TruSocial Waitlist | AI-Powered Social Media Management",
+    description:
+      "Get early access to TruSocial - the AI-powered social media management platform. Join thousands of businesses waiting for the future of social media automation.",
+    url: "https://trubot.ai/trusocial-waitlist",
+    siteName: "TruBot AI",
+    images: [
+      {
+        url: "https://trubot.ai/images/default-og.png",
+        width: 1200,
+        height: 630,
+        alt: "TruSocial Waitlist - AI-Powered Social Media Management",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Join TruSocial Waitlist | AI-Powered Social Media Management",
+    description:
+      "Be the first to experience AI-powered social media management. Get early access to TruSocial and help shape the future of social media automation.",
+    images: ["https://trubot.ai/images/default-og.png"],
+  },
+};
 
 const TrusocialWaitlistFormInputClasses =
   "py-4 px-4 text-base rounded-xl border-2 border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/30 bg-white/80 shadow-sm hover:shadow-md";

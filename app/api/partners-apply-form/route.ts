@@ -4,7 +4,6 @@ export async function POST(req: NextRequest) {
   try {
     const data = await req.json();
     console.log(data);
-    // TODO: Replace with actual API endpoint
     const res = await fetch("", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

@@ -23,7 +23,11 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           {label || id}
         </label>
         {Icon && (
-          <div className="absolute top-3 left-0 pl-3 flex items-start pointer-events-none">
+          <div
+            className={`absolute ${
+              label ? "top-10" : "top-3"
+            } left-0 pl-3 flex items-start pointer-events-none`}
+          >
             <Icon className="h-5 w-5 text-gray-400 mt-1" />
           </div>
         )}

@@ -9,6 +9,7 @@ import { Loader2 } from "lucide-react";
 import TextInput from "@/app/ui/components/form/TextInput";
 import TextArea from "@/app/ui/components/form/TextArea";
 import SelectInput from "@/app/ui/components/form/SelectInput";
+import PhoneInput from "@/app/ui/components/form/PhoneInput";
 import Button from "@/app/ui/components/shared/Button";
 import PartnersApplySuccessBox from "./components/PartnersApplySuccessBox";
 import { inputList } from "@/app/ui/libs/constants/crm-form/partners-apply-form";
@@ -16,6 +17,9 @@ import {
   partnersApplyFormSchema,
   PartnersApplyFormData,
 } from "@/app/ui/libs/validation/partnersApplyForm.schema";
+
+const PartnershipApplyFormInputClasses =
+  "py-4 px-4 text-base rounded-xl border-2 border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/30 bg-white/80 shadow-sm hover:shadow-md";
 
 const sectionMap = {
   company: ["companyName", "website", "industry", "companySize"],
@@ -47,9 +51,6 @@ const PartnersApplyForm = () => {
       });
       if (!response.ok) throw new Error("Network response was not ok");
 
-      toast.success(
-        "Thank you for your application! We&rsquo;ll review it and get back to you within 5 business days."
-      );
       form.reset();
       setSubmitted(true);
     } catch (error) {
@@ -85,6 +86,7 @@ const PartnersApplyForm = () => {
                     ]?.message
                   }
                   {...form.register(field.id as keyof PartnersApplyFormData)}
+                  className={PartnershipApplyFormInputClasses}
                 >
                   <option value="">{field.placeholder}</option>
                   {field.options?.map((option) => (
@@ -108,6 +110,7 @@ const PartnersApplyForm = () => {
                 placeholder={field.placeholder}
                 type={field.type}
                 {...form.register(field.id as keyof PartnersApplyFormData)}
+                className={PartnershipApplyFormInputClasses}
               />
             );
           })}
@@ -134,6 +137,7 @@ const PartnersApplyForm = () => {
                     ]?.message
                   }
                   {...form.register(field.id as keyof PartnersApplyFormData)}
+                  className={PartnershipApplyFormInputClasses}
                 >
                   <option value="">{field.placeholder}</option>
                   {field.options?.map((option) => (
@@ -158,6 +162,7 @@ const PartnersApplyForm = () => {
                   }
                   placeholder={field.placeholder}
                   {...form.register(field.id as keyof PartnersApplyFormData)}
+                  className={PartnershipApplyFormInputClasses}
                 />
               );
             }
@@ -174,6 +179,20 @@ const PartnersApplyForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {sectionMap.contact.map((id) => {
             const field = inputList.find((f) => f.id === id)!;
+            if (id === "phone") {
+              return (
+                <PhoneInput
+                  key={field.id}
+                  id={field.id}
+                  label={field.label}
+                  error={form.formState.errors.phone?.message}
+                  placeholder={field.placeholder}
+                  value={form.watch("phone")}
+                  onChange={(value) => form.setValue("phone", value || "")}
+                  className={PartnershipApplyFormInputClasses}
+                />
+              );
+            }
             return (
               <TextInput
                 key={field.id}
@@ -187,6 +206,7 @@ const PartnersApplyForm = () => {
                 placeholder={field.placeholder}
                 type={field.type}
                 {...form.register(field.id as keyof PartnersApplyFormData)}
+                className={PartnershipApplyFormInputClasses}
               />
             );
           })}
@@ -213,6 +233,7 @@ const PartnersApplyForm = () => {
                 }
                 placeholder={field.placeholder}
                 {...form.register(field.id as keyof PartnersApplyFormData)}
+                className={PartnershipApplyFormInputClasses}
               />
             );
           })}
@@ -225,7 +246,9 @@ const PartnersApplyForm = () => {
           type="submit"
           as="button"
           label={form.formState.isSubmitting ? "" : "Submit Application"}
-          className="w-full max-w-xs py-4 text-lg font-semibold rounded-xl bg-gradient-to-r from-electric to-teal shadow-lg hover:shadow-xl transition-all duration-200"
+          variant="submit"
+          size="lg"
+          className="w-full max-w-xs rounded-xl"
           disabled={form.formState.isSubmitting}
           animate
         >

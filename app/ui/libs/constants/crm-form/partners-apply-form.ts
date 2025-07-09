@@ -70,7 +70,6 @@ const inputList = [
     type: "select",
     required: true,
     options: [
-      "Select partnership type",
       "White Label Partner",
       "Implementation Partner",
       "Technology Partner",
