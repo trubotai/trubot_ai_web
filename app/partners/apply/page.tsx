@@ -5,13 +5,13 @@ import PageLayout from "@/app/ui/components/shared/PageLayout";
 import SectionHeader from "@/app/ui/components/shared/SectionHeader";
 import HorizontalTimeline from "@/app/ui/components/shared/HorizontalTimeline";
 import CTASection from "@/app/ui/components/shared/CTASection";
+import PartnersApplyForm from "@/app/(crm-form)/partners-apply-form/PartnersApplyForm";
 import {
   heroSection,
   formSection,
   nextStepSection,
   ctaSection,
 } from "@/app/ui/libs/constants/partners/apply";
-import PartnersApplyForm from "@/app/(crm-form)/partners-apply-form/PartnersApplyForm";
 
 export const metadata: Metadata = {
   title: "Apply to TruBot AI Partner Program | Partnership Application",
