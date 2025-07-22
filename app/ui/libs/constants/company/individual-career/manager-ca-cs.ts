@@ -1,14 +1,14 @@
 import { CareerPageDataType } from "../../../types/careerPage";
 
-const charteredAccountantCompanySecretaryPageData: CareerPageDataType = {
-  id: "chartered-accountant-company-secretary",
+const cacsManagerPageData: CareerPageDataType = {
+  id: "manager-ca-cs",
   title: "Chartered Accountant / Company Secretary",
-  location: "Remote (Open Globally)",
+  location: "Remote (Global)",
   type: "Full-Time / Part-Time",
   shortDescription:
     "Join TruBot AI as a Chartered Accountant / Company Secretary to ensure financial integrity and regulatory compliance in our AI startup.",
   about:
-    "We're a stealth-mode AI startup transforming customer support and business communication through cutting-edge AI solutions. Our mission is to enhance efficiency, drive growth, and enable businesses to provide human-like, intelligent interactions across multiple platforms.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We are seeking a Result Oriented and Dynamic Accounting Professional who shall ensure financial integrity and efficiency for organizations and individuals by handling tasks like auditing, financial reporting, tax planning, and strategic financial advice with equal hands on experience as a compliance officer, corporate advisor, and governance professional. Should be able to assist the board of directors with efficient governance practices, ensure timely regulatory filings, maintain statutory registers, and coordinate various legal and financial tasks.",
   responsibilities: [
@@ -61,18 +61,18 @@ const charteredAccountantCompanySecretaryPageData: CareerPageDataType = {
     "Creativity: Think innovatively to solve problems and find alternative solutions when facing obstacles",
   ],
   benefits: [
-    "Equity Ownership – Be a key stakeholder in our success",
-    "Remote & Flexible – Work from anywhere",
-    "Performance-Based Compensation – Commissions transitioning to competitive salary",
-    "Impact Opportunity – Drive measurable growth at a fast-scaling AI startup",
+    "🌍 Equity Ownership – Be a key stakeholder in our success.",
+    "🚀 Remote & Flexible – Work from anywhere, on your terms.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact finance role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "Email your resume with the subject line 'Application for Chartered Accountant / Company Secretary' to careers@trubotai.com",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Chartered Accountant / Company Secretary'.",
   applyEmail: "careers@trubotai.com",
 };
 
-export { charteredAccountantCompanySecretaryPageData };
+export { cacsManagerPageData };

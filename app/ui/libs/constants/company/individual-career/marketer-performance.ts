@@ -8,7 +8,7 @@ const performanceMarketerPageData: CareerPageDataType = {
   shortDescription:
     "Spearhead data-driven growth campaigns at TruBot AI. Run paid ads, optimize performance, and maximize ROAS across channels.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionising business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We are seeking a data-driven and results-oriented Performance Marketer to lead our growth campaigns. You will manage and optimize paid media initiatives to drive user acquisition, boost engagement, and maximize return on ad spend (ROAS).",
   responsibilities: [
@@ -32,13 +32,13 @@ const performanceMarketerPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Commissions transitioning to competitive salary.",
-    "📈 Impact Opportunity – Drive measurable growth at a fast-scaling AI startup.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact marketing role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
     "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Performance Marketer'.",
   applyEmail: "careers@trubotai.com",

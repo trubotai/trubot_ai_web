@@ -8,7 +8,7 @@ const CTOPageData: CareerPageDataType = {
   shortDescription:
     "Shape the future of AI at TruBot AI as our CTO. Drive innovation, build scalable products, and lead a world-class tech team.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified AI platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We are seeking a visionary Chief Technology Officer to lead and shape the technical strategy of our AI startup. As a core member of our founding team, you will define the tech stack, oversee product development, ensure scalability, and execute innovative solutions that drive our mission and long-term growth.",
   responsibilities: [
@@ -34,15 +34,15 @@ const CTOPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Sales commissions transitioning to a competitive salary.",
-    "💡 High-Impact Role – Build a category-defining AI solution from the ground up.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact technology role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
     "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for CTO' and become a part of TruBot AI's leadership team!",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for CTO'.",
   applyEmail: "careers@trubotai.com",
 };
 

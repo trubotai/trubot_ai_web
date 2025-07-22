@@ -36,8 +36,8 @@ import { graphicDesignerPageData } from "./designer-graphic";
 import { uiuxDesignerPageData } from "./designer-uiux";
 import { cfoPageData } from "./chief-financial-officer";
 import { aiSolutionArchitectPageData } from "./architect-ai-solutions";
-import { charteredAccountantCompanySecretaryPageData } from "./chartered-accountant-company-secretary";
-import seniorFullStackDeveloper from "./senior-full-stack-developer";
+import { cacsManagerPageData } from "./manager-ca-cs";
+import { seniorFullStackDeveloperPageData } from "./senior-full-stack-developer";
 
 export const careerPagesMap: Record<string, CareerPageDataType> = {
   "assistant-operations-founder": executiveAssistantPageData,
@@ -64,6 +64,7 @@ export const careerPagesMap: Record<string, CareerPageDataType> = {
   "lead-product-designer": leadProductDesignerPageData,
   "lead-social-media-strategy": socialMediaStrategyLeadPageData,
   "manager-accounts-payroll": accountsPayrollManagerPageData,
+  "manager-ca-cs": cacsManagerPageData,
   "manager-fundraising": fundraisingManagerPageData,
   "manager-human-resources": humanResourcesManagerPageData,
   "manager-mergers-acquisitions-specialist": MASpecialistManagerPageData,
@@ -76,7 +77,5 @@ export const careerPagesMap: Record<string, CareerPageDataType> = {
   "engineer-software": softwareEngineerPageData,
   "svp-technology-ai": svpTechnologyAIPageData,
   "vp-technology": vpTechnologyPageData,
-  "senior-full-stack-developer": seniorFullStackDeveloper,
-  "chartered-accountant-company-secretary":
-    charteredAccountantCompanySecretaryPageData,
+  "senior-full-stack-developer": seniorFullStackDeveloperPageData,
 };

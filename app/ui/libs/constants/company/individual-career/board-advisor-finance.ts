@@ -8,9 +8,9 @@ const financeAdvisorPageData: CareerPageDataType = {
   shortDescription:
     "Guide financial planning, capital strategies, and investor readiness to support sustainable growth.",
   about:
-    "At TruBot AI, we’re redefining how businesses communicate and scale operations through our all-in-one AI platform. From automation to engagement, we empower SMEs globally.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
-    "We’re seeking a Finance Advisor to help steer our financial planning, capital strategy, and investor readiness. Your insights will be instrumental in shaping our path toward sustainable growth and funding success.",
+    "We're seeking a Finance Advisor to help steer our financial planning, capital strategy, and investor readiness. Your insights will be instrumental in shaping our path toward sustainable growth and funding success.",
   responsibilities: [
     "Advise on financial strategy, modelling, and metrics.",
     "Guide investor engagement and capital structuring.",
@@ -28,12 +28,15 @@ const financeAdvisorPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "📈 Influence Financial Growth – Help shape the future of a rising AI disruptor.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact advisory role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
-  compensation: "Equity-based",
-  workingHours: "Flexible",
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
+  workingHours:
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "To apply, please email your resume and LinkedIn profile to careers@trubotai.com with the subject line: 'Application for Board Advisor – Finance'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Board Advisor – Finance'.",
   applyEmail: "careers@trubotai.com",
 };
 

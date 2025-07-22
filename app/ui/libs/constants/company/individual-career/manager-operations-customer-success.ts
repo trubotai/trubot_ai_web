@@ -8,7 +8,7 @@ const customerSuccessManagerPageData: CareerPageDataType = {
   shortDescription:
     "Join TruBot AI as a Customer Success & Client Onboarding Manager to lead seamless onboarding, support engagement, and elevate customer satisfaction with our AI-powered solutions.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and invoice automation to streamline operations and scale customer engagement.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We are seeking a Customer Success & Client Onboarding Manager to ensure smooth adoption and long-term success with our AI solutions. This role blends customer engagement, technical onboarding, and cross-functional collaboration to deliver value and satisfaction at every stage of the client journey.",
   responsibilities: [
@@ -27,8 +27,8 @@ const customerSuccessManagerPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Sales commissions transitioning to competitive salary.",
-    "💡 High-Impact Role – Help build a category-defining AI solution from the ground up.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact customer success role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",

@@ -117,11 +117,11 @@ const jobListData = [
     href: "/careers/manager-accounts-payroll",
   },
   {
-    id: "chartered-accountant-company-secretary",
+    id: "manager-ca-cs",
     title: "Chartered Accountant / Company Secretary",
     department: "Finance",
     level: "Manager",
-    href: "/careers/chartered-accountant-company-secretary",
+    href: "/careers/manager-ca-cs",
     featured: true,
   },
   {

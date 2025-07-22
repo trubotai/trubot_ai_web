@@ -8,7 +8,7 @@ const fullStackEngineeringManagerPageData: CareerPageDataType = {
   shortDescription:
     "Drive innovation and scalability at TruBot AI. Lead the development of AI-powered customer support systems in a high-impact leadership role.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation to transform operations and scale intelligently.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We are looking for a Full Stack Hands-on Engineering Manager/Lead to drive the technical direction of our AI products. You will lead the design, development, and deployment of scalable AI-powered systems and mentor a world-class engineering team.",
   responsibilities: [
@@ -31,17 +31,17 @@ const fullStackEngineeringManagerPageData: CareerPageDataType = {
     "Proven ability to adapt quickly in dynamic startup environments.",
   ],
   benefits: [
-    "🌍 Equity Ownership – Become a core stakeholder in a high-growth AI company.",
-    "🚀 Remote & Flexible – Work from anywhere with autonomy and purpose.",
-    "💰 Performance-Based Compensation – Sales commissions transitioning to a competitive salary.",
-    "💡 High-Impact Role – Shape technical innovation in the future of AI-powered automation.",
+    "🌍 Equity Ownership – Be a key stakeholder in our success.",
+    "🚀 Remote & Flexible – Work from anywhere, on your terms.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact engineering management role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Full Stack Engineering Manager' and take the first step in building the next big thing in AI!",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Full Stack Engineering Manager'.",
   applyEmail: "careers@trubotai.com",
 };
 
