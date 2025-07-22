@@ -1,13 +1,15 @@
-const data = {
+import { CareerPageDataType } from "../../../types/careerPage";
+
+const seniorFullStackDeveloperPageData: CareerPageDataType = {
   id: "senior-full-stack-developer",
   title:
     "Senior Full-Stack Developer (React, Next.js, Node.js, .NET Core, Azure AI)",
-  location: "Remote (India preferred)",
+  location: "Remote (India Preferred)",
   type: "Full-Time | Experience: 10+ Years",
   shortDescription:
     "Build next-gen SaaS and AI platforms with React, Next.js, Node.js, .NET Core, and Azure AI. Join TruBot AI to drive innovation and impact at scale.",
   about:
-    "At TruBot AI, we are transforming how modern businesses communicate and scale. We're a fast-growing AI-first startup building a unified automation platform that combines chatbots, voice assistants, AI agents, social media tools, and business automation. We empower SMEs to automate workflows, engage users, and grow efficiently using the power of AI, cloud-native engineering, and seamless integration.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We're seeking a Senior Full-Stack Developer who thrives in ambiguity, owns outcomes end-to-end, and enjoys turning vision into high-performing, secure, and elegant applications. You'll build across the stack — frontend, backend, and infrastructure — while integrating next-gen AI capabilities using Azure OpenAI. This is your opportunity to build next-gen SaaS and AI platforms used by thousands of businesses — with the autonomy, agility, and velocity of a startup.",
   responsibilities: [
@@ -32,17 +34,18 @@ const data = {
     "A bias for action, strong ownership, and ability to thrive in startup speed and uncertainty.",
   ],
   benefits: [
-    "Impact at Scale: Power core workflows for thousands of businesses across industries.",
-    "AI-Native Innovation: Work with the latest in LLMs, voice AI, and automation agents.",
-    "Freedom to Own: Drive decisions, own deliverables, and shape the tech stack.",
-    "Collaborative Culture: Work with a sharp, mission-driven team that values growth, ownership, and excellence.",
+    "🌍 Equity Ownership – Be a key stakeholder in our success.",
+    "🚀 Remote & Flexible – Work from anywhere, on your terms.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact engineering role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
-  applyInstructions:
-    "Send your resume and a brief note about why you're a great fit to careers@trubotai.com. Please include links to your GitHub, portfolio, or any relevant work.",
-  applyEmail: "careers@trubotai.com",
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, remote-first. Core collaboration hours: 11am–7pm IST.",
-  compensation: "Competitive salary + equity. Based on experience and fit.",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
+  applyInstructions:
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Senior Full-Stack Developer'.",
+  applyEmail: "careers@trubotai.com",
 };
 
-export default data;
+export { seniorFullStackDeveloperPageData };

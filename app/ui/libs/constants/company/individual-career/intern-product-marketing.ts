@@ -6,11 +6,11 @@ const productMarketingInternPageData: CareerPageDataType = {
   location: "Remote (Global)",
   type: "Internship | 3–6 Months",
   shortDescription:
-    "Launch your career in product marketing at TruBot AI! Help craft messaging, execute go-to-market strategies, and gain real-world experience with AI products.",
+    "Gain hands-on experience in product marketing at TruBot AI. Support go-to-market strategy, content creation, and campaign execution for AI-powered solutions.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our platform integrates AI-powered chatbots, voice bots, customer support automation, social media management, and invoice processing to help SMEs drive efficiency and scale operations.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
-    "We are seeking a creative and proactive Product Marketing Intern to support product positioning, market research, and content creation. You'll collaborate closely with senior product managers and gain hands-on exposure to AI-driven product development within a dynamic startup environment.",
+    "We’re looking for a Product Marketing Intern to support our go-to-market strategy, content creation, and campaign execution. This internship offers hands-on exposure to product launches, market research, and digital marketing in a dynamic AI startup environment.",
   responsibilities: [
     "Assist in crafting compelling product messaging and positioning strategies.",
     "Conduct market research and competitive analysis to identify trends and gaps.",
@@ -37,7 +37,7 @@ const productMarketingInternPageData: CareerPageDataType = {
   workingHours:
     "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Product Marketing Intern' and kickstart your marketing journey with TruBot AI.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Product Marketing Intern'.",
   applyEmail: "careers@trubotai.com",
 };
 

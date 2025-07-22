@@ -8,7 +8,7 @@ const headHumanResourcesPageData: CareerPageDataType = {
   shortDescription:
     "Define culture, drive talent strategy, and lead HR operations as the Head of Human Resources at TruBot AI.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media automation, and invoice tools — transforming how businesses engage customers and scale operations.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "As Head of Human Resources, you will be responsible for designing and executing our end-to-end HR strategy. From talent acquisition to employee well-being and organizational culture, you'll shape the foundation for an empowered, high-performing team.",
   responsibilities: [
@@ -32,9 +32,9 @@ const headHumanResourcesPageData: CareerPageDataType = {
   ],
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
-    "🚀 Remote & Flexible – Work from anywhere, on your schedule.",
-    "💰 Performance-Based Compensation – Commissions transitioning to a competitive salary.",
-    "💡 High-Impact Role – Shape the people strategy of a category-defining AI startup.",
+    "🚀 Remote & Flexible – Work from anywhere, on your terms.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact HR role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",

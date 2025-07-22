@@ -8,7 +8,7 @@ const humanResourcesManagerPageData: CareerPageDataType = {
   shortDescription:
     "Build a high-performing, values-driven team at TruBot AI. Lead recruitment, culture, and HR operations in a fast-paced AI startup.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and invoice automation — transforming how businesses engage customers and scale operations.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "As our HR Manager, you will lead recruitment, employee engagement, and organizational development initiatives. You will play a pivotal role in building scalable HR systems and a strong culture that enables our people to thrive.",
   responsibilities: [
@@ -33,8 +33,8 @@ const humanResourcesManagerPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Sales commissions transitioning to competitive salary.",
-    "💡 High-Impact Role – Help shape the people-first culture of a leading AI startup.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact HR role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",

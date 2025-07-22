@@ -10,9 +10,9 @@ const vpTechnologyPageData: CareerPageDataType = {
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
-    "We’re seeking a visionary Vice President of Technology to lead our technology strategy, architecture, and execution. You will play a critical role in shaping the direction of our product and tech roadmap, fostering innovation while ensuring technical excellence across all systems.",
+    "We're seeking a visionary Vice President of Technology to lead our technology strategy, architecture, and execution. You will play a critical role in shaping the direction of our product and tech roadmap, fostering innovation while ensuring technical excellence across all systems.",
   responsibilities: [
-    "Define and drive the company’s long-term technology vision, architecture, and infrastructure strategy.",
+    "Define and drive the company's long-term technology vision, architecture, and infrastructure strategy.",
     "Lead and mentor engineering teams to deliver scalable and high-performance technology solutions.",
     "Oversee the development, deployment, and maintenance of all technology systems, including the AI platform.",
     "Evaluate emerging technologies and implement innovative solutions to maintain competitive advantage.",
@@ -36,13 +36,13 @@ const vpTechnologyPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Equity or commissions transitioning to competitive salary.",
-    "🧠 Tech Leadership Opportunity – Build and lead the next generation of AI products in a high-growth startup.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact technology role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
     "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for VP of Technology'.",
   applyEmail: "careers@trubotai.com",

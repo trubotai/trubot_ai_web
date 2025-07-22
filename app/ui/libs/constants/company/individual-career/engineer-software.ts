@@ -8,7 +8,7 @@ const softwareEngineerPageData: CareerPageDataType = {
   shortDescription:
     "Join TruBot AI to design scalable systems and backend architecture powering AI chatbots, voice bots, and automation tools.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools and smart invoicing to automate processes and scale customer interactions.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We are looking for a versatile Software Engineer to help build core infrastructure, APIs, and backend services powering our AI products. You’ll collaborate with product and ML teams to develop scalable, secure, and high-performance systems that serve real-world business needs.",
   responsibilities: [
@@ -32,13 +32,13 @@ const softwareEngineerPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Equity and bonuses transitioning to competitive salary.",
-    "💡 High-Impact Role – Help build a category-defining AI company from the ground up.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact engineering role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
     "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Software Engineer'.",
   applyEmail: "careers@trubotai.com",

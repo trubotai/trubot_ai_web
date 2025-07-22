@@ -8,7 +8,7 @@ const aiSolutionArchitectPageData: CareerPageDataType = {
   shortDescription:
     "Bridge business goals with AI capabilities at TruBot AI. Design scalable, production-ready AI solutions across domains.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionising business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "We’re seeking an experienced and innovative Artificial Intelligence Solution Architect to design and implement AI-powered solutions that align with business goals. Your role will be pivotal in translating complex requirements into robust architectures, collaborating with cross-functional teams to deliver impactful, scalable systems.",
   responsibilities: [
@@ -34,13 +34,13 @@ const aiSolutionArchitectPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Equity or commissions transitioning to a competitive salary.",
-    "🧠 AI Innovation Opportunity – Build transformative AI systems at a high-growth startup.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact engineering role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
     "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for AI Solution Architect'.",
   applyEmail: "careers@trubotai.com",

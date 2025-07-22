@@ -28,10 +28,10 @@ const leadProductDesignerPageData: CareerPageDataType = {
     "Creative problem solver who thrives in fast-paced, dynamic environments.",
   ],
   benefits: [
-    "🌍 Equity Ownership – Help define the visual and functional identity of our products.",
-    "🚀 Remote & Flexible – Work from anywhere while making real product impact.",
-    "💰 Performance-Based Compensation – Commissions transitioning to competitive salary.",
-    "💡 End-to-End Design Ownership – Influence major product decisions across all AI touchpoints.",
+    "�� Equity Ownership – Be a key stakeholder in our success.",
+    "🚀 Remote & Flexible – Work from anywhere, on your terms.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact design leadership role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",

@@ -8,9 +8,9 @@ const fundraisingManagerPageData: CareerPageDataType = {
   shortDescription:
     "Join TruBot AI as a Fundraising Manager and lead strategic efforts to secure capital and fuel the growth of our next-gen AI platform.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs through a unified AI platform integrating chatbots, voice bots, AI agents, social media automation, and invoice tools — transforming how businesses automate and scale operations.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
-    "We are seeking a hands-on Fundraising Manager to lead investor outreach, manage funding campaigns, and secure capital for TruBot AI’s growth. This strategic role involves working closely with leadership and investors to align financial planning with long-term business success.",
+    "We are seeking a hands-on Fundraising Manager to lead investor outreach, manage funding campaigns, and secure capital for TruBot AI's growth. This strategic role involves working closely with leadership and investors to align financial planning with long-term business success.",
   responsibilities: [
     "Investor Outreach – Identify and build relationships with potential investors, including VC firms, angels, and funding institutions.",
     "Fundraising Strategy – Develop and execute impactful fundraising campaigns tailored to our growth stage.",
@@ -27,8 +27,8 @@ const fundraisingManagerPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Commissions transitioning to a competitive salary.",
-    "💡 High-Impact Role – Shape the financial future of a category-defining AI solution.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact fundraising role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
