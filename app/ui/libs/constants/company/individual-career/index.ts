@@ -36,6 +36,7 @@ import { graphicDesignerPageData } from "./designer-graphic";
 import { uiuxDesignerPageData } from "./designer-uiux";
 import { cfoPageData } from "./chief-financial-officer";
 import { aiSolutionArchitectPageData } from "./architect-ai-solutions";
+import { charteredAccountantCompanySecretaryPageData } from "./chartered-accountant-company-secretary";
 import seniorFullStackDeveloper from "./senior-full-stack-developer";
 
 export const careerPagesMap: Record<string, CareerPageDataType> = {
@@ -76,4 +77,6 @@ export const careerPagesMap: Record<string, CareerPageDataType> = {
   "svp-technology-ai": svpTechnologyAIPageData,
   "vp-technology": vpTechnologyPageData,
   "senior-full-stack-developer": seniorFullStackDeveloper,
+  "chartered-accountant-company-secretary":
+    charteredAccountantCompanySecretaryPageData,
 };
