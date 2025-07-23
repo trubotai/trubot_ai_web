@@ -12,16 +12,12 @@ export async function POST(req: NextRequest) {
           firstName: data.firstName,
           lastName: data.lastName,
           emailAddress: data.email,
-          phoneNumber: data.mobile,
           cCompanyName: data.companyName,
           cJobTitle: data.jobTitle,
+          phoneNumber: data.mobile,
+          description: data.location,
           cSocialMediaNeeds: data.socialMediaNeeds,
           cSource: "TruSocial Waitlist Page",
-          // "addressStreet": "ADDRESS_STREET",
-          // "addressCity": "ADDRESS_CITY",
-          // "addressState": "ADDRESS_STATE",
-          // "addressCountry": "ADDRESS_COUNTRY",
-          // "addressPostalCode": "ADDRESS_POSTAL_CODE",
         }),
       }
     );
