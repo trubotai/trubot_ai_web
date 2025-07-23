@@ -1,18 +1,5 @@
 const jobListData = [
-  {
-    id: "board-advisor-sales-growth",
-    title: "Board Advisor – Sales & Growth",
-    department: "Sales & Marketing",
-    level: "Board",
-    href: "/careers/board-advisor-sales-growth",
-  },
-  {
-    id: "board-advisor-technology",
-    title: "Board Advisor – Technology",
-    department: "Technology",
-    level: "Board",
-    href: "/careers/board-advisor-technology",
-  },
+  // Board Level
   {
     id: "board-advisor-finance",
     title: "Board Advisor – Finance",
@@ -28,25 +15,26 @@ const jobListData = [
     href: "/careers/board-advisor-legal",
   },
   {
-    id: "svp-technology-ai",
-    title: "SVP of Technology – Artificial Intelligence",
-    department: "Technology",
-    level: "VP",
-    href: "/careers/svp-technology-ai",
+    id: "board-advisor-sales-growth",
+    title: "Board Advisor – Sales & Growth",
+    department: "Sales & Marketing",
+    level: "Board",
+    href: "/careers/board-advisor-sales-growth",
   },
+  {
+    id: "board-advisor-technology",
+    title: "Board Advisor – Technology",
+    department: "Technology",
+    level: "Board",
+    href: "/careers/board-advisor-technology",
+  },
+  // Chief Level
   {
     id: "chief-financial-officer",
     title: "Chief Financial Officer",
     department: "Finance",
     level: "Chief",
     href: "/careers/chief-financial-officer",
-  },
-  {
-    id: "chief-sales-officer",
-    title: "Chief Sales Officer",
-    department: "Sales & Marketing",
-    level: "Chief",
-    href: "/careers/chief-sales-officer",
   },
   {
     id: "chief-operations-officer",
@@ -56,11 +44,26 @@ const jobListData = [
     href: "/careers/chief-operations-officer",
   },
   {
+    id: "chief-sales-officer",
+    title: "Chief Sales Officer",
+    department: "Sales & Marketing",
+    level: "Chief",
+    href: "/careers/chief-sales-officer",
+  },
+  {
     id: "chief-technology-officer",
     title: "Chief Technology Officer",
     department: "Technology",
     level: "Chief",
     href: "/careers/chief-technology-officer",
+  },
+  // VP Level
+  {
+    id: "svp-technology-ai",
+    title: "SVP of Technology – Artificial Intelligence",
+    department: "Technology",
+    level: "VP",
+    href: "/careers/svp-technology-ai",
   },
   {
     id: "vp-technology",
@@ -69,19 +72,13 @@ const jobListData = [
     level: "VP",
     href: "/careers/vp-technology",
   },
+  // Head Level
   {
-    id: "architect-ai-solutions",
-    title: "AI Solution Architect",
-    department: "Technology",
-    level: "Engineer",
-    href: "/careers/architect-ai-solutions",
-  },
-  {
-    id: "head-sales-country",
-    title: "Head of Sales - Country",
-    department: "Sales & Marketing",
+    id: "head-fundraising",
+    title: "Head of Fundraising",
+    department: "Finance",
     level: "Head",
-    href: "/careers/head-sales-country",
+    href: "/careers/head-fundraising",
   },
   {
     id: "head-human-resources",
@@ -91,13 +88,6 @@ const jobListData = [
     href: "/careers/head-human-resources",
   },
   {
-    id: "head-products",
-    title: "Head of Products",
-    department: "Product & Design",
-    level: "Head",
-    href: "/careers/head-products",
-  },
-  {
     id: "head-mergers-acquisitions",
     title: "Head of M&A",
     department: "Legal & Strategy",
@@ -105,32 +95,34 @@ const jobListData = [
     href: "/careers/head-mergers-acquisitions",
   },
   {
-    id: "head-fundraising",
-    title: "Head of Fundraising",
-    department: "Finance",
-    level: "Head",
-    href: "/careers/head-fundraising",
-  },
-  {
-    id: "manager-human-resources",
-    title: "Human Resources Manager",
-    department: "HR",
-    level: "Manager",
-    href: "/careers/manager-human-resources",
-  },
-  {
-    id: "manager-product",
-    title: "Product Manager",
+    id: "head-products",
+    title: "Head of Products",
     department: "Product & Design",
-    level: "Manager",
-    href: "/careers/manager-product",
+    level: "Head",
+    href: "/careers/head-products",
   },
   {
-    id: "manager-mergers-acquisitions-specialist",
-    title: "M&A Specialist Manager",
-    department: "Legal & Strategy",
+    id: "head-sales-country",
+    title: "Head of Sales - Country",
+    department: "Sales & Marketing",
+    level: "Head",
+    href: "/careers/head-sales-country",
+  },
+  // Manager Level
+  {
+    id: "manager-accounts-payroll",
+    title: "Accounts and Payroll Manager",
+    department: "Finance",
     level: "Manager",
-    href: "/careers/manager-mergers-acquisitions-specialist",
+    href: "/careers/manager-accounts-payroll",
+  },
+  {
+    id: "manager-ca-cs",
+    title: "Chartered Accountant / Company Secretary",
+    department: "Finance",
+    level: "Manager",
+    href: "/careers/manager-ca-cs",
+    featured: true,
   },
   {
     id: "manager-fundraising",
@@ -140,6 +132,20 @@ const jobListData = [
     href: "/careers/manager-fundraising",
   },
   {
+    id: "manager-human-resources",
+    title: "Human Resources Manager",
+    department: "HR",
+    level: "Manager",
+    href: "/careers/manager-human-resources",
+  },
+  {
+    id: "manager-mergers-acquisitions-specialist",
+    title: "M&A Specialist Manager",
+    department: "Legal & Strategy",
+    level: "Manager",
+    href: "/careers/manager-mergers-acquisitions-specialist",
+  },
+  {
     id: "manager-operations-customer-success",
     title: "Customer Success Manager",
     department: "Operations",
@@ -147,11 +153,11 @@ const jobListData = [
     href: "/careers/manager-operations-customer-success",
   },
   {
-    id: "manager-technology-fullstack-engineer",
-    title: "Full Stack Engineering Manager",
-    department: "Technology",
+    id: "manager-product",
+    title: "Product Manager",
+    department: "Product & Design",
     level: "Manager",
-    href: "/careers/manager-technology-fullstack-engineer",
+    href: "/careers/manager-product",
   },
   {
     id: "manager-project",
@@ -161,20 +167,57 @@ const jobListData = [
     href: "/careers/manager-project",
   },
   {
-    id: "manager-accounts-payroll",
-    title: "Accounts and Payroll Manager",
-    department: "Finance",
+    id: "manager-technology-fullstack-engineer",
+    title: "Full Stack Engineering Manager",
+    department: "Technology",
     level: "Manager",
-    href: "/careers/manager-accounts-payroll",
+    href: "/careers/manager-technology-fullstack-engineer",
+  },
+  // Lead Level
+  {
+    id: "lead-product-designer",
+    title: "Lead Product Designer",
+    department: "Product & Design",
+    level: "Lead",
+    href: "/careers/lead-product-designer",
   },
   {
-    id: "senior-full-stack-developer",
-    title:
-      "Senior Full-Stack Developer (React, Next.js, Node.js, .NET Core, Azure AI)",
+    id: "lead-social-media-strategy",
+    title: "Lead Social Media Strategy",
+    department: "Product & Design",
+    level: "Lead",
+    href: "/careers/lead-social-media-strategy",
+  },
+  // Designer Level
+  {
+    id: "designer-graphic",
+    title: "Graphic Designer",
+    department: "Product & Design",
+    level: "Designer",
+    href: "/careers/designer-graphic",
+  },
+  {
+    id: "designer-uiux",
+    title: "UI/UX Designer",
+    department: "Product & Design",
+    level: "Designer",
+    href: "/careers/designer-uiux",
+  },
+  // Marketing Level
+  {
+    id: "marketer-performance",
+    title: "Performance Marketer",
+    department: "Sales & Marketing",
+    level: "Marketing",
+    href: "/careers/marketer-performance",
+  },
+  // Engineer Level
+  {
+    id: "architect-ai-solutions",
+    title: "AI Solution Architect",
     department: "Technology",
     level: "Engineer",
-    href: "/careers/senior-full-stack-developer",
-    featured: true,
+    href: "/careers/architect-ai-solutions",
   },
   {
     id: "engineer-machine-learning",
@@ -191,47 +234,22 @@ const jobListData = [
     href: "/careers/engineer-software",
   },
   {
-    id: "marketer-performance",
-    title: "Performance Marketer",
-    department: "Sales & Marketing",
+    id: "senior-full-stack-developer",
+    title:
+      "Senior Full-Stack Developer (React, Next.js, Node.js, .NET Core, Azure AI)",
+    department: "Technology",
     level: "Engineer",
-    href: "/careers/marketer-performance",
+    href: "/careers/senior-full-stack-developer",
   },
+  // Assistant Level
   {
-    id: "designer-graphic",
-    title: "Graphic Designer",
-    department: "Product & Design",
-    level: "Engineer",
-    href: "/careers/designer-graphic",
+    id: "assistant-operations-founder",
+    title: "Executive Assistant – Founder",
+    department: "Operations",
+    level: "Assistant",
+    href: "/careers/assistant-operations-founder",
   },
-  {
-    id: "designer-uiux",
-    title: "UI/UX Designer",
-    department: "Product & Design",
-    level: "Engineer",
-    href: "/careers/designer-uiux",
-  },
-  {
-    id: "lead-product-designer",
-    title: "Lead Product Designer",
-    department: "Product & Design",
-    level: "Lead",
-    href: "/careers/lead-product-designer",
-  },
-  {
-    id: "lead-social-media-strategy",
-    title: "Lead Social Media Strategy",
-    department: "Product & Design",
-    level: "Lead",
-    href: "/careers/lead-social-media-strategy",
-  },
-  {
-    id: "intern-sales-marketing",
-    title: "Sales and Marketing Intern",
-    department: "Sales & Marketing",
-    level: "Intern",
-    href: "/careers/intern-sales-marketing",
-  },
+  // Intern Level
   {
     id: "intern-human-resources",
     title: "HR Intern",
@@ -247,18 +265,18 @@ const jobListData = [
     href: "/careers/intern-product-marketing",
   },
   {
+    id: "intern-sales-marketing",
+    title: "Sales and Marketing Intern",
+    department: "Sales & Marketing",
+    level: "Intern",
+    href: "/careers/intern-sales-marketing",
+  },
+  {
     id: "intern-technology-fullstack-developer",
     title: "Full Stack Developer Intern",
     department: "Technology",
-    level: "Engineer",
+    level: "Intern",
     href: "/careers/intern-technology-fullstack-developer",
-  },
-  {
-    id: "assistant-operations-founder",
-    title: "Executive Assistant – Founder",
-    department: "Operations",
-    level: "Assistant",
-    href: "/careers/assistant-operations-founder",
   },
 ];
 

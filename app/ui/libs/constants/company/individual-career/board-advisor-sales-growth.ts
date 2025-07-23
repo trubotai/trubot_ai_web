@@ -8,9 +8,9 @@ const salesGrowthAdvisorPageData: CareerPageDataType = {
   shortDescription:
     "Define GTM strategy, enhance customer acquisition, and drive global revenue growth.",
   about:
-    "TruBot AI is a fast-growing AI startup powering intelligent automation for SMEs. Our platform combines AI chat, voice, and workflow tools into a single, scalable solution.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
-    "We’re looking for a Sales & Growth Advisor to help define our GTM strategy, improve customer acquisition, and drive revenue growth across global markets.",
+    "We're looking for a Sales & Growth Advisor to help define our GTM strategy, improve customer acquisition, and drive revenue growth across global markets.",
   responsibilities: [
     "Design and advise on GTM and sales strategies.",
     "Support channel development and partner expansion.",
@@ -28,12 +28,15 @@ const salesGrowthAdvisorPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "🎯 Impactful Role – Shape GTM for a global AI product.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact advisory role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
-  compensation: "Equity-based",
-  workingHours: "Flexible",
+  compensation:
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
+  workingHours:
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "To apply, please email your resume and LinkedIn profile to careers@trubotai.com with the subject line: 'Application for Board Advisor – Sales'.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Board Advisor – Sales & Growth'.",
   applyEmail: "careers@trubotai.com",
 };
 

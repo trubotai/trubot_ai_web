@@ -33,8 +33,8 @@ const accountsPayrollManagerPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💼 Foundational Role – Shape the financial infrastructure of a rising AI company.",
-    "📈 Career Growth – Opportunity to evolve into a future CFO or Head of Finance.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact finance role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",

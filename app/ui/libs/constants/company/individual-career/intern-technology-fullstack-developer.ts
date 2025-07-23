@@ -4,13 +4,13 @@ const fullStackDeveloperInternPageData: CareerPageDataType = {
   id: "intern-technology-fullstack-developer",
   title: "Full Stack Developer Intern",
   location: "Remote (Global)",
-  type: "Internship (3–6 Months)",
+  type: "Internship | 3–6 Months",
   shortDescription:
-    "Start your tech journey at TruBot AI as a Full Stack Developer Intern. Gain hands-on experience building real-world AI-driven applications.",
+    "Kickstart your engineering career at TruBot AI. Gain hands-on experience building scalable AI-powered solutions across the stack.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified AI platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation — helping businesses automate processes and scale operations effectively.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
-    "We’re looking for passionate Full Stack Developer Interns eager to take on real-world development challenges. You’ll collaborate with senior engineers to build scalable web and mobile applications while gaining exposure to modern AI-powered frameworks and tooling.",
+    "We’re looking for a Full Stack Developer Intern to support the development of scalable AI-powered solutions. This internship offers hands-on exposure to frontend, backend, and cloud technologies in a dynamic AI startup environment.",
   responsibilities: [
     "Independently develop web applications using both front-end and back-end technologies for mobile and desktop platforms.",
     "Collaborate with senior developers in software design, implementation, and testing.",
@@ -36,7 +36,7 @@ const fullStackDeveloperInternPageData: CareerPageDataType = {
   workingHours:
     "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
-    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Full Stack Developer Intern' and become part of TruBot AI’s innovation journey.",
+    "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Full Stack Developer Intern'.",
   applyEmail: "careers@trubotai.com",
 };
 

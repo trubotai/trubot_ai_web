@@ -6,7 +6,7 @@ const headProductsPageData: CareerPageDataType = {
   location: "Remote (Global)",
   type: "Full-Time / Part-Time",
   shortDescription:
-    "Define product vision and lead execution of TruBot AI’s next-gen customer engagement solutions powered by AI and automation.",
+    "Define product vision and lead execution of TruBot AI's next-gen customer engagement solutions powered by AI and automation.",
   about:
     "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
@@ -27,8 +27,8 @@ const headProductsPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Sales commissions transitioning to a competitive salary.",
-    "💡 High-Impact Role – Shape the product direction of a category-defining AI solution.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact product role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",

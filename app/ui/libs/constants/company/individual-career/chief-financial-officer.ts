@@ -6,11 +6,11 @@ const cfoPageData: CareerPageDataType = {
   location: "Remote (Global)",
   type: "Full-Time / Part-Time",
   shortDescription:
-    "Join TruBot AI’s founding team to lead fundraising, financial strategy, and capital growth as our CFO.",
+    "Join TruBot AI's founding team to lead fundraising, financial strategy, and capital growth as our CFO.",
   about:
-    "We are TruBot AI, an early-stage startup redefining business communication through AI. Our platform empowers SMEs with smart automation—chatbots, voice bots, AI agents, social media tools, and invoicing—all powered by cutting-edge AI technologies. We’re on a mission to help businesses scale faster, smarter, and more efficiently with intelligent automation.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
-    "We’re seeking a visionary yet hands-on Chief Financial Officer (CFO) to own and shape the financial strategy of our early-stage AI company. As a founding leadership team member, you’ll navigate capital planning, fundraising, budgeting, and financial controls to drive sustainable growth. You’ll partner closely with the CEO and product teams to align financial planning with our go-to-market and innovation goals—building a rock-solid foundation for scale.",
+    "We're seeking a visionary yet hands-on Chief Financial Officer (CFO) to own and shape the financial strategy of our early-stage AI company. As a founding leadership team member, you'll navigate capital planning, fundraising, budgeting, and financial controls to drive sustainable growth. You'll partner closely with the CEO and product teams to align financial planning with our go-to-market and innovation goals—building a rock-solid foundation for scale.",
   responsibilities: [
     "Design and implement short- and long-term financial strategies aligned with company goals.",
     "Lead capital raising efforts (equity, convertible notes, grants) and manage investor communications.",
@@ -28,7 +28,7 @@ const cfoPageData: CareerPageDataType = {
     "Comfort with ambiguity and building financial systems from scratch.",
     "Proficiency with financial modeling, budgeting, and tools like Excel, QuickBooks, or SaaS analytics platforms.",
     "Exceptional communication and stakeholder management skills.",
-    "Entrepreneurial mindset with a roll-up-your-sleeves attitude and a deep belief in AI’s potential.",
+    "Entrepreneurial mindset with a roll-up-your-sleeves attitude and a deep belief in AI's potential.",
   ],
   benefits: [
     "🌍 Equity Ownership – Be a foundational member shaping our financial future.",
@@ -37,9 +37,9 @@ const cfoPageData: CareerPageDataType = {
     "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary",
+    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
-    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST)",
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
     "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for CFO'.",
   applyEmail: "careers@trubotai.com",

@@ -31,10 +31,12 @@ const CSOPageData: CareerPageDataType = {
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
     "💰 Performance-Based Compensation – Sales commissions transitioning to a competitive salary.",
-    "💡 High-Impact Role – Build a category-defining AI solution from the ground up.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
+  workingHours:
+    "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
     "To apply, please email your resume to careers@trubotai.com with the subject line: 'Application for Chief Sales Officer'.",
   applyEmail: "careers@trubotai.com",

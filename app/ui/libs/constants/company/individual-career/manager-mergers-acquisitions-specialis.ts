@@ -8,11 +8,11 @@ const MASpecialistManagerPageData: CareerPageDataType = {
   shortDescription:
     "Identify and execute M&A and partnership opportunities that accelerate TruBot AI’s strategic growth in the AI automation space.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our mission is to empower SMEs with a unified AI platform that integrates chatbots, voice bots, AI agents, social media management, and invoice automation — transforming how businesses automate workflows and scale operations.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "As an M&A Specialist Manager, you will play a key role in identifying and executing strategic opportunities for mergers, acquisitions, and partnerships. You will work closely with the founding team to support business expansion, deal negotiation, and integration of acquired companies.",
   responsibilities: [
-    "Develop and execute an M&A strategy aligned with TruBot AI’s long-term growth goals.",
+    "Develop and execute an M&A strategy aligned with TruBot AI's long-term growth goals.",
     "Identify potential acquisition targets and strategic partners that complement our technology and market vision.",
     "Lead financial, operational, and legal due diligence for prospective acquisitions.",
     "Negotiate and structure deals ensuring strategic and financial alignment.",
@@ -31,8 +31,8 @@ const MASpecialistManagerPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Commissions transitioning to a competitive salary.",
-    "💡 High-Impact Role – Contribute to foundational growth strategy in a high-potential AI company.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact M&A role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",

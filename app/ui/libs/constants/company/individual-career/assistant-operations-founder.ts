@@ -8,7 +8,7 @@ const executiveAssistantPageData: CareerPageDataType = {
   shortDescription:
     "Become a trusted strategic partner to the Founder at TruBot AI. Drive executive productivity and operational excellence at a transformative AI startup.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through intelligent automation solutions. Our unified platform features AI-powered chatbots, voice agents, customer support tools, social media management, and invoice automation—helping SMEs cut operational costs by 40% while boosting customer satisfaction.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
     "As Executive Assistant to our Founder, you'll act as an essential extension of leadership—ensuring seamless communication, time management, and execution of strategic initiatives. You'll play a vital role in scaling operations and shaping the foundation of TruBot AI’s growth.",
   responsibilities: [
@@ -27,10 +27,9 @@ const executiveAssistantPageData: CareerPageDataType = {
     "Entrepreneurial mindset, eager to contribute across multiple functions.",
   ],
   benefits: [
-    "🌍 Equity Ownership – Build wealth by earning equity in a high-growth AI startup.",
+    "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Direct Access – Work directly with the Founder, gaining mentorship and strategic exposure.",
     "💡 Career Growth – Clear path to full-time leadership opportunities in operations, people ops, or strategy.",
-    "🎯 Mission-Driven – Play a pivotal role in building a transformative, category-defining AI company.",
     "🏡 Future Hybrid Flexibility – Transition to a hybrid setup after probationary period.",
   ],
   compensation:

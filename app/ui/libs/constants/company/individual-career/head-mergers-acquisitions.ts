@@ -8,9 +8,9 @@ const headMAPageData: CareerPageDataType = {
   shortDescription:
     "Lead TruBot AI's M&A and strategic partnership efforts. Identify opportunities, negotiate deals, and shape the future of AI-driven growth.",
   about:
-    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media automation, and invoice tools — transforming how businesses scale and automate operations.",
+    "We are TruBot AI, a fast-growing AI startup revolutionizing business communication through cutting-edge AI solutions. Our unified platform empowers SMEs with chatbots, voice bots, AI agents, social media tools, and smart invoicing to automate processes and scale customer interactions.",
   roleIntro:
-    "As the Head of M&A, you will play a key leadership role in identifying strategic opportunities for mergers, acquisitions, and partnerships that support our long-term growth. You’ll work closely with the co-founders to integrate acquisitions and unlock synergies across the business.",
+    "As the Head of M&A, you will play a key leadership role in identifying strategic opportunities for mergers, acquisitions, and partnerships that support our long-term growth. You'll work closely with the co-founders to integrate acquisitions and unlock synergies across the business.",
   responsibilities: [
     "M&A Strategy & Vision – Develop and execute an M&A strategy aligned with company growth goals. Identify acquisition targets and strategic partners.",
     "Due Diligence – Lead due diligence efforts across financial, legal, and operational domains for potential deals.",
@@ -32,8 +32,8 @@ const headMAPageData: CareerPageDataType = {
   benefits: [
     "🌍 Equity Ownership – Be a key stakeholder in our success.",
     "🚀 Remote & Flexible – Work from anywhere, on your terms.",
-    "💰 Performance-Based Compensation – Commissions transitioning to a competitive salary.",
-    "💡 High-Impact Role – Shape TruBot AI’s growth trajectory through strategic initiatives.",
+    "💰 Performance-Based Compensation – Earn equity with the potential for a high-impact M&A role.",
+    "📈 AI Growth Journey – Help scale a transformative AI platform from the ground up.",
   ],
   compensation:
     "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
