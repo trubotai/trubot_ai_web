@@ -110,7 +110,7 @@ const Page = () => {
             subtitle="Powerful features, instead of tools designed to streamline your social media workflow and maximize your impact."
           />
 
-          <div className="grid gap-8 md:grid-cols-3 mt-12">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mt-12">
             {benefitList.map((item) => (
               <div
                 key={item.title}
@@ -124,7 +124,7 @@ const Page = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-navy mb-4">
+                <h3 className="text-xl font-bold text-navy mb-4 text-center">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-center">

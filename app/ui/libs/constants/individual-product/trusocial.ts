@@ -80,6 +80,14 @@ const benefitList = [
     description:
       "Track your success with detailed analytics. Understand what works and optimize your strategy.",
   },
+  {
+    icon: Users,
+    iconColor: "from-purple-100 to-purple-200 text-purple-600",
+    title: "Brand Voice Tuning",
+    subtitle: "Customize your brand personality",
+    description:
+      "Customize your brand's voice and personality across all content. Maintain consistent messaging that resonates with your audience.",
+  },
 ];
 
 const featureList = [
@@ -284,6 +292,11 @@ const faqList = [
     question: "Is there a mobile version available?",
     answer:
       "A dedicated mobile app is coming soon! In the meantime, you can easily manage content, approve posts, and track analytics on the go with our mobile-friendly website.",
+  },
+  {
+    question: "What is your refund policy?",
+    answer:
+      "Get in touch with our friendly customer success manager who is handling your account, and they will make the process easy.",
   },
 ];
 
