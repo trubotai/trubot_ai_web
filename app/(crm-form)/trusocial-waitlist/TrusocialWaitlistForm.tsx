@@ -2,12 +2,10 @@
 
 import { toast } from "sonner";
 import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Loader2, Mail, Target } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import LocationInput from "@/app/ui/components/form/LocationInput";
-import GoogleMapsLoader from "@/app/ui/components/form/GoogleMapsLoader";
 import TextInput from "@/app/ui/components/form/TextInput";
 import PhoneInput from "@/app/ui/components/form/PhoneInput";
 import SelectInput from "@/app/ui/components/form/SelectInput";
@@ -151,22 +149,17 @@ const TrusocialWaitlistForm = () => {
                 className={TrusocialWaitlistFormInputClasses}
               />
 
-              <GoogleMapsLoader>
-                <Controller
-                  name="location"
-                  control={form.control}
-                  render={({ field }) => (
-                    <LocationInput
-                      onChange={field.onChange}
-                      placeholder="City, State"
-                      className={`text-base rounded-xl border-2 border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/30 bg-white/80 shadow-sm hover:shadow-md ${
-                        form.formState.errors.location ? "border-coral" : ""
-                      }`}
-                      error={form.formState.errors.location?.message}
-                    />
-                  )}
-                />
-              </GoogleMapsLoader>
+              <TextInput
+                key="location"
+                id="location"
+                label={undefined}
+                icon={undefined}
+                error={form.formState.errors.location?.message}
+                placeholder="City, State"
+                type="text"
+                {...form.register("location")}
+                className={TrusocialWaitlistFormInputClasses}
+              />
             </div>
           </div>
 
