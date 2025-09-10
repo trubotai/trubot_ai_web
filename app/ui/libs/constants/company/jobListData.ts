@@ -205,6 +205,13 @@ const jobListData = [
   },
   // Marketing Level
   {
+    id: "content-manager",
+    title: "Content Manager",
+    department: "Sales & Marketing",
+    level: "Marketing",
+    href: "/careers/content-manager",
+  },
+  {
     id: "marketer-performance",
     title: "Performance Marketer",
     department: "Sales & Marketing",
