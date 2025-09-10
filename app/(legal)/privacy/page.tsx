@@ -20,18 +20,18 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <PageLayout id="privacy-policy">
-      <div className="text-center mb-12">
+      <div className="text-center mb-16">
         <h1
           id="privacy-policy-heading"
-          className="text-4xl font-bold text-navy mb-4"
+          className="text-5xl font-heading font-bold text-navy mb-6 leading-tight"
         >
           Privacy Policy
         </h1>
-        <p className="text-gray-700 max-w-3xl mx-auto font-body">
+        <p className="text-navy/70 text-lg max-w-3xl mx-auto font-body mb-6">
           Last updated: April 1, 2025
         </p>
 
-        <p className="text-gray-700 max-w-3xl mx-auto font-body mt-4">
+        <p className="text-navy/80 max-w-4xl mx-auto font-body text-lg leading-relaxed">
           TruBot AI (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is
           committed to protecting your privacy. This Privacy Policy explains how
           we collect, use, disclose, and safeguard your information when you use
@@ -39,14 +39,14 @@ const Page = () => {
         </p>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 md:px-0 space-y-8 text-gray-700 leading-relaxed font-body fade-in">
+      <div className="max-w-4xl mx-auto px-6 md:px-0 space-y-12 text-navy/80 leading-relaxed font-body fade-in">
         {/* Information We Collect */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             1. Information We Collect
           </h2>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             1.1 Personal Information
           </h3>
           <p className="mb-4">
@@ -61,7 +61,7 @@ const Page = () => {
             <li>Communication history and support requests</li>
           </ul>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             1.2 Usage Information
           </h3>
           <p className="mb-4">
@@ -77,7 +77,7 @@ const Page = () => {
             <li>Error logs and performance data</li>
           </ul>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             1.3 Customer Data
           </h3>
           <p className="mb-4">
@@ -94,7 +94,7 @@ const Page = () => {
 
         {/* How We Use Information */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             2. How We Use Your Information
           </h2>
 
@@ -136,7 +136,7 @@ const Page = () => {
 
         {/* Information Sharing */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             3. Information Sharing and Disclosure
           </h2>
 
@@ -167,7 +167,7 @@ const Page = () => {
 
         {/* Data Security */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             4. Data Security
           </h2>
 
@@ -187,7 +187,7 @@ const Page = () => {
 
         {/* Data Retention */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             5. Data Retention
           </h2>
 
@@ -201,7 +201,7 @@ const Page = () => {
 
         {/* International Transfers */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             6. International Data Transfers
           </h2>
 
@@ -222,7 +222,9 @@ const Page = () => {
 
         {/* Your Rights */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">7. Your Rights</h2>
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
+            7. Your Rights
+          </h2>
 
           <p className="mb-4">
             Depending on your location, you may have the following rights
@@ -267,7 +269,7 @@ const Page = () => {
 
         {/* Cookies and Tracking */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             8. Cookies and Tracking Technologies
           </h2>
 
@@ -277,7 +279,7 @@ const Page = () => {
             control cookie settings through your browser preferences.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             Types of Cookies We Use:
           </h3>
           <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -302,7 +304,7 @@ const Page = () => {
 
         {/* Third-Party Services */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             9. Third-Party Services
           </h2>
 
@@ -316,21 +318,21 @@ const Page = () => {
 
         {/* Children's Privacy */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             10. Children&apos;s Privacy
           </h2>
 
           <p className="mb-4">
-            Our services are not intended for children under 16 years of age. We
+            Our services are not intended for children under 18 years of age. We
             do not knowingly collect personal information from children under
-            16. If we become aware that we have collected such information, we
+            18. If we become aware that we have collected such information, we
             will take steps to delete it promptly.
           </p>
         </section>
 
         {/* Changes to Policy */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             11. Changes to This Privacy Policy
           </h2>
 
@@ -344,40 +346,48 @@ const Page = () => {
 
         {/* Contact Information */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">12. Contact Us</h2>
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
+            12. Contact Us
+          </h2>
 
           <p className="mb-4">
             If you have any questions about this Privacy Policy or our data
             practices, please contact us:
           </p>
 
-          <div className="bg-gray-soft p-6 rounded-lg">
-            <p className="mb-2">
-              <strong>Email:</strong>{" "}
-              <Button
-                label="contact@trubotai.com"
-                href="mailto:contact@trubotai.com"
-                variant="link"
-                target="_blank"
-                className="pr-0 pl-1"
-              />
-            </p>
-            <p className="mb-2">
-              <strong>Support:</strong>{" "}
-              <Button
-                label="support@trubotai.com"
-                href="mailto:support@trubotai.com"
-                variant="link"
-                target="_blank"
-                className="pr-0 pl-1"
-              />
-            </p>
+          <div className="bg-gray-soft p-8 rounded-xl border border-gray-200 shadow-sm">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <span className="font-heading font-semibold text-navy min-w-[80px]">
+                  Email:
+                </span>
+                <Button
+                  label="contact@trubotai.com"
+                  href="mailto:contact@trubotai.com"
+                  variant="link"
+                  target="_blank"
+                  className="pr-0 pl-0 text-electric hover:text-teal"
+                />
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="font-heading font-semibold text-navy min-w-[80px]">
+                  Support:
+                </span>
+                <Button
+                  label="support@trubotai.com"
+                  href="mailto:support@trubotai.com"
+                  variant="link"
+                  target="_blank"
+                  className="pr-0 pl-0 text-electric hover:text-teal"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Legal Basis */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             13. Legal Basis for Processing (GDPR)
           </h2>
 
@@ -407,7 +417,7 @@ const Page = () => {
 
         {/* Complaints */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             14. Complaints and Supervisory Authorities
           </h2>
 
@@ -415,7 +425,104 @@ const Page = () => {
             If you believe our processing of your personal data violates data
             protection laws, you have the right to lodge a complaint with your
             local data protection authority. For EU residents, you can find your
-            supervisory authority at the European Data Protection Board website.
+            supervisory authority at the{" "}
+            <a
+              href="https://edpb.europa.eu/"
+              className="text-electric font-medium hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              European Data Protection Board website
+            </a>
+            .
+          </p>
+        </section>
+
+        {/* Disclaimer */}
+        <section>
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
+            15. Disclaimer
+          </h2>
+
+          <p className="mb-4">
+            By using our services, you acknowledge and agree that we may access,
+            process, and store your information in accordance with our Privacy
+            Policy and applicable laws. While we take reasonable technical and
+            organizational measures to protect your information, we do not
+            warrant that unauthorized access, breaches, or other security
+            incidents will never occur. We shall not be liable for any loss,
+            damage, or unauthorized disclosure of information resulting from
+            circumstances beyond our reasonable control, including but not
+            limited to cyberattacks, network failures, or actions of third
+            parties.
+          </p>
+        </section>
+
+        {/* AI Output Disclaimer */}
+        <section>
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
+            AI Output Disclaimer
+          </h2>
+
+          <p className="mb-4">
+            TruBot AI Platform and its products i.e TruSocial utilizes
+            artificial intelligence and machine learning technologies that may
+            generate outputs based on patterns, algorithms, and data inputs.
+            TruBot AI does not guarantee the accuracy, completeness,
+            reliability, or legality of any such outputs. You are solely
+            responsible for reviewing, verifying, and determining the
+            appropriateness of any AI-generated content before relying on,
+            publishing, distributing, or otherwise using it. TruBot AI shall not
+            be liable for any loss, damage, or claim arising from your use of or
+            reliance on AI-generated outputs.
+          </p>
+        </section>
+
+        {/* Data Ownership & Responsibility */}
+        <section>
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
+            Data Ownership &amp; Responsibility
+          </h2>
+
+          <p className="mb-4">
+            You represent and warrant that you have all necessary rights,
+            licenses, and permissions to submit, upload, or otherwise transmit
+            data to the TruBot AI Platform and its products i.e TruSocial, and
+            that such data does not and will not violate any applicable laws,
+            regulations, third-party rights (including intellectual property
+            rights), or confidentiality obligations. You are solely responsible
+            for the legality, reliability, integrity, and accuracy of any data
+            you provide.
+          </p>
+        </section>
+
+        {/* Force Majeure Clause */}
+        <section>
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
+            Force Majeure Clause
+          </h2>
+
+          <p className="mb-4">
+            TruBot AI Platform and its products i.e TruSocial, shall not be
+            liable for any delay or failure to perform due to causes beyond its
+            reasonable control, including but not limited to acts of Nature,
+            labor disputes, war, terrorism, government actions, internet or
+            telecommunications failures, or natural disasters.
+          </p>
+        </section>
+
+        {/* Copyright Infringement Policy */}
+        <section>
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
+            Copyright Infringement Policy
+          </h2>
+
+          <p className="mb-4">
+            TruBot AI Platform and its products i.e TruSocial, respects
+            intellectual property rights. If you believe that your work has been
+            copied in a way that constitutes copyright infringement, please
+            submit a notification in accordance with the Respective
+            Department/Authorities.
           </p>
         </section>
       </div>

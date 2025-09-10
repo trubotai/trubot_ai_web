@@ -21,17 +21,17 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <PageLayout id="terms-of-service">
-      <div className="text-center mb-12">
+      <div className="text-center mb-16">
         <h1
           id="terms-of-service-heading"
-          className="text-4xl font-bold text-navy mb-4"
+          className="text-5xl font-heading font-bold text-navy mb-6 leading-tight"
         >
           Terms of Service
         </h1>
-        <p className="text-gray-700 max-w-3xl mx-auto font-body">
+        <p className="text-navy/70 text-lg max-w-3xl mx-auto font-body mb-6">
           Effective starting: April 1, 2025
         </p>
-        <p className="text-gray-700 max-w-3xl mx-auto font-body mt-4">
+        <p className="text-navy/80 max-w-4xl mx-auto font-body text-lg leading-relaxed">
           TruBot AI and its products i.e TruSocial (&quot;TruBot,&quot;
           &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) provides an online
           software platform that enables businesses to build, deploy, and manage
@@ -39,10 +39,10 @@ const Page = () => {
         </p>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 md:px-0 space-y-8 text-gray-700 leading-relaxed font-body fade-in">
+      <div className="max-w-4xl mx-auto px-6 md:px-0 space-y-12 text-navy/80 leading-relaxed font-body fade-in">
         {/* Introduction */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             1. Introduction and Acceptance
           </h2>
 
@@ -102,11 +102,11 @@ const Page = () => {
 
         {/* Accounts and Registration */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             2. Accounts and Registration
           </h2>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             2.1 Account Creation
           </h3>
           <p className="mb-4">
@@ -117,7 +117,7 @@ const Page = () => {
             use our services.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             2.2 Account Responsibilities
           </h3>
           <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -141,7 +141,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             2.3 Account Termination
           </h3>
           <p className="mb-4">
@@ -152,11 +152,11 @@ const Page = () => {
 
         {/* Use of Services */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             3. Use of Services
           </h2>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             3.1 Permitted Use
           </h3>
           <p className="mb-4">
@@ -184,7 +184,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             3.2 Prohibited Activities
           </h3>
           <p className="mb-4">You agree not to:</p>
@@ -214,11 +214,11 @@ const Page = () => {
 
         {/* Intellectual Property */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             4. Intellectual Property Rights
           </h2>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             4.1 Our Rights
           </h3>
           <p className="mb-4">
@@ -231,7 +231,7 @@ const Page = () => {
             other intellectual property or proprietary rights laws.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             4.2 License Grant
           </h3>
           <p className="mb-4">
@@ -240,7 +240,7 @@ const Page = () => {
             and its products i.e TruSocial for your business purposes.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             4.3 Your Content
           </h3>
           <p className="mb-4">
@@ -254,7 +254,7 @@ const Page = () => {
 
         {/* Privacy and Data */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             5. Privacy and Data Protection
           </h2>
 
@@ -270,7 +270,7 @@ const Page = () => {
             , which is incorporated into these Terms by reference.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             5.1 Data Processing
           </h3>
           <p className="mb-4">
@@ -279,7 +279,7 @@ const Page = () => {
             Privacy Policy and applicable data protection laws.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             5.2 Data Security
           </h3>
           <p className="mb-4">
@@ -291,11 +291,11 @@ const Page = () => {
 
         {/* Payment Terms */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             6. Payment Terms
           </h2>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             6.1 Fees and Billing
           </h3>
           <p className="mb-4">
@@ -305,7 +305,7 @@ const Page = () => {
             non-refundable except as expressly stated in these Terms.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             6.2 Payment Methods
           </h3>
           <p className="mb-4">
@@ -314,7 +314,7 @@ const Page = () => {
             incurred.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             6.3 Late Payments
           </h3>
           <p className="mb-4">
@@ -322,7 +322,7 @@ const Page = () => {
             account. We reserve the right to charge interest on overdue amounts.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             6.4 Refund Policy
           </h3>
           <p className="mb-4">
@@ -331,7 +331,7 @@ const Page = () => {
             exceptional circumstances.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             6.5 Subscriptions Policy
           </h3>
           <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -360,11 +360,11 @@ const Page = () => {
 
         {/* Service Level and Support */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             7. Service Level and Support
           </h2>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             7.1 Service Availability
           </h3>
           <p className="mb-4">
@@ -383,7 +383,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             7.2 Support Services
           </h3>
           <p className="mb-4">
@@ -395,9 +395,11 @@ const Page = () => {
 
         {/* Termination */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">8. Termination</h2>
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
+            8. Termination
+          </h2>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             8.1 Termination by You
           </h3>
           <p className="mb-4">
@@ -406,7 +408,7 @@ const Page = () => {
             the services will immediately cease.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             8.2 Termination by Us
           </h3>
           <p className="mb-4">
@@ -415,7 +417,7 @@ const Page = () => {
             limitation if you breach the Terms.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             8.3 Effect of Termination
           </h3>
           <p className="mb-4">
@@ -428,7 +430,9 @@ const Page = () => {
 
         {/* Disclaimers */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">9. Disclaimers</h2>
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
+            9. Disclaimers
+          </h2>
 
           <p className="mb-4">
             THE TRUBOT AI PLATFORM AND ITS PRODUCTS I.E TRUSOCIAL IS PROVIDED ON
@@ -446,7 +450,7 @@ const Page = () => {
 
         {/* Limitation of Liability */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             10. Limitation of Liability
           </h2>
 
@@ -468,7 +472,7 @@ const Page = () => {
 
         {/* Indemnification */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             11. Indemnification
           </h2>
 
@@ -482,11 +486,11 @@ const Page = () => {
 
         {/* Governing Law */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             12. Governing Law and Dispute Resolution
           </h2>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             12.1 Governing Law
           </h3>
           <p className="mb-4">
@@ -495,7 +499,7 @@ const Page = () => {
             its conflict of law principles.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             12.2 Arbitration
           </h3>
           <p className="mb-4">
@@ -505,7 +509,7 @@ const Page = () => {
             Association.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             12.3 Class Action Waiver
           </h3>
           <p className="mb-4">
@@ -516,7 +520,7 @@ const Page = () => {
 
         {/* Changes to Terms */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             13. Changes to Terms
           </h2>
 
@@ -531,11 +535,11 @@ const Page = () => {
 
         {/* Miscellaneous */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             14. Miscellaneous
           </h2>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             14.1 Entire Agreement
           </h3>
           <p className="mb-4">
@@ -544,7 +548,7 @@ const Page = () => {
             and its products i.e TruSocial and supersede all prior agreements.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             14.2 Severability
           </h3>
           <p className="mb-4">
@@ -553,13 +557,15 @@ const Page = () => {
             and effect.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">14.3 Waiver</h3>
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
+            14.3 Waiver
+          </h3>
           <p className="mb-4">
             No waiver of any term of these Terms shall be deemed a further or
             continuing waiver of such term or any other term.
           </p>
 
-          <h3 className="text-xl font-semibold text-navy mb-3">
+          <h3 className="text-xl font-heading font-semibold text-navy mb-4 leading-tight">
             14.4 Assignment
           </h3>
           <p className="mb-4">
@@ -570,7 +576,7 @@ const Page = () => {
 
         {/* Contact Information */}
         <section>
-          <h2 className="text-2xl font-bold text-navy mb-4">
+          <h2 className="text-3xl font-heading font-bold text-navy mb-6 leading-tight">
             15. Contact Information
           </h2>
 
@@ -578,27 +584,33 @@ const Page = () => {
             If you have any questions about these Terms, please contact us:
           </p>
 
-          <div className="bg-gray-soft p-6 rounded-lg">
-            <p className="mb-2">
-              <strong>Email:</strong>
-              <Button
-                label="contact@trubotai.com"
-                href="mailto:contact@trubotai.com"
-                variant="link"
-                target="_blank"
-                className="pr-0 pl-1"
-              />
-            </p>
-            <p className="mb-2">
-              <strong>Support:</strong>
-              <Button
-                label="support@trubotai.com"
-                href="mailto:support@trubotai.com"
-                variant="link"
-                target="_blank"
-                className="pr-0 pl-1"
-              />
-            </p>
+          <div className="bg-gray-soft p-8 rounded-xl border border-gray-200 shadow-sm">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <span className="font-heading font-semibold text-navy min-w-[80px]">
+                  Email:
+                </span>
+                <Button
+                  label="contact@trubotai.com"
+                  href="mailto:contact@trubotai.com"
+                  variant="link"
+                  target="_blank"
+                  className="pr-0 pl-0 text-electric hover:text-teal"
+                />
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="font-heading font-semibold text-navy min-w-[80px]">
+                  Support:
+                </span>
+                <Button
+                  label="support@trubotai.com"
+                  href="mailto:support@trubotai.com"
+                  variant="link"
+                  target="_blank"
+                  className="pr-0 pl-0 text-electric hover:text-teal"
+                />
+              </div>
+            </div>
           </div>
         </section>
       </div>
