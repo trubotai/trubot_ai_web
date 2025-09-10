@@ -125,6 +125,13 @@ const jobListData = [
     featured: true,
   },
   {
+    id: "grants-expert",
+    title: "Grants Expert",
+    department: "Finance",
+    level: "Manager",
+    href: "/careers/grants-expert",
+  },
+  {
     id: "manager-fundraising",
     title: "Fundraising Manager",
     department: "Finance",
@@ -184,7 +191,7 @@ const jobListData = [
   {
     id: "lead-social-media-strategy",
     title: "Lead Social Media Strategy",
-    department: "Product & Design",
+    department: "Sales & Marketing",
     level: "Lead",
     href: "/careers/lead-social-media-strategy",
   },
@@ -204,6 +211,13 @@ const jobListData = [
     href: "/careers/designer-uiux",
   },
   // Marketing Level
+  {
+    id: "content-manager",
+    title: "Content Manager",
+    department: "Sales & Marketing",
+    level: "Marketing",
+    href: "/careers/content-manager",
+  },
   {
     id: "marketer-performance",
     title: "Performance Marketer",
