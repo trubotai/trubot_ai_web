@@ -125,6 +125,13 @@ const jobListData = [
     featured: true,
   },
   {
+    id: "grants-expert",
+    title: "Grants Expert",
+    department: "Finance",
+    level: "Manager",
+    href: "/careers/grants-expert",
+  },
+  {
     id: "manager-fundraising",
     title: "Fundraising Manager",
     department: "Finance",
