@@ -191,7 +191,7 @@ const jobListData = [
   {
     id: "lead-social-media-strategy",
     title: "Lead Social Media Strategy",
-    department: "Product & Design",
+    department: "Sales & Marketing",
     level: "Lead",
     href: "/careers/lead-social-media-strategy",
   },
