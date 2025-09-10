@@ -34,7 +34,7 @@ const HRInternPageData: CareerPageDataType = {
     "🎯 Full-Time Opportunity – Outstanding interns may be considered for full-time HR roles based on performance.",
   ],
   compensation:
-    "Equity-based or commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
+    "Commission-based (until profitability); transitioning to a competitive salary based on industry standard.",
   workingHours:
     "Flexible, with at least 4 hours overlap between 8:30 AM – 1:30 PM EST (6:00 PM – 11:00 PM IST).",
   applyInstructions:
