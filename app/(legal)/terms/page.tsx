@@ -32,10 +32,10 @@ const Page = () => {
           Effective starting: April 1, 2025
         </p>
         <p className="text-gray-700 max-w-3xl mx-auto font-body mt-4">
-          TruBot AI (&quot;TruBot,&quot; &quot;we,&quot; &quot;our,&quot; or
-          &quot;us&quot;) provides an online software platform that enables
-          businesses to build, deploy, and manage AI-powered chatbots,
-          voicebots, and automation solutions.
+          TruBot AI and its products i.e TruSocial (&quot;TruBot,&quot;
+          &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) provides an online
+          software platform that enables businesses to build, deploy, and manage
+          AI-powered chatbots, voicebots, and automation solutions.
         </p>
       </div>
 
@@ -48,9 +48,26 @@ const Page = () => {
 
           <p className="mb-4">
             These Terms of Service (&quot;Terms&quot;) govern your use of our
-            website located at https://www.trubotai.com and other websites owned
-            and/or operated by TruBot AI (the &quot;Website(s)&quot;), our AI
-            platform, APIs, and services (collectively, the &quot;TruBot
+            website located at{" "}
+            <Link
+              href="https://www.trubotai.com"
+              className="text-electric font-medium hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://www.trubotai.com
+            </Link>{" "}
+            and other websites owned (
+            <Link
+              href="https://trusocial.trubotai.com"
+              className="text-electric font-medium hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://trusocial.trubotai.com
+            </Link>
+            ) or operated by TruBot AI (the &quot;Website(s)&quot;), our AI
+            platform, APIs, and services (collectively, the &quot;TruBot AI
             Platform&quot;).
           </p>
 
@@ -66,18 +83,20 @@ const Page = () => {
           </p>
 
           <p className="mb-4">
-            By using or continuing to use the TruBot Platform, or by clicking
-            &quot;Sign Up&quot; or similar buttons, you agree to use the TruBot
-            Platform solely in accordance with these Terms, and you agree that
-            you are bound by and are a party to these Terms.
+            By using or continuing to use the TruBot AI Platform and its
+            products i.e TruSocial or by clicking &quot;Sign Up&quot; or similar
+            buttons, you agree to use the TruBot AI Platform and its products
+            i.e TruSocial solely in accordance with these Terms, and you agree
+            that you are bound by and are a party to these Terms.
           </p>
 
           <p className="mb-4">
             You warrant that you are at least eighteen (18) years old and that
             you have the legal capacity to agree to and be bound by these Terms.
-            If you access or use the TruBot Platform on behalf of a company,
-            principal, or other entity, you represent that you have authority to
-            bind such entity and its affiliates to these Terms.
+            If you access or use the TruBot AI Platform and its products i.e
+            TruSocial, on behalf of a company, principal, or other entity, you
+            represent that you have authority to bind such entity and its
+            affiliates to these Terms.
           </p>
         </section>
 
@@ -91,9 +110,11 @@ const Page = () => {
             2.1 Account Creation
           </h3>
           <p className="mb-4">
-            You need to create a TruBot AI account to use our services. You may
-            create an account using existing credentials or via other
-            registration methods we may provide.
+            You need to create a TruBot AI account to use our services.
+          </p>
+          <p className="mb-4">
+            For our product TruSocial, you need to create a TruSocial account to
+            use our services.
           </p>
 
           <h3 className="text-xl font-semibold text-navy mb-3">
@@ -109,7 +130,8 @@ const Page = () => {
               secure
             </li>
             <li>
-              You must notify TruBot AI immediately of any unauthorized use
+              You must notify TruBot AI and its products i.e TruSocial
+              immediately of any unauthorized use
             </li>
             <li>You may never use another user&apos;s account</li>
             <li>Your login may only be used by one person</li>
@@ -138,8 +160,9 @@ const Page = () => {
             3.1 Permitted Use
           </h3>
           <p className="mb-4">
-            You may use the TruBot Platform only for lawful purposes and in
-            accordance with these Terms. You agree not to use the services:
+            You may use the TruBot AI Platform and its products i.e TruSocial
+            only for lawful purposes and in accordance with these Terms. You
+            agree not to use the services:
           </p>
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>
@@ -151,8 +174,9 @@ const Page = () => {
               promotional material
             </li>
             <li>
-              To impersonate or attempt to impersonate TruBot AI, a TruBot AI
-              employee, or any other person or entity
+              To impersonate or attempt to impersonate TruBot AI, Trubot AI
+              products i.e TruSocial, a TruBot AI employee, or any other person
+              or entity
             </li>
             <li>
               To engage in any other conduct that restricts or inhibits
@@ -198,13 +222,13 @@ const Page = () => {
             4.1 Our Rights
           </h3>
           <p className="mb-4">
-            The TruBot Platform and its entire contents, features, and
-            functionality (including but not limited to all information,
-            software, text, displays, images, video, and audio, and the design,
-            selection, and arrangement thereof) are owned by TruBot AI, its
-            licensors, or other providers of such material and are protected by
-            copyright, trademark, patent, trade secret, and other intellectual
-            property or proprietary rights laws.
+            The TruBot AI Platform and its products i.e TruSocial and its entire
+            contents, features, and functionality (including but not limited to
+            all information, software, text, displays, images, video, and audio,
+            and the design, selection, and arrangement thereof) are owned by
+            TruBot AI, its licensors, or other providers of such material and
+            are protected by copyright, trademark, patent, trade secret, and
+            other intellectual property or proprietary rights laws.
           </p>
 
           <h3 className="text-xl font-semibold text-navy mb-3">
@@ -212,8 +236,8 @@ const Page = () => {
           </h3>
           <p className="mb-4">
             Subject to these Terms, we grant you a limited, non-exclusive,
-            non-transferable, revocable license to use the TruBot Platform for
-            your business purposes.
+            non-transferable, revocable license to use the TruBot AI Platform
+            and its products i.e TruSocial for your business purposes.
           </p>
 
           <h3 className="text-xl font-semibold text-navy mb-3">
@@ -221,10 +245,10 @@ const Page = () => {
           </h3>
           <p className="mb-4">
             You retain ownership of any content you create or upload to the
-            TruBot Platform. By uploading content, you grant us a worldwide,
-            non-exclusive, royalty-free license to use, reproduce, modify, and
-            distribute your content solely for the purpose of providing our
-            services to you.
+            TruBot AI and its products i.e TruSocial Platform. By uploading
+            content, you grant us a worldwide, non-exclusive, royalty-free
+            license to use, reproduce, modify, and distribute your content
+            solely for the purpose of providing our services to you.
           </p>
         </section>
 
@@ -275,10 +299,10 @@ const Page = () => {
             6.1 Fees and Billing
           </h3>
           <p className="mb-4">
-            You agree to pay all fees associated with your use of the TruBot
-            Platform. Fees are billed in advance on a monthly or annual basis,
-            as applicable. All fees are non-refundable except as expressly
-            stated in these Terms.
+            You agree to pay all fees associated with your use of the TruBot AI
+            Platform and its products i.e TruSocial. Fees are billed in advance
+            on a monthly or annual basis, as applicable. All fees are
+            non-refundable except as expressly stated in these Terms.
           </p>
 
           <h3 className="text-xl font-semibold text-navy mb-3">
@@ -306,6 +330,32 @@ const Page = () => {
             unused time. Refunds may be provided at our sole discretion in
             exceptional circumstances.
           </p>
+
+          <h3 className="text-xl font-semibold text-navy mb-3">
+            6.5 Subscriptions Policy
+          </h3>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li>
+              Fees for Products are set forth on our website or agreed upon in a
+              separate contract.
+            </li>
+            <li>
+              Subscription payments are billed monthly/annually and are
+              non-refundable unless otherwise stated.
+            </li>
+            <li>
+              We reserve the right to modify pricing with or without prior
+              notice.
+            </li>
+            <li>
+              We may suspend or terminate access if payments are not made on
+              time.
+            </li>
+            <li>
+              Payments are due within seven (7) days from the invoice date
+              unless otherwise specified.
+            </li>
+          </ul>
         </section>
 
         {/* Service Level and Support */}
@@ -319,15 +369,25 @@ const Page = () => {
           </h3>
           <p className="mb-4">
             We strive to maintain high service availability but do not guarantee
-            uninterrupted access to the TruBot Platform. We may perform
-            maintenance that temporarily affects service availability.
+            uninterrupted access to the TruBot AI Platform and its products i.e
+            TruSocial. We may perform maintenance that temporarily affects
+            service availability.
           </p>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li>
+              We may roll out updates, improvements, or new features from time
+              to time.
+            </li>
+            <li>
+              Planned maintenance will be communicated in advance when possible.
+            </li>
+          </ul>
 
           <h3 className="text-xl font-semibold text-navy mb-3">
             7.2 Support Services
           </h3>
           <p className="mb-4">
-            We provide support services as described in your service plan.
+            We provide support services as described in your Pricing Plan.
             Support is available through email, chat, and other channels as we
             may specify from time to time.
           </p>
@@ -371,8 +431,9 @@ const Page = () => {
           <h2 className="text-2xl font-bold text-navy mb-4">9. Disclaimers</h2>
 
           <p className="mb-4">
-            THE TRUBOT PLATFORM IS PROVIDED ON AN &quot;AS IS&quot; AND &quot;AS
-            AVAILABLE&quot; BASIS. TRUBOT AI MAKES NO WARRANTIES, EXPRESS OR
+            THE TRUBOT AI PLATFORM AND ITS PRODUCTS I.E TRUSOCIAL IS PROVIDED ON
+            AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS. TRUBOT AI
+            AND ITS PRODUCTS I.E TRUSOCIAL MAKES NO WARRANTIES, EXPRESS OR
             IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
             FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
           </p>
@@ -390,15 +451,17 @@ const Page = () => {
           </h2>
 
           <p className="mb-4">
-            TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, TRUBOT AI SHALL
-            NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
-            OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS,
-            DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES.
+            TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, TRUBOT AI AND ITS
+            PRODUCTS I.E TRUSOCIAL SHALL NOT BE LIABLE FOR ANY INDIRECT,
+            INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING
+            WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER
+            INTANGIBLE LOSSES.
           </p>
 
           <p className="mb-4">
-            IN NO EVENT SHALL TRUBOT AI&apos;S TOTAL LIABILITY TO YOU FOR ALL
-            CLAIMS EXCEED THE AMOUNT PAID BY YOU TO TRUBOT AI IN THE TWELVE (12)
+            IN NO EVENT SHALL TRUBOT AI AND ITS PRODUCTS I.E TRUSOCIAL&apos;S
+            TOTAL LIABILITY TO YOU FOR ALL CLAIMS EXCEED THE AMOUNT PAID BY YOU
+            TO TRUBOT AI AND ITS PRODUCTS I.E TRUSOCIAL IN THE TWELVE (12)
             MONTHS PRECEDING THE CLAIM.
           </p>
         </section>
@@ -411,9 +474,9 @@ const Page = () => {
 
           <p className="mb-4">
             You agree to defend, indemnify, and hold harmless TruBot AI and its
-            affiliates from and against any claims, damages, obligations,
-            losses, liabilities, costs, or debt arising from your use of the
-            services or violation of these Terms.
+            products i.e TruSocial and its affiliates from and against any
+            claims, damages, obligations, losses, liabilities, costs, or debt
+            arising from your use of the services or violation of these Terms.
           </p>
         </section>
 
@@ -477,8 +540,8 @@ const Page = () => {
           </h3>
           <p className="mb-4">
             These Terms constitute the entire agreement between you and TruBot
-            AI concerning the TruBot Platform and supersede all prior
-            agreements.
+            AI and its products i.e TruSocial concerning the TruBot AI Platform
+            and its products i.e TruSocial and supersede all prior agreements.
           </p>
 
           <h3 className="text-xl font-semibold text-navy mb-3">
