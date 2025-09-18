@@ -18,7 +18,9 @@ interface CallToActionProps {
 
 const isExternalLink = (href: string) => {
   return (
-    href.startsWith("mailto:") || href.startsWith("https://calendar.google.com")
+    href.startsWith("mailto:") ||
+    href.startsWith("https://calendar.google.com") ||
+    href.startsWith("https://trusocial.trubotai.com")
   );
 };
 
