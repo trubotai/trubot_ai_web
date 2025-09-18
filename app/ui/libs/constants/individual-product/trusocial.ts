@@ -6,7 +6,6 @@ import {
   FileText,
   Bookmark,
   MoreHorizontal,
-  Home,
   Plus,
   Users,
 } from "lucide-react";
@@ -26,7 +25,7 @@ const heroSection = {
     main: "Effortless",
     highlight: "Social Media Management",
   },
-  subtitle: "Design. Plan. Schedule. Analyse",
+  subtitle: "Design. Plan. Schedule. Analyze",
   poweredBy: {
     text: "Powered by",
     ai: {
@@ -37,8 +36,8 @@ const heroSection = {
   },
   buttons: {
     primary: {
-      label: "Join Waitlist",
-      href: "/trusocial-waitlist",
+      label: "Get Started",
+      href: "https://trusocial.trubotai.com/auth/signup",
       variant: "primary" as const,
     },
     secondary: {
@@ -176,32 +175,17 @@ const testimonialList = [
 
 const pricingPlans = [
   {
-    icon: Home,
-    title: "Free Trial Starter",
-    description: "Ideal for new users exploring the platform capabilities",
-    price: "Free Trial / 14 Days",
-    features: [
-      "25 Credits (trial allocation)",
-      "AI Content Generation (text only)",
-      "Social Media Posts (up to 300 words)",
-      "Content Scheduling (up to 10 posts)",
-      "Analytics Dashboard (basic metrics)",
-    ],
-    buttonLabel: "Get Started",
-    buttonVariant: "outline" as const,
-    popular: false,
-    color: "text-purple-600",
-  },
-  {
     icon: FaClock,
-    title: "Basic Plan",
+    title: "Starter",
     description:
-      "Perfect for small businesses and freelancers - 325 credits for social media posts, product descriptions",
+      "Perfect for growing brands—AI text generation, smart scheduling, and core integrations to keep your content flowing.",
     price: "$50 /month",
     features: [
-      "Social Media Management",
-      "Content Scheduling",
-      "Analytics Dashboard",
+      "AI Content Generation (Text)",
+      "Smart Scheduling",
+      "Integrations - Instagram, Facebook, LinkedIn, Pinterest & more",
+      "Approval workflow",
+      "Email support",
     ],
     buttonLabel: "Get Started",
     buttonVariant: "outline" as const,
@@ -210,14 +194,17 @@ const pricingPlans = [
   },
   {
     icon: Plus,
-    title: "Standard",
+    title: "Pro",
     description:
-      "Ideal for growing businesses and content creators - 720 credits with 10% bonus for consistent blog",
+      "Level up with AI text + image generation, advanced analytics, and priority support. Built for businesses that want impact with precision.",
     price: "$100 /month",
     features: [
-      "Social Media Management",
-      "Content Scheduling",
-      "Analytics Dashboard",
+      "AI Content Generation (Text+Image)",
+      "Smart Scheduling",
+      "Integrations - Instagram, Facebook, LinkedIn, Pinterest & more",
+      "Basic Analytics",
+      "Approval workflow",
+      "Priority Email Support",
     ],
     buttonLabel: "Get Started",
     buttonVariant: "primary" as const,
@@ -226,19 +213,22 @@ const pricingPlans = [
   },
   {
     icon: Users,
-    title: "Premium",
+    title: "Business",
     description:
-      "Best deal available - 1,150 credits with 15% bonus savings vs lower plans, perfect for agencies and",
-    price: "$150 /month",
+      "Enterprise-ready tools with AI-driven content, smart scheduling, advanced analytics, and premium support.",
+    price: "$200 /month",
     features: [
-      "Social Media Management",
-      "Content Scheduling",
-      "Analytics Dashboard",
+      "AI Content Generation (Text+Image)",
+      "Smart Scheduling",
+      "Integrations - Instagram, Facebook, LinkedIn, Pinterest & more",
+      "Advanced Analytics",
+      "Approval workflow",
+      "Priority Email + Chat Support",
     ],
     buttonLabel: "Get Started",
     buttonVariant: "outline" as const,
     popular: false,
-    color: "text-orange-600",
+    color: "text-pink-600",
   },
 ];
 
@@ -329,8 +319,8 @@ const ctaSection = {
   subtitle:
     "Join thousands of businesses already using Tru Social to transform their social media presence. Start your free trial today.",
   primaryCTA: {
-    label: "Schedule Your First Post Today",
-    href: "/trusocial-waitlist",
+    label: "Get Started Today",
+    href: "https://trusocial.trubotai.com/auth/signup",
   },
 };
 

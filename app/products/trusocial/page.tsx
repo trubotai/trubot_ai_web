@@ -82,6 +82,7 @@ const Page = () => {
                 label={heroSection.buttons.primary.label}
                 variant={heroSection.buttons.primary.variant}
                 iconRight={ArrowRight}
+                target="_blank"
               />
             </div>
           </div>
@@ -237,7 +238,7 @@ const Page = () => {
           subtitle="Choose the plan that fits your needs. Start with our free plan or upgrade anytime."
         />
 
-        <div className="grid gap-6 mt-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 mt-12 md:grid-cols-2 lg:grid-cols-3">
           {pricingPlans.map((plan) => (
             <div
               key={plan.title}
@@ -301,11 +302,13 @@ const Page = () => {
 
               {/* Button */}
               <Button
-                href="/trusocial-waitlist"
+                href="https://trusocial.trubotai.com/auth/signup"
                 label={plan.buttonLabel}
                 variant={plan.buttonVariant}
                 iconRight={ArrowRight}
                 className="w-full text-sm py-2"
+                target="_blank"
+                rel="noopener noreferrer"
               />
             </div>
           ))}
