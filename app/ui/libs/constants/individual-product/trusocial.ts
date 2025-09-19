@@ -175,6 +175,23 @@ const testimonialList = [
 
 const pricingPlans = [
   {
+    icon: Star,
+    title: "Free Trial",
+    description:
+      "Kickstart your social media journey now! Explore AI-powered content creation, scheduling, and integrations for free.",
+    price: "Free / 15 Days",
+    features: [
+      "AI Content Generation (Text)",
+      "Smart Scheduling",
+      "Integrations - Facebook, LinkedIn, Instagram",
+      "Email support",
+    ],
+    buttonLabel: "Get Started",
+    buttonVariant: "outline" as const,
+    popular: false,
+    color: "text-green-600",
+  },
+  {
     icon: FaClock,
     title: "Starter",
     description:

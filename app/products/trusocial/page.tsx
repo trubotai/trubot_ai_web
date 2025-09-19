@@ -238,7 +238,7 @@ const Page = () => {
           subtitle="Choose the plan that fits your needs. Start with our free plan or upgrade anytime."
         />
 
-        <div className="grid gap-6 mt-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 mt-12 md:grid-cols-2 lg:grid-cols-4">
           {pricingPlans.map((plan) => (
             <div
               key={plan.title}
